@@ -1,0 +1,16 @@
+{
+ "roat_id": "ROAT-SNAP-METHOD-2026-09-05",
+ "module": "ROAT-MOD-METHOD",
+ "snapshot_date": "2026-09-05",
+ "coder": "JA",
+ "second_pass": "Not applicable: a methods statement, not coded evidence.",
+ "finding": "The framework is an integration: Leenes's TechReg model as the outer process, ROAT's N0-N4 vector, actor ontology and bridge/gate taxonomy as the automated-vehicle module inside stages 5-8 and 12.",
+ "caveats": [
+  "Depth follows the decision question, not a fixed page count; not every analysis needs every stage in full.",
+  "The operational Hub methodology (evidence and workflow integrity) is deliberately kept separate from this substantive analytical framework.",
+  "The framework has not yet been piloted end to end; the recommended pilot is the Slovak transition from conditional test operation toward commercial deployment, compared with France and Croatia."
+ ],
+ "supersedes": null,
+ "doi": null,
+ "status": "published"
+}

@@ -1,0 +1,14 @@
+{
+ "roat_id": "ROAT-SNAP-ROLES-2026-09-05",
+ "module": "ROAT-MOD-ROLES",
+ "snapshot_date": "2026-09-05",
+ "coder": "JA",
+ "second_pass": "No second pass recorded yet.",
+ "finding": "",
+ "caveats": [
+  "First export of Roles & Concepts + Role Function Matrix; coding date per row is the 'Last checked' column in the Hub."
+ ],
+ "supersedes": null,
+ "doi": null,
+ "status": "draft"
+}

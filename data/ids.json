@@ -1,0 +1,77 @@
+{
+  "_comment": "ROAT ID registry. Every ID used on the Observatory must be here; every entry must resolve to a page or a snapshot. Hub record IDs (ROAT-2026-NNNN) and OUT-* are registered in the Hub, not here.",
+  "modules": {
+    "ROAT-MOD-LAYERS": {
+      "slug": "layered-normalisation",
+      "status": "published"
+    },
+    "ROAT-MOD-SECOND-GATE": {
+      "slug": "second-gate",
+      "status": "published"
+    },
+    "ROAT-MOD-ROLES": {
+      "slug": "human-roles",
+      "status": "draft"
+    },
+    "ROAT-MOD-METHOD": {
+      "slug": "regulatory-method",
+      "status": "published"
+    }
+  },
+  "jurisdictions": {
+    "ROAT-JUR-EU": {
+      "slug": "eu-unece",
+      "title": "EU / UNECE baseline"
+    },
+    "ROAT-JUR-DE": {
+      "slug": "germany",
+      "title": "Germany"
+    },
+    "ROAT-JUR-FR": {
+      "slug": "france",
+      "title": "France"
+    },
+    "ROAT-JUR-HR": {
+      "slug": "croatia",
+      "title": "Croatia"
+    },
+    "ROAT-JUR-UK": {
+      "slug": "great-britain",
+      "title": "Great Britain"
+    },
+    "ROAT-JUR-CN": {
+      "slug": "china",
+      "title": "China"
+    },
+    "ROAT-JUR-SK": {
+      "slug": "slovakia",
+      "title": "Slovakia"
+    },
+    "ROAT-JUR-US": {
+      "slug": "united-states",
+      "title": "United States",
+      "profile": false
+    }
+  },
+  "regime_variants": {
+    "ROAT-JUR-SK:131-2026": {
+      "of": "ROAT-JUR-SK",
+      "label": "Slovakia from 1 Sept 2026 – Act 131/2026 only",
+      "panel": "prospective"
+    },
+    "ROAT-JUR-SK:1329": {
+      "of": "ROAT-JUR-SK",
+      "label": "Slovakia – parliamentary print 1329",
+      "panel": "prospective"
+    },
+    "ROAT-JUR-CN:RTSL-DRAFT": {
+      "of": "ROAT-JUR-CN",
+      "label": "China – 2026 Road Traffic Safety Law draft",
+      "panel": "prospective"
+    }
+  },
+  "external_outputs_pending": {
+    "OUT-AV-HISTORY": "Placeholder until the AV History article receives an OUT-* id in the Hub Outputs sheet",
+    "OUT-BLF-REMOTE": "Placeholder until the BLF 2026 remote-intervention paper receives an OUT-* id"
+  }
+}

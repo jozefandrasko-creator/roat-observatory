@@ -1,0 +1,119 @@
+{
+  "roat_id": "ROAT-MOD-ROLES",
+  "slug": "human-roles",
+  "number": 3,
+  "title": "Human roles in automated driving",
+  "short_title": "Human roles",
+  "question": "Which human and organisational roles do automated-driving frameworks recognise, which driving and safety functions does each perform, and which must not be conflated?",
+  "method_summary": "A concept register of roles across UNECE, EU, German, British, French and Slovak frameworks, and a role–function matrix coding each role against DDT, fallback, monitoring, remote assistance, remote intervention, remote driving, dispatch, service operation, lifecycle compliance, testing responsibility and keeper responsibility.",
+  "hub": {
+    "sheet": "Role Function Matrix",
+    "profile": "single-table",
+    "header_row": 0,
+    "join": {
+      "sheet": "Roles & Concepts",
+      "header_row": 0,
+      "key": "Concept ID"
+    }
+  },
+  "dimensions": [
+    {
+      "key": "ddt",
+      "label": "DDT",
+      "scale": "role-value",
+      "column": "DDT"
+    },
+    {
+      "key": "fallback",
+      "label": "Fallback / MRM",
+      "scale": "role-value",
+      "column": "Fallback / MRM"
+    },
+    {
+      "key": "monitoring",
+      "label": "Monitoring / supervision",
+      "scale": "role-value",
+      "column": "Monitoring / supervision"
+    },
+    {
+      "key": "remote_assistance",
+      "label": "Remote assistance",
+      "scale": "role-value",
+      "column": "Remote assistance"
+    },
+    {
+      "key": "remote_intervention",
+      "label": "Remote intervention",
+      "scale": "role-value",
+      "column": "Remote intervention"
+    },
+    {
+      "key": "remote_driving",
+      "label": "Remote driving",
+      "scale": "role-value",
+      "column": "Remote driving"
+    },
+    {
+      "key": "dispatch",
+      "label": "Dispatch / trip strategy",
+      "scale": "role-value",
+      "column": "Dispatch / trip strategy"
+    },
+    {
+      "key": "service_operation",
+      "label": "Service operation",
+      "scale": "role-value",
+      "column": "Service operation"
+    },
+    {
+      "key": "lifecycle",
+      "label": "ADS lifecycle compliance",
+      "scale": "role-value",
+      "column": "ADS lifecycle compliance"
+    },
+    {
+      "key": "testing",
+      "label": "Testing permit / trial responsibility",
+      "scale": "role-value",
+      "column": "Testing permit / trial responsibility"
+    },
+    {
+      "key": "keeper",
+      "label": "Ownership / keeper responsibility",
+      "scale": "role-value",
+      "column": "Ownership / keeper responsibility"
+    }
+  ],
+  "row_fields": {
+    "id": "Concept ID",
+    "label": "Role / function",
+    "term": "Term",
+    "framework": "Framework",
+    "records": "ROAT Record ID(s)",
+    "rationale": "Analytical note / gap",
+    "extra": [
+      "Actor type",
+      "Core function",
+      "Primary legal / technical source",
+      "Slovak current-law equivalent",
+      "Slovak draft 1329 equivalent",
+      "Functional equivalence",
+      "Slovak drafting implication"
+    ],
+    "verification": "Verification status"
+  },
+  "regimes": {},
+  "relationships": {
+    "companion_of": [
+      "OUT-BLF-REMOTE"
+    ],
+    "related_module": [
+      "ROAT-MOD-SECOND-GATE"
+    ],
+    "uses_concept": []
+  },
+  "status": "draft",
+  "license": "CC-BY-4.0",
+  "evidence_policy": "publish-evidenced-rows",
+  "_evidence_policy_note": "A row publishes when at least one of its core records passes the evidence gate (Research Stage >= Verified, Evidence Level 1-4). A row whose evidence is entirely below the gate is not published as a coded row: it is listed as pending evidence with the primary source it needs."
+}

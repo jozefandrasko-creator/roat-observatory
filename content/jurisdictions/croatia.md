@@ -1,0 +1,1 @@
+Croatia combines EU ADS type approval with dedicated road-traffic rules, owner responsibility for offences in driverless operation, recognised remote-intervention arrangements and a mandatory real-world service validation on a registered sample vehicle before passenger service — a deployment-assurance gate of the service-test variant.

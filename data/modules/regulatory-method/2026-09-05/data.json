@@ -1,0 +1,215 @@
+{
+ "module": "ROAT-MOD-METHOD",
+ "snapshot_date": "2026-09-05",
+ "exported_from_hub": "2026-09-05T20:34:56.889Z",
+ "source_sheet": "ROAT Regulatory Method",
+ "rows": [
+  {
+   "stage": "1. Decision question & scope",
+   "question": "What concrete regulatory decision must the analysis support, at what level and on what date?",
+   "basis": "SIENNA scoping; distinguish technology, artefact and application; avoid pitching the analysis too high in the technology stack.",
+   "operationalisation": "Fix the ADS/FAV use case, jurisdiction, legal snapshot date, ODD, test/deployment status, passenger/goods/service context and the precise decision to be supported.",
+   "asset": "Cross-section 2026 – AV Normalisation; Intelligence Register",
+   "output": "Scope note + assumptions + decision question",
+   "checks": "Vehicle vs ADS vs service/system; public-road use; testing vs ordinary deployment; commercial vs non-commercial use.",
+   "rule": "Do not code or diagnose gaps before the object and legal time-slice are fixed.",
+   "source": "https://doi.org/10.56675/rtn1",
+   "number": 1,
+   "title": "Decision question & scope"
+  },
+  {
+   "stage": "2. Sociotechnical mapping",
+   "question": "Which features, functions and affordances of the technology matter legally and socially?",
+   "basis": "Essential characteristics, salient features and affordances; intended function and users; who drives the technology; interests and business model.",
+   "operationalisation": "Map DDT, fallback/MRM, ODD, remote management/intervention, control-centre functions, data/logging, updates, cybersecurity, service organisation and lifecycle dependencies.",
+   "asset": "Roles & Concepts; Role Function Matrix",
+   "output": "Function–actor–technology map",
+   "checks": "Absence/change of human driver; remote functions; ODD limits; software/update lifecycle; system/service dependencies.",
+   "rule": "Regulate the relevant practice and sociotechnical context, not merely the label attached to the technology.",
+   "source": "https://doi.org/10.56675/rtn1",
+   "number": 2,
+   "title": "Sociotechnical mapping"
+  },
+  {
+   "stage": "3. Problem framing",
+   "question": "What is the problem represented to be, by whom, and what alternative frames exist?",
+   "basis": "Problem frames reflect roles, interests, values, information and implicit assumptions; separate problem definition from solution.",
+   "operationalisation": "Record competing frames before legal conclusions: safety, market access, innovation, road access, liability, labour, privacy/data, cybersecurity, local impacts and cross-border operation.",
+   "asset": "Source Audit; analytical case files",
+   "output": "Problem-frame matrix",
+   "checks": "Manufacturer/operator frame vs authority/road-user/worker/insurer/local-community frames.",
+   "rule": "A preferred solution is not evidence that the problem was correctly framed.",
+   "source": "https://doi.org/10.56675/rtn1",
+   "number": 3,
+   "title": "Problem framing"
+  },
+  {
+   "stage": "4. Stakeholders, impacts & ethics",
+   "question": "Who benefits, who bears risk or cost, and which rights/values are affected?",
+   "basis": "SIENNA ethical assessment: scope; stratify; describe; identify impacts/stakeholders; identify and analyse ethical issues; evaluate/recommend.",
+   "operationalisation": "Map direct/indirect benefits and harms, distributional effects and vulnerable groups; distinguish empirical risk from normative conflict.",
+   "asset": "Roles & Concepts; People & Organisations",
+   "output": "Stakeholder–impact–ethics matrix",
+   "checks": "Safety, responsibility, privacy/surveillance, employment, autonomy/de-skilling, cybersecurity, market/data power, accessibility and vulnerable road users.",
+   "rule": "Stakeholder salience informs the analysis but does not by itself determine the legal outcome.",
+   "source": "https://doi.org/10.56675/rtn1",
+   "number": 4,
+   "title": "Stakeholders, impacts & ethics"
+  },
+  {
+   "stage": "5. Multi-level legal landscape",
+   "question": "What law already applies before assuming that new AV-specific law is needed?",
+   "basis": "SIENNA legal method: scope; identify legal issues; analyse international/regional/national norms; identify gaps/challenges.",
+   "operationalisation": "Map international/UNECE, EU, national and where relevant local/private/standards layers; search by legal function/category, not only by technology name.",
+   "asset": "Intelligence Register; ROAT Regulatory Map; Public Library",
+   "output": "Legal hierarchy / regulatory-stack map",
+   "checks": "Vienna Convention/WP.1; UNECE/WP.29; EU type approval; national road traffic/testing/operator rules; liability/insurance; AI/data/cybersecurity; standards/guidance.",
+   "rule": "An apparent lacuna may disappear once inherited general law and adjacent regulatory layers are examined.",
+   "source": "https://doi.org/10.56675/rtn1",
+   "number": 5,
+   "title": "Multi-level legal landscape"
+  },
+  {
+   "stage": "6. ROAT functional-layer coding",
+   "question": "How deeply is automated driving legally embedded in each regulatory function?",
+   "basis": "TechReg provides the wider process; the N0–N4 vector is a ROAT-specific empirical module.",
+   "operationalisation": "Code technical approval; road access/operation; actor allocation; liability/risk; behavioural rules; infrastructure; international/cross-border recognition. Record evidence, rationale, confidence and caveat.",
+   "asset": "Layer Coding – AV History; Cross-section 2026 – AV Normalisation",
+   "output": "N0–N4 layer vector + asynchrony signal",
+   "checks": "Separate mature type approval from lawful road/service deployment; do not collapse operator, user, ADS and remote roles.",
+   "rule": "Scores measure legal embedding, not regulatory intensity. Layer range is a descriptive asymmetry signal, not a statistical index.",
+   "source": "https://docs.google.com/spreadsheets/d/1G_jtoKunmcY0BTuTCEZBe21cMxiOH6fJdsduZRRKXGc/edit",
+   "number": 6,
+   "title": "ROAT functional-layer coding"
+  },
+  {
+   "stage": "7. Disconnect / gap diagnosis",
+   "question": "Where and how does the fit between law and sociotechnical practice break?",
+   "basis": "Descriptive disconnect; normative disconnect; business/use-model disconnect. Downstream symptoms include need for special law, uncertainty, over-/under-inclusiveness and obsolescence.",
+   "operationalisation": "Classify each alleged gap. Distinguish true lacuna from interpretive uncertainty, implementation gap, enforcement deficit, unintended effect or obsolete premise.",
+   "asset": "Source Audit; jurisdictional legal analyses",
+   "output": "Gap/disconnection register",
+   "checks": "Driver-based definitions; testing rules used for deployment; actor-role mismatch; commercial-use assumptions; outdated human-control premises.",
+   "rule": "A genuinely normative disconnect may require legislative choice rather than aggressive interpretation.",
+   "source": "https://doi.org/10.56675/rtn1",
+   "number": 7,
+   "title": "Disconnect / gap diagnosis"
+  },
+  {
+   "stage": "8. Bridge / gate analysis",
+   "question": "What legal mechanism lets one regulatory layer function while adjacent layers remain less mature?",
+   "basis": "TechReg moves from gap analysis to intervention; ROAT adds an AV-specific bridge/gate taxonomy for asynchronous legal embedding.",
+   "operationalisation": "Identify deeming, equivalence/exemption, conditional permits, safety cases, service-level validation, operator licensing, mutual recognition, transitional rules and other bridges/gates.",
+   "asset": "Layer Coding – AV History; Cross-section 2026 – AV Normalisation",
+   "output": "Bridge/gate map + legal effect",
+   "checks": "Article 34bis; Article 39/equivalence; national testing permits; France safety-case/mise-en-service; Croatia service validation; GB staged permits.",
+   "rule": "A bridge manages inter-layer mismatch; it does not by itself prove full regulatory normalisation.",
+   "source": "https://docs.google.com/spreadsheets/d/1G_jtoKunmcY0BTuTCEZBe21cMxiOH6fJdsduZRRKXGc/edit",
+   "number": 8,
+   "title": "Bridge / gate analysis"
+  },
+  {
+   "stage": "9. Justification & innovation posture",
+   "question": "Why intervene, whose interests are served, and what stance toward innovation is justified?",
+   "basis": "Market failure; public interests/rights; SHEC rationales; private-interest/capture critique. Innovation governance: precaution, permissionless innovation, responsible innovation, innovation principle.",
+   "operationalisation": "Test necessity, proportionality, distributional effects, capture risk, uncertainty, reversibility, observability and capacity to learn through monitored deployment.",
+   "asset": "Jurisdictional analysis; Draft Legislative Architecture",
+   "output": "Regulatory-justification memo + innovation posture",
+   "checks": "Safety benefits and residual risk; market access; learning-by-testing; irreversible physical harm; regulatory cost; incumbent/new-entrant interests.",
+   "rule": "Reject the shortcut ‘new technology = new law’. The intervention needs an independent justification.",
+   "source": "https://doi.org/10.56675/rtn1",
+   "number": 9,
+   "title": "Justification & innovation posture"
+  },
+  {
+   "stage": "10. Regulatory design & instruments",
+   "question": "Who or what should be regulated, with which instrument, and how will the control loop work?",
+   "basis": "Rules/principles/standards; 8 Cs: command, competition, consensus, communication, contract, claims, code, compensation. Control loop: standard-setting, monitoring, behaviour modification/enforcement.",
+   "operationalisation": "Allocate obligations to the correct actor/function; combine public law, technical requirements, licences/permits, standards, contractual allocation, disclosure, code/design and insurance/compensation where appropriate.",
+   "asset": "Draft Legislative Architecture; Amendment Draft – CPT 1329; Roles & Concepts",
+   "output": "Intervention-design matrix + enforcement loop",
+   "checks": "Type approval; operator/service authorisation; control-centre duties; remote-management constraints; incident/in-use reporting; sanctions; insurance/compensation; software/update controls.",
+   "rule": "Always identify who sets the standard, who monitors compliance and who can impose or trigger corrective action.",
+   "source": "https://doi.org/10.56675/rtn1",
+   "number": 10,
+   "title": "Regulatory design & instruments"
+  },
+  {
+   "stage": "11. Legality, legitimacy, acceptance & accountability",
+   "question": "Is the intervention legally valid, institutionally legitimate, accountable and likely to be accepted?",
+   "basis": "Legality is distinct from legitimacy. Legitimacy has input, throughput and output dimensions; acceptance is the sociological question whether regulatees treat the rule as binding; accountability sustains legitimacy.",
+   "operationalisation": "Check legal basis/competence, procedure, participation, transparency, review/appeal, consistency, effectiveness, accountability forum and expected compliance/acceptance.",
+   "asset": "Draft Legislative Architecture; Amendment Draft – CPT 1329",
+   "output": "Legality–legitimacy–acceptance checklist",
+   "checks": "Ministerial competence; EU/national competence boundary; consultation/notification; authority discretion; review rights; proportional burden on operators/users.",
+   "rule": "Legal validity does not establish legitimacy; formal compliance does not establish normative acceptance.",
+   "source": "https://doi.org/10.56675/rtn1",
+   "number": 11,
+   "title": "Legality, legitimacy, acceptance & accountability"
+  },
+  {
+   "stage": "12. Comparative pathway & portability",
+   "question": "What regulatory configuration/pathway does the jurisdiction represent, and what can travel across borders?",
+   "basis": "TechReg is general; ROAT adds comparative vector/pathway analysis to test how different legal systems sequence normalisation.",
+   "operationalisation": "Compare layer vectors, leading/lagging functions, bridge/gate forms, institutional design and portability of safety evidence/approvals.",
+   "asset": "Cross-section 2026 – AV Normalisation; Layer Coding – AV History",
+   "output": "Pathway family + transferability assessment",
+   "checks": "Technical/harmonisation-first; actor/institutional-first; deployment-assurance; testing-permit pathways; cross-border recognition of evidence and operation.",
+   "rule": "Do not force jurisdictions onto a single linear ladder; configurations may have different leading layers.",
+   "source": "https://docs.google.com/spreadsheets/d/1G_jtoKunmcY0BTuTCEZBe21cMxiOH6fJdsduZRRKXGc/edit",
+   "number": 12,
+   "title": "Comparative pathway & portability"
+  },
+  {
+   "stage": "13. In-use monitoring & iteration",
+   "question": "What post-deployment evidence can falsify assumptions and trigger revision?",
+   "basis": "TechReg is iterative; the Chapter 9 control loop and Chapter 10 failure analysis imply continuous monitoring, adjustment and accountability.",
+   "operationalisation": "Define review triggers around incidents, in-use safety, ODD changes, software updates, cybersecurity, remote-management performance, enforcement outcomes and material service changes.",
+   "asset": "Monitoring Watchlist; Intelligence Register; Safety/remote-management records",
+   "output": "Review-trigger and feedback plan",
+   "checks": "SMS/in-use reporting; incidents/near misses; update governance; retraining/retesting; change control; operational data and enforcement feedback.",
+   "rule": "Monitoring is part of the regulatory architecture, not merely research administration; evidence must feed back into earlier stages.",
+   "source": "https://doi.org/10.56675/rtn1",
+   "number": 13,
+   "title": "In-use monitoring & iteration"
+  }
+ ],
+ "verdict": [
+  {
+   "label": "Keep from ROAT",
+   "what": "N0–N4 functional-layer vector; actor/function ontology; bridge/gate analysis; pathway families; explicit evidence, confidence and caveat discipline.",
+   "why": "These are more granular for automated-vehicle legal architecture than the general TechReg model.",
+   "how": "Treat them as the core AV-specific module inside stages 5–8 and 12.",
+   "asset": "Layer Coding – AV History; Cross-section 2026; Roles & Concepts",
+   "caveat": "ROAT’s distinctive contribution is layered/asynchronous normalisation and the bridge/gate mechanism."
+  },
+  {
+   "label": "Add from Leenes",
+   "what": "Sociotechnical scoping; problem framing; stakeholder/ethical assessment; explicit justification for intervention; innovation-governance posture; instrument choice/control loop; legality–legitimacy–acceptance–accountability.",
+   "why": "These supply the upstream and downstream stages that were less explicit in the current ROAT analytical architecture.",
+   "how": "Use them as mandatory questions, with depth proportionate to the task.",
+   "asset": "ROAT-2026-0322",
+   "caveat": "Depth should follow the decision question, not a fixed page count."
+  },
+  {
+   "label": "Keep separate",
+   "what": "Operational Hub Methodology and substantive regulatory-analysis methodology solve different problems.",
+   "why": "The existing Methodology tab governs evidence/workflow integrity, not the substance of AV regulatory analysis.",
+   "how": "Do not overwrite the operational Methodology tab; use this dedicated analytical tab.",
+   "asset": "Methodology",
+   "caveat": "Maintain bidirectional source/output integrity independently of the analytical framework."
+  },
+  {
+   "label": "Recommended pilot",
+   "what": "Run one end-to-end case to test whether the framework generates additional decision-relevant insight without making ordinary analyses unnecessarily complex.",
+   "why": "The framework is expressly designed to be iterative and scalable from quick scan to deep analysis.",
+   "how": "Pilot on the Slovakia transition from conditional/test operation toward ordinary/commercial FAV deployment, then compare the result with France and Croatia.",
+   "asset": "Cross-section 2026 – AV Normalisation",
+   "caveat": "If added stages do not change decisions or expose hidden assumptions, simplify them rather than expanding the framework for its own sake."
+  }
+ ],
+ "intro": [
+  "ROAT Regulatory Analysis Framework – TechReg integration",
+  "Core principle: use Leenes’ TechReg model as the outer iterative regulatory-governance process; retain the ROAT N0–N4 functional-layer model, actor ontology and bridge/gate analysis as the automated-vehicle-specific legal architecture module. Later findings may require reframing earlier stages."
+ ]
+}

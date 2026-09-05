@@ -1,0 +1,16 @@
+{
+ "roat_id": "ROAT-SNAP-LAYERS-2026-08-25",
+ "module": "ROAT-MOD-LAYERS",
+ "snapshot_date": "2026-08-25",
+ "coder": "JA",
+ "second_pass": "Rule-based second-pass recoding by the same coder of six cells under stricter decision rules; 2 of 6 moved by one stage, no jurisdiction changed pathway family. Not inter-coder reliability.",
+ "finding": "The five 2026 regimes do not line up on one common ladder. They display different layer configurations and different leading layers. France strengthens the model because it replicates the deployment-assurance family through a different legal mechanism than Croatia.",
+ "caveats": [
+  "Draft law is excluded from current-law scores and shown as sensitivity rows.",
+  "Scores measure legal embedding, not regulatory intensity.",
+  "Snapshot is 25 August 2026; Act 131/2026 effective 1 September 2026 is shown only as a sensitivity row."
+ ],
+ "supersedes": null,
+ "doi": null,
+ "status": "review"
+}

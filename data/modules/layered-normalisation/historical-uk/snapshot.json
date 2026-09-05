@@ -1,0 +1,18 @@
+{
+ "roat_id": "ROAT-SNAP-LAYERS-HISTORICAL-UK",
+ "module": "ROAT-MOD-LAYERS",
+ "panel": "historical-uk",
+ "label": "Longitudinal panel: United Kingdom 1861–1930, EU/UNECE 2018–2026, Great Britain 2024–2026",
+ "snapshot_date": "2026-09-05",
+ "coder": "JA",
+ "second_pass": "First-pass coding; no second pass recorded.",
+ "finding": "",
+ "caveats": [
+  "The Hub sheet records no coding date per panel; snapshot_date is the export date. Modern rows (2018–2026) are coded against the sources listed in each row.",
+  "Historical scores are based on the presence or absence of technology-specific integration in each layer, not on the density of regulation.",
+  "Longitudinal EU/UNECE and Great Britain rows overlap with the 2026 cross-section and may differ by one stage where the coding rule was applied more strictly in the cross-section."
+ ],
+ "supersedes": null,
+ "doi": null,
+ "status": "draft"
+}

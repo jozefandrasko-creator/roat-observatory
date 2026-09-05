@@ -1,0 +1,1 @@
+Germany most clearly converts a technical operational design domain into a public-law deployment object: lawful autonomous operation is bounded by an authority-approved defined operating area, with the keeper, the manufacturer and the technical supervision as separately allocated actors, and explicit lifecycle control over post-permit changes.

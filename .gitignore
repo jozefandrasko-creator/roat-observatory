@@ -1,0 +1,5 @@
+# Raw Hub exports contain internal notes — never commit them
+hub-export/
+site/
+node_modules/
+.DS_Store

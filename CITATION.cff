@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use the ROAT Observatory, cite the snapshot you relied on (module ID, snapshot ID and date) and this repository."
+title: "ROAT Observatory: how law lets automated vehicles onto the road"
+type: dataset
+authors:
+  - family-names: Andraško
+    given-names: Jozef
+    affiliation: "Faculty of Law, Comenius University Bratislava (ROAT)"
+license: CC-BY-4.0
+version: 0.1.0-alpha
+date-released: 2026-09-05
+abstract: "Comparative models of automated-vehicle deployment governance — layered regulatory normalisation (N0–N4), post-type-approval deployment models (Second Gate) and human roles — published as coded, provenance-tracked datasets at dated snapshots from the ROAT Intelligence Hub."
+keywords: [automated vehicles, regulation, type approval, deployment governance, comparative law, UNECE, European Union, Slovakia]

@@ -1,0 +1,5 @@
+Most regulatory analysis of automated driving starts in the middle: it asks what the rules say before it has fixed which decision the analysis must support, which sociotechnical practice is actually being regulated, and whose problem definition is being adopted. The framework below is the order ROAT works in, written down so that a reader can see which stage a conclusion came from and which stages were done lightly.
+
+Two things are worth saying plainly about it. It is an integration, not an invention: the outer process is Ronald Leenes's TechReg model, and what ROAT adds is the automated-vehicle module inside stages 5 to 8 and 12 — the N0-N4 functional-layer vector, the actor and function ontology, and the bridge and gate taxonomy that the other modules of this Observatory apply. And it is deliberately scalable: not every short doctrinal memo needs a full ethical or legitimacy chapter, and a framework that demanded one would simply be ignored.
+
+This page is a methods statement, not a coded dataset. It carries no jurisdiction claims and therefore no per-row evidence; the sources it rests on are cited for the framework as a whole.

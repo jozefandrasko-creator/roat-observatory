@@ -1,0 +1,18 @@
+{
+  "roat_id": "ROAT-MOD-METHOD",
+  "slug": "regulatory-method",
+  "number": 7,
+  "kind": "method",
+  "title": "The ROAT regulatory analysis framework",
+  "short_title": "Regulatory method",
+  "question": "What has to be established, in what order, before a regulatory conclusion about automated driving can be trusted?",
+  "method_summary": "Thirteen stages that integrate Leenes's TechReg model as the outer regulatory-governance process with ROAT's own automated-vehicle module: the N0-N4 functional-layer vector, the actor and function ontology, and bridge / gate analysis. The framework is modular and iterative: depth follows the decision question, not a fixed page count, and later findings may require reframing earlier stages.",
+  "hub": { "sheet": "ROAT Regulatory Method", "profile": "stages", "header_row": 2, "verdict_from": "Integration verdict" },
+  "dimensions": [],
+  "row_fields": {},
+  "regimes": {},
+  "sources": ["ROAT-2026-0322"],
+  "relationships": { "companion_of": [], "related_module": ["ROAT-MOD-LAYERS", "ROAT-MOD-SECOND-GATE", "ROAT-MOD-ROLES"], "uses_concept": [] },
+  "status": "published",
+  "license": "CC-BY-4.0"
+}

@@ -1,0 +1,339 @@
+{
+ "module": "ROAT-MOD-LAYERS",
+ "snapshot_date": "2026-09-05",
+ "panel": "historical-uk",
+ "exported_from_hub": "2026-09-05T20:22:16.315Z",
+ "source_sheet": "Layer Coding – AV History",
+ "rows": [
+  {
+   "regime_id": "ROAT-JUR-UK:1861",
+   "regime_label": "1861 · Locomotive Act 1861",
+   "panel": "historical",
+   "series": "Historical UK",
+   "year": 1861,
+   "records": [
+    "ROAT-2026-0264",
+    "ROAT-2026-0275"
+   ],
+   "rationale": "Road locomotives were specifically constrained, but no mature vehicle-approval, liability, infrastructure or international-recognition architecture had formed.",
+   "confidence": "High",
+   "range": 1,
+   "asynchrony": "Mild",
+   "bridge": "Exceptionalisation through special operational constraints",
+   "caveat": "Liability and infrastructure coding is based on absence of demonstrated technology-specific integration, not absence of general law.",
+   "technical_approval": 0,
+   "road_access": 1,
+   "actor_allocation": 1,
+   "liability_risk": 0,
+   "behavioural_rules": 1,
+   "infrastructure": 0,
+   "international": 0
+  },
+  {
+   "regime_id": "ROAT-JUR-UK:1865",
+   "regime_label": "1865 · Locomotives Act 1865 – Red Flag regime",
+   "panel": "historical",
+   "series": "Historical UK",
+   "year": 1865,
+   "records": [
+    "ROAT-2026-0265",
+    "ROAT-2026-0275"
+   ],
+   "rationale": "The law intensified operating and crew constraints while other regulatory layers remained largely unintegrated.",
+   "confidence": "High",
+   "range": 1,
+   "asynchrony": "Mild",
+   "bridge": "Exceptionalisation / precautionary direct-control regime",
+   "caveat": "Do not equate restrictive regulation with low regulatory activity: N1 denotes bounded accommodation, not deregulation.",
+   "technical_approval": 0,
+   "road_access": 1,
+   "actor_allocation": 1,
+   "liability_risk": 0,
+   "behavioural_rules": 1,
+   "infrastructure": 0,
+   "international": 0
+  },
+  {
+   "regime_id": "ROAT-JUR-UK:1878",
+   "regime_label": "1878 · Highways and Locomotives (Amendment) Act 1878",
+   "panel": "historical",
+   "series": "Historical UK",
+   "year": 1878,
+   "records": [
+    "ROAT-2026-0266"
+   ],
+   "rationale": "Operational rules were recalibrated and infrastructure/bridge concerns received more structured treatment, while vehicle approval, liability and international layers remained immature.",
+   "confidence": "Medium–High",
+   "range": 1,
+   "asynchrony": "Mild",
+   "bridge": "Regulatory recalibration",
+   "caveat": "Infrastructure is coded N1 because the regime reacts to roads/bridges but does not yet evidence system-wide infrastructural institutionalisation.",
+   "technical_approval": 0,
+   "road_access": 1,
+   "actor_allocation": 1,
+   "liability_risk": 0,
+   "behavioural_rules": 1,
+   "infrastructure": 1,
+   "international": 0
+  },
+  {
+   "regime_id": "ROAT-JUR-UK:1896",
+   "regime_label": "1896 · Locomotives on Highways Act 1896",
+   "panel": "historical",
+   "series": "Historical UK",
+   "year": 1896,
+   "records": [
+    "ROAT-2026-0267",
+    "ROAT-2026-0268"
+   ],
+   "rationale": "Reclassification and deeming integrate the technology into inherited carriage law without yet producing mature liability, infrastructure or international layers.",
+   "confidence": "High",
+   "range": 2,
+   "asynchrony": "Significant",
+   "bridge": "Classificatory bridge: light locomotive ‘deemed to be a carriage’",
+   "caveat": "N2 does not imply comprehensive motor-vehicle law; it denotes transitional/intermediate integration. The classificatory bridge is coded separately as the mechanism supporting that state.",
+   "technical_approval": 2,
+   "road_access": 2,
+   "actor_allocation": 2,
+   "liability_risk": 0,
+   "behavioural_rules": 2,
+   "infrastructure": 1,
+   "international": 0
+  },
+  {
+   "regime_id": "ROAT-JUR-UK:1903",
+   "regime_label": "1903 · Motor Car Act 1903",
+   "panel": "historical",
+   "series": "Historical UK",
+   "year": 1903,
+   "records": [
+    "ROAT-2026-0269",
+    "ROAT-2026-0270"
+   ],
+   "rationale": "Operation, driver identity and behavioural governance become dedicated and stable before liability, infrastructure and international recognition catch up.",
+   "confidence": "High",
+   "range": 3,
+   "asynchrony": "Strong",
+   "bridge": "Dedicated licensing/registration institutionalisation",
+   "caveat": "Driver licensing was initially identification-oriented rather than a mature competence-testing regime; N3 reflects dedicated legal institutionalisation, not full substantive maturity.",
+   "technical_approval": 2,
+   "road_access": 3,
+   "actor_allocation": 3,
+   "liability_risk": 1,
+   "behavioural_rules": 3,
+   "infrastructure": 1,
+   "international": 0
+  },
+  {
+   "regime_id": "ROAT-JUR-UK:1926",
+   "regime_label": "1926 · International Convention relative to Motor Traffic",
+   "panel": "historical",
+   "series": "Historical UK / international",
+   "year": 1926,
+   "records": [
+    "ROAT-2026-0271",
+    "ROAT-2026-0273"
+   ],
+   "rationale": "Approved type/vehicle examination, driver authorisation and international certificate recognition are institutionalised, while liability and infrastructure remain less converged.",
+   "confidence": "Medium–High",
+   "range": 2,
+   "asynchrony": "Significant",
+   "bridge": "Mutual-recognition / certification bridge",
+   "caveat": "The liability score reflects the UK/European motor-risk environment rather than obligations created by the 1926 Convention itself.",
+   "technical_approval": 3,
+   "road_access": 3,
+   "actor_allocation": 3,
+   "liability_risk": 1,
+   "behavioural_rules": 3,
+   "infrastructure": 2,
+   "international": 3
+  },
+  {
+   "regime_id": "ROAT-JUR-UK:1930",
+   "regime_label": "1930 · Road Traffic Act 1930",
+   "panel": "historical",
+   "series": "Historical UK",
+   "year": 1930,
+   "records": [
+    "ROAT-2026-0272",
+    "ROAT-2026-0277",
+    "ROAT-2026-0293"
+   ],
+   "rationale": "Road operation, driver conduct, compulsory third-party insurance and enforcement are routinised within a mature system of automobility; technical/infrastructure/international layers remain highly institutionalised but not coded as fully routinised.",
+   "confidence": "High",
+   "range": 1,
+   "asynchrony": "Mild",
+   "bridge": "System-level institutionalisation and risk pooling",
+   "caveat": "N4 is not deregulation: the mature system is more institutionally dense than the 1865 regime.",
+   "technical_approval": 3,
+   "road_access": 4,
+   "actor_allocation": 4,
+   "liability_risk": 4,
+   "behavioural_rules": 4,
+   "infrastructure": 3,
+   "international": 3
+  },
+  {
+   "regime_id": "ROAT-JUR-EU:2018",
+   "regime_label": "2018 · EU type-approval baseline + Vienna/WP.29 bridge architecture",
+   "panel": "longitudinal",
+   "series": "EU / UNECE",
+   "year": 2018,
+   "records": [
+    "ROAT-2026-0036",
+    "ROAT-2026-0039",
+    "ROAT-2026-0010"
+   ],
+   "rationale": "EU law can accommodate new vehicle technologies through type-approval exception/equivalence mechanisms, but full-ADS operational and actor layers remain largely national or inherited.",
+   "confidence": "Medium",
+   "range": 2,
+   "asynchrony": "Significant",
+   "bridge": "Equivalence/exemption + compatibility bridges",
+   "caveat": "2018 is used as an analytical baseline; Regulation 2018/858 applied later and the score reflects the emerging architecture rather than one single commencement date.",
+   "technical_approval": 2,
+   "road_access": 1,
+   "actor_allocation": 0,
+   "liability_risk": 1,
+   "behavioural_rules": 2,
+   "infrastructure": 1,
+   "international": 2
+  },
+  {
+   "regime_id": "ROAT-JUR-EU:2022",
+   "regime_label": "2022 · EU ADS type approval + Vienna Convention Article 34bis",
+   "panel": "longitudinal",
+   "series": "EU / UNECE",
+   "year": 2022,
+   "records": [
+    "ROAT-2026-0040",
+    "ROAT-2026-0011",
+    "ROAT-2026-0273"
+   ],
+   "rationale": "Dedicated ADS type-approval requirements reach N3 while Article 34bis bridges the driver requirement only where both technical rules and domestic operating law are satisfied; operation and actor allocation therefore remain less normalised.",
+   "confidence": "High",
+   "range": 2,
+   "asynchrony": "Significant",
+   "bridge": "Agency/deeming bridge + dedicated technical institutionalisation",
+   "caveat": "Article 34bis entered into force on 14 July 2022; it does not designate the ADS as the legal driver and does not create uniform domestic operational law.",
+   "technical_approval": 3,
+   "road_access": 2,
+   "actor_allocation": 2,
+   "liability_risk": 1,
+   "behavioural_rules": 2,
+   "infrastructure": 1,
+   "international": 2
+  },
+  {
+   "regime_id": "ROAT-JUR-EU:2026",
+   "regime_label": "2026 · Consolidated EU ADS type approval + new UNECE ADS Regulation/GTR",
+   "panel": "longitudinal",
+   "series": "EU / UNECE",
+   "year": 2026,
+   "records": [
+    "ROAT-2026-0177",
+    "ROAT-2026-0217",
+    "ROAT-2026-0218",
+    "ROAT-2026-0227",
+    "ROAT-2026-0011"
+   ],
+   "rationale": "Technical and international ADS regulation is comparatively mature, including the June 2026 UNECE ADS instruments, while road operation, actor allocation and infrastructure remain more fragmented. EU 2026/481 moves automated parking toward unlimited-series market access.",
+   "confidence": "High",
+   "range": 2,
+   "asynchrony": "Significant",
+   "bridge": "Dedicated technical harmonisation + persistent operational bridges",
+   "caveat": "Technical approval is coded N3 overall because N4-like unlimited-series treatment currently applies to a narrower automated-parking sublayer, not to all ADS deployment.",
+   "technical_approval": 3,
+   "road_access": 2,
+   "actor_allocation": 2,
+   "liability_risk": 2,
+   "behavioural_rules": 2,
+   "infrastructure": 1,
+   "international": 3
+  },
+  {
+   "regime_id": "ROAT-JUR-UK:2024",
+   "regime_label": "2024 · Automated Vehicles Act 2024 – enacted architecture",
+   "panel": "longitudinal",
+   "series": "Great Britain",
+   "year": 2024,
+   "records": [
+    "ROAT-2026-0171"
+   ],
+   "rationale": "The Act creates dedicated self-driving authorisation, ASDE and NUiC operator roles and reallocates responsibility, while full operational use depends on subsequent safety principles and implementation measures.",
+   "confidence": "High",
+   "range": 2,
+   "asynchrony": "Significant",
+   "bridge": "Dedicated actor/authorisation architecture + licensing bridge",
+   "caveat": "Scores distinguish enacted legal architecture from operational commencement; the principal authorisation scheme was not yet fully deployable in 2024.",
+   "technical_approval": 3,
+   "road_access": 2,
+   "actor_allocation": 3,
+   "liability_risk": 3,
+   "behavioural_rules": 2,
+   "infrastructure": 1,
+   "international": 1
+  },
+  {
+   "regime_id": "ROAT-JUR-UK:2026",
+   "regime_label": "2026 · Pre-full-implementation phase: passenger permits + draft safety principles",
+   "panel": "longitudinal",
+   "series": "Great Britain",
+   "year": 2026,
+   "records": [
+    "ROAT-2026-0171",
+    "ROAT-2026-0214",
+    "ROAT-2026-0301",
+    "ROAT-2026-0302"
+   ],
+   "rationale": "Actor and responsibility architecture is already dedicated, but the full authorisation regime is planned for 2027; 2026 passenger-service permits and trialling provide conditional operational pathways while the Statement of Safety Principles is still being finalised.",
+   "confidence": "High",
+   "range": 2,
+   "asynchrony": "Significant",
+   "bridge": "Permit bridge during staged implementation",
+   "caveat": "Automated passenger services are more mature than the general authorisation layer; the row codes the overall GB regime rather than the most advanced sub-use-case.",
+   "technical_approval": 3,
+   "road_access": 2,
+   "actor_allocation": 3,
+   "liability_risk": 3,
+   "behavioural_rules": 2,
+   "infrastructure": 1,
+   "international": 1
+  }
+ ],
+ "findings_table": [
+  {
+   "Finding": "Historical peak asymmetry around 1903",
+   "Empirical implication": "Operation, driver/actor and behavioural rules reach N3 while liability/infrastructure/international recognition remain N0–N1.",
+   "Article use": "Strong evidence that normalisation is not one transition; the regulatory system can be highly developed in some functions and rudimentary in others.",
+   "Status": "SUPPORTED – first-pass coding"
+  },
+  {
+   "Finding": "Historical convergence by 1930",
+   "Empirical implication": "The layer range narrows as liability/risk pooling and system-level road governance catch up.",
+   "Article use": "Supports defining normalisation as convergence toward stable embedding, not deregulation.",
+   "Status": "SUPPORTED – first-pass coding"
+  },
+  {
+   "Finding": "Modern EU/UNECE technical lead",
+   "Empirical implication": "Technical approval and international harmonisation are N3 while operation, actors and infrastructure remain N1–N2.",
+   "Article use": "Direct empirical support for layered/asynchronous normalisation and the dual-pillar claim.",
+   "Status": "SUPPORTED – current 2026 sources"
+  },
+  {
+   "Finding": "Great Britain shows law can lead implementation",
+   "Empirical implication": "Dedicated actors and responsibility rules reach N3 before full operational authorisation and final safety principles are in force.",
+   "Article use": "Important falsification of a simplistic pacing problem: asynchrony is multidirectional, not merely technology-fast/law-slow.",
+   "Status": "SUPPORTED – current 2026 sources"
+  },
+  {
+   "Finding": "Legal bridges cluster in high-asymmetry periods",
+   "Empirical implication": "1896 reclassification, EU Article 39, Article 34bis and UK passenger permits appear where one layer needs to function before adjacent layers are fully institutionalised.",
+   "Article use": "Supports treating legal bridges as mechanisms for managing inter-layer mismatch rather than as isolated drafting techniques.",
+   "Status": "PROMISING – requires broader case test"
+  }
+ ],
+ "purpose": [
+  "Empirical Test v1 – Layered / Asynchronous Regulatory Normalisation",
+  "Coding principle: N0–N4 measures the degree of legal embedding of the technology in each functional regulatory layer, not regulatory intensity. Scores are ordinal and heuristic. N2 denotes transitional/intermediate integration and is coded independently of the bridge or gate mechanism identified in column M. The range (max–min) is used only as a descriptive signal of inter-layer asymmetry, not as a statistical index."
+ ]
+}

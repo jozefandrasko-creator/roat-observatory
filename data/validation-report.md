@@ -1,0 +1,276 @@
+# Observatory validation — 2026-09-05 20:22 UTC
+
+**0 errors · 269 warnings**
+
+## Warnings
+
+- human-roles — companion output is a placeholder — assign an OUT-* id in the Hub Outputs sheet
+- layered-normalisation — companion output is a placeholder — assign an OUT-* id in the Hub Outputs sheet
+- human-roles/2026-09-05 · Human driver — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Human driver — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Human driver — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · ADS as functional substitute for driver requirement — dimension remote_driving: value "No human remote driving" not in role_values vocabulary
+- human-roles/2026-09-05 · ADS as functional substitute for driver requirement — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · ADS as functional substitute for driver requirement — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · ADS as functional substitute for driver requirement — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · ADS as functional substitute for driver requirement — record ROAT-2026-0300 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Remote assistance / remote interaction — record ROAT-2026-0193 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Remote assistance / remote interaction — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Remote assistance / remote interaction — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Remote assistance / remote interaction — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Transport / service operator — dimension fallback: value "Organisational" not in role_values vocabulary
+- human-roles/2026-09-05 · Transport / service operator — dimension monitoring: value "Entity-level" not in role_values vocabulary
+- human-roles/2026-09-05 · Transport / service operator — dimension remote_assistance: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Transport / service operator — dimension remote_intervention: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Transport / service operator — record ROAT-2026-0040 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Transport / service operator — record ROAT-2026-0218 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Transport / service operator — record ROAT-2026-0311 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Transport / service operator — record ROAT-2026-0312 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Remote management function — dimension fallback: value "Support" not in role_values vocabulary
+- human-roles/2026-09-05 · Remote management function — dimension remote_driving: value "Not necessarily" not in role_values vocabulary
+- human-roles/2026-09-05 · Remote management function — dimension service_operation: value "Supports" not in role_values vocabulary
+- human-roles/2026-09-05 · Remote management function — record ROAT-2026-0311 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Remote management function — record ROAT-2026-0040 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Authorised self-driving entity / ADS legal-responsibility entity — dimension fallback: value "No direct" not in role_values vocabulary
+- human-roles/2026-09-05 · Authorised self-driving entity / ADS legal-responsibility entity — dimension monitoring: value "Entity-level" not in role_values vocabulary
+- human-roles/2026-09-05 · Authorised self-driving entity / ADS legal-responsibility entity — dimension service_operation: value "No / distinct" not in role_values vocabulary
+- human-roles/2026-09-05 · Authorised self-driving entity / ADS legal-responsibility entity — record ROAT-2026-0171 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Authorised self-driving entity / ADS legal-responsibility entity — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Authorised self-driving entity / ADS legal-responsibility entity — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Authorised self-driving entity / ADS legal-responsibility entity — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · User with limited in-vehicle legal duties during self-driving — dimension ddt: value "No while engaged" not in role_values vocabulary
+- human-roles/2026-09-05 · User with limited in-vehicle legal duties during self-driving — dimension fallback: value "Transition" not in role_values vocabulary
+- human-roles/2026-09-05 · User with limited in-vehicle legal duties during self-driving — dimension monitoring: value "Readiness duties" not in role_values vocabulary
+- human-roles/2026-09-05 · User with limited in-vehicle legal duties during self-driving — record ROAT-2026-0171 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · No-user-in-charge operational entity — dimension fallback: value "Organisational" not in role_values vocabulary
+- human-roles/2026-09-05 · No-user-in-charge operational entity — dimension monitoring: value "Entity-level" not in role_values vocabulary
+- human-roles/2026-09-05 · No-user-in-charge operational entity — dimension remote_assistance: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · No-user-in-charge operational entity — dimension remote_intervention: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · No-user-in-charge operational entity — record ROAT-2026-0171 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · No-user-in-charge operational entity — record ROAT-2026-0301 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Technical remote supervisor — dimension ddt: value "No continuous" not in role_values vocabulary
+- human-roles/2026-09-05 · Technical remote supervisor — dimension fallback: value "Support" not in role_values vocabulary
+- human-roles/2026-09-05 · Technical remote supervisor — dimension remote_intervention: value "Legally constrained" not in role_values vocabulary
+- human-roles/2026-09-05 · Technical remote supervisor — record ROAT-2026-0170 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Technical remote supervisor — record ROAT-2026-0205 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Technical remote supervisor — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Technical remote supervisor — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Technical remote supervisor — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Automated road transport system operator — dimension fallback: value "Organisational" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated road transport system operator — dimension monitoring: value "Entity-level" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated road transport system operator — dimension remote_assistance: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated road transport system operator — dimension remote_intervention: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated road transport system operator — record ROAT-2026-0307 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Automated road transport system operator — record ROAT-2026-0308 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Authorised remote intervention person — dimension ddt: value "Limited intervention" not in role_values vocabulary
+- human-roles/2026-09-05 · Authorised remote intervention person — dimension fallback: value "Support" not in role_values vocabulary
+- human-roles/2026-09-05 · Authorised remote intervention person — dimension remote_driving: value "Not ordinary" not in role_values vocabulary
+- human-roles/2026-09-05 · Authorised remote intervention person — record ROAT-2026-0307 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Authorised remote intervention person — record ROAT-2026-0308 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · In-vehicle operator during automated operation — dimension fallback: value "MRM request" not in role_values vocabulary
+- human-roles/2026-09-05 · In-vehicle operator during automated operation — dimension remote_assistance: value "No remote" not in role_values vocabulary
+- human-roles/2026-09-05 · In-vehicle operator during automated operation — dimension remote_intervention: value "In-vehicle commands" not in role_values vocabulary
+- human-roles/2026-09-05 · In-vehicle operator during automated operation — dimension dispatch: value "Route / stops" not in role_values vocabulary
+- human-roles/2026-09-05 · In-vehicle operator during automated operation — record ROAT-2026-0303 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · In-vehicle operator during automated operation — record ROAT-2026-0262 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Remote intervention operator — dimension fallback: value "MRM support" not in role_values vocabulary
+- human-roles/2026-09-05 · Remote intervention operator — record ROAT-2026-0303 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Remote intervention operator — record ROAT-2026-0262 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Licensed fully automated vehicle operator — dimension fallback: value "Organisational" not in role_values vocabulary
+- human-roles/2026-09-05 · Licensed fully automated vehicle operator — dimension monitoring: value "Entity-level" not in role_values vocabulary
+- human-roles/2026-09-05 · Licensed fully automated vehicle operator — dimension remote_assistance: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Licensed fully automated vehicle operator — dimension remote_intervention: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Licensed fully automated vehicle operator — record ROAT-2026-0159 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Supervision operator — dimension ddt: value "No continuous" not in role_values vocabulary
+- human-roles/2026-09-05 · Supervision operator — dimension fallback: value "Support" not in role_values vocabulary
+- human-roles/2026-09-05 · Supervision operator — dimension remote_driving: value "Potential boundary" not in role_values vocabulary
+- human-roles/2026-09-05 · Supervision operator — record ROAT-2026-0159 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Level 3 fallback-ready user — dimension ddt: value "After takeover" not in role_values vocabulary
+- human-roles/2026-09-05 · Level 3 fallback-ready user — dimension monitoring: value "Readiness" not in role_values vocabulary
+- human-roles/2026-09-05 · Level 3 fallback-ready user — record ROAT-2026-0120 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Level 3 fallback-ready user — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Level 3 fallback-ready user — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Level 3 fallback-ready user — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Remote human driver — dimension remote_intervention: value "Yes – direct" not in role_values vocabulary
+- human-roles/2026-09-05 · Remote human driver — record ROAT-2026-0120 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Remote human driver — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Remote human driver — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Remote human driver — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Trip-dispatch / strategic user — dimension service_operation: value "Support" not in role_values vocabulary
+- human-roles/2026-09-05 · Trip-dispatch / strategic user — record ROAT-2026-0120 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Trip-dispatch / strategic user — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Trip-dispatch / strategic user — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Trip-dispatch / strategic user — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Prototype ADS fallback test driver — dimension testing: value "Testing role" not in role_values vocabulary
+- human-roles/2026-09-05 · Prototype ADS fallback test driver — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Prototype ADS fallback test driver — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Prototype ADS fallback test driver — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · In-vehicle prototype fallback test driver — dimension ddt: value "After takeover" not in role_values vocabulary
+- human-roles/2026-09-05 · In-vehicle prototype fallback test driver — dimension remote_intervention: value "In-vehicle" not in role_values vocabulary
+- human-roles/2026-09-05 · In-vehicle prototype fallback test driver — dimension testing: value "Testing role" not in role_values vocabulary
+- human-roles/2026-09-05 · In-vehicle prototype fallback test driver — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · In-vehicle prototype fallback test driver — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · In-vehicle prototype fallback test driver — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Remote prototype fallback test driver — dimension ddt: value "Possible during fallback" not in role_values vocabulary
+- human-roles/2026-09-05 · Remote prototype fallback test driver — dimension remote_intervention: value "Direct fallback" not in role_values vocabulary
+- human-roles/2026-09-05 · Remote prototype fallback test driver — dimension remote_driving: value "Potentially yes" not in role_values vocabulary
+- human-roles/2026-09-05 · Remote prototype fallback test driver — dimension testing: value "Testing role" not in role_values vocabulary
+- human-roles/2026-09-05 · Remote prototype fallback test driver — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Remote prototype fallback test driver — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Remote prototype fallback test driver — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Safety driver in public-road AV testing — dimension remote_intervention: value "In-vehicle takeover" not in role_values vocabulary
+- human-roles/2026-09-05 · Safety driver in public-road AV testing — dimension testing: value "Testing driver role" not in role_values vocabulary
+- human-roles/2026-09-05 · Safety driver in public-road AV testing — [draft] record ROAT-2026-0172 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Safety driver in public-road AV testing — record ROAT-2026-0172 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Safety driver in public-road AV testing — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Safety driver in public-road AV testing — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Safety driver in public-road AV testing — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · AV testing permit holder — dimension fallback: value "Organisational" not in role_values vocabulary
+- human-roles/2026-09-05 · AV testing permit holder — dimension monitoring: value "Entity-level" not in role_values vocabulary
+- human-roles/2026-09-05 · AV testing permit holder — dimension remote_assistance: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · AV testing permit holder — dimension remote_intervention: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · AV testing permit holder — dimension service_operation: value "Testing programme" not in role_values vocabulary
+- human-roles/2026-09-05 · AV testing permit holder — [draft] record ROAT-2026-0172 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · AV testing permit holder — record ROAT-2026-0172 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · AV testing permit holder — record ROAT-2026-0183 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · AV testing permit holder — record ROAT-2026-0185 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · AV testing permit holder — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · AV testing permit holder — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · AV testing permit holder — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Automated-vehicle trial permit holder — dimension fallback: value "Organisational" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated-vehicle trial permit holder — dimension monitoring: value "Entity-level" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated-vehicle trial permit holder — dimension remote_assistance: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated-vehicle trial permit holder — dimension remote_intervention: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated-vehicle trial permit holder — dimension remote_driving: value "Possible by permit design" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated-vehicle trial permit holder — dimension service_operation: value "Testing programme" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated-vehicle trial permit holder — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Automated-vehicle trial permit holder — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Automated-vehicle trial permit holder — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · ADS lifecycle safety entity — dimension fallback: value "Lifecycle" not in role_values vocabulary
+- human-roles/2026-09-05 · ADS lifecycle safety entity — dimension monitoring: value "Entity-level" not in role_values vocabulary
+- human-roles/2026-09-05 · ADS lifecycle safety entity — dimension remote_assistance: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · ADS lifecycle safety entity — dimension remote_intervention: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · ADS lifecycle safety entity — dimension service_operation: value "Distinct" not in role_values vocabulary
+- human-roles/2026-09-05 · ADS lifecycle safety entity — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · ADS lifecycle safety entity — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · ADS lifecycle safety entity — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Driverless-operation permission holder — dimension fallback: value "Organisational" not in role_values vocabulary
+- human-roles/2026-09-05 · Driverless-operation permission holder — dimension monitoring: value "Entity-level" not in role_values vocabulary
+- human-roles/2026-09-05 · Driverless-operation permission holder — dimension remote_assistance: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Driverless-operation permission holder — dimension remote_intervention: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Driverless-operation permission holder — dimension testing: value "Permission holder" not in role_values vocabulary
+- human-roles/2026-09-05 · Driverless-operation permission holder — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Driverless-operation permission holder — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Driverless-operation permission holder — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Remote operational supervisor — dimension fallback: value "Incident response" not in role_values vocabulary
+- human-roles/2026-09-05 · Remote operational supervisor — dimension remote_driving: value "No routine" not in role_values vocabulary
+- human-roles/2026-09-05 · Remote operational supervisor — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Remote operational supervisor — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Remote operational supervisor — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Automated commercial vehicle pilot participant — dimension fallback: value "Organisational" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated commercial vehicle pilot participant — dimension monitoring: value "Entity-level" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated commercial vehicle pilot participant — dimension remote_assistance: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated commercial vehicle pilot participant — dimension remote_intervention: value "Arranged" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated commercial vehicle pilot participant — dimension service_operation: value "Testing programme" not in role_values vocabulary
+- human-roles/2026-09-05 · Automated commercial vehicle pilot participant — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Automated commercial vehicle pilot participant — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Automated commercial vehicle pilot participant — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Driverless-test oversight assistant — dimension ddt: value "No regular" not in role_values vocabulary
+- human-roles/2026-09-05 · Driverless-test oversight assistant — dimension fallback: value "Safe-stop support" not in role_values vocabulary
+- human-roles/2026-09-05 · Driverless-test oversight assistant — dimension remote_intervention: value "Limited exceptional" not in role_values vocabulary
+- human-roles/2026-09-05 · Driverless-test oversight assistant — dimension remote_driving: value "No regular driving" not in role_values vocabulary
+- human-roles/2026-09-05 · Driverless-test oversight assistant — dimension testing: value "Pilot oversight" not in role_values vocabulary
+- human-roles/2026-09-05 · Driverless-test oversight assistant — [draft] record ROAT-2026-0317 is at Research Stage "Signal" — cannot support a cell
+- human-roles/2026-09-05 · Driverless-test oversight assistant — [draft] record ROAT-2026-0317 is Level 6 - Blog or other — cannot support a cell
+- human-roles/2026-09-05 · Driverless-test oversight assistant — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Vehicle owner as statutory responsibility holder — dimension service_operation: value "Distinct" not in role_values vocabulary
+- human-roles/2026-09-05 · Vehicle owner as statutory responsibility holder — record ROAT-2026-0303 is not Published in the Public Library (source page will not exist)
+- human-roles/2026-09-05 · Vehicle owner as statutory responsibility holder — record ROAT-2026-0262 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · EU / UNECE baseline — record ROAT-2026-0036 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · EU / UNECE baseline — record ROAT-2026-0040 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · EU / UNECE baseline — record ROAT-2026-0011 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · EU / UNECE baseline — record ROAT-2026-0177 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · EU / UNECE baseline — record ROAT-2026-0218 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · EU / UNECE baseline — record ROAT-2026-0299 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · EU / UNECE baseline — record ROAT-2026-0300 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Great Britain — record ROAT-2026-0171 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Great Britain — record ROAT-2026-0214 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Great Britain — record ROAT-2026-0301 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Great Britain — record ROAT-2026-0302 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Croatia — record ROAT-2026-0262 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Croatia — record ROAT-2026-0303 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Croatia — record ROAT-2026-0304 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Croatia — record ROAT-2026-0305 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Slovakia — record ROAT-2026-0070 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Slovakia — record ROAT-2026-0155 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Slovakia — record ROAT-2026-0156 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Slovakia — record ROAT-2026-0159 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · Slovakia — record ROAT-2026-0306 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · France — record ROAT-2026-0176 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · France — record ROAT-2026-0307 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · France — record ROAT-2026-0308 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · France — record ROAT-2026-0036 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/2026-08-25 · France — record ROAT-2026-0011 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk — latest snapshot status is "draft" — module page will show a draft banner
+- layered-normalisation/historical-uk · 1861 · Locomotive Act 1861 — record ROAT-2026-0264 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1861 · Locomotive Act 1861 — record ROAT-2026-0275 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1865 · Locomotives Act 1865 – Red Flag regime — record ROAT-2026-0265 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1865 · Locomotives Act 1865 – Red Flag regime — record ROAT-2026-0275 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1878 · Highways and Locomotives (Amendment) Act 1878 — record ROAT-2026-0266 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1896 · Locomotives on Highways Act 1896 — record ROAT-2026-0267 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1896 · Locomotives on Highways Act 1896 — record ROAT-2026-0268 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1903 · Motor Car Act 1903 — record ROAT-2026-0269 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1903 · Motor Car Act 1903 — record ROAT-2026-0270 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1926 · International Convention relative to Motor Traffic — record ROAT-2026-0271 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1926 · International Convention relative to Motor Traffic — record ROAT-2026-0273 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1930 · Road Traffic Act 1930 — record ROAT-2026-0272 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1930 · Road Traffic Act 1930 — record ROAT-2026-0277 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 1930 · Road Traffic Act 1930 — record ROAT-2026-0293 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2018 · EU type-approval baseline + Vienna/WP.29 bridge architecture — record ROAT-2026-0036 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2018 · EU type-approval baseline + Vienna/WP.29 bridge architecture — record ROAT-2026-0039 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2018 · EU type-approval baseline + Vienna/WP.29 bridge architecture — record ROAT-2026-0010 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2022 · EU ADS type approval + Vienna Convention Article 34bis — record ROAT-2026-0040 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2022 · EU ADS type approval + Vienna Convention Article 34bis — record ROAT-2026-0011 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2022 · EU ADS type approval + Vienna Convention Article 34bis — record ROAT-2026-0273 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2026 · Consolidated EU ADS type approval + new UNECE ADS Regulation/GTR — record ROAT-2026-0177 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2026 · Consolidated EU ADS type approval + new UNECE ADS Regulation/GTR — record ROAT-2026-0217 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2026 · Consolidated EU ADS type approval + new UNECE ADS Regulation/GTR — record ROAT-2026-0218 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2026 · Consolidated EU ADS type approval + new UNECE ADS Regulation/GTR — record ROAT-2026-0227 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2026 · Consolidated EU ADS type approval + new UNECE ADS Regulation/GTR — record ROAT-2026-0011 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2024 · Automated Vehicles Act 2024 – enacted architecture — record ROAT-2026-0171 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2026 · Pre-full-implementation phase: passenger permits + draft safety principles — record ROAT-2026-0171 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2026 · Pre-full-implementation phase: passenger permits + draft safety principles — record ROAT-2026-0214 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2026 · Pre-full-implementation phase: passenger permits + draft safety principles — record ROAT-2026-0301 is not Published in the Public Library (source page will not exist)
+- layered-normalisation/historical-uk · 2026 · Pre-full-implementation phase: passenger permits + draft safety principles — record ROAT-2026-0302 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 — latest snapshot status is "review" — module page will show a draft banner
+- second-gate/2026-08-31 · Germany – current law — record ROAT-2026-0329 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Germany – current law — record ROAT-2026-0330 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Germany – current law — record ROAT-2026-0170 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Germany – current law — record ROAT-2026-0205 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · France – current law — record ROAT-2026-0307 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · France – current law — record ROAT-2026-0308 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · France – current law — record ROAT-2026-0336 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Croatia – current law — record ROAT-2026-0262 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Croatia – current law — record ROAT-2026-0303 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Croatia – current law — record ROAT-2026-0304 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Croatia – current law — record ROAT-2026-0305 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Great Britain – 2026 transitional current law — record ROAT-2026-0171 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Great Britain – 2026 transitional current law — record ROAT-2026-0214 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Great Britain – 2026 transitional current law — record ROAT-2026-0301 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Great Britain – 2026 transitional current law — record ROAT-2026-0302 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · China – current transitional regime — record ROAT-2026-0327 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · China – current transitional regime — record ROAT-2026-0328 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · China – 2026 Road Traffic Safety Law draft — record ROAT-2026-0326 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · China – 2026 Road Traffic Safety Law draft — record ROAT-2026-0327 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · China – 2026 Road Traffic Safety Law draft — record ROAT-2026-0328 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Slovakia – current law (31 Aug 2026) — record ROAT-2026-0155 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Slovakia – current law (31 Aug 2026) — record ROAT-2026-0156 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Slovakia – current law (31 Aug 2026) — record ROAT-2026-0306 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Slovakia – current law (31 Aug 2026) — record ROAT-2026-0159 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Slovakia – CPT 1329 prospective model — record ROAT-2026-0159 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Slovakia – CPT 1329 prospective model — record ROAT-2026-0040 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Slovakia – CPT 1329 prospective model — record ROAT-2026-0311 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Slovakia – CPT 1329 prospective model — record ROAT-2026-0326 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Slovakia – CPT 1329 prospective model — record ROAT-2026-0329 is not Published in the Public Library (source page will not exist)
+- second-gate/2026-08-31 · Slovakia – CPT 1329 prospective model — record ROAT-2026-0330 is not Published in the Public Library (source page will not exist)
+

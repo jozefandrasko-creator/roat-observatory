@@ -1,0 +1,15 @@
+{
+ "roat_id": "ROAT-SNAP-SECOND-GATE-2026-08-31",
+ "module": "ROAT-MOD-SECOND-GATE",
+ "snapshot_date": "2026-08-31",
+ "coder": "JA",
+ "second_pass": "No second pass recorded yet.",
+ "finding": "",
+ "caveats": [
+  "Current law and draft/prospective regimes are kept apart; China RTSL draft and Slovak print 1329 are prospective only.",
+  "Great Britain is coded as 2026 transitional current law; full AV Act framework planned for 2027."
+ ],
+ "supersedes": null,
+ "doi": null,
+ "status": "review"
+}

@@ -1,0 +1,1 @@
+Great Britain is the control case in which dedicated responsible actors and an authorisation architecture were legislated before routine general deployment. The 2026 Automated Passenger Services permit is a targeted early route; the full authorisation framework and the statement of safety principles are still being implemented.

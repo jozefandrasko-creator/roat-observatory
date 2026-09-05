@@ -1,0 +1,3646 @@
+{
+ "exported": "2026-09-05T20:34:56.875Z",
+ "count": 364,
+ "records": {
+  "ROAT-2026-0001": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "LinkedIn post",
+   "next_check": "",
+   "jurisdiction": "China"
+  },
+  "ROAT-2026-0002": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0003": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Fellowship",
+   "next_check": "2026-09-13",
+   "jurisdiction": "Canada"
+  },
+  "ROAT-2026-0004": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Conference",
+   "next_check": "2026-09-13",
+   "jurisdiction": "USA"
+  },
+  "ROAT-2026-0005": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Call for papers",
+   "next_check": "2026-09-13",
+   "jurisdiction": "USA"
+  },
+  "ROAT-2026-0006": {
+   "stage": "Knowledge",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Journal",
+   "next_check": "2026-08-14",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0007": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Funding call",
+   "next_check": "2026-08-01",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0008": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0009": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0010": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0011": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0012": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Draft legislation",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0013": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0014": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0015": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0016": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Draft legislation",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0017": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Organisation",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0018": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0019": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0020": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0021": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0022": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0023": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Organisation",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0024": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Organisation",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0025": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Policy document",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0026": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Organisation",
+   "next_check": "2026-08-27",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0027": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Policy document",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0028": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Draft legislation",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0029": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0030": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0031": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0032": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0033": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Organisation",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0034": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Organisation",
+   "next_check": "2026-09-13",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0035": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Policy document",
+   "next_check": "",
+   "jurisdiction": "Council of Europe"
+  },
+  "ROAT-2026-0036": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0037": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Organisation",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0038": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0039": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0040": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0041": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0042": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0043": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0044": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0045": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0046": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0047": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0048": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0049": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0050": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Policy document",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0051": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0052": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0053": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0054": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0055": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0056": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0057": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0058": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0059": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0060": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0061": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Organisation",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0062": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Draft legislation",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0063": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Draft legislation",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0064": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Policy document",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0065": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0066": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0067": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0068": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0069": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0070": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Slovakia"
+  },
+  "ROAT-2026-0071": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Book chapter",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0072": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0073": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0074": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0075": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0076": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Book chapter",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0077": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0078": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0079": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0080": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0081": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0082": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0083": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0084": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0085": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0086": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0087": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0088": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0089": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0090": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0091": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0092": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0093": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0094": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0095": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0096": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0097": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0098": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0099": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0100": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0101": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0102": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0103": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0104": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0105": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0106": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0107": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0108": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0109": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0110": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0111": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0112": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Expert profile",
+   "next_check": "",
+   "jurisdiction": "USA"
+  },
+  "ROAT-2026-0113": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0114": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0115": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0116": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0117": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0118": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0119": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0120": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0121": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0122": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0123": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0124": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0125": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0126": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0127": {
+   "stage": "Verified",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0128": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0129": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "News article",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0130": {
+   "stage": "Signal",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "LinkedIn post",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0131": {
+   "stage": "Signal",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "LinkedIn post",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0132": {
+   "stage": "Signal",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "LinkedIn post",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0133": {
+   "stage": "Signal",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "LinkedIn post",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0134": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Conference",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0135": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0136": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Conference",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0137": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0138": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "News article",
+   "next_check": "2026-08-14",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0139": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0140": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0141": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0142": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0143": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0144": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Expert profile",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0145": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0146": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0147": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0148": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0149": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0150": {
+   "stage": "Signal",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0151": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Organisation",
+   "next_check": "",
+   "jurisdiction": "Netherlands"
+  },
+  "ROAT-2026-0152": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0153": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0154": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0155": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Slovak Republic"
+  },
+  "ROAT-2026-0156": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Slovak Republic"
+  },
+  "ROAT-2026-0157": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0158": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0159": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Draft legislation",
+   "next_check": "",
+   "jurisdiction": "Slovak Republic"
+  },
+  "ROAT-2026-0160": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Czech Republic"
+  },
+  "ROAT-2026-0161": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Czech Republic"
+  },
+  "ROAT-2026-0162": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0163": {
+   "stage": "Signal",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "LinkedIn post",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0164": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "Under consultation",
+   "public_status": "Review",
+   "record_type": "Draft legislation",
+   "next_check": "2026-07-27",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0165": {
+   "stage": "Signal",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "ChatGPT",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0166": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0167": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0168": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "News article",
+   "next_check": "2026-07-23",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0169": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Tennessee, United States"
+  },
+  "ROAT-2026-0170": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Germany"
+  },
+  "ROAT-2026-0171": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0172": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0173": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0174": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0175": {
+   "stage": "Signal",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0176": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "France"
+  },
+  "ROAT-2026-0177": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0178": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "News article",
+   "next_check": "",
+   "jurisdiction": "California, USA"
+  },
+  "ROAT-2026-0179": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Secondary source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "International / UNECE"
+  },
+  "ROAT-2026-0180": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Organisation",
+   "next_check": "2026-10-24",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0181": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Dataset",
+   "next_check": "2026-09-13",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0182": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0183": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "2026-09-13",
+   "jurisdiction": "California, United States"
+  },
+  "ROAT-2026-0184": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Secondary source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Dataset",
+   "next_check": "2026-09-13",
+   "jurisdiction": "California, United States"
+  },
+  "ROAT-2026-0185": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "2027-02-01",
+   "jurisdiction": "California, United States"
+  },
+  "ROAT-2026-0186": {
+   "stage": "Signal",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Unverified",
+   "legal_status": "Not applicable",
+   "public_status": "Draft",
+   "record_type": "LinkedIn post",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0187": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Germany / Munich public transport"
+  },
+  "ROAT-2026-0188": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "News article",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0189": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "News article",
+   "next_check": "",
+   "jurisdiction": "Sweden"
+  },
+  "ROAT-2026-0190": {
+   "stage": "Verified",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Commentary",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0191": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0192": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United States / Global"
+  },
+  "ROAT-2026-0193": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Draft",
+   "public_status": "Review",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "UNECE"
+  },
+  "ROAT-2026-0194": {
+   "stage": "Signal",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "United States / Global"
+  },
+  "ROAT-2026-0195": {
+   "stage": "Verified",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Commentary",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "News article",
+   "next_check": "2026-08-28",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0196": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "News article",
+   "next_check": "2026-08-29",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0197": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Conference",
+   "next_check": "2026-08-06",
+   "jurisdiction": "Germany / Europe"
+  },
+  "ROAT-2026-0198": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "In force",
+   "public_status": "Review",
+   "record_type": "News article",
+   "next_check": "2026-08-06",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0199": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Conference",
+   "next_check": "2026-08-06",
+   "jurisdiction": "European Union / Germany"
+  },
+  "ROAT-2026-0200": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Research project",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0201": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Organisation",
+   "next_check": "2026-08-20",
+   "jurisdiction": "European Union / Global"
+  },
+  "ROAT-2026-0202": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Sweden / European Union / United States / China"
+  },
+  "ROAT-2026-0203": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0204": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0205": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Germany"
+  },
+  "ROAT-2026-0206": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Netherlands"
+  },
+  "ROAT-2026-0207": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0208": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "Review",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0209": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0214": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Under consultation",
+   "public_status": "",
+   "record_type": "Policy document",
+   "next_check": "2026-08-18",
+   "jurisdiction": "Great Britain"
+  },
+  "ROAT-2026-0215": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Book chapter",
+   "next_check": "",
+   "jurisdiction": ""
+  },
+  "ROAT-2026-0216": {
+   "stage": "Signal",
+   "evidence_level": "",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "News article",
+   "next_check": "",
+   "jurisdiction": ""
+  },
+  "ROAT-2026-0217": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0218": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0219": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0220": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Conference",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0221": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Europe"
+  },
+  "ROAT-2026-0222": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Organisation",
+   "next_check": "2026-09-07",
+   "jurisdiction": "UNECE / international vehicle regulation"
+  },
+  "ROAT-2026-0223": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Funding call",
+   "next_check": "2026-09-08",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0224": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Symposium",
+   "next_check": "",
+   "jurisdiction": "Europe"
+  },
+  "ROAT-2026-0225": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0226": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Special issue",
+   "next_check": "2026-09-29",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0227": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "UNECE / international vehicle regulation"
+  },
+  "ROAT-2026-0228": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Conference",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0229": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "News article",
+   "next_check": "2026-09-13",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0230": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Journal",
+   "next_check": "2026-09-13",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0231": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Special issue",
+   "next_check": "2027-05-31",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0232": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Organisation",
+   "next_check": "2026-08-20",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0233": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Conference",
+   "next_check": "2026-09-05",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0234": {
+   "stage": "Verified",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "United Arab Emirates – Emirate of Dubai"
+  },
+  "ROAT-2026-0235": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0236": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0237": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "News article",
+   "next_check": "",
+   "jurisdiction": "International Maritime Organization (IMO)"
+  },
+  "ROAT-2026-0238": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "News article",
+   "next_check": "2026-10-23",
+   "jurisdiction": "United States – California – Santa Monica"
+  },
+  "ROAT-2026-0239": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Secondary source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "United States – urban and local governance"
+  },
+  "ROAT-2026-0240": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "News article",
+   "next_check": "",
+   "jurisdiction": "European Union / Netherlands"
+  },
+  "ROAT-2026-0241": {
+   "stage": "Signal",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "LinkedIn post",
+   "next_check": "",
+   "jurisdiction": "International / municipal curb management"
+  },
+  "ROAT-2026-0242": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "United States / international automated-vehicle policy and research"
+  },
+  "ROAT-2026-0243": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "European Union / European public transport authorities and operators"
+  },
+  "ROAT-2026-0244": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "Draft",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United States / Midwestern university college-student sample"
+  },
+  "ROAT-2026-0245": {
+   "stage": "Signal",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Unverified",
+   "legal_status": "Not applicable",
+   "public_status": "Draft",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0246": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0247": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0248": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0249": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0250": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0251": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0252": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0253": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0254": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0255": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0256": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0257": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0258": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0259": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0260": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0261": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "European Union / CJEU"
+  },
+  "ROAT-2026-0262": {
+   "stage": "Analysed",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Secondary source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Croatia / Zagreb"
+  },
+  "ROAT-2026-0263": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Unverified",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0264": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "Repealed",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0265": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "Repealed",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0266": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "Repealed",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0267": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0268": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "Repealed",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0269": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "Repealed",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0270": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0271": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0272": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "Repealed",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0273": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0274": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0275": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0276": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0277": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0278": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0279": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0280": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0281": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0282": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0283": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0284": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0285": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0286": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0287": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0288": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0289": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0290": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0291": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0292": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "Europe / North America"
+  },
+  "ROAT-2026-0293": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "Western Europe"
+  },
+  "ROAT-2026-0294": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0295": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0296": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global / Australia"
+  },
+  "ROAT-2026-0297": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0298": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Book chapter",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0299": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Draft legislation",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0300": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "International"
+  },
+  "ROAT-2026-0301": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Great Britain"
+  },
+  "ROAT-2026-0302": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "Great Britain"
+  },
+  "ROAT-2026-0303": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Croatia"
+  },
+  "ROAT-2026-0304": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Croatia"
+  },
+  "ROAT-2026-0305": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Croatia"
+  },
+  "ROAT-2026-0306": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "Adopted - not yet in force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Slovakia"
+  },
+  "ROAT-2026-0307": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "France"
+  },
+  "ROAT-2026-0308": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "France"
+  },
+  "ROAT-2026-0309": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0310": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0311": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0312": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0313": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Conference",
+   "next_check": "2026-11-01",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0314": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Call for papers",
+   "next_check": "2026-10-15",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0315": {
+   "stage": "Verified",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "News article",
+   "next_check": "2026-11-01",
+   "jurisdiction": "Germany"
+  },
+  "ROAT-2026-0316": {
+   "stage": "Signal",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "News article",
+   "next_check": "2026-10-01",
+   "jurisdiction": "United Kingdom"
+  },
+  "ROAT-2026-0317": {
+   "stage": "Signal",
+   "evidence_level": "Level 6 - Blog or other",
+   "reliability": "Commentary",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Other",
+   "next_check": "2026-09-26",
+   "jurisdiction": "Global / comparative"
+  },
+  "ROAT-2026-0318": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "ChatGPT",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0319": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "ChatGPT",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0320": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "ChatGPT",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0321": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "ChatGPT",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0322": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Book",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0323": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Policy document",
+   "next_check": "2026-09-29",
+   "jurisdiction": "Italy / Rome"
+  },
+  "ROAT-2026-0324": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Other",
+   "next_check": "2026-09-06",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0325": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0326": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Under consultation",
+   "public_status": "Review",
+   "record_type": "Draft legislation",
+   "next_check": "2026-09-07",
+   "jurisdiction": "China"
+  },
+  "ROAT-2026-0327": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Adopted - not yet in force",
+   "public_status": "Review",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "China"
+  },
+  "ROAT-2026-0328": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "Review",
+   "record_type": "Policy document",
+   "next_check": "",
+   "jurisdiction": "China"
+  },
+  "ROAT-2026-0329": {
+   "stage": "Analysed",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "Review",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Germany"
+  },
+  "ROAT-2026-0330": {
+   "stage": "Analysed",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "Review",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Germany"
+  },
+  "ROAT-2026-0331": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Great Britain"
+  },
+  "ROAT-2026-0332": {
+   "stage": "Analysed",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Secondary source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Germany"
+  },
+  "ROAT-2026-0333": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0334": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Germany"
+  },
+  "ROAT-2026-0335": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Comparative / Global"
+  },
+  "ROAT-2026-0336": {
+   "stage": "Analysed",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "Review",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "France"
+  },
+  "ROAT-2026-0337": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0338": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0339": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Under consultation",
+   "public_status": "Review",
+   "record_type": "Policy document",
+   "next_check": "2026-09-30",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0340": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "2026-09-30",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0341": {
+   "stage": "Analysed",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "News article",
+   "next_check": "",
+   "jurisdiction": "European Union / Netherlands / Sweden"
+  },
+  "ROAT-2026-0342": {
+   "stage": "Analysed",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Report",
+   "next_check": "2026-11-30",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0343": {
+   "stage": "Analysed",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "2026-09-01",
+   "record_type": "Legal act",
+   "next_check": "None",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0344": {
+   "stage": "Analysed",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "2026-09-01",
+   "record_type": "Legal act",
+   "next_check": "None",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0345": {
+   "stage": "Analysed",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "2026-09-01",
+   "record_type": "Legal act",
+   "next_check": "Event-driven",
+   "jurisdiction": "Slovakia"
+  },
+  "ROAT-2026-0346": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "European Union"
+  },
+  "ROAT-2026-0347": {
+   "stage": "Analysed",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Secondary source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Comparative / Global"
+  },
+  "ROAT-2026-0348": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Report",
+   "next_check": "",
+   "jurisdiction": "Great Britain"
+  },
+  "ROAT-2026-0349": {
+   "stage": "Signal",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "News article",
+   "next_check": "",
+   "jurisdiction": "San Francisco, California, USA"
+  },
+  "ROAT-2026-0350": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Adopted - not yet in force",
+   "public_status": "Review",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0351": {
+   "stage": "Analysed",
+   "evidence_level": "Level 5 - LinkedIn or media",
+   "reliability": "Commentary",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "News article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0352": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "California, United States"
+  },
+  "ROAT-2026-0353": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "UNECE / Global"
+  },
+  "ROAT-2026-0354": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Conference",
+   "next_check": "2026-09-18",
+   "jurisdiction": "Denmark"
+  },
+  "ROAT-2026-0355": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Workshop",
+   "next_check": "2026-09-11",
+   "jurisdiction": "Denmark"
+  },
+  "ROAT-2026-0356": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Conference",
+   "next_check": "2026-09-22",
+   "jurisdiction": "United States / international"
+  },
+  "ROAT-2026-0357": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Conference",
+   "next_check": "2026-09-08",
+   "jurisdiction": "Poland / European Union"
+  },
+  "ROAT-2026-0358": {
+   "stage": "Verified",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0359": {
+   "stage": "Verified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Journal",
+   "next_check": "",
+   "jurisdiction": "United States"
+  },
+  "ROAT-2026-0360": {
+   "stage": "Analysed",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0361": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0362": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "United Kingdom / Global"
+  },
+  "ROAT-2026-0363": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0364": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Comparative / Global"
+  },
+  "ROAT-2026-0365": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Comparative / Global"
+  },
+  "ROAT-2026-0366": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Comparative / Global"
+  },
+  "ROAT-2026-0367": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0368": {
+   "stage": "Analysed",
+   "evidence_level": "Level 3 - Scientific publication",
+   "reliability": "Peer-reviewed source",
+   "legal_status": "",
+   "public_status": "",
+   "record_type": "Scientific article",
+   "next_check": "",
+   "jurisdiction": "Global"
+  }
+ }
+}

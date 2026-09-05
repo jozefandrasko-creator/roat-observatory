@@ -1,0 +1,23 @@
+name: Hub sync (opens a PR when the export changed)
+on:
+  schedule: [{ cron: "0 5 * * 1" }]   # Mondays 05:00 UTC, before the weekly review
+  workflow_dispatch:
+permissions: { contents: write, pull-requests: write }
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Sync from the Hub
+        env: { HUB_SHEET_ID: "${{ secrets.HUB_SHEET_ID }}" }
+        run: node scripts/hub-sync.mjs --from-url
+      - name: Validate (report only)
+        run: node scripts/validate.mjs --report || true
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: hub-sync/auto
+          title: "Hub sync: new export"
+          body: "Automated export from the ROAT Intelligence Hub. Review data/validation-report.md before merging; a changed score becomes a new snapshot only after a human completes snapshot.json."
+          commit-message: "hub-sync: export"

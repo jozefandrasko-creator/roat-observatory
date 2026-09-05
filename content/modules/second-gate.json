@@ -1,0 +1,47 @@
+{
+  "roat_id": "ROAT-MOD-SECOND-GATE",
+  "slug": "second-gate",
+  "number": 2,
+  "title": "Post-type-approval deployment models",
+  "short_title": "Second Gate",
+  "question": "How do national legal orders convert the technical admissibility of a vehicle or ADS into a legal authorisation for real driverless deployment, and which functions does post-type-approval deployment governance perform?",
+  "method_summary": "Functional coding of eight regimes across eighteen dimensions: regulatory object, technical baseline, deployment gate, ODD legalisation, authority, accountable actor, remote human role, DDT allocation, offence allocation, liability, data, in-use oversight, material change, revalidation, service pathway, dominant model, legal status. Current law and draft or prospective regimes are kept apart.",
+  "hub": { "sheet": "Post-Type-Approval Deployment Models", "profile": "single-table", "header_row": 2 },
+  "dimensions": [
+    { "key": "regulatory_object", "label": "Regulatory object", "scale": "text", "column": "Regulatory object" },
+    { "key": "technical_baseline", "label": "Technical approval baseline", "scale": "text", "column": "Technical approval baseline" },
+    { "key": "deployment_gate", "label": "Additional deployment / road-use gate", "scale": "text", "column": "Additional deployment / road-use gate", "summary": true },
+    { "key": "odd_legalisation", "label": "ODD / operating-area legalisation", "scale": "text", "column": "ODD / operating-area legalisation" },
+    { "key": "authority", "label": "Competent authority / decision maker", "scale": "text", "column": "Competent authority / decision maker" },
+    { "key": "accountable_actor", "label": "Primary accountable organisational actor", "scale": "text", "column": "Primary accountable organisational actor" },
+    { "key": "remote_role", "label": "Remote human role", "scale": "text", "column": "Remote human role", "summary": true },
+    { "key": "ddt_allocation", "label": "DDT / fallback allocation", "scale": "text", "column": "DDT / fallback allocation" },
+    { "key": "offence_allocation", "label": "Traffic-offence allocation", "scale": "text", "column": "Traffic-offence allocation" },
+    { "key": "civil_liability", "label": "Civil liability / insurance", "scale": "text", "column": "Civil liability / insurance" },
+    { "key": "data_logging", "label": "Data / logging", "scale": "text", "column": "Data / logging" },
+    { "key": "in_use_oversight", "label": "Post-market / in-use oversight", "scale": "text", "column": "Post-market / in-use oversight" },
+    { "key": "material_change", "label": "Material change / software update", "scale": "text", "column": "Material change / software update" },
+    { "key": "revalidation", "label": "Retesting / revalidation", "scale": "text", "column": "Retesting / revalidation" },
+    { "key": "service_pathway", "label": "Commercial service pathway", "scale": "text", "column": "Commercial service pathway" },
+    { "key": "dominant_model", "label": "Dominant deployment model", "scale": "text", "column": "Dominant deployment model", "summary": true },
+    { "key": "legal_status", "label": "Legal status", "scale": "text", "column": "Legal status", "summary": true },
+    { "key": "primary_source_anchor", "label": "Primary-source anchor", "scale": "text", "column": "Primary-source anchor" }
+  ],
+  "row_fields": {
+    "label": "Jurisdiction / legal state", "records": "Core ROAT records",
+    "rationale": "Analytical note", "confidence": "Confidence"
+  },
+  "regimes": {
+    "Germany – current law": "ROAT-JUR-DE",
+    "France – current law": "ROAT-JUR-FR",
+    "Croatia – current law": "ROAT-JUR-HR",
+    "Great Britain – 2026 transitional current law": "ROAT-JUR-UK",
+    "China – current transitional regime": "ROAT-JUR-CN",
+    "China – 2026 Road Traffic Safety Law draft": "ROAT-JUR-CN:RTSL-DRAFT",
+    "Slovakia – current law (31 Aug 2026)": "ROAT-JUR-SK",
+    "Slovakia – CPT 1329 prospective model": "ROAT-JUR-SK:1329"
+  },
+  "relationships": { "companion_of": ["OUT-005"], "related_module": ["ROAT-MOD-LAYERS"], "uses_concept": [] },
+  "status": "published",
+  "license": "CC-BY-4.0"
+}

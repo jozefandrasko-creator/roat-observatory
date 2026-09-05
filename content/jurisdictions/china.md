@@ -1,0 +1,1 @@
+China already practises second-gate logic: conditional product admission is followed by geographically and functionally bounded road-access pilots rather than unrestricted deployment. The 2026 Road Traffic Safety Law draft would add a manufacturer-centred road-use accountability layer, and is coded only as a prospective regime.

@@ -1,0 +1,279 @@
+{
+ "module": "ROAT-MOD-LAYERS",
+ "snapshot_date": "2026-08-25",
+ "exported_from_hub": "2026-09-05T20:22:16.310Z",
+ "source_sheet": "Cross-section 2026 – AV Normalisation",
+ "rows": [
+  {
+   "regime_id": "ROAT-JUR-EU",
+   "regime_label": "EU / UNECE baseline",
+   "records": [
+    "ROAT-2026-0036",
+    "ROAT-2026-0040",
+    "ROAT-2026-0011",
+    "ROAT-2026-0177",
+    "ROAT-2026-0218",
+    "ROAT-2026-0299",
+    "ROAT-2026-0300"
+   ],
+   "rationale": "EU ADS type-approval rules are dedicated and UNECE technical harmonisation is advanced, while lawful operation, actors and infrastructure remain partly national and fragmented.",
+   "confidence": "High",
+   "panel": "current",
+   "technical_approval": 3,
+   "road_access": 2,
+   "actor_allocation": 2,
+   "liability_risk": 2,
+   "behavioural_rules": 2,
+   "infrastructure": 1,
+   "international": 3,
+   "range": 2,
+   "asynchrony": "Significant",
+   "family": "Technical + international harmonisation-leading configuration",
+   "bridge": "Art 34bis agency/deeming; Art 39 equivalence/exemption; national operational law remains necessary",
+   "sensitivity": "Road/actor/liability plausibly N1–N2; technical and international remain N3.",
+   "robust_conclusion": "Technical/international-leading configuration survives all plausible ±1 recoding.",
+   "caveat": "This is a supranational baseline, not a self-contained road-operation jurisdiction."
+  },
+  {
+   "regime_id": "ROAT-JUR-UK",
+   "regime_label": "Great Britain",
+   "records": [
+    "ROAT-2026-0171",
+    "ROAT-2026-0214",
+    "ROAT-2026-0301",
+    "ROAT-2026-0302"
+   ],
+   "rationale": "The 2024 Act creates dedicated responsible actors and authorisation architecture; 2026 APS permits enable passenger-service deployment while the full authorisation framework and final safety principles are still being implemented.",
+   "confidence": "High",
+   "panel": "current",
+   "technical_approval": 3,
+   "road_access": 2,
+   "actor_allocation": 3,
+   "liability_risk": 3,
+   "behavioural_rules": 2,
+   "infrastructure": 1,
+   "international": 2,
+   "range": 2,
+   "asynchrony": "Significant",
+   "family": "Actor / institutional-leading configuration with staged operational permitting",
+   "bridge": "APS permit bridge before full 2027 AV Act implementation",
+   "sensitivity": "Operation N2–N3; actor/liability N2–N3; international N1–N2.",
+   "robust_conclusion": "Actor/institution-leading configuration survives plausible recoding; legal institutionalisation precedes routine general deployment.",
+   "caveat": "General full-Act implementation is planned for 2027; APS is a targeted early route, not proof that all AV use is N3."
+  },
+  {
+   "regime_id": "ROAT-JUR-HR",
+   "regime_label": "Croatia",
+   "records": [
+    "ROAT-2026-0262",
+    "ROAT-2026-0303",
+    "ROAT-2026-0304",
+    "ROAT-2026-0305"
+   ],
+   "rationale": "Croatia combines EU technical approval with dedicated road-traffic rules, remote/intervention actors, owner enforcement duties and a mandatory service-level real-world validation procedure before public passenger transport.",
+   "confidence": "High",
+   "panel": "current",
+   "technical_approval": 3,
+   "road_access": 3,
+   "actor_allocation": 3,
+   "liability_risk": 2,
+   "behavioural_rules": 3,
+   "infrastructure": 2,
+   "international": 2,
+   "range": 1,
+   "asynchrony": "Mild",
+   "family": "Deployment-assurance configuration – service-test variant",
+   "bridge": "Mandatory real-world service validation on a registered sample vehicle before passenger service",
+   "sensitivity": "Liability N2–N3; infrastructure N1–N2; international N2–N3.",
+   "robust_conclusion": "Deployment-assurance configuration remains robust under conservative recoding.",
+   "caveat": "Civil liability and quantitative retesting/change-control rules remain less clear than traffic-offence and service-assurance rules."
+  },
+  {
+   "regime_id": "ROAT-JUR-SK",
+   "regime_label": "Slovakia",
+   "records": [
+    "ROAT-2026-0070",
+    "ROAT-2026-0155",
+    "ROAT-2026-0156",
+    "ROAT-2026-0159",
+    "ROAT-2026-0306"
+   ],
+   "rationale": "EU technical approval can reach N3, but current Slovak law still relies mainly on § 49 conditional test operation for AV/FAV; dedicated general operator/control-centre/fully automated deployment rules are proposed in print 1329 but are not yet law.",
+   "confidence": "Medium–High",
+   "panel": "current",
+   "technical_approval": 3,
+   "road_access": 1,
+   "actor_allocation": 1,
+   "liability_risk": 1,
+   "behavioural_rules": 1,
+   "infrastructure": 1,
+   "international": 2,
+   "range": 2,
+   "asynchrony": "Significant",
+   "family": "Testing-permit / technical-leading configuration",
+   "bridge": "§ 49 test-operation permit; narrower ADV operational regime",
+   "sensitivity": "Road/actor/behaviour plausibly N1–N2 because of permits and the narrower automated-delivery-vehicle regime; technical stays N3.",
+   "robust_conclusion": "Testing-permit / technical-leading configuration persists under plausible recoding and after the 1 September 2026 trial-focused amendment.",
+   "caveat": "Snapshot is 25 August 2026. Print 1329 passed first reading but committee deadlines fall in September; Act 131/2026 is adopted but effective only from 1 September 2026."
+  },
+  {
+   "regime_id": "ROAT-JUR-FR",
+   "regime_label": "France",
+   "records": [
+    "ROAT-2026-0176",
+    "ROAT-2026-0307",
+    "ROAT-2026-0308",
+    "ROAT-2026-0036",
+    "ROAT-2026-0011"
+   ],
+   "rationale": "France combines EU vehicle approval with a dedicated automated-road-transport-system regime requiring safety demonstration for the technical system and deployed route or zone, qualified independent assessment, remote-intervention qualifications, safety management and a formal service-organiser decision before operation.",
+   "confidence": "High",
+   "panel": "current",
+   "technical_approval": 3,
+   "road_access": 3,
+   "actor_allocation": 3,
+   "liability_risk": 2,
+   "behavioural_rules": 3,
+   "infrastructure": 2,
+   "international": 2,
+   "range": 1,
+   "asynchrony": "Mild",
+   "family": "Deployment-assurance configuration – system safety-case / organiser-decision variant",
+   "bridge": "Prior safety demonstration + qualified-body opinions + organiser decision of mise en service",
+   "sensitivity": "Liability N2-N3; infrastructure N1-N2; international N2-N3.",
+   "robust_conclusion": "Deployment-assurance configuration remains robust, with a safety-case/organiser-decision gate rather than Croatia’s service-test gate.",
+   "caveat": "Dedicated criminal responsibility is clear; civil-liability allocation is less comprehensively AV-specific and is therefore coded conservatively at N2."
+  },
+  {
+   "regime_label": "Slovakia from 1 Sept 2026 – Act 131/2026 only",
+   "panel": "prospective",
+   "technical_approval": 3,
+   "road_access": 1,
+   "actor_allocation": 1,
+   "liability_risk": 1,
+   "behavioural_rules": 1,
+   "infrastructure": 1,
+   "international": 2,
+   "result": "UNCHANGED PATHWAY",
+   "interpretation": "The amendment broadens/adjusts § 49 trial mechanics but does not itself create a general deployment/operator regime.",
+   "records": [],
+   "rationale": "The amendment broadens/adjusts § 49 trial mechanics but does not itself create a general deployment/operator regime.",
+   "confidence": "",
+   "regime_id": "ROAT-JUR-SK:131-2026"
+  },
+  {
+   "regime_label": "Slovakia if print 1329 enacted substantially as proposed",
+   "panel": "prospective",
+   "technical_approval": 3,
+   "road_access": 3,
+   "actor_allocation": 3,
+   "liability_risk": 2,
+   "behavioural_rules": 3,
+   "infrastructure": 1,
+   "international": 2,
+   "result": "PATHWAY SHIFT",
+   "interpretation": "Would move Slovakia from test-permit accommodation toward dedicated institutionalisation, while infrastructure and cross-border operational recognition would remain less mature.",
+   "records": [],
+   "rationale": "Would move Slovakia from test-permit accommodation toward dedicated institutionalisation, while infrastructure and cross-border operational recognition would remain less mature.",
+   "confidence": "",
+   "regime_id": "ROAT-JUR-SK:1329"
+  }
+ ],
+ "pathways": [
+  {
+   "pathway": "Technical / harmonisation-first",
+   "pattern": "Technical and/or international layers are at least one stage ahead of operational/actor layers.",
+   "case": "EU/UNECE; Slovakia (stronger national variant)",
+   "value": "Shows why type approval cannot be treated as equivalent to lawful deployment."
+  },
+  {
+   "pathway": "Actor / institutional-first",
+   "pattern": "Dedicated responsible actors and liability/authorisation architecture precede full ordinary operational implementation.",
+   "case": "Great Britain",
+   "value": "Falsifies one-directional pacing accounts: law can lead deployment."
+  },
+  {
+   "pathway": "Deployment-assurance family",
+   "pattern": "Vehicle technical approval is followed by a separate service or system-level safety gate before ordinary operation.",
+   "case": "Croatia - real-world service-test gate; France - safety-case + qualified assessment + organiser mise-en-service decision",
+   "value": "Portability result: the pathway repeats across jurisdictions even though the bridging mechanism differs."
+  },
+  {
+   "pathway": "Testing-permit pathway",
+   "pattern": "Public-road access remains predominantly experimental/conditional despite advanced technical standards.",
+   "case": "Slovakia",
+   "value": "Illustrates persistent inter-layer mismatch and dependence on legal bridges."
+  }
+ ],
+ "findings": {
+  "Cross-sectional finding": "The five 2026 regimes do not line up on one common ladder. They display different layer configurations and different leading layers. France strengthens the model because it replicates the deployment-assurance family through a different legal mechanism than Croatia.",
+  "Novelty implication": "The strongest defensible contribution is a vector/pathway model: jurisdiction-specific configurations of functional-layer states produce recurring pathway families, while legal bridges or gates differ in doctrinal form.",
+  "Next empirical step": "A true inter-coder reliability test requires a second human coder. The present same-model rule-based second pass is sufficient as a sensitivity audit, so theoretical drafting can now proceed."
+ },
+ "audit": [
+  {
+   "cell": "EU/UNECE - liability/risk",
+   "first": "N2",
+   "rule": "Require dedicated AV-specific liability institutionalisation for N2+",
+   "second": "N1",
+   "change": "-1",
+   "effect": "None - technical/international lead becomes stronger"
+  },
+  {
+   "cell": "Great Britain - international/cross-border",
+   "first": "N2",
+   "rule": "Require dedicated reciprocal operational recognition, not only participation in UNECE technical instruments",
+   "second": "N1",
+   "change": "-1",
+   "effect": "None - actor/institution-first pathway unchanged"
+  },
+  {
+   "cell": "Croatia - liability/risk",
+   "first": "N2",
+   "rule": "Dedicated traffic-offence and owner responsibility is insufficient for N3 without mature AV-specific civil-liability allocation",
+   "second": "N2",
+   "change": "0",
+   "effect": "None"
+  },
+  {
+   "cell": "Slovakia - actor allocation",
+   "first": "N1",
+   "rule": "Draft operator and control-centre roles are excluded; narrower ADV and trial roles do not establish general FAV institutionalisation",
+   "second": "N1",
+   "change": "0",
+   "effect": "None"
+  },
+  {
+   "cell": "France - liability/risk",
+   "first": "N2",
+   "rule": "Dedicated criminal responsibility exists, but N3 requires a broader stable AV-specific liability and risk architecture",
+   "second": "N2",
+   "change": "0",
+   "effect": "None"
+  },
+  {
+   "cell": "France - infrastructure",
+   "first": "N2",
+   "rule": "Route and zone infrastructure is integrated into the safety case, but infrastructure is not yet routinised as an ordinary AV-wide layer",
+   "second": "N2",
+   "change": "0",
+   "effect": "None"
+  },
+  {
+   "cell": "Audit result",
+   "first": "2 of 6 audited cells moved by one stage under stricter rules; no jurisdiction changed pathway family.",
+   "rule": "This is a robustness or sensitivity check only. It is not inter-coder reliability and should not be reported as such.",
+   "second": "",
+   "change": "",
+   "effect": ""
+  }
+ ],
+ "audit_result": [
+  "2 of 6 audited cells moved by one stage under stricter rules; no jurisdiction changed pathway family.",
+  "This is a robustness or sensitivity check only. It is not inter-coder reliability and should not be reported as such."
+ ],
+ "purpose": [
+  "Cross-sectional Validation – Regulatory Normalisation of Automated Vehicles (snapshot: 25 August 2026)",
+  "Purpose: test whether the N0–N4 functional-layer model discriminates among contemporary regimes at the same point in time. Scores measure legal embedding, not regulatory intensity. Draft law is excluded from current-law scores and shown separately as sensitivity/prospective evidence."
+ ]
+}

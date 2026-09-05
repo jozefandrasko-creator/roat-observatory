@@ -1,0 +1,18 @@
+{
+  "name": "roat-observatory",
+  "version": "0.1.0-alpha",
+  "private": true,
+  "description": "ROAT Observatory — how law lets automated vehicles onto the road. Static site generated from ROAT Intelligence Hub snapshots.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "sync": "node scripts/hub-sync.mjs",
+    "sync:url": "node scripts/hub-sync.mjs --from-url",
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/validate.mjs && node scripts/build.mjs",
+    "build:draft": "node scripts/build.mjs --draft",
+    "review-queue": "node scripts/review-queue.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "license": "MIT"
+}

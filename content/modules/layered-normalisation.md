@@ -1,0 +1,3 @@
+Each regime is a vector of seven layer states, not a single maturity score. Read across a row for the configuration; read down a column to compare one function. The five 2026 regimes do not line up on one common ladder: they display different layer configurations and different leading layers, and the legal bridge or gate that manages the interface between a leading and a lagging layer differs in doctrinal form even where the pathway repeats.
+
+Draft law is excluded from current-law scores and shown separately as sensitivity evidence. The historical United Kingdom panel (1861–1930) applies the same coding to the normalisation of the motor car and is published as a separate snapshot of this module.

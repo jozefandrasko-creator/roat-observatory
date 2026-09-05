@@ -1,0 +1,124 @@
+{
+  "roat_id": "ROAT-MOD-LAYERS",
+  "slug": "layered-normalisation",
+  "number": 1,
+  "title": "Regulatory normalisation by functional layer",
+  "short_title": "Layered normalisation",
+  "question": "How far has each regulatory function normalised automated driving, and which legal bridge or gate manages the mismatch between layers?",
+  "method_summary": "N0–N4 ordinal coding of seven functional layers per regime; range and asynchrony as descriptive signals of inter-layer asymmetry; pathway families as recurring configurations. Scores measure legal embedding, not regulatory intensity, and are never aggregated per jurisdiction.",
+  "hub": {
+    "sheet": "Cross-section 2026 – AV Normalisation",
+    "profile": "cross-section"
+  },
+  "dimensions": [
+    {
+      "key": "technical_approval",
+      "label": "Technical approval",
+      "scale": "n-scale",
+      "column": "Technical approval"
+    },
+    {
+      "key": "road_access",
+      "label": "Road access / operation",
+      "scale": "n-scale",
+      "column": "Road access / operation"
+    },
+    {
+      "key": "actor_allocation",
+      "label": "Actor allocation",
+      "scale": "n-scale",
+      "column": "Actor allocation"
+    },
+    {
+      "key": "liability_risk",
+      "label": "Liability / risk",
+      "scale": "n-scale",
+      "column": "Liability / risk"
+    },
+    {
+      "key": "behavioural_rules",
+      "label": "Behavioural rules",
+      "scale": "n-scale",
+      "column": "Behavioural rules"
+    },
+    {
+      "key": "infrastructure",
+      "label": "Infrastructure",
+      "scale": "n-scale",
+      "column": "Infrastructure"
+    },
+    {
+      "key": "international",
+      "label": "International / cross-border",
+      "scale": "n-scale",
+      "column": "International / cross-border"
+    }
+  ],
+  "row_fields": {
+    "label": "Jurisdiction / baseline",
+    "range": "Range",
+    "asynchrony": "Asynchrony",
+    "family": "Normalisation configuration family",
+    "bridge": "Dominant legal bridge / gate",
+    "records": "Core ROAT records",
+    "rationale": "Primary current-law rationale",
+    "sensitivity": "Sensitivity range",
+    "robust": "Robust conclusion",
+    "confidence": "Confidence",
+    "caveat": "Important caveat"
+  },
+  "regimes": {
+    "EU / UNECE baseline": "ROAT-JUR-EU",
+    "Great Britain": "ROAT-JUR-UK",
+    "Croatia": "ROAT-JUR-HR",
+    "Slovakia": "ROAT-JUR-SK",
+    "France": "ROAT-JUR-FR",
+    "Slovakia from 1 Sept 2026 – Act 131/2026 only": "ROAT-JUR-SK:131-2026",
+    "Slovakia if print 1329 enacted substantially as proposed": "ROAT-JUR-SK:1329"
+  },
+  "relationships": {
+    "companion_of": [
+      "OUT-AV-HISTORY"
+    ],
+    "related_module": [
+      "ROAT-MOD-SECOND-GATE"
+    ],
+    "uses_concept": []
+  },
+  "status": "published",
+  "license": "CC-BY-4.0",
+  "extra_snapshots": [
+    {
+      "dir": "historical-uk",
+      "label": "Longitudinal panel: United Kingdom 1861–1930, EU/UNECE 2018–2026, Great Britain 2024–2026",
+      "sheet": "Layer Coding – AV History",
+      "profile": "longitudinal",
+      "header_row": 2,
+      "stop_at": "Finding",
+      "column_aliases": {
+        "international": "International recognition"
+      },
+      "row_fields": {
+        "panel": "Panel",
+        "year": "Year",
+        "label": "Milestone / legal system",
+        "range": "Layer range",
+        "asynchrony": "Asynchrony signal",
+        "bridge": "Dominant bridge / mechanism",
+        "records": "Core ROAT evidence",
+        "rationale": "Coding rationale",
+        "confidence": "Confidence",
+        "caveat": "Caveat"
+      },
+      "panel_map": {
+        "Historical UK": "ROAT-JUR-UK",
+        "Historical UK / international": "ROAT-JUR-UK",
+        "EU / UNECE": "ROAT-JUR-EU",
+        "Great Britain": "ROAT-JUR-UK"
+      },
+      "findings_table": {
+        "header": "Finding"
+      }
+    }
+  ]
+}

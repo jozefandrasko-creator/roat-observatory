@@ -1,0 +1,1 @@
+The EU and UNECE layer is a supranational baseline, not a self-contained road-operation jurisdiction. Dedicated ADS type-approval rules and advanced UNECE technical harmonisation coexist with operation, actors and infrastructure that remain partly national and fragmented — the reason type approval cannot be treated as equivalent to lawful deployment.

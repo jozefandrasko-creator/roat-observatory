@@ -1,0 +1,100 @@
+{
+ "_comment": "Scales used by the Observatory plus a snapshot of the Hub Lists sheet values the build checks against (snapshot 2026-09-04). The Hub Lists sheet is authoritative.",
+ "n_scale": [
+  {
+   "value": 0,
+   "label": "Unintegrated / exceptional",
+   "definition": "No stable accommodation for the technology. Not the absence of law: inherited rules constrain or exclude it."
+  },
+  {
+   "value": 1,
+   "label": "Ad hoc or conditional accommodation",
+   "definition": "Bounded lawful access — testing permits, case-by-case permissions, supervised operation. Restrictive regimes still score N1."
+  },
+  {
+   "value": 2,
+   "label": "Bridge-based integration",
+   "definition": "Inherited law kept operational through deeming provisions, legal fictions, equivalence or exemption clauses, provisional authorisations."
+  },
+  {
+   "value": 3,
+   "label": "Dedicated institutionalisation",
+   "definition": "Stable technology- or function-specific actors, duties, authorisations and governance mechanisms exist."
+  },
+  {
+   "value": 4,
+   "label": "Routinisation / mainstream recognition",
+   "definition": "Governed as an ordinary participant in the wider system, with mature enforcement, infrastructure, risk pooling and reciprocal recognition."
+  }
+ ],
+ "asynchrony": [
+  "Mild",
+  "Significant",
+  "Strong"
+ ],
+ "confidence": [
+  "High",
+  "Medium–High",
+  "Medium",
+  "Low"
+ ],
+ "hub": {
+  "research_stage": [
+   "Signal",
+   "Verified",
+   "Analysed",
+   "Knowledge",
+   "Published",
+   "Archived"
+  ],
+  "publishable_stages": [
+   "Verified",
+   "Analysed",
+   "Knowledge",
+   "Published"
+  ],
+  "evidence_level": [
+   "Level 1 - Legal act",
+   "Level 2 - Official document",
+   "Level 3 - Scientific publication",
+   "Level 4 - Conference or institutional source",
+   "Level 5 - LinkedIn or media",
+   "Level 6 - Blog or other"
+  ],
+  "evidence_level_max_for_cell": 4,
+  "legal_status": [
+   "In force",
+   "Adopted - not yet in force",
+   "Draft",
+   "Under consultation",
+   "Amended",
+   "Repealed",
+   "Expired",
+   "Not applicable"
+  ]
+ },
+ "evidence_badge": {
+  "Level 1 - Legal act": "primary",
+  "Level 2 - Official document": "official-guidance",
+  "Level 3 - Scientific publication": "academic",
+  "Level 4 - Conference or institutional source": "academic"
+ },
+ "role_polarity": {
+  "_comment": "A role-function cell is a qualified value, not a closed list: a leading polarity token plus an optional qualifier that carries the legal condition ('No while engaged', 'Possible during fallback', 'MRM request'). The build derives the polarity for the colour chip and keeps the full text as the label; validation checks that a polarity is derivable, never that the string is in a list.",
+  "yes": [
+   "yes"
+  ],
+  "no": [
+   "no",
+   "not"
+  ],
+  "system": [
+   "system",
+   "self-monitoring",
+   "technical compliance"
+  ],
+  "other": [
+   "everything else is treated as a qualified value"
+  ]
+ }
+}

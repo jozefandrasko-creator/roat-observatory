@@ -1,0 +1,1 @@
+France regulates the socio-technical automated road transport system — vehicle, technical system, route or zone and service organisation — rather than the vehicle alone. Technical approval is necessary but not sufficient: a prior safety demonstration, qualified independent opinions and a formal mise-en-service decision by the organiser stand between approval and operation.
