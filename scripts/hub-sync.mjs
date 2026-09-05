@@ -6,7 +6,8 @@
 //   --from-url   fetch each sheet as CSV from Google Sheets (requires HUB_SHEET_ID and the
 //                spreadsheet shared "anyone with the link can view"):
 //                https://docs.google.com/spreadsheets/d/<id>/gviz/tq?tqx=out:csv&sheet=<name>
-//   default      read hub-export/<Sheet name>.csv (File → Download → CSV per sheet)
+//   default      read hub-export/<Sheet name>.csv — Google's download name
+//                "ROAT Intelligence Hub – Final - <Sheet name>.csv" is accepted as is (File → Download → CSV per sheet)
 //
 // Output:
 //   data/hub/register-index.json   id → stage, evidence level, legal status, public status, next check (public-safe)
@@ -40,8 +41,10 @@ async function readSheet(name) {
   const dir = path.join(ROOT, "hub-export");
   let file = path.join(dir, `${name}.csv`);
   if (!fs.existsSync(file)) {
-    // tolerate truncated sheet names (xlsx exports cut names at 31 chars)
-    const cand = fs.existsSync(dir) ? fs.readdirSync(dir).find(f => f.endsWith(".csv") && (name.startsWith(f.slice(0, -4)) || f.slice(0, -4).startsWith(name.slice(0, 28)))) : null;
+    // tolerate truncated sheet names (xlsx exports cut names at 31 chars) and Google's own
+    // download naming "<Spreadsheet name> - <Sheet name>.csv" (File → Download → CSV, per sheet)
+    const ok = b => b === name || name.startsWith(b) || b.startsWith(name.slice(0, 28)) || b.endsWith(" - " + name) || b.endsWith("- " + name);
+    const cand = fs.existsSync(dir) ? fs.readdirSync(dir).find(f => f.endsWith(".csv") && ok(f.slice(0, -4))) : null;
     if (!cand) throw new Error(`No export for sheet "${name}" in hub-export/`);
     file = path.join(dir, cand);
   }
@@ -224,6 +227,7 @@ function profileStages(mod, rows) {
   const vi = findRow(rows, r => r[0] === mod.hub.verdict_from);
   const verdict = vi >= 0 ? tableAt(rows, hdr, { stopAtBlank: false }).rows
     .filter(r => !/^\d+\./.test(String(r["Stage"] || "")) && String(r["Stage"] || "").trim())
+    .filter(r => ["Core question", "Leenes / TechReg basis", "ROAT operationalisation"].some(k => String(r[k] || "").trim()))   // skip the section heading row
     .map(r => ({ label: r["Stage"], what: r["Core question"], why: r["Leenes / TechReg basis"],
                  how: r["ROAT operationalisation"], asset: r["Existing ROAT asset"], caveat: r["Decision rule / caveat"] })) : [];
   const intro = rows.slice(0, hdr).map(r => r[0]).filter(Boolean);

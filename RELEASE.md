@@ -81,6 +81,21 @@ A release note that says "v0.1" tells a reader nothing about evidentiary state. 
 - Module 07 regulatory method — published; no companion manuscript, so no embargo.
 - Source Library — empty until the Public Editorial Queue is run; identifiers on module pages will not resolve until then.
 
+## Windows routine (PowerShell), step by step
+
+Everything below runs in the repository folder (`C:\Users\jozef\Desktop\roat-observatory`): open it in Explorer, right-click an empty spot, **Open in Terminal**. One-time setup was `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`; Node ≥ 20 and Git for Windows are installed.
+
+1. **Export the Hub.** In Google Sheets open each sheet the Observatory reads and use File → Download → Comma-separated values (.csv). Google names the file `ROAT Intelligence Hub – Final - <Sheet name>.csv`; keep that name. Move all files into the `hub-export` folder inside the repository (create it once; it is git-ignored, nothing in it is ever committed). Sheets needed: Intelligence Register, Public Library, Outputs, Cross-section 2026 – AV Normalisation, Post-Type-Approval Deployment Models, Roles & Concepts, Role Function Matrix, Layer Coding – AV History, ROAT Regulatory Method.
+2. **Sync.** `npm run sync` — or, when only one module changed, `node scripts/hub-sync.mjs --module=second-gate --snapshot-date=2026-10-15`. A new snapshot date creates a new folder under `data\modules\<slug>\<date>\` with a skeleton `snapshot.json`; an existing folder is overwritten with the current export (a published snapshot must never be re-synced — its data is frozen).
+3. **Complete `snapshot.json`** for the new date in Notepad: `coder`, `second_pass`, `finding`, `caveats`, `supersedes` (the previous snapshot's `roat_id`), `status` (`draft` → `review` → `published`). `doi` stays `null` until step 8.
+4. **Check.** `npm run validate` must end with `0 errors`; then `npm run build`, `npm run serve`, look at http://localhost:8080, Ctrl+C.
+5. **Commit and push.** `git add .` then `git status --porcelain | Select-String "hub-export|site/"` (must print nothing), then `git commit -m "Snapshot second-gate 2026-10-15"` and `git push`. GitHub Actions rebuilds the site in about half a minute.
+6. **Release** (only when a snapshot reached `published`, or the code changed in a way worth citing): bump `version` in `package.json` and `CITATION.cff`, add a heading to `CHANGELOG.md`, commit, push; then GitHub → Releases → Draft a new release → tag `v0.2.0`, title, notes → Publish.
+7. **Wait for Zenodo** (a few minutes) and read the version DOI at https://zenodo.org/account/settings/github/repository/jozefandrasko-creator/roat-observatory.
+8. **Write the DOI back** into every snapshot the release contains (`"doi": "10.5281/zenodo.NNNNNNNN"` — the version DOI, not the concept DOI `10.5281/zenodo.22409313`), commit, push.
+
+Rule of thumb: steps 1–5 are a normal week; steps 6–8 happen only when something becomes citable.
+
 ## Recurring release
 
 Every later release is: freeze a snapshot in the Hub → `npm run sync` → complete `snapshot.json` → `npm run validate` → commit and push → tag → write the DOI back. The embargo rule from section 9.3 of the architecture decides *when*: a module snapshot is published after its companion manuscript has been submitted, not before.

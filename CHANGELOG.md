@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+- hub-sync accepts Google's own CSV download names (`ROAT Intelligence Hub – Final - <Sheet>.csv`) and no longer emits the "Integration verdict" heading as an empty verdict row.
+- RELEASE.md: Windows routine, step by step.
+- DOI of v0.1.0 (10.5281/zenodo.22409314) written into the three published/review snapshots; concept DOI 10.5281/zenodo.22409313 in README and CITATION.cff.
+
 ## v0.1.0 — first public release (2026-09-05)
 - Windows fix: scripts resolve their own directory with `fileURLToPath` instead of `new URL(import.meta.url).pathname`, which on Windows yields `/C:/…` and resolved to `C:\C:\…`.
 - Changelog page generated from this file plus every snapshot the site holds; release runbook in RELEASE.md; base-path build verified for GitHub Pages project sites.
