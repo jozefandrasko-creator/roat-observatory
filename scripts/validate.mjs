@@ -124,6 +124,15 @@ for (const f of fs.readdirSync(path.join(ROOT, "content/jurisdictions")).filter(
   else { const w = fs.readFileSync(path.join(ROOT, `content/jurisdictions/${j.slug}.md`), "utf8").split(/\s+/).filter(Boolean).length; if (w > 140) warn(j.slug, `overview is ${w} words (limit 120)`); }
 }
 
+/* ---- source library ---- */
+for (const src of J("data/hub/sources.json").sources) {
+  const where = `source ${src.id}`;
+  if (!String(src.title || "").trim()) err(where, "published source has no title");
+  if (!String(src.official_source || src.doi || "").trim()) err(where, "published source has neither an official source URL nor a DOI");
+  for (const k of ["summary", "citation", "category", "publication_date"]) if (!String(src[k] || "").trim()) warn(where, `published source has no ${k.replace("_", " ")}`);
+  if (/^(Legal act|Draft legislation|Official guidance|Policy document|Standard)$/.test(src.record_type || "") && !String(src.legal_status || "").trim()) warn(where, "legal instrument without legal status");
+}
+
 /* ---- report ---- */
 const dedupe = a => { const s = new Set(); return a.filter(x => { const k = x.where + "|" + x.msg; if (s.has(k)) return false; s.add(k); return true; }); };
 const E = dedupe(errors), W = dedupe(warnings);
