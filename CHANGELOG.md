@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased — repository scaffold (2026-09-05)
+## v0.1.0 — first public release (2026-09-05)
 - Windows fix: scripts resolve their own directory with `fileURLToPath` instead of `new URL(import.meta.url).pathname`, which on Windows yields `/C:/…` and resolved to `C:\C:\…`.
 - Changelog page generated from this file plus every snapshot the site holds; release runbook in RELEASE.md; base-path build verified for GitHub Pages project sites.
 - 2026-09-05, evening: Hub repaired (column shift on ROAT-2026-0360..0366, 53 Used In values, 57 evidence-pairing values, 17 single cells). Re-synced: 0 validation errors, warnings down from 272 to 181.
