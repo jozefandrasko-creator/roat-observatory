@@ -1,5 +1,5 @@
 {
- "exported": "2026-09-05T22:43:19.220Z",
+ "exported": "2026-09-05T23:02:06.307Z",
  "count": 364,
  "records": {
   "ROAT-2026-0001": {
@@ -1197,7 +1197,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Not applicable",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Standard",
    "next_check": "",
    "jurisdiction": "Global"
@@ -2227,7 +2227,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Draft",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Official guidance",
    "next_check": "",
    "jurisdiction": "UNECE / international vehicle regulation"
@@ -2597,7 +2597,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2607,7 +2607,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2617,7 +2617,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2637,7 +2637,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2647,7 +2647,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2666,8 +2666,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "Review",
+   "legal_status": "Repealed",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "International"
@@ -2677,7 +2677,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2727,7 +2727,7 @@
    "evidence_level": "Level 3 - Scientific publication",
    "reliability": "Peer-reviewed source",
    "legal_status": "Not applicable",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Scientific article",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2887,7 +2887,7 @@
    "evidence_level": "Level 3 - Scientific publication",
    "reliability": "Peer-reviewed source",
    "legal_status": "Not applicable",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Book",
    "next_check": "",
    "jurisdiction": "Western Europe"
@@ -2987,7 +2987,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Croatia"
@@ -2997,7 +2997,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Croatia"
@@ -3007,7 +3007,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Croatia"
@@ -3016,8 +3016,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "Adopted - not yet in force",
-   "public_status": "Review",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Slovakia"
@@ -3177,7 +3177,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Not applicable",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Book",
    "next_check": "",
    "jurisdiction": "Global"
