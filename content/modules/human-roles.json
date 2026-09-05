@@ -112,7 +112,7 @@
     ],
     "uses_concept": []
   },
-  "status": "draft",
+  "status": "published",
   "license": "CC-BY-4.0",
   "evidence_policy": "publish-evidenced-rows",
   "_evidence_policy_note": "A row publishes when at least one of its core records passes the evidence gate (Research Stage >= Verified, Evidence Level 1-4). A row whose evidence is entirely below the gate is not published as a coded row: it is listed as pending evidence with the primary source it needs."

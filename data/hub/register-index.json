@@ -1,6 +1,6 @@
 {
- "exported": "2026-09-05T23:02:06.307Z",
- "count": 364,
+ "exported": "2026-09-05T23:22:24.674Z",
+ "count": 371,
  "records": {
   "ROAT-2026-0001": {
    "stage": "Verified",
@@ -1713,14 +1713,14 @@
    "jurisdiction": "United Kingdom"
   },
   "ROAT-2026-0172": {
-   "stage": "Signal",
-   "evidence_level": "Level 2 - Official document",
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
+   "legal_status": "In force",
    "public_status": "",
    "record_type": "Legal act",
    "next_check": "",
-   "jurisdiction": "Global"
+   "jurisdiction": "California, United States"
   },
   "ROAT-2026-0173": {
    "stage": "Signal",
@@ -1743,14 +1743,14 @@
    "jurisdiction": "Global"
   },
   "ROAT-2026-0175": {
-   "stage": "Signal",
-   "evidence_level": "Level 2 - Official document",
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
+   "legal_status": "In force",
    "public_status": "",
    "record_type": "Legal act",
    "next_check": "",
-   "jurisdiction": "Global"
+   "jurisdiction": "Ontario, Canada"
   },
   "ROAT-2026-0176": {
    "stage": "Verified",
@@ -3641,6 +3641,76 @@
    "record_type": "Scientific article",
    "next_check": "",
    "jurisdiction": "Global"
+  },
+  "ROAT-2026-0369": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Not applicable",
+   "public_status": "",
+   "record_type": "Standard",
+   "next_check": "",
+   "jurisdiction": "Global"
+  },
+  "ROAT-2026-0370": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Sweden"
+  },
+  "ROAT-2026-0371": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Sweden"
+  },
+  "ROAT-2026-0372": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "Draft",
+   "public_status": "",
+   "record_type": "Policy document",
+   "next_check": "",
+   "jurisdiction": "Australia"
+  },
+  "ROAT-2026-0373": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Japan"
+  },
+  "ROAT-2026-0374": {
+   "stage": "Verified",
+   "evidence_level": "Level 1 - Legal act",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Legal act",
+   "next_check": "",
+   "jurisdiction": "Ontario, Canada"
+  },
+  "ROAT-2026-0375": {
+   "stage": "Verified",
+   "evidence_level": "Level 2 - Official document",
+   "reliability": "Official source",
+   "legal_status": "In force",
+   "public_status": "",
+   "record_type": "Official guidance",
+   "next_check": "",
+   "jurisdiction": "Ontario, Canada"
   }
  }
 }

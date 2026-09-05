@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Module 03 human roles: snapshot 2026-09-06 (status review) supersedes 2026-09-05 — all 30 rows now rest on primary sources; ROAT-2026-0317 dropped as core evidence; seven records added to the Hub (SAE J3018, Swedish Ordinance 2017:309 and TSFS 2021:4, NTC Australia ADSE paper, Japan Act No. 32 of 2022, Ontario O. Reg. 161/25 and ACMV pilot conditions); California Veh. Code § 38750 and Ontario O. Reg. 306/15 verified. Module status draft → published (latest snapshot in review).
 - Hub sync 2026-09-06 (second pass): 16 more records Published → 54 source pages; every source cited by the released snapshots (Modules 01, 02, 07 and the UK longitudinal panel) now resolves. 0183 stays in Review (no publication date on the DMV page).
 - Hub sync 2026-09-06 after the Public Editorial Queue: 38 records Published → Source Library has 38 source pages; 54 resolvable IDs. Register repairs (0318–0321, 0343–0345, 0165 public columns; Priority 0360–0366; Outputs back-links for OUT-005/OUT-012); ROAT-2026-0214 monitoring check (consultation open until 9 Sep 2026, next check 2026-12-01).
 - hub-sync accepts Google's own CSV download names (`ROAT Intelligence Hub – Final - <Sheet>.csv`) and no longer emits the "Integration verdict" heading as an empty verdict row.

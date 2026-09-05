@@ -1,0 +1,17 @@
+{
+ "roat_id": "ROAT-SNAP-ROLES-2026-09-06",
+ "module": "ROAT-MOD-ROLES",
+ "snapshot_date": "2026-09-06",
+ "coder": "JA",
+ "second_pass": "No second pass recorded yet.",
+ "finding": "",
+ "caveats": [
+  "Evidence base completed on 2026-09-06: the blog crosswalk ROAT-2026-0317 is no longer cited as core evidence; every row rests on a primary legal or technical source (Vienna Convention 1968 and Art. 34 bis, SAE J3016/J3018, Swedish Ordinance 2017:309 and TSFS 2021:4, NTC Australia ADSE policy paper, Japan Act No. 32 of 2022, California Veh. Code § 38750, Ontario O. Reg. 306/15 and O. Reg. 161/25).",
+  "RC-021 (remote prototype fallback test driver): SAE J3018_202012 names the role but defers its guidance to a future iteration — the cell records the definition, not operational requirements.",
+  "RC-025 (ADS lifecycle safety entity) rests on a consultation policy paper; the Australian Automated Vehicle Safety Law is not yet enacted.",
+  "Coding date per row is the 'Last checked' column in the Hub."
+ ],
+ "supersedes": "ROAT-SNAP-ROLES-2026-09-05",
+ "doi": null,
+ "status": "review"
+}
