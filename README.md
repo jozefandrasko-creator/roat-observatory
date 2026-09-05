@@ -2,6 +2,8 @@
 
 *How law lets automated vehicles onto the road.*
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22409313.svg)](https://doi.org/10.5281/zenodo.22409313)
+
 Static, versioned publication of ROAT's comparative models of automated-vehicle deployment governance, generated from the **ROAT Intelligence Hub** at dated snapshots. Specification: [ARCHITECTURE.md](ARCHITECTURE.md) (v0.2).
 
 No dependencies beyond Node ≥ 20. Runs on Windows, macOS and Linux (on Windows, PowerShell may need `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once before `npm` will run). No framework: `scripts/` are plain Node modules and `src/templates.mjs` renders HTML.
