@@ -11,7 +11,8 @@
 //
 // Output:
 //   data/hub/register-index.json   id → stage, evidence level, legal status, public status, next check (public-safe)
-//   data/hub/sources.json          Public Library rows (Public Status = Published only)
+//   data/hub/sources.json          Source Library: Public Library sheet rows, or — when that sheet is empty —
+//                                  Register rows with Public Status = Published (public columns only)
 //   data/hub/outputs.json          Outputs sheet, public-safe columns
 //   data/modules/<slug>/<date>/data.json, data.csv, snapshot.json (skeleton, never overwritten)
 //
@@ -74,10 +75,13 @@ async function syncRegister() {
   return index;
 }
 async function syncSources() {
+  // Source Library = Public Library sheet when it carries rows; otherwise derived from the Register's
+  // public columns (51–63) for records whose Public Status is Published. Only public-safe fields are
+  // taken from the Register — never Notes, Follow-up, AI Insight, Reviewed By or the workflow columns.
   const rows = await readSheet("Public Library");
   const hdr = findRow(rows, r => r[0] === "Record ID");
   const { rows: recs } = hdr >= 0 ? tableAt(rows, hdr, { stopAtBlank: false }) : { rows: [] };
-  const sources = recs.filter(r => /^ROAT-/.test(r["Record ID"])).map(r => ({
+  let sources = recs.filter(r => /^ROAT-/.test(r["Record ID"])).map(r => ({
     id: r["Record ID"], category: r["Public Category"], title: r["Title"], org: r["Author / Organisation"],
     jurisdiction: r["Jurisdiction"], record_type: r["Record Type"], topic: r["Main Topic"], impact_area: r["Impact Area"],
     publication_date: r["Publication Date"], legal_status: r["Legal Status"], effective_from: r["Effective From"],
@@ -85,8 +89,25 @@ async function syncSources() {
     keywords: r["Keywords"], citation: r["Citation"], official_source: r["Official Source"], doi: r["DOI / ISBN"],
     last_verified: r["Last Verified"], featured: r["Featured"], display_order: r["Display Order"]
   }));
-  writeJSON(path.join(ROOT, "data/hub/sources.json"), { exported: new Date().toISOString(), count: sources.length, sources });
-  log(`sources (Public Library, Published): ${sources.length}`);
+  let from = "Public Library sheet";
+  if (!sources.length) {
+    from = "Register (Public Status = Published)";
+    const reg = await readSheet("Intelligence Register");
+    const rh = findRow(reg, r => r[0] === "Record ID");
+    const { rows: rr } = tableAt(reg, rh, { stopAtBlank: false });
+    const t = v => String(v ?? "").trim();
+    sources = rr.filter(r => /^ROAT-\d{4}-\d{4}$/.test(r["Record ID"]) && t(r["Public Status"]) === "Published").map(r => ({
+      id: r["Record ID"], category: t(r["Public Category"]), title: t(r["Public Title"]) || t(r["Title"]),
+      org: [t(r["Author"]), t(r["Organisation"])].filter(Boolean).join(" · "),
+      jurisdiction: t(r["Jurisdiction"]), record_type: t(r["Record Type"]), topic: t(r["Main Topic"]), impact_area: t(r["Impact Area"]),
+      publication_date: t(r["Publication Date"]), legal_status: t(r["Legal Status"]), effective_from: t(r["Effective From"]),
+      language: t(r["Language"]), open_access: t(r["Open Access"]), summary: t(r["Public Summary"]), why_it_matters: t(r["Why This Source Matters"]),
+      keywords: t(r["Keywords"]), citation: t(r["Citation"]), official_source: t(r["Primary Source URL"]) || t(r["URL"]), doi: t(r["DOI / ISBN"]),
+      last_verified: t(r["Date Reviewed"]), featured: t(r["Featured"]), display_order: t(r["Display Order"])
+    }));
+  }
+  writeJSON(path.join(ROOT, "data/hub/sources.json"), { exported: new Date().toISOString(), from, count: sources.length, sources });
+  log(`sources (${from}): ${sources.length}`);
   return sources;
 }
 async function syncOutputs() {

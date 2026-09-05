@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Hub sync 2026-09-06 after the Public Editorial Queue: 38 records Published → Source Library has 38 source pages; 54 resolvable IDs. Register repairs (0318–0321, 0343–0345, 0165 public columns; Priority 0360–0366; Outputs back-links for OUT-005/OUT-012); ROAT-2026-0214 monitoring check (consultation open until 9 Sep 2026, next check 2026-12-01).
 - hub-sync accepts Google's own CSV download names (`ROAT Intelligence Hub – Final - <Sheet>.csv`) and no longer emits the "Integration verdict" heading as an empty verdict row.
 - RELEASE.md: Windows routine, step by step.
 - DOI of v0.1.0 (10.5281/zenodo.22409314) written into the three published/review snapshots; concept DOI 10.5281/zenodo.22409313 in README and CITATION.cff.

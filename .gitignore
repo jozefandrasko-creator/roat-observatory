@@ -3,3 +3,4 @@ hub-export/
 site/
 node_modules/
 .DS_Store
+Claude outputs/

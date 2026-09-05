@@ -1,5 +1,5 @@
 {
- "exported": "2026-09-05T20:34:56.875Z",
+ "exported": "2026-09-05T22:43:19.220Z",
  "count": 364,
  "records": {
   "ROAT-2026-0001": {
@@ -96,8 +96,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "International"
@@ -106,8 +106,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "International"
@@ -356,8 +356,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -386,8 +386,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -396,8 +396,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -696,8 +696,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Slovakia"
@@ -1196,8 +1196,8 @@
    "stage": "Verified",
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
    "record_type": "Standard",
    "next_check": "",
    "jurisdiction": "Global"
@@ -1546,8 +1546,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Slovak Republic"
@@ -1556,8 +1556,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Slovak Republic"
@@ -1586,8 +1586,8 @@
    "stage": "Verified",
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "Draft",
+   "public_status": "Published",
    "record_type": "Draft legislation",
    "next_check": "",
    "jurisdiction": "Slovak Republic"
@@ -1647,7 +1647,7 @@
    "evidence_level": "Level 5 - LinkedIn or media",
    "reliability": "Unverified",
    "legal_status": "",
-   "public_status": "ChatGPT",
+   "public_status": "",
    "record_type": "Other",
    "next_check": "",
    "jurisdiction": "Global"
@@ -1696,8 +1696,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Germany"
@@ -1706,8 +1706,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "Adopted - not yet in force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -1756,8 +1756,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "France"
@@ -1766,8 +1766,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -1826,8 +1826,8 @@
    "stage": "Verified",
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "Not applicable",
+   "public_status": "Review",
    "record_type": "Official guidance",
    "next_check": "2026-09-13",
    "jurisdiction": "California, United States"
@@ -1847,7 +1847,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Report",
    "next_check": "2027-02-01",
    "jurisdiction": "California, United States"
@@ -1927,7 +1927,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Draft",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Official guidance",
    "next_check": "",
    "jurisdiction": "UNECE"
@@ -2047,7 +2047,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Not applicable",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Report",
    "next_check": "",
    "jurisdiction": "Germany"
@@ -2097,9 +2097,9 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Under consultation",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Policy document",
-   "next_check": "2026-08-18",
+   "next_check": "2026-12-01",
    "jurisdiction": "Great Britain"
   },
   "ROAT-2026-0215": {
@@ -2126,8 +2126,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -2137,7 +2137,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -2226,8 +2226,8 @@
    "stage": "Verified",
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "Draft",
+   "public_status": "Review",
    "record_type": "Official guidance",
    "next_check": "",
    "jurisdiction": "UNECE / international vehicle regulation"
@@ -2577,7 +2577,7 @@
    "evidence_level": "Level 4 - Conference or institutional source",
    "reliability": "Secondary source",
    "legal_status": "Not applicable",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Report",
    "next_check": "",
    "jurisdiction": "Croatia / Zagreb"
@@ -2597,7 +2597,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2607,7 +2607,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2617,7 +2617,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2627,7 +2627,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Not applicable",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Other",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2637,7 +2637,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2647,7 +2647,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2657,7 +2657,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Not applicable",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Other",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2667,7 +2667,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "International"
@@ -2677,7 +2677,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Repealed",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2687,7 +2687,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Not applicable",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Report",
    "next_check": "",
    "jurisdiction": "International"
@@ -2707,7 +2707,7 @@
    "evidence_level": "Level 3 - Scientific publication",
    "reliability": "Peer-reviewed source",
    "legal_status": "Not applicable",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Scientific article",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2727,7 +2727,7 @@
    "evidence_level": "Level 3 - Scientific publication",
    "reliability": "Peer-reviewed source",
    "legal_status": "Not applicable",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Scientific article",
    "next_check": "",
    "jurisdiction": "United Kingdom"
@@ -2887,7 +2887,7 @@
    "evidence_level": "Level 3 - Scientific publication",
    "reliability": "Peer-reviewed source",
    "legal_status": "Not applicable",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Book",
    "next_check": "",
    "jurisdiction": "Western Europe"
@@ -2946,8 +2946,8 @@
    "stage": "Verified",
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "Adopted - not yet in force",
+   "public_status": "Published",
    "record_type": "Draft legislation",
    "next_check": "",
    "jurisdiction": "International"
@@ -2956,8 +2956,8 @@
    "stage": "Verified",
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "Adopted - not yet in force",
+   "public_status": "Published",
    "record_type": "Standard",
    "next_check": "",
    "jurisdiction": "International"
@@ -2967,7 +2967,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Great Britain"
@@ -2977,7 +2977,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Not applicable",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Official guidance",
    "next_check": "",
    "jurisdiction": "Great Britain"
@@ -2987,7 +2987,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Croatia"
@@ -2997,7 +2997,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Croatia"
@@ -3007,7 +3007,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Croatia"
@@ -3017,7 +3017,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "Adopted - not yet in force",
-   "public_status": "",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Slovakia"
@@ -3027,7 +3027,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "France"
@@ -3037,7 +3037,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "France"
@@ -3066,8 +3066,8 @@
    "stage": "Verified",
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "Not applicable",
+   "public_status": "Published",
    "record_type": "Official guidance",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -3076,8 +3076,8 @@
    "stage": "Verified",
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "Not applicable",
+   "public_status": "Published",
    "record_type": "Official guidance",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -3137,7 +3137,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "ChatGPT",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -3147,7 +3147,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "ChatGPT",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -3157,7 +3157,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "ChatGPT",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -3167,7 +3167,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "ChatGPT",
+   "public_status": "Review",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "European Union"
@@ -3217,7 +3217,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Under consultation",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Draft legislation",
    "next_check": "2026-09-07",
    "jurisdiction": "China"
@@ -3227,7 +3227,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Adopted - not yet in force",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Standard",
    "next_check": "",
    "jurisdiction": "China"
@@ -3237,7 +3237,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Policy document",
    "next_check": "",
    "jurisdiction": "China"
@@ -3247,7 +3247,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Germany"
@@ -3257,7 +3257,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Germany"
@@ -3317,7 +3317,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "France"
@@ -3387,9 +3387,9 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "2026-09-01",
+   "public_status": "",
    "record_type": "Legal act",
-   "next_check": "None",
+   "next_check": "",
    "jurisdiction": "European Union"
   },
   "ROAT-2026-0344": {
@@ -3397,9 +3397,9 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "2026-09-01",
+   "public_status": "",
    "record_type": "Legal act",
-   "next_check": "None",
+   "next_check": "",
    "jurisdiction": "European Union"
   },
   "ROAT-2026-0345": {
@@ -3407,9 +3407,9 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "2026-09-01",
+   "public_status": "",
    "record_type": "Legal act",
-   "next_check": "Event-driven",
+   "next_check": "",
    "jurisdiction": "Slovakia"
   },
   "ROAT-2026-0346": {
