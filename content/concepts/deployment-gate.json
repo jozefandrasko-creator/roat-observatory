@@ -1,0 +1,21 @@
+{
+  "roat_id": "ROAT-CON-SECOND-GATE",
+  "slug": "deployment-gate",
+  "title": "Deployment gate (the second gate)",
+  "aliases": ["second gate", "post-type-approval authorisation", "Betriebsbereichsgenehmigung", "mise en service", "druhá brána"],
+  "definition": "Whatever a legal order requires, beyond the technical admissibility of the vehicle and its automated driving system, before driverless operation on a given road, for a given service and under a given actor is lawful: an operating-area approval, a service commissioning decision, a passenger-service permit, a conditional admission with a road-access pilot, or only a test permit. A gate has an object, a decision maker, an accountable actor and lifecycle rules that keep the authorisation honest when the system changes. It is the organising concept of Module 02.",
+  "definition_status": "draft",
+  "drafted": "Drafted 2026-09-06 from the primary sources listed below; author review pending.",
+  "locus": [
+    { "record": "ROAT-2026-0329", "pinpoint": "§ 1e", "note": "Approval of the defined operating area." },
+    { "record": "ROAT-2026-0330", "pinpoint": "§§ 7–10", "note": "Operating permit and operating-area approval procedure." },
+    { "record": "ROAT-2026-0308", "pinpoint": "arts. R.3152-10 to R.3152-12", "note": "Mise en service decision after the safety demonstration." },
+    { "record": "ROAT-2026-0304", "pinpoint": "Arts. 13b–13d", "note": "Real-world service validation before licensing." },
+    { "record": "ROAT-2026-0301", "pinpoint": "SI 2026/439", "note": "Automated passenger service permits under Part 5 of the AV Act 2024." },
+    { "record": "ROAT-2026-0156", "pinpoint": "§ 49", "note": "Test-operation permit as the only general gate in Slovak law." }
+  ],
+  "used_in": [
+    { "module": "ROAT-MOD-SECOND-GATE", "dimension": "deployment_gate" }
+  ],
+  "related": ["ROAT-CON-ODD"]
+}

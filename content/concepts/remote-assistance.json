@@ -1,0 +1,19 @@
+{
+  "roat_id": "ROAT-CON-REMOTE-ASSISTANCE",
+  "slug": "remote-assistance",
+  "title": "Remote assistance",
+  "aliases": ["remote interaction (UNECE)", "remote assistant", "Fernunterstützung", "vzdialená asistencia"],
+  "definition": "Event-driven provision, by a remotely located human, of information or advice to an ADS-equipped vehicle in driverless operation so that the trip can continue when the automated driving system meets a situation it cannot manage. The ADS keeps performing the complete DDT and the fallback. The UNECE ADS group treats remote interaction and remote intervention as the same case of support for tactical functions while the ADS performs the entire DDT. The Observatory keeps assistance apart from intervention by one test: does the human only advise, or does the human issue commands that change vehicle behaviour.",
+  "definition_status": "draft",
+  "drafted": "Drafted 2026-09-06 from the primary sources listed below; author review pending.",
+  "locus": [
+    { "record": "ROAT-2026-0120", "pinpoint": "§ 3.23, § 3.31.5", "note": "Remote assistance and the remote assistant; note 1 excludes real-time DDT performance." },
+    { "record": "ROAT-2026-0193", "pinpoint": "Revised text", "note": "Remote interaction and remote intervention not intended to convey different meanings." },
+    { "record": "ROAT-2026-0311", "pinpoint": "Appendix 2, § 2.1.1", "note": "Remote management as tactical or strategic input to the ADS." }
+  ],
+  "used_in": [
+    { "module": "ROAT-MOD-ROLES", "dimension": "remote_assistance" },
+    { "module": "ROAT-MOD-SECOND-GATE", "dimension": "remote_role" }
+  ],
+  "related": ["ROAT-CON-REMOTE-INTERVENTION", "ROAT-CON-REMOTE-DRIVING"]
+}

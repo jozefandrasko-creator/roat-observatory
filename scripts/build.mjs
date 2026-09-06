@@ -86,6 +86,13 @@ const jurById = Object.fromEntries(jurisdictions.map(j => [j.roat_id, j]));
 const baseJur = id => String(id || "").split(":")[0];
 const outputById = Object.fromEntries(J("data/hub/outputs.json").outputs.map(o => [o.id, o]));
 
+/* ---- concepts: content/concepts/*.json — a definition with its locus in the sources and the module dimensions it governs ---- */
+const conceptDir = path.join(ROOT, "content/concepts");
+const concepts = (fs.existsSync(conceptDir) ? fs.readdirSync(conceptDir).filter(f => f.endsWith(".json")) : []).map(f => J(`content/concepts/${f}`)).sort((a, b) => a.title.localeCompare(b.title));
+const conceptById = Object.fromEntries(concepts.map(c => [c.roat_id, c]));
+const conceptsOfModule = m => concepts.filter(c => (c.used_in || []).some(u => u.module === m.roat_id));
+const conceptLink = c => `<a href="${base}method/concepts/${c.slug}/">${esc(c.title)}</a>`;
+
 const snapBadge = s => s.snap.status === "published" ? "" : ` <span class="badge prospective">${esc(s.snap.status)} snapshot</span>`;
 const levelNum = x => { const mm = String(x || "").match(/Level (\d)/); return mm ? Number(mm[1]) : null; };
 const passesGate = id => { const r = hubIndex.records[id]; if (!r) return false; const lv = levelNum(r.evidence_level);
@@ -164,6 +171,7 @@ ${pending.length ? `<section><div class="wrap"><p class="module">Pending evidenc
 ${s.snap.caveats?.length ? `<dt>Caveats</dt><dd><ul>${s.snap.caveats.map(c => `<li>${esc(c)}</li>`).join("")}</ul></dd>` : ""}
 <dt>Companion research</dt><dd>${(m.relationships.companion_of || []).map(o => outputById[o] ? `<a href="${base}research/#${o.toLowerCase()}">${esc(outputById[o].title)}</a> (${esc(o)})` : `<span class="muted">${esc(o)} — pending OUT id</span>`).join("; ") || "—"}</dd>
 <dt>Related modules</dt><dd>${(m.relationships.related_module || []).map(o => modById[o] ? `<a href="${base}modules/${modById[o].slug}/">${esc(modById[o].title)}</a>` : esc(o)).join("; ") || "—"}</dd>
+${conceptsOfModule(m).length ? `<dt>Concepts</dt><dd>${conceptsOfModule(m).map(c => `${conceptLink(c)} <span class="muted">(${(c.used_in || []).filter(u => u.module === m.roat_id).map(u => esc((m.dimensions.find(d => d.key === u.dimension) || {}).label || u.dimension)).join(", ")})</span>`).join("; ")}</dd>` : ""}
 <dt>All snapshots</dt><dd>${m.snapshots.filter(x => /^\d{4}-\d{2}-\d{2}$/.test(x.dir)).map(x => (x === s ? `<b>${esc(x.dir)}</b>` : `<a href="${base}modules/${m.slug}/${x.dir}/">${esc(x.dir)}</a>`) + (x.supersededBy ? ` <span class="muted">(superseded)</span>` : "")).join(" · ")}</dd>
 ${s.snap.supersedes ? `<dt>Supersedes</dt><dd><code>${esc(s.snap.supersedes)}</code>${s.diff ? ` · <a href="#changes">${s.diff.cells.length} cells recoded</a>` : ""}</dd>` : ""}
 ${m.panels.length ? `<dt>Additional panels</dt><dd>${m.panels.map(x => x === s ? `<b>${esc(x.snap.label || x.dir)}</b>` : `<a href="${base}modules/${m.slug}/${x.dir}/">${esc(x.snap.label || x.dir)}</a>${snapBadge(x)}`).join("<br>")}</dd>` : ""}
@@ -237,7 +245,31 @@ const methodMeta = methodFiles.map(f => { const { meta, body } = splitFront(R(`c
 for (const p of methodMeta) page(`method/${p.slug}/index.html`, p.title, `<div class="wrap"><p class="crumbs"><a href="${base}method/">Method</a> › ${esc(p.title)}</p><h1 class="page-title">${esc(p.title)}</h1><div class="prose" style="margin-top:18px">${p.body}</div>${p.slug === "n-scale" ? `<div class="defs" style="margin-top:20px">${vocab.n_scale.map(n => `<div class="def" style="border-color:var(--n${n.value})"><b>N${n.value}</b>${esc(n.label)}<br><small>${esc(n.definition)}</small></div>`).join("")}</div>` : ""}</div>`);
 page("method/index.html", "Method", `<div class="wrap"><h1 class="page-title">Method</h1><p class="sub" style="margin-top:10px">How the Observatory codes, verifies and publishes — and the analytical framework the modules apply.</p>
 ${T.cards(modules.filter(m => m.kind === "method").map(m => ({ lab: `Module ${String(m.number).padStart(2, "0")}`, title: m.title, href: `${base}modules/${m.slug}/`, lines: [m.question] })))}
-<ul class="plain" style="margin-top:20px">${methodMeta.map(p => `<li><a href="${base}method/${p.slug}/">${esc(p.title)}</a></li>`).join("")}<li><a href="${base}about/changelog/">Changelog</a></li></ul></div>`);
+<ul class="plain" style="margin-top:20px">${methodMeta.map(p => `<li><a href="${base}method/${p.slug}/">${esc(p.title)}</a></li>`).join("")}${concepts.length ? `<li><a href="${base}method/concepts/">Concepts</a> — ${concepts.length} defined terms with their locus in the sources</li>` : ""}<li><a href="${base}about/changelog/">Changelog</a></li></ul></div>`);
+
+// concept pages: definition, locus, where the Observatory uses the concept (the module column, row by row)
+const conceptBadge = c => c.definition_status === "approved" ? "" : ` <span class="badge prospective" title="${esc(c.drafted || "")}">draft definition</span>`;
+for (const c of concepts) {
+  const uses = (c.used_in || []).map(u => { const m = modById[u.module]; const d = m?.dimensions.find(x => x.key === u.dimension); return m && m.latest ? { m, d } : null; }).filter(Boolean);
+  const useBlocks = uses.map(({ m, d }) => {
+    const rows = splitByEvidence(m, m.latest.data).rows; // published rows only; prospective rows are shown with a badge
+    const isRole = d.scale === "role-value";
+    return `<section><div class="wrap"><p class="module">In Module ${String(m.number).padStart(2, "0")} · column “${esc(d.label)}” · snapshot ${esc(m.latest.data.snapshot_date)}${snapBadge(m.latest)}</p><h2><a href="${base}modules/${m.slug}/" style="border:0;color:inherit">${esc(m.title)}</a></h2>
+<div class="tblwrap"><table class="audit"><thead><tr><th>${isRole ? "Role" : "Regime"}</th><th>${esc(d.label)}</th></tr></thead><tbody>${rows.map(r => `<tr><td>${esc(r.regime_label)}${r.framework ? `<br><small class="muted">${esc(r.framework)}</small>` : ""}${(r.panel || "current") === "prospective" ? ' <span class="badge prospective">prospective</span>' : ""}</td>${isRole ? T.roleCell(r[d.key]) : `<td>${esc(r[d.key] || "—")}</td>`}</tr>`).join("")}</tbody></table></div>${isRole ? T.legendRoles() : ""}</div></section>`;
+  });
+  page(`method/concepts/${c.slug}/index.html`, c.title, `<div class="wrap"><p class="crumbs"><a href="${base}method/">Method</a> › <a href="${base}method/concepts/">Concepts</a> › ${esc(c.title)}</p><p class="eyebrow">${esc(c.roat_id)} · concept</p><h1 class="page-title">${esc(c.title)}${conceptBadge(c)}</h1>
+${c.aliases?.length ? `<p class="muted" style="margin-top:8px">Also: ${c.aliases.map(esc).join(" · ")}</p>` : ""}
+<div class="prose" style="margin-top:18px"><p>${esc(c.definition)}</p></div>
+${c.definition_status !== "approved" ? `<p class="hint">${esc(c.drafted || "Definition drafted; author review pending.")}</p>` : ""}
+<p class="module" style="margin-top:22px">Locus in the sources</p>
+${(c.locus || []).map(l => `<div class="srcrow">${T.chips([l.record], site, sources)}<div><b>${esc(sources[l.record]?.title || hubIndex.records[l.record]?.record_type || l.record)}</b> — ${esc(l.pinpoint)}${l.note ? `<br><span class="muted">${esc(l.note)}</span>` : ""}</div></div>`).join("")}
+${c.related?.length ? `<p class="module" style="margin-top:22px">Related concepts</p><p>${c.related.map(r => conceptById[r] ? conceptLink(conceptById[r]) : esc(r)).join(" · ")}</p>` : ""}
+</div>
+${useBlocks.join("")}
+<section><div class="wrap"><div class="note" style="border-top:1px solid var(--rule);padding-top:14px"><p class="module">Cite this concept</p><p>ROAT Observatory, concept <em>${esc(c.title)}</em> [<code>${esc(c.roat_id)}</code>], ${esc(c.definition_status)} definition, ${esc(site.built)}. Faculty of Law, Comenius University Bratislava. ${esc(base)}method/concepts/${esc(c.slug)}/</p></div></div></section>`, { description: c.definition.slice(0, 160) });
+}
+if (concepts.length) page("method/concepts/index.html", "Concepts", `<div class="wrap"><p class="crumbs"><a href="${base}method/">Method</a> › Concepts</p><h1 class="page-title">Concepts</h1><p class="sub" style="margin-top:10px">The terms the modules code against, each with its definition, its locus in the primary sources and the module columns it governs. A draft badge means the definition has been drafted from the sources and awaits the author's review.</p>
+${T.cards(concepts.map(c => ({ lab: c.roat_id, title: c.title + (c.definition_status === "approved" ? "" : " (draft)"), href: `${base}method/concepts/${c.slug}/`, lines: [c.definition.split(". ")[0] + ".", { lab: "Used in", text: (c.used_in || []).map(u => modById[u.module]?.short_title).filter(Boolean).join(" · ") || "—" }] })))}</div>`);
 
 // changelog: repository history plus every snapshot the site holds
 const snapRows = modules.flatMap(m => m.snapshots.map(x => ({ m, x }))).sort((a, b) => String(b.x.data.snapshot_date).localeCompare(String(a.x.data.snapshot_date)));
@@ -254,6 +286,7 @@ const resolve = {};
 for (const m of modules) { resolve[m.roat_id] = `modules/${m.slug}/`; for (const s of m.snapshots) resolve[s.snap.roat_id] = `modules/${m.slug}/${s.dir}/`; }
 for (const j of jurisdictions) resolve[j.roat_id] = `jurisdictions/${j.slug}/`;
 for (const s of sourcesArr) resolve[s.id] = `sources/${s.id.toLowerCase()}/`;
+for (const c of concepts) resolve[c.roat_id] = `method/concepts/${c.slug}/`;
 for (const [id, target] of Object.entries(resolve)) write(`id/${id}/index.html`, `<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${base}${target}"><title>${esc(id)}</title><a href="${base}${target}">${esc(id)}</a>`);
 write("id/index.json", JSON.stringify(resolve, null, 1));
 

@@ -1,0 +1,21 @@
+{
+  "roat_id": "ROAT-CON-REMOTE-INTERVENTION",
+  "slug": "remote-intervention",
+  "title": "Remote intervention",
+  "aliases": ["remote intervention operator", "intervention à distance", "intervencija na daljinu", "vzdialený zásah"],
+  "definition": "Discrete commands issued from outside the vehicle that change its behaviour, such as requesting a minimal risk manoeuvre, confirming or releasing a manoeuvre, rerouting, resuming the trip or controlling doors, while the automated driving system continues to perform the DDT. EU type-approval law defines the remote intervention operator as a person outside the fully automated vehicle who may remotely achieve the tasks of the on-board operator where it is safe to do so and who shall not drive the vehicle; French and Croatian law create equivalent roles. In the Observatory a takeover of the DDT is never intervention: it is remote driving, and commands given from inside the vehicle are not remote.",
+  "definition_status": "draft",
+  "drafted": "Drafted 2026-09-06 from the primary sources listed below; author review pending.",
+  "locus": [
+    { "record": "ROAT-2026-0040", "pinpoint": "Art. 2(25)", "note": "Remote intervention operator; the ADS continues to perform the DDT." },
+    { "record": "ROAT-2026-0308", "pinpoint": "art. R.3151-1(8)", "note": "Personne habilitée à intervenir à distance: commands and route changes without driving." },
+    { "record": "ROAT-2026-0303", "pinpoint": "Art. 2(113)", "note": "Operator intervencije na daljinu." },
+    { "record": "ROAT-2026-0329", "pinpoint": "§ 1f(2)", "note": "Technische Aufsicht may release alternative manoeuvres proposed by the vehicle." },
+    { "record": "ROAT-2026-0193", "pinpoint": "Revised text", "note": "UNECE reading of intervention as tactical support while the ADS performs the DDT." }
+  ],
+  "used_in": [
+    { "module": "ROAT-MOD-ROLES", "dimension": "remote_intervention" },
+    { "module": "ROAT-MOD-SECOND-GATE", "dimension": "remote_role" }
+  ],
+  "related": ["ROAT-CON-REMOTE-ASSISTANCE", "ROAT-CON-REMOTE-DRIVING", "ROAT-CON-TECH-SUPERVISION"]
+}

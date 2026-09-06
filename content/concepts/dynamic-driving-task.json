@@ -1,0 +1,19 @@
+{
+  "roat_id": "ROAT-CON-DDT",
+  "slug": "dynamic-driving-task",
+  "title": "Dynamic driving task (DDT)",
+  "aliases": ["DDT", "Fahraufgabe", "dynamická úloha riadenia"],
+  "definition": "All real-time operational and tactical functions required to operate a vehicle in on-road traffic: lateral and longitudinal motion control, object and event detection and response, and manoeuvre planning. Strategic functions such as trip scheduling and the choice of destination are not part of it. In the Observatory the question of who performs the DDT separates the automated driving system from every human role: a role that supervises, assists, intervenes or dispatches does not perform the DDT.",
+  "definition_status": "draft",
+  "drafted": "Drafted 2026-09-06 from the primary sources listed below; author review pending.",
+  "locus": [
+    { "record": "ROAT-2026-0120", "pinpoint": "§ 3.10", "note": "Canonical definition; § 3.14 and § 3.15 define the two motion-control subtasks." },
+    { "record": "ROAT-2026-0040", "pinpoint": "Art. 2(25)", "note": "The remote intervention operator shall not drive; the ADS continues to perform the DDT." },
+    { "record": "ROAT-2026-0193", "pinpoint": "Revised text", "note": "Remote interaction and intervention support tactical functions while the ADS performs the entire DDT." }
+  ],
+  "used_in": [
+    { "module": "ROAT-MOD-ROLES", "dimension": "ddt" },
+    { "module": "ROAT-MOD-SECOND-GATE", "dimension": "ddt_allocation" }
+  ],
+  "related": ["ROAT-CON-FALLBACK", "ROAT-CON-REMOTE-DRIVING"]
+}

@@ -133,6 +133,30 @@ for (const src of J("data/hub/sources.json").sources) {
   if (/^(Legal act|Draft legislation|Official guidance|Policy document|Standard)$/.test(src.record_type || "") && !String(src.legal_status || "").trim()) warn(where, "legal instrument without legal status");
 }
 
+/* ---- concepts (content/concepts/*.json): registry, locus records, module dimensions ---- */
+const conDir = path.join(ROOT, "content/concepts");
+const conFiles = fs.existsSync(conDir) ? fs.readdirSync(conDir).filter(f => f.endsWith(".json")) : [];
+const conIds = new Set();
+for (const f of conFiles) {
+  const c = J(`content/concepts/${f}`); const w = `concept ${c.slug || f}`; conIds.add(c.roat_id);
+  for (const k of ["roat_id", "slug", "title", "definition", "definition_status", "locus", "used_in"]) if (c[k] == null) err(w, `missing "${k}"`);
+  if (!ids.concepts?.[c.roat_id]) err(w, `${c.roat_id} is not in data/ids.json concepts`);
+  else if (ids.concepts[c.roat_id].slug !== c.slug) err(w, `slug differs from registry`);
+  for (const l of c.locus || []) {
+    if (!index[l.record]) err(w, `locus record ${l.record} is not in the Hub register`);
+    else if (!l.pinpoint) warn(w, `locus ${l.record} has no pinpoint`);
+  }
+  for (const u of c.used_in || []) {
+    const m = ids.modules[u.module];
+    if (!m) { err(w, `used_in module ${u.module} not registered`); continue; }
+    const mm = J(`content/modules/${m.slug}.json`);
+    if (u.dimension && !mm.dimensions.some(d => d.key === u.dimension)) err(w, `dimension "${u.dimension}" does not exist in ${m.slug}`);
+  }
+  for (const r of c.related || []) if (!ids.concepts?.[r]) err(w, `related concept ${r} not registered`);
+  if (c.definition_status !== "approved") warn(w, `definition is "${c.definition_status}" — author review pending`);
+}
+for (const [id, c] of Object.entries(ids.concepts || {})) if (!exists(`content/concepts/${c.slug}.json`)) err(id, `concept registered but no content/concepts/${c.slug}.json`);
+
 /* ---- report ---- */
 const dedupe = a => { const s = new Set(); return a.filter(x => { const k = x.where + "|" + x.msg; if (s.has(k)) return false; s.add(k); return true; }); };
 const E = dedupe(errors), W = dedupe(warnings);

@@ -60,7 +60,8 @@ Sheets read by the sync: Intelligence Register, Public Library, Outputs, Cross-s
 
 ## Conventions
 
-- IDs: `ROAT-MOD-*` modules, `ROAT-SNAP-<MOD>-<date>` snapshots, `ROAT-JUR-*` jurisdictions (variants `ROAT-JUR-SK:1329`, `ROAT-JUR-UK:1861`), `RC-NNN` role concepts; all resolvable at `/id/<ID>/`. Registry: `data/ids.json`.
+- IDs: `ROAT-MOD-*` modules, `ROAT-SNAP-<MOD>-<date>` snapshots, `ROAT-JUR-*` jurisdictions (variants `ROAT-JUR-SK:1329`, `ROAT-JUR-UK:1861`), `RC-NNN` role concepts, `ROAT-CON-*` defined concepts (`content/concepts/*.json`, `definition_status` draft until the author approves); all resolvable at `/id/<ID>/`. Registry: `data/ids.json`.
+- Snapshots that declare `supersedes` get a build-time cell diff ("What changed") against the snapshot they replace; the superseded snapshot shows a forward-linking banner. No data is written for this; it is computed from the frozen files.
 - Vocabularies: `data/vocabularies.json` (N0–N4 scale, role polarity, Hub publishable stages and evidence max).
 - Windows: scripts resolve their own path with `fileURLToPath` (never `URL.pathname`); `serve.mjs` normalises URLs before `path.join`. Keep it that way.
 - Language: repository, site and commit messages in English; conversation with the author in Slovak.

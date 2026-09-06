@@ -1,0 +1,20 @@
+{
+  "roat_id": "ROAT-CON-ODD",
+  "slug": "operational-design-domain",
+  "title": "Operational design domain (ODD)",
+  "aliases": ["ODD", "festgelegter Betriebsbereich", "design operating conditions", "authorised domain", "prevádzková oblasť"],
+  "definition": "The operating conditions, including environmental, geographical, time-of-day, traffic and road characteristics, under which a driving automation system or feature is designed to function. Law turns the ODD into a legal object in different ways: Germany approves a defined operating area, France ties the safety case to a route or zone, China's draft law binds activation to design operating conditions, and test permits fix territory, route and time. Module 02 codes this translation as ODD legalisation.",
+  "definition_status": "draft",
+  "drafted": "Drafted 2026-09-06 from the primary sources listed below; author review pending.",
+  "locus": [
+    { "record": "ROAT-2026-0120", "pinpoint": "§ 3.21", "note": "Canonical definition." },
+    { "record": "ROAT-2026-0040", "pinpoint": "Art. 2", "note": "ODD as defined for type approval; activation limited to the ODD." },
+    { "record": "ROAT-2026-0329", "pinpoint": "§ 1d(2)", "note": "Festgelegter Betriebsbereich as an approved area." },
+    { "record": "ROAT-2026-0308", "pinpoint": "art. R.3151-1", "note": "Route or zone as part of the automated road transport system." },
+    { "record": "ROAT-2026-0326", "pinpoint": "Arts. 95–103", "note": "Design operating conditions in the draft law." }
+  ],
+  "used_in": [
+    { "module": "ROAT-MOD-SECOND-GATE", "dimension": "odd_legalisation" }
+  ],
+  "related": ["ROAT-CON-SECOND-GATE", "ROAT-CON-FALLBACK"]
+}

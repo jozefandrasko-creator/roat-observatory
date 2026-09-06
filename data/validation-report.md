@@ -1,6 +1,6 @@
-# Observatory validation — 2026-09-06 14:38 UTC
+# Observatory validation — 2026-09-06 14:53 UTC
 
-**0 errors · 53 warnings**
+**0 errors · 61 warnings**
 
 ## Warnings
 
@@ -57,4 +57,12 @@
 - human-roles/2026-09-07 — latest snapshot status is "review" — module page will show a draft banner
 - layered-normalisation/historical-uk — latest snapshot status is "draft" — module page will show a draft banner
 - second-gate/2026-09-07 — latest snapshot status is "review" — module page will show a draft banner
+- concept ddt-fallback — definition is "draft" — author review pending
+- concept deployment-gate — definition is "draft" — author review pending
+- concept dynamic-driving-task — definition is "draft" — author review pending
+- concept operational-design-domain — definition is "draft" — author review pending
+- concept remote-assistance — definition is "draft" — author review pending
+- concept remote-driving — definition is "draft" — author review pending
+- concept remote-intervention — definition is "draft" — author review pending
+- concept technical-supervision — definition is "draft" — author review pending
 

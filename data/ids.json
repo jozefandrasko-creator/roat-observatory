@@ -70,6 +70,16 @@
       "panel": "prospective"
     }
   },
+  "concepts": {
+    "ROAT-CON-DDT": { "slug": "dynamic-driving-task" },
+    "ROAT-CON-FALLBACK": { "slug": "ddt-fallback" },
+    "ROAT-CON-REMOTE-ASSISTANCE": { "slug": "remote-assistance" },
+    "ROAT-CON-REMOTE-INTERVENTION": { "slug": "remote-intervention" },
+    "ROAT-CON-REMOTE-DRIVING": { "slug": "remote-driving" },
+    "ROAT-CON-ODD": { "slug": "operational-design-domain" },
+    "ROAT-CON-SECOND-GATE": { "slug": "deployment-gate" },
+    "ROAT-CON-TECH-SUPERVISION": { "slug": "technical-supervision" }
+  },
   "external_outputs_pending": {
     "OUT-AV-HISTORY": "Placeholder until the AV History article receives an OUT-* id in the Hub Outputs sheet",
     "OUT-BLF-REMOTE": "Placeholder until the BLF 2026 remote-intervention paper receives an OUT-* id"
