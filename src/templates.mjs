@@ -14,7 +14,7 @@ export function layout({ title, body, nav, draft, site, path: current = "/", des
   const sk = lang === "sk";
   const items = sk
     ? [["/sk/", "Observatórium"], ["/sk/moduly/", "Moduly"], ["/sk/o-projekte/", "O projekte"], ["/sources/", "Zdroje (EN)"], ["/method/", "Metóda (EN)"]]
-    : [["/", "Observatory"], ["/modules/", "Modules"], ["/jurisdictions/", "Jurisdictions"], ["/sources/", "Sources"], ["/research/", "Research"], ["/method/", "Method"]];
+    : [["/", "Observatory"], ["/modules/", "Modules"], ["/map/", "Map"], ["/jurisdictions/", "Jurisdictions"], ["/sources/", "Sources"], ["/research/", "Research"], ["/method/", "Method"]];
   const other = alternates.find(a => a.hreflang === (sk ? "en" : "sk"));
   const switchHref = other ? other.href : (sk ? "" : "sk/");
   const isCurrent = p => (p === "/" || p === "/sk/") ? current === p : current.startsWith(p);

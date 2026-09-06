@@ -288,6 +288,64 @@ for (const s of sourcesArr) {
 <p class="module" style="margin-top:22px">Cited by</p>${citing.length ? `<ul>${citing.map(({ m, r }) => `<li><a href="${base}modules/${m.slug}/">${esc(m.short_title)}</a> — ${esc(r.regime_label)}</li>`).join("")}</ul>` : `<p class="muted">No module cell cites this record.</p>`}</div>`, { description: s.summary || s.title, head: ldSource(s) });
 }
 
+// landscape map: the "wall" of instruments by pillar and layer, from content/landscape/<date>.json.
+// A box is a legal instrument or standard; its records are Hub records and link to the Source Library once published.
+const landDir = path.join(ROOT, "content/landscape");
+const landscapes = fs.existsSync(landDir) ? fs.readdirSync(landDir).filter(f => f.endsWith(".json")).sort().map(f => J(`content/landscape/${f}`)) : [];
+const landscape = landscapes[landscapes.length - 1];
+if (landscape) {
+  const L = landscape;
+  const statusKey = s => s.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "");
+  const statusLabel = { "binding-in-force": "Binding, in force", "binding-adopted-phased": "Binding, adopted or phased", "soft-law-guidance": "Soft law and guidance", "draft-negotiation": "Draft or in negotiation", "standard-technical-reference": "Standard or technical reference", "hub-gap-verify": "Verification pending" };
+  const lab = s => statusLabel[statusKey(s)] || s;
+  const fnLabel = { "TA": "type approval", "OP": "operation", "TA + OP": "approval and operation" };
+  const count = (f, v) => L.boxes.filter(b => f(b) === v).length;
+  const recChip = id => sources[id]
+    ? `<a class="chip" href="${base}sources/${id.toLowerCase()}/" title="${esc(sources[id].title)}">${esc(id)}</a>`
+    : `<span class="chip" title="In the Hub, not yet in the public Source Library">${esc(id)}</span>`;
+  const boxHtml = b => `<div class="mapbox s-${statusKey(b.status)}" data-layer="${esc(b.layer)}" data-status="${esc(b.status)}" data-fn="${esc(b.function)}" data-flag="${b.backbone ? "backbone " : ""}${b.new_2026 ? "new" : ""}" data-q="${esc([b.id, b.label, b.pillar, b.layer, b.status, b.note, ...b.records].join(" ").toLowerCase())}">
+  <p class="lbl">${esc(b.label)}${b.new_2026 ? ' <span class="tag new">new 2026</span>' : ""}${b.backbone ? ' <span class="tag bb">backbone</span>' : ""}</p>
+  <p class="meta">${esc(b.layer)} · ${esc(fnLabel[b.function] || b.function)}</p>
+  ${b.records.length ? `<div class="chips">${b.records.map(recChip).join("")}</div>` : ""}
+  ${b.urls.length ? `<p class="meta"><a href="${esc(b.urls[0])}" rel="noopener">official source</a>${b.urls.length > 1 ? ` and ${b.urls.length - 1} more` : ""}</p>` : ""}
+  ${b.note ? `<p class="meta note">${esc(b.note)}</p>` : ""}
+</div>`;
+  const allRecords = [...new Set(L.boxes.flatMap(b => b.records))];
+  const pending = allRecords.filter(id => !sources[id]).length;
+  const opt = (label, key, values) => `<label class="facet"><span>${esc(label)}</span><select data-facet="${key}"><option value="">All</option>${values.map(v => `<option value="${esc(v)}">${esc(lab(v))}</option>`).join("")}</select></label>`;
+  page("map/index.html", L.title, `<div class="wrap wide"><h1 class="page-title">${esc(L.title)}</h1>
+<p class="sub" style="margin-top:10px">${esc(L.subtitle)}. ${L.boxes.length} instruments and standards across ${L.pillars.length} regulatory pillars, as they stood on ${esc(L.snapshot_date)}. A box is one instrument; its identifiers link to the Source Library where the record is published.</p>
+<form class="filters" id="mapfilters" onsubmit="return false"><label class="facet grow"><span>Search</span><input type="search" id="mapq" placeholder="instrument, pillar, ROAT ID…" autocomplete="off"></label>
+${opt("Layer", "layer", L.layers)}${opt("Status", "status", L.statuses)}${opt("Function", "fn", ["TA", "OP", "TA + OP"])}
+<label class="facet"><span>Only</span><select data-facet="flag"><option value="">All boxes</option><option value="backbone">Backbone instruments</option><option value="new">New in 2026</option></select></label>
+<span class="count" id="mapcount">${L.boxes.length} of ${L.boxes.length}</span></form>
+<div class="legend">${L.statuses.map(s => `<span class="k"><span class="sw s-${statusKey(s)}"></span><span>${esc(lab(s))} <span class="muted">${count(b => b.status, s)}</span></span></span>`).join("")}</div>
+<div class="wall" id="wall">${L.pillars.map(p => `<section class="pcol" data-pillar="${esc(p)}"><h2>${esc(p)}</h2><p class="pcount muted">${L.boxes.filter(b => b.pillar === p).length} instruments</p>${L.boxes.filter(b => b.pillar === p).map(boxHtml).join("")}</section>`).join("")}</div>
+<p class="hint" id="mapnone" hidden>No instrument matches. Clear a filter or shorten the search.</p>
+<div class="note" style="margin-top:24px;border-top:1px solid var(--rule);padding-top:14px"><p class="module">Provenance</p>
+<p>Classification by pillar, layer, function and status comes from ${esc(L.source.workbook)}, cut-off ${esc(L.source.cut_off)}. The instruments themselves are ROAT Intelligence Hub records: ${allRecords.length} records are referenced, ${allRecords.length - pending} are published in the Source Library and ${pending} are held in the Hub pending publication, which is why some identifiers are not links. The map is a navigation layer; the coded comparative data lives in the <a href="${base}modules/">modules</a>.</p></div></div>
+<script>
+(function(){
+  const boxes=[...document.querySelectorAll('#wall .mapbox')], cols=[...document.querySelectorAll('#wall .pcol')];
+  const q=document.getElementById('mapq'), sels=[...document.querySelectorAll('#mapfilters select')], count=document.getElementById('mapcount'), none=document.getElementById('mapnone'), total=boxes.length;
+  function apply(){
+    const text=q.value.trim().toLowerCase(); let n=0;
+    boxes.forEach(b=>{
+      let ok=!text||b.dataset.q.indexOf(text)>-1;
+      for(const s of sels){ if(!s.value) continue; const v=b.dataset[s.dataset.facet]||''; if(s.dataset.facet==='flag'? v.indexOf(s.value)<0 : v!==s.value) ok=false; }
+      b.hidden=!ok; if(ok) n++;
+    });
+    cols.forEach(c=>{ const vis=[...c.querySelectorAll('.mapbox')].filter(b=>!b.hidden).length; c.hidden=vis===0; const p=c.querySelector('.pcount'); if(p) p.textContent=vis+' instruments'; });
+    count.textContent=n+' of '+total; none.hidden=n>0;
+    const p=new URLSearchParams(); if(text) p.set('q',text); sels.forEach(s=>{ if(s.value) p.set(s.dataset.facet,s.value); });
+    history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:'')+location.hash);
+  }
+  const init=new URLSearchParams(location.search); if(init.get('q')) q.value=init.get('q'); sels.forEach(s=>{ const v=init.get(s.dataset.facet); if(v) s.value=v; });
+  q.addEventListener('input',apply); sels.forEach(s=>s.addEventListener('change',apply)); apply();
+})();
+</script>`, { description: `${L.boxes.length} instruments across ${L.pillars.length} pillars of automated mobility regulation, linked to the ROAT Source Library.` });
+}
+
 // research: one page per public output — what it is, which modules belong to it, which Hub records it rests on
 const companionsOf = o => modules.filter(m => (m.relationships.companion_of || []).includes(o.id));
 page("research/index.html", "Research", `<div class="wrap"><h1 class="page-title">Research</h1><p class="sub" style="margin-top:10px">ROAT outputs that the modules belong to. Each is catalogued in the Hub Outputs sheet; the page lists the records it rests on and how many of them are already in the public Source Library.</p>
@@ -355,7 +413,7 @@ if (skIntro) {
   <div class="lede prose" style="margin-top:16px">${skIntro.body}</div>${skHint(skIntro)}
 </div></header>
 <section><div class="wrap"><p class="module">Moduly</p><h2>Štyri porovnávacie modely</h2>${skCards()}
-<p class="note muted" style="margin-top:18px">Údaje, tabuľky a pramene sú v angličtine: <a href="${base}">ROAT Observatory →</a> · <a href="${base}sources/">Knižnica zdrojov</a> · <a href="${base}jurisdictions/">Jurisdikcie</a> · <a href="${base}research/">Výskumné výstupy</a></p></div></section>`, { description: skIntro.summary || "Slovenský prehľad ROAT Observatória: ako právo vpúšťa automatizované vozidlá na cestu.", lang: "sk" });
+<p class="note muted" style="margin-top:18px">Údaje, tabuľky a pramene sú v angličtine: <a href="${base}">ROAT Observatory →</a> · <a href="${base}map/">Mapa regulačného prostredia</a> · <a href="${base}sources/">Knižnica zdrojov</a> · <a href="${base}jurisdictions/">Jurisdikcie</a> · <a href="${base}research/">Výskumné výstupy</a></p></div></section>`, { description: skIntro.summary || "Slovenský prehľad ROAT Observatória: ako právo vpúšťa automatizované vozidlá na cestu.", lang: "sk" });
   page("sk/moduly/index.html", "Moduly", `<div class="wrap"><p class="crumbs"><a href="${base}sk/">Observatórium</a> › Moduly</p><h1 class="page-title">Moduly</h1><p class="sub" style="margin-top:10px">Každý modul je jeden porovnávací model s datovanými, zmrazenými snímkami kódovaných údajov. Slovenská stránka modulu je orientačný prehľad; kódované údaje sú na anglickej stránke.</p>${skCards()}</div>`, { description: "Slovenský prehľad modulov ROAT Observatória.", lang: "sk" });
   for (const m of modules) {
     const t = skByModule[m.slug]; if (!t) continue;

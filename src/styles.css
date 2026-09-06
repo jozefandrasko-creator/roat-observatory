@@ -180,3 +180,28 @@ table.diff td{vertical-align:top;max-width:34ch}
 #srclist .srcrow[hidden]{display:none}
 nav.site a.lang{margin-left:auto;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--muted)} nav.site a.lang:hover{color:var(--accent)}
 .mast .lede.prose{font-size:17px;max-width:70ch} .mast .lede.prose p{margin:0 0 12px}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:14px;margin-top:16px;align-items:start}
+.pcol{border:1px solid var(--rule);border-radius:4px;background:var(--surface);padding:12px 12px 14px}
+.pcol h2{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);margin:0;line-height:1.3}
+.pcol .pcount{font-family:var(--mono);font-size:10.5px;margin:4px 0 10px}
+.mapbox{border:1px solid var(--rule-soft);border-left:3px solid var(--rule);border-radius:3px;padding:8px 9px;margin-bottom:8px;background:var(--paper)}
+.mapbox .lbl{margin:0;font-size:13.5px;font-weight:600;line-height:1.28}
+.mapbox .meta{margin:4px 0 0;font-size:11.5px;color:var(--muted);line-height:1.35}
+.mapbox .meta.note{font-style:italic}
+.mapbox .chips{margin-top:6px;gap:4px}
+.mapbox .chip{font-size:10px;padding:1px 5px}
+.mapbox .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;padding:1px 4px;border-radius:2px;vertical-align:middle;white-space:nowrap}
+.mapbox .tag.new{background:var(--accent-soft);color:var(--accent-ink)}
+.mapbox .tag.bb{background:var(--shift-soft);color:var(--shift)}
+.s-binding-in-force{border-left-color:var(--n4)}
+.s-binding-adopted-phased{border-left-color:var(--n3)}
+.s-soft-law-guidance{border-left-color:var(--n2)}
+.s-standard-technical-reference{border-left-color:var(--n1)}
+.s-draft-negotiation{border-left-color:var(--shift)}
+.s-hub-gap-verify{border-left-color:var(--rule);border-left-style:dashed}
+.legend .sw{display:inline-block;width:14px;height:14px;border-radius:2px;border:1px solid var(--rule-soft)}
+.legend .sw.s-binding-in-force{background:var(--n4)} .legend .sw.s-binding-adopted-phased{background:var(--n3)}
+.legend .sw.s-soft-law-guidance{background:var(--n2)} .legend .sw.s-standard-technical-reference{background:var(--n1)}
+.legend .sw.s-draft-negotiation{background:var(--shift)} .legend .sw.s-hub-gap-verify{background:var(--n0);border-style:dashed}
+#wall .pcol[hidden],#wall .mapbox[hidden]{display:none!important}
+.wrap.wide{max-width:1560px}
