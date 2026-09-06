@@ -8,7 +8,10 @@
 //   node scripts/release.mjs --prepare --version 0.3.0 --title "Second Gate published"
 //       Bumps package.json and CITATION.cff, turns the CHANGELOG's "Unreleased" section into a
 //       dated heading, and flips the snapshots the embargo releases from review to published.
-//       Refuses to run if --check would fail. Add --force only with a written reason.
+//       Refuses to run if --check would fail, and refuses a release that lifts no embargo unless
+//       --code-only says that is deliberate. --force overrides the BLOCKED preflight items; it cannot
+//       lift an embargo, because what the embargo releases is derived from the Hub output status alone.
+//       Nothing is written until every edit has been computed and checked, so a failure is re-runnable.
 //
 //   node scripts/release.mjs --doi 10.5281/zenodo.NNNNNNNN
 //       Writes a minted version DOI into every snapshot that is part of the published record and
@@ -82,8 +85,13 @@ const companionSubmitted = m => {
     : { released: true, why: states.map(s => `${s.id} is "${s.status}"`).join(", ") };
 };
 
-// Snapshots the embargo would let out: review snapshots of a module whose companion is submitted.
-const releasable = snapshots.filter(s => s.snap.status === "review" && companionSubmitted(s.module).released);
+// Snapshots the embargo would let out: review snapshots of a module whose companion is submitted, minus
+// any that a later snapshot supersedes. Publishing a superseded snapshot would be a claim nobody makes —
+// and it would then fail the "published snapshot carries a DOI" check for good, because the DOI of a
+// superseded snapshot belongs to the release it was archived in, not to this one.
+const supersededIds = new Set(snapshots.filter(s => s.snap.supersedes).map(s => s.snap.supersedes));
+const isSuperseded = s => supersededIds.has(s.snap.roat_id);
+const releasable = snapshots.filter(s => s.snap.status === "review" && !isSuperseded(s) && companionSubmitted(s.module).released);
 const blocked = snapshots.filter(s => s.snap.status === "review" && !companionSubmitted(s.module).released);
 
 /* ---------- preflight ---------- */
@@ -126,7 +134,13 @@ function preflight() {
   if (undoi.length) fail(`published snapshot without a DOI: ${undoi.map(s => s.file).join(", ")}`);
   else pass("every published snapshot carries a version DOI");
 
-  // 6. something to release
+  // 6. an embargo that lets nothing out is a legitimate release only when the author says so. The runbook
+  // allows a code-only release; it must not be the accidental outcome of running this a day too early.
+  if (args.prepare && !releasable.length && blocked.length && !args["code-only"]) {
+    fail(`nothing leaves embargo: ${[...new Set(blocked.map(s => s.module.slug))].map(slug => { const m = modules.find(x => x.slug === slug); return `${slug} — ${companionSubmitted(m).why}`; }).join("; ")}. If this is deliberately a release of code changes only, pass --code-only`);
+  }
+
+  // 7. something to release
   const cl = R("CHANGELOG.md");
   const unreleased = cl.match(/## Unreleased\n([\s\S]*?)(?=\n## |\n*$)/);
   const bullets = unreleased ? unreleased[1].split("\n").filter(l => l.trim().startsWith("- ")).length : 0;
@@ -174,11 +188,19 @@ function prepare() {
   // allows one when the code changed in a way worth citing — but it should never happen by accident.
   if (!releasable.length) console.log("\nNote: no snapshot leaves embargo in this release. This is a code-only release; if you expected a module to be published, stop and check the output status in the Hub.");
 
+  // Everything is computed and checked before the first byte is written, so a failure leaves the working
+  // tree untouched and the command can simply be run again.
+  const writes = [];
   const changes = [];
-  // package.json + CITATION.cff
-  W("package.json", R("package.json").replace(/("version":\s*")[^"]+(")/, `$1${version}$2`));
+
+  const pkgSrc = R("package.json");
+  if (!/("version":\s*")[^"]+(")/.test(pkgSrc)) { console.error("package.json has no version field to bump"); process.exit(1); }
+  writes.push(["package.json", pkgSrc.replace(/("version":\s*")[^"]+(")/, `$1${version}$2`)]);
   changes.push(`package.json version → ${version}`);
-  W("CITATION.cff", R("CITATION.cff").replace(/^version:.*$/m, `version: ${version}`).replace(/^date-released:.*$/m, `date-released: ${today}`));
+
+  const cffSrc = R("CITATION.cff");
+  if (!/^version:.*$/m.test(cffSrc)) { console.error("CITATION.cff has no version line"); process.exit(1); }
+  writes.push(["CITATION.cff", cffSrc.replace(/^version:.*$/m, `version: ${version}`).replace(/^date-released:.*$/m, `date-released: ${today}`)]);
   changes.push(`CITATION.cff version → ${version}, date-released → ${today}`);
 
   // CHANGELOG: Unreleased becomes the release heading
@@ -190,18 +212,22 @@ function prepare() {
     const dates = releasable.filter(s => s.module.slug === slug).map(s => s.dir).join(", ");
     return `- Embargo lifted on Module ${String(m.number).padStart(2, "0")} ${m.short_title}: snapshot ${dates} moves from review to published now that ${(m.relationships?.companion_of || []).join(" and ")} has been submitted (Architecture §9.3).`;
   }).join("\n");
-  W("CHANGELOG.md", cl.replace("## Unreleased", `## v${version} — ${title} (${today})${lifted ? "\n" + lifted : ""}`));
-  changes.push(`CHANGELOG heading → v${version} — ${title} (${today})${lifted ? ", with the embargo lift recorded" : ""}`);
+  // A release that publishes nothing says so in the record Zenodo archives.
+  const held = lifted ? "" : `- No snapshot changes status in this release; the embargo of Architecture §9.3 still holds for ${[...new Set(blocked.map(s => s.module.slug))].join(", ") || "no module"}.`;
+  writes.push(["CHANGELOG.md", cl.replace("## Unreleased", `## v${version} — ${title} (${today})\n${lifted || held}`)]);
+  changes.push(`CHANGELOG heading → v${version} — ${title} (${today}), ${lifted ? "with the embargo lift recorded" : "recorded as changing no snapshot status"}`);
 
   // snapshots the embargo releases. Edited as text, not re-serialised: a frozen snapshot file should
   // show a one-line diff, and JSON.stringify would reindent the whole thing.
   for (const s of releasable) {
     const before = R(s.file);
     const hits = before.match(/"status":\s*"review"/g) || [];
-    if (hits.length !== 1) { console.error(`${s.file}: expected exactly one "status": "review", found ${hits.length}`); process.exit(1); }
-    W(s.file, before.replace(/"status":\s*"review"/, '"status": "published"'));
+    if (hits.length !== 1) { console.error(`${s.file}: expected exactly one "status": "review", found ${hits.length} — nothing written`); process.exit(1); }
+    writes.push([s.file, before.replace(/"status":\s*"review"/, '"status": "published"')]);
     changes.push(`${s.file}: review → published`);
   }
+
+  for (const [f, content] of writes) W(f, content);
 
   console.log("\n## Applied\n");
   for (const c of changes) console.log(`- ${c}`);
