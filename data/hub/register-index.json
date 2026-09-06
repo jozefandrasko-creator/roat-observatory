@@ -1,5 +1,5 @@
 {
- "exported": "2026-09-06T10:14:21.380Z",
+ "exported": "2026-09-06T10:49:53.474Z",
  "count": 371,
  "records": {
   "ROAT-2026-0001": {
@@ -1114,8 +1114,8 @@
   },
   "ROAT-2026-0112": {
    "stage": "Verified",
-   "evidence_level": "Level 2 - Official document",
-   "reliability": "Unverified",
+   "evidence_level": "Level 4 - Conference or institutional source",
+   "reliability": "Official source",
    "legal_status": "",
    "public_status": "",
    "record_type": "Expert profile",
@@ -1706,7 +1706,7 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "Adopted - not yet in force",
+   "legal_status": "In force",
    "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
@@ -1846,7 +1846,7 @@
    "stage": "Verified",
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
-   "legal_status": "",
+   "legal_status": "Not applicable",
    "public_status": "Published",
    "record_type": "Report",
    "next_check": "2027-02-01",
@@ -2404,7 +2404,7 @@
   },
   "ROAT-2026-0245": {
    "stage": "Signal",
-   "evidence_level": "Level 4 - Conference or institutional source",
+   "evidence_level": "Level 5 - LinkedIn or media",
    "reliability": "Unverified",
    "legal_status": "Not applicable",
    "public_status": "Draft",
@@ -3549,7 +3549,7 @@
    "legal_status": "Not applicable",
    "public_status": "",
    "record_type": "Journal",
-   "next_check": "",
+   "next_check": "2026-12-01",
    "jurisdiction": "United States"
   },
   "ROAT-2026-0360": {
