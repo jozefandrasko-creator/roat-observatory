@@ -80,8 +80,5 @@
     "ROAT-CON-SECOND-GATE": { "slug": "deployment-gate" },
     "ROAT-CON-TECH-SUPERVISION": { "slug": "technical-supervision" }
   },
-  "external_outputs_pending": {
-    "OUT-AV-HISTORY": "Placeholder until the AV History article receives an OUT-* id in the Hub Outputs sheet",
-    "OUT-BLF-REMOTE": "Placeholder until the BLF 2026 remote-intervention paper receives an OUT-* id"
-  }
+  "external_outputs_pending": {}
 }

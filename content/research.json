@@ -1,4 +1,4 @@
 {
   "_comment": "OUT-* identifiers from the Hub Outputs sheet that may appear on the public Research page. Everything else stays internal.",
-  "public_outputs": ["OUT-001", "OUT-005", "OUT-006", "OUT-007", "OUT-012"]
+  "public_outputs": ["OUT-001", "OUT-002", "OUT-005", "OUT-006", "OUT-007", "OUT-012", "OUT-013"]
 }

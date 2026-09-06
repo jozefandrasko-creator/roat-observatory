@@ -222,7 +222,7 @@ hub_sheet: "Cross-section 2026 – AV Normalisation"   # where coding lives
 panels: [current, prospective, historical]
 latest_snapshot: 2026-08-25
 relationships:
-  companion_of: [OUT-005-HISTORY]      # placeholder until AV History has an OUT id
+  companion_of: [OUT-013]              # AV History article (Hub Outputs sheet)
   related_module: [ROAT-MOD-SECOND-GATE]
   uses_concept: [ROAT-CON-BRIDGE, ROAT-CON-GATE, ROAT-CON-NORMALISATION]
 status: published

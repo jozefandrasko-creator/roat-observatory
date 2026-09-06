@@ -1,11 +1,9 @@
-# Observatory validation — 2026-09-06 16:20 UTC
+# Observatory validation — 2026-09-06 16:53 UTC
 
-**0 errors · 53 warnings**
+**0 errors · 51 warnings**
 
 ## Warnings
 
-- human-roles — companion output is a placeholder — assign an OUT-* id in the Hub Outputs sheet
-- layered-normalisation — companion output is a placeholder — assign an OUT-* id in the Hub Outputs sheet
 - human-roles/2026-09-05 · Human driver — record ROAT-2026-0317 is below the evidence gate (Signal, Level 6 - Blog or other) — omitted from this row's sources
 - human-roles/2026-09-05 · Human driver — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
 - human-roles/2026-09-05 · Human driver — no publishable evidence — the row is listed as pending, not published as coded

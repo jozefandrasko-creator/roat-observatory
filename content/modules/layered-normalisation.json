@@ -78,7 +78,7 @@
   },
   "relationships": {
     "companion_of": [
-      "OUT-AV-HISTORY"
+      "OUT-013"
     ],
     "related_module": [
       "ROAT-MOD-SECOND-GATE"
