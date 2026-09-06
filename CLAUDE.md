@@ -7,7 +7,7 @@ Read this before touching anything. It is the hand-off from the session that bui
 Static, versioned publication of ROAT's comparative models of automated-vehicle deployment governance (Faculty of Law, Comenius University Bratislava; author Jozef Andraško). Data comes from the **ROAT Intelligence Hub** (Google Sheet `1G_jtoKunmcY0BTuTCEZBe21cMxiOH6fJdsduZRRKXGc`) at dated snapshots. Specification: `ARCHITECTURE.md` (v0.2 + amendments A1–A3). Runbook: `RELEASE.md` (including the Windows routine). History: `CHANGELOG.md`.
 
 - Live site: https://jozefandrasko-creator.github.io/roat-observatory/ (GitHub Pages, built by `.github/workflows/build.yml` on every push to `main`).
-- Release v0.1.0 → Zenodo version DOI `10.5281/zenodo.22409314`, concept DOI `10.5281/zenodo.22409313` (all versions). v0.2.0 prepared 2026-09-06 (version bumped, CHANGELOG heading, `.zenodo.json` with `upload_type: dataset`, notes in `Claude outputs/release-notes-v0.2.0.md`); the author publishes the GitHub release, then the v0.2.0 version DOI goes into the snapshots this release contains: second-gate/2026-09-07, human-roles/2026-09-07 (review) — and the three snapshots already carrying the v0.1.0 DOI keep it.
+- Release v0.1.0 → Zenodo version DOI `10.5281/zenodo.22409314`, concept DOI `10.5281/zenodo.22409313` (all versions). Release v0.2.0 (2026-09-06) → version DOI `10.5281/zenodo.22546848`, written into second-gate/2026-09-07 and human-roles/2026-09-07 (review); the three snapshots carrying the v0.1.0 DOI keep it. `.zenodo.json` (`upload_type: dataset`) governs Zenodo metadata from v0.2.0 on.
 - Zero npm dependencies; Node ≥ 20. Scripts are plain ESM in `scripts/`, templates in `src/templates.mjs`.
 
 ## Hard rules

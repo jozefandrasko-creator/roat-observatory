@@ -1,6 +1,7 @@
 # Changelog
 
 ## v0.2.0 — Source Library, Slovak layer, concept definitions (2026-09-06)
+- Zenodo version DOI 10.5281/zenodo.22546848 written into the two snapshots new in this release (second-gate/2026-09-07, human-roles/2026-09-07); concept DOI 10.5281/zenodo.22409313 unchanged.
 - Source Library: 65 sources — ROAT-2026-0263, Matthew Wansley, *Backroom Drivers* (Harvard JOLT forthcoming 2026; SSRN preprint posted 19 Aug 2026) published after Hub prompt 18b; the register's two SSRN placeholders (0245, 0263) now carry verified metadata.
 - Companion outputs resolved (Hub prompt 18, 2026-09-06): Module 01 Layered normalisation → `OUT-013` (new Outputs row, working title "Regulatory normalisation of automated driving by functional layer: a cross-sectional and longitudinal comparison", 40 source records), Module 03 Human roles → `OUT-002` (Bratislava Legal Forum 2026 contribution, retitled, 33 source records). Both outputs are public and have research pages; the `OUT-AV-HISTORY` / `OUT-BLF-REMOTE` placeholders are gone and `external_outputs_pending` is empty. Validation 53 → 51 warnings.
 - Concept definitions: all eight `ROAT-CON-*` terms approved by the author on 2026-09-06 (`definition_status: approved`, `approved` date recorded); concept pages lose the draft badge and cite as approved definitions. Validation warnings 61 → 53.
