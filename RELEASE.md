@@ -99,3 +99,32 @@ Rule of thumb: steps 1–5 are a normal week; steps 6–8 happen only when somet
 ## Recurring release
 
 Every later release is: freeze a snapshot in the Hub → `npm run sync` → complete `snapshot.json` → `npm run validate` → commit and push → tag → write the DOI back. The embargo rule from section 9.3 of the architecture decides *when*: a module snapshot is published after its companion manuscript has been submitted, not before.
+
+## The next release, v0.3.0, step by step
+
+The trigger is a submission, not a date: **v0.3.0 goes out when OUT-005 (The Second Gate, CLSR) has been submitted.** Until then the preflight refuses, and that refusal is the embargo of Architecture §9.3 doing its job.
+
+`scripts/release.mjs` carries the mechanical part. It never touches the Hub and never guesses: it reads the output status that `hub-sync` wrote, and stops if anything is out of place.
+
+```bash
+npm run release-check        # preflight only, changes nothing
+```
+
+It prints, per module, whether the embargo is lifted and why; then seven checks (validation, no ignored material in git status, clean tree, version consistency between package.json and CITATION.cff, no placeholder OUT ids, every published snapshot carrying a DOI, a CHANGELOG Unreleased section with entries); then exactly which snapshot files `--prepare` would change.
+
+### On submission day
+
+1. **Record the submission in the Hub.** Run `Claude outputs/ROAT-prompt-24-OUT-005-submitted.md` in ChatGPT. It sets the Outputs row for OUT-005 to `Submitted` with the date and the journal, and nothing else. The Hub is the only place this fact is written.
+2. **Bring it into the repository.** Export the `Outputs` sheet into `hub-export/` and run `node scripts/hub-sync.mjs --module=none`. Nothing else needs re-exporting unless the register changed.
+3. **Preflight.** `npm run release-check` — Module 02 must now read `released — OUT-005 is "Submitted"`, and no line may say `BLOCKED`.
+4. **Prepare.** `node scripts/release.mjs --prepare --version=0.3.0 --title="Second Gate published"`. This bumps `package.json` and `CITATION.cff`, dates the CHANGELOG heading, adds a bullet recording the embargo lift, and flips the two Module 02 snapshots from `review` to `published` with a one-line diff in each file.
+5. **Check what you are about to publish.** `npm run validate` (0 errors), `npm run build`, `npm run serve`, and look at the two Module 02 snapshot pages: the draft banner must be gone and the citation block must show the DOI.
+6. **Commit and push.** `git status --porcelain | Select-String "hub-export|site/|Claude outputs"` must print nothing, and check `git status --short` for stray files in the repository root as well.
+7. **Tag and release.** GitHub → Releases → Draft a new release → tag `v0.3.0`, notes from `Claude outputs/release-notes-v0.3.0.md`.
+8. **Write the DOI back.** When Zenodo has minted the version DOI, run `node scripts/release.mjs --doi=10.5281/zenodo.NNNNNNNN`. Expect it to report **nothing to write**: both Module 02 snapshots already carry the DOI of the release in which they first became citable (v0.1.0 for 2026-08-31, v0.2.0 for 2026-09-07), and a snapshot keeps that DOI so existing citations keep resolving. The command lists any review snapshot without a DOI as a candidate; add one deliberately with `--snapshots=<module>/<date>` or leave it.
+
+### What v0.3.0 does not do
+
+Modules 01 and 03 stay embargoed: OUT-013 (layered normalisation) and OUT-002 (human roles) are still `In preparation`. Their snapshots remain `review`, the module pages keep the draft banner, and the same procedure releases them later, one module per submission. Module 07 has no companion manuscript and has been published since v0.1.0.
+
+Still open from earlier releases: the Zenodo record for **v0.1.0** was created before `.zenodo.json` existed and is still typed as Software. Edit it once in Zenodo (Edit → Resource type → Dataset). Every release from v0.2.0 on takes its type from `.zenodo.json`.

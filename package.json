@@ -12,6 +12,7 @@
     "build": "node scripts/validate.mjs && node scripts/build.mjs",
     "build:draft": "node scripts/build.mjs --draft",
     "review-queue": "node scripts/review-queue.mjs",
+    "release-check": "node scripts/release.mjs --check",
     "serve": "node scripts/serve.mjs"
   },
   "license": "MIT"

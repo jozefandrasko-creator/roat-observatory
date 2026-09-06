@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Release tooling: `scripts/release.mjs` with a preflight (`npm run release-check`) that reads the embargo from the Hub output statuses, a `--prepare` mode that performs every mechanical edit of a release, and a `--doi` mode that writes a minted version DOI only into published snapshots that lack one. RELEASE.md gains a step-by-step section for v0.3.0.
 - The regulatory map is now maintained in the Hub: the `Regulatory Map` sheet (76 boxes, validation on five columns, checks CHK-31 and CHK-32) is synced into `data/hub/landscape.json` and the map page states the Hub as its source, the coding cut-off of 27 August 2026 and the refresh date separately.
 - Navigation layer on the map: a decision tree (`/map/decision-tree/`) with three routes and eight decisions that assemble the legal layers in play, the nine-stage regulatory journey (`/map/journey/`) marking where technical approval ends and operational permission begins, and Slovakia in the European stack (`/map/slovakia/`, Slovak at `/sk/slovensko-v-stacku/`). Content in `content/guide/*.json`, imported from the ROAT Regulatory Map workbook v0.7.1 and checked record by record against the Hub register.
 - Product Liability Directive date restored to 8 December 2026 with the corrigendum cited: the 7 May 2026 corrigendum (OJ L, 2026/90364) rewrites Article 2(1), and the EUR-Lex base text still shows the uncorrected date, so an earlier verification pass had "corrected" a correct entry.
