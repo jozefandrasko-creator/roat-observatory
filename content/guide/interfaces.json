@@ -1,0 +1,282 @@
+{
+ "roat_id": "ROAT-GUIDE-INTERFACES",
+ "slug": "interfaces",
+ "title": "Where the regimes meet",
+ "subtitle": "Thirteen interfaces between automated-mobility legal regimes, and the friction each one produces",
+ "snapshot_date": "2026-08-27",
+ "status": "draft",
+ "proposition": "the central regulatory problem is increasingly not absence of rules, but coordination across technical approval, AI governance, national operation, human roles, post-market control and loss allocation.",
+ "interfaces": [
+  {
+   "n": 1,
+   "left": "UNECE ADS safety framework",
+   "right": "EU vehicle type approval",
+   "question": "How global ADS safety evidence enters EU approval pathways",
+   "tag": "EMERGING / NEW 2026",
+   "actors": [
+    "Manufacturer",
+    "Approval authority"
+   ],
+   "lifecycle": "Safety validation → Type approval",
+   "records_left": [
+    "ROAT-2026-0299",
+    "ROAT-2026-0300"
+   ],
+   "records_right": [
+    "ROAT-2026-0036",
+    "ROAT-2026-0039",
+    "ROAT-2026-0040",
+    "ROAT-2026-0218"
+   ]
+  },
+  {
+   "n": 2,
+   "left": "AI Act + Digital Omnibus",
+   "right": "Vehicle safety / type approval",
+   "question": "Horizontal AI governance overlaps with sectoral automotive law",
+   "tag": "TRANSITION",
+   "actors": [
+    "AI provider",
+    "Manufacturer",
+    "Authority"
+   ],
+   "lifecycle": "Design → Conformity assessment",
+   "records_left": [
+    "ROAT-2026-0318",
+    "ROAT-2026-0319"
+   ],
+   "records_right": [
+    "ROAT-2026-0036",
+    "ROAT-2026-0039",
+    "ROAT-2026-0040"
+   ]
+  },
+  {
+   "n": 3,
+   "left": "Testing & safety evidence",
+   "right": "Type approval decision",
+   "question": "When can simulation, scenarios and public-road testing become legally sufficient evidence?",
+   "tag": "EMERGING",
+   "actors": [
+    "Manufacturer",
+    "Technical service"
+   ],
+   "lifecycle": "R&D → Validation → Approval",
+   "records_left": [
+    "ROAT-2026-0040",
+    "ROAT-2026-0300",
+    "ROAT-2026-0311",
+    "ROAT-2026-0312"
+   ],
+   "records_right": []
+  },
+  {
+   "n": 4,
+   "left": "EU type approval",
+   "right": "National road operation",
+   "question": "Approval of a vehicle does not itself answer all road-use, operator and service questions",
+   "tag": "STRUCTURAL INTERFACE",
+   "actors": [
+    "Manufacturer",
+    "Operator",
+    "National authority"
+   ],
+   "lifecycle": "Type approval → Deployment",
+   "records_left": [
+    "ROAT-2026-0036",
+    "ROAT-2026-0040"
+   ],
+   "records_right": [
+    "ROAT-2026-0156",
+    "ROAT-2026-0306",
+    "ROAT-2026-0171",
+    "ROAT-2026-0307",
+    "ROAT-2026-0308"
+   ]
+  },
+  {
+   "n": 5,
+   "left": "Manufacturer / ASDE / ADS provider",
+   "right": "Operator / service provider",
+   "question": "Allocation of lifecycle safety duties between product and operational actors",
+   "tag": "ACCOUNTABILITY GAP",
+   "actors": [
+    "Manufacturer",
+    "ADS provider",
+    "Operator"
+   ],
+   "lifecycle": "Approval → Operation → Updates",
+   "records_left": [
+    "ROAT-2026-0299",
+    "ROAT-2026-0311",
+    "ROAT-2026-0171",
+    "ROAT-2026-0308"
+   ],
+   "records_right": []
+  },
+  {
+   "n": 6,
+   "left": "ADS automated function",
+   "right": "Human oversight / remote management",
+   "question": "Driver, remote assistant, remote driver and oversight roles are not legally equivalent",
+   "tag": "ROLE INTERFACE",
+   "actors": [
+    "ADS",
+    "Remote operator",
+    "User"
+   ],
+   "lifecycle": "Operation → Fallback / intervention",
+   "records_left": [
+    "ROAT-2026-0040",
+    "ROAT-2026-0193",
+    "ROAT-2026-0191",
+    "ROAT-2026-0311",
+    "ROAT-2026-0312"
+   ],
+   "records_right": []
+  },
+  {
+   "n": 7,
+   "left": "Vehicle deployment",
+   "right": "Operator / service authorisation",
+   "question": "Technical fitness and authorisation to run a transport service are separate questions",
+   "tag": "NATIONAL DIVERGENCE",
+   "actors": [
+    "Operator",
+    "Transport authority"
+   ],
+   "lifecycle": "Deployment → Commercial service",
+   "records_left": [
+    "ROAT-2026-0171",
+    "ROAT-2026-0301",
+    "ROAT-2026-0307",
+    "ROAT-2026-0308",
+    "ROAT-2026-0159",
+    "ROAT-2026-0305"
+   ],
+   "records_right": []
+  },
+  {
+   "n": 8,
+   "left": "ODD / infrastructure assumptions",
+   "right": "Road & digital infrastructure",
+   "question": "Operational safety depends on infrastructure conditions not controlled solely by vehicle law",
+   "tag": "CROSS-SECTOR",
+   "actors": [
+    "Operator",
+    "Road authority",
+    "Infrastructure provider"
+   ],
+   "lifecycle": "ODD definition → Operation",
+   "records_left": [
+    "ROAT-2026-0208",
+    "ROAT-2026-0060",
+    "ROAT-2026-0064"
+   ],
+   "records_right": []
+  },
+  {
+   "n": 9,
+   "left": "Operational event / crash",
+   "right": "Incident reporting & enforcement",
+   "question": "Who must report, preserve evidence, investigate and trigger corrective action?",
+   "tag": "IN-USE GOVERNANCE",
+   "actors": [
+    "Operator",
+    "Manufacturer",
+    "Enforcement authority"
+   ],
+   "lifecycle": "In-use → Incident response",
+   "records_left": [
+    "ROAT-2026-0182",
+    "ROAT-2026-0183",
+    "ROAT-2026-0040",
+    "ROAT-2026-0218"
+   ],
+   "records_right": []
+  },
+  {
+   "n": 10,
+   "left": "Software defect / update failure",
+   "right": "Product liability",
+   "question": "Post-market software and update control can become an ex post liability issue",
+   "tag": "NEW LIABILITY REGIME",
+   "actors": [
+    "Manufacturer",
+    "Software/ADS provider"
+   ],
+   "lifecycle": "Updates → Defect → Claim",
+   "records_left": [
+    "ROAT-2026-0320",
+    "ROAT-2026-0019",
+    "ROAT-2026-0318"
+   ],
+   "records_right": []
+  },
+  {
+   "n": 11,
+   "left": "Road accident",
+   "right": "Motor insurance / compensation",
+   "question": "Victim compensation remains necessary even where fault migrates away from the human driver",
+   "tag": "ESTABLISHED + AV REVIEW",
+   "actors": [
+    "Owner/keeper",
+    "Operator",
+    "Insurer"
+   ],
+   "lifecycle": "Accident → Compensation",
+   "records_left": [
+    "ROAT-2026-0321"
+   ],
+   "records_right": []
+  },
+  {
+   "n": 12,
+   "left": "ADS data / event logs",
+   "right": "Privacy, cybersecurity & evidence",
+   "question": "The same data can be safety evidence, personal data and cybersecurity-relevant information",
+   "tag": "MULTI-REGIME",
+   "actors": [
+    "Manufacturer",
+    "Operator",
+    "Data controller"
+   ],
+   "lifecycle": "Operation → Logging → Investigation",
+   "records_left": [
+    "ROAT-2026-0052",
+    "ROAT-2026-0059",
+    "ROAT-2026-0018",
+    "ROAT-2026-0019",
+    "ROAT-2026-0067"
+   ],
+   "records_right": []
+  },
+  {
+   "n": 13,
+   "left": "Commercial deployment",
+   "right": "Liability allocation",
+   "question": "Who carries residual risk once AV operation moves from testing into normal service?",
+   "tag": "OPEN DESIGN QUESTION",
+   "actors": [
+    "Manufacturer",
+    "Operator",
+    "Owner/keeper",
+    "Insurer"
+   ],
+   "lifecycle": "Commercial service → Loss allocation",
+   "records_left": [
+    "ROAT-2026-0320",
+    "ROAT-2026-0321",
+    "ROAT-2026-0307",
+    "ROAT-2026-0308",
+    "ROAT-2026-0171"
+   ],
+   "records_right": []
+  }
+ ],
+ "source": {
+  "workbook": "ROAT Regulatory Map 2026 – Reconstructed Draft v0.7.1 (PraF UK), sheet \"Regulatory Interfaces v0.6\"",
+  "cut_off": "2026-08-27",
+  "note": "Analytical layer. An interface is a place where two regimes have to be read together; the tag says what kind of problem that produces."
+ }
+}

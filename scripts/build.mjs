@@ -328,7 +328,7 @@ if (landscape) {
   const allRecords = [...new Set(L.boxes.flatMap(b => b.records))];
   const pending = allRecords.filter(id => !sources[id]).length;
   const opt = (label, key, values) => `<label class="facet"><span>${esc(label)}</span><select data-facet="${key}"><option value="">All</option>${values.map(v => `<option value="${esc(v)}">${esc(lab(v))}</option>`).join("")}</select></label>`;
-  const guideCards = [["decision-tree", "Decision tree", "From an intended activity to the approval, operational and liability rules that apply."], ["journey", "Regulatory journey", "Nine stages from safety engineering to incident response, and where the law changes hands."], ["slovakia", "Slovakia in the European stack", "Seven regulatory questions read across UNECE, EU and Slovak law."]].filter(([k]) => guides[k]);
+  const guideCards = [["decision-tree", "Decision tree", "From an intended activity to the approval, operational and liability rules that apply."], ["journey", "Regulatory journey", "Nine stages from safety engineering to incident response, and where the law changes hands."], ["interfaces", "Where the regimes meet", "Thirteen interfaces between regimes, and the friction each one produces."], ["governance", "Who decides what", "The thirty bodies that make, interpret and enforce these rules."], ["slovakia", "Slovakia in the European stack", "Seven regulatory questions read across UNECE, EU and Slovak law."]].filter(([k]) => guides[k]);
   page("map/index.html", L.title, `<div class="wrap wide"><h1 class="page-title">${esc(L.title)}</h1>
 ${guideCards.length ? `<p class="module" style="margin-top:18px">Navigation layer</p>${T.cards(guideCards.map(([k, t, d]) => ({ title: t, href: `${base}map/${guides[k].slug}/`, lines: [d] })))}<p class="module" style="margin-top:26px">The wall</p>` : ""}
 <p class="sub" style="margin-top:10px">${esc(L.subtitle)}. ${L.boxes.length} instruments and standards across ${L.pillars.length} regulatory pillars, as they stood on ${esc(L.snapshot_date)}. A box is one instrument; its identifiers link to the Source Library where the record is published.</p>
@@ -435,6 +435,83 @@ ${guideProv(sks)}</div>`, { description: sks.subtitle });
   guides.__skStackTable = stackTable;
 }
 
+// interfaces: where two regimes have to be read together, and what kind of problem that produces
+const ifs = guides["interfaces"];
+if (ifs) {
+  const tagKey = t => t.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "");
+  page("map/interfaces/index.html", ifs.title, `<div class="wrap">${guideCrumbs("Interfaces")}<h1 class="page-title">${esc(ifs.title)}${guideBadge(ifs)}</h1>
+<p class="sub" style="margin-top:10px">${esc(ifs.subtitle)}. Position as of ${esc(ifs.snapshot_date)}.</p>
+<div class="ifaces">${ifs.interfaces.map(i => `<section class="iface">
+<p class="ihead"><span class="n">${i.n}</span><span class="side">${esc(i.left)}</span><span class="arrow" aria-hidden="true">↔</span><span class="side">${esc(i.right)}</span><span class="badge tag-${tagKey(i.tag)}">${esc(i.tag.toLowerCase())}</span></p>
+<p class="q">${esc(i.question)}</p>
+<div class="imeta"><div><span class="lab">Actors</span> ${i.actors.map(esc).join(" · ")}</div><div><span class="lab">Lifecycle</span> ${esc(i.lifecycle)}</div></div>
+<div class="isides"><div><span class="lab">${esc(i.left)}</span>${recChips(i.records_left)}</div>${i.records_right.length ? `<div><span class="lab">${esc(i.right)}</span>${recChips(i.records_right)}</div>` : ""}</div>
+</section>`).join("")}</div>
+${ifs.proposition ? `<blockquote class="find" style="margin-top:24px"><p>${esc(ifs.proposition)}</p></blockquote>` : ""}
+${guideProv(ifs)}</div>`, { description: ifs.subtitle });
+}
+
+// governance: the forums in which the instruments on the map are made and applied
+const gov = guides["governance"];
+if (gov) {
+  const order = ["International", "EU / International", "EU", "EU / National", "National", "National / International reference", "US Federal", "US State"];
+  const levels = [...gov.levels].sort((a, b) => (order.indexOf(a) + 1 || 99) - (order.indexOf(b) + 1 || 99));
+  page("map/governance/index.html", gov.title, `<div class="wrap">${guideCrumbs("Governance")}<h1 class="page-title">${esc(gov.title)}${guideBadge(gov)}</h1>
+<p class="sub" style="margin-top:10px">${esc(gov.subtitle)}. ${gov.bodies.length} bodies and mechanisms as of ${esc(gov.snapshot_date)}.</p>
+${levels.map(l => `<section><p class="module" style="margin-top:26px">${esc(l)} · ${gov.bodies.filter(b => b.level === l).length}</p>
+<div class="govlist">${gov.bodies.filter(b => b.level === l).map(b => `<div class="gov">
+<h3>${b.url ? `<a href="${esc(b.url)}" rel="noopener">${esc(b.body)}</a>` : esc(b.body)}</h3>
+<p class="gmeta"><span class="badge">${esc(b.type)}</span> ${esc(b.function)}${b.jurisdiction && b.jurisdiction !== l ? ` · ${esc(b.jurisdiction)}` : ""}</p>
+<p class="grole">${esc(b.role)}</p>
+${b.instruments ? `<p class="ginst"><span class="lab">Key instruments</span> ${esc(b.instruments)}</p>` : ""}
+</div>`).join("")}</div></section>`).join("")}
+${guideProv(gov)}</div>`, { description: gov.subtitle });
+}
+
+// roles glossary: the eight defined concepts joined to the Module 03 matrix, read in both directions
+const rolesMod = modById["ROAT-MOD-ROLES"];
+if (rolesMod?.latest && concepts.length) {
+  const rows = splitByEvidence(rolesMod, rolesMod.latest.data).rows;
+  const dimOf = c => (c.used_in || []).find(u => u.module === "ROAT-MOD-ROLES")?.dimension;
+  const byFunction = concepts.filter(c => dimOf(c)).map(c => {
+    const key = dimOf(c);
+    const d = rolesMod.dimensions.find(x => x.key === key);
+    // "Yes" is an outright allocation; a qualified value ("Support only", "Entity-level", "Conditional")
+    // allocates something narrower and the cell text is the only place that says what. Keep them apart.
+    const all = rows.map(r => ({ r, v: r[key], p: T.rolePolarity(r[key]) }));
+    const outright = all.filter(x => x.p.cls === "yes");
+    const qualified = all.filter(x => x.p.cls === "cond");
+    const performers = [...outright, ...qualified];
+    const system = all.filter(x => x.p.cls === "sys").length;
+    return { c, d, performers, system, nYes: outright.length, nQual: qualified.length };
+  });
+  page("method/roles/index.html", "Who may do what", `<div class="wrap"><p class="crumbs"><a href="${base}method/">Method</a> › Roles</p><h1 class="page-title">Who may do what</h1>
+<p class="sub" style="margin-top:10px">The eight defined concepts read against the ${rows.length} roles of Module 03, in both directions: which roles a function is allocated to, and which functions a role performs. Snapshot ${esc(rolesMod.latest.data.snapshot_date)}${snapBadge(rolesMod.latest)}.</p>
+<p class="note" style="margin-top:14px">A qualified answer carries its legal condition in the cell text; read the text, not the colour. Where the answer is “system”, the automated driving system performs the function and no person is allocated to it.</p>
+
+<p class="module" style="margin-top:32px">By function</p><h2>Who is allocated each function</h2>
+<div class="fnblocks">${byFunction.map(({ c, d, performers, system, nYes, nQual }) => `<section class="fnblock">
+<h3>${conceptLink(c)} <span class="muted">· column “${esc(d.label)}”</span></h3>
+<p class="def">${esc(c.definition.split(". ")[0])}.</p>
+<div class="tblwrap"><table class="audit"><thead><tr><th>Role</th><th>Framework</th><th>${esc(d.label)}</th></tr></thead><tbody>
+${performers.map(({ r, v }) => `<tr><td><b>${esc(r.term || r.regime_label)}</b>${r.term && r.term !== r.regime_label ? `<br><small class="muted">${esc(r.regime_label)}</small>` : ""}</td><td><small>${esc(r.framework || "—")}</small></td>${T.roleCell(v)}</tr>`).join("")}
+</tbody></table></div>
+<p class="hint">${nYes} of ${rows.length} roles perform this outright; ${nQual} do so on a qualified basis, and the cell says on what${system ? `; ${system} coded as performed by the system itself` : ""}.</p>
+</section>`).join("")}</div>
+
+<p class="module" style="margin-top:34px">By role</p><h2>What each role performs</h2>
+<div class="rolelist">${rows.map(r => {
+    const does = rolesMod.dimensions.filter(d => { const p = T.rolePolarity(r[d.key]); return p.cls === "yes" || p.cls === "cond"; });
+    const con = concepts.filter(c => does.some(d => d.key === dimOf(c)));
+    return `<div class="rolerow"><div class="rname"><b>${esc(r.term || r.regime_label)}</b><br><small class="muted">${esc(r.framework || "")}</small></div>
+<div class="rfns">${does.length ? does.map(d => `<span class="fnchip">${esc(d.label)}<em>${esc(String(r[d.key]).length > 34 ? String(r[d.key]).slice(0, 32) + "…" : r[d.key])}</em></span>`).join("") : '<span class="muted">no function coded as performed</span>'}
+${con.length ? `<p class="hint">Concepts: ${con.map(c => conceptLink(c)).join(" · ")}</p>` : ""}</div>
+<div class="rrec">${recChips(r.records || [])}</div></div>`;
+  }).join("")}</div>
+
+<div class="note" style="margin-top:26px;border-top:1px solid var(--rule);padding-top:14px"><p class="module">Where this comes from</p><p>Definitions from <a href="${base}method/concepts/">the concept register</a>, allocations from <a href="${base}modules/human-roles/">Module 03</a> snapshot ${esc(rolesMod.latest.data.snapshot_date)}. Nothing is stated here that is not coded there; this page only reads the same data by function instead of by row.</p></div></div>`, { description: "The defined concepts of automated driving read against the roles that frameworks recognise." });
+}
+
 // research: one page per public output — what it is, which modules belong to it, which Hub records it rests on
 const companionsOf = o => modules.filter(m => (m.relationships.companion_of || []).includes(o.id));
 page("research/index.html", "Research", `<div class="wrap"><h1 class="page-title">Research</h1><p class="sub" style="margin-top:10px">ROAT outputs that the modules belong to. Each is catalogued in the Hub Outputs sheet; the page lists the records it rests on and how many of them are already in the public Source Library.</p>
@@ -462,7 +539,7 @@ const methodMeta = methodFiles.map(f => { const { meta, body } = splitFront(R(`c
 for (const p of methodMeta) page(`method/${p.slug}/index.html`, p.title, `<div class="wrap"><p class="crumbs"><a href="${base}method/">Method</a> › ${esc(p.title)}</p><h1 class="page-title">${esc(p.title)}</h1><div class="prose" style="margin-top:18px">${p.body}</div>${p.slug === "n-scale" ? `<div class="defs" style="margin-top:20px">${vocab.n_scale.map(n => `<div class="def" style="border-color:var(--n${n.value})"><b>N${n.value}</b>${esc(n.label)}<br><small>${esc(n.definition)}</small></div>`).join("")}</div>` : ""}</div>`);
 page("method/index.html", "Method", `<div class="wrap"><h1 class="page-title">Method</h1><p class="sub" style="margin-top:10px">How the Observatory codes, verifies and publishes — and the analytical framework the modules apply.</p>
 ${T.cards(modules.filter(m => m.kind === "method").map(m => ({ lab: `Module ${String(m.number).padStart(2, "0")}`, title: m.title, href: `${base}modules/${m.slug}/`, lines: [m.question] })))}
-<ul class="plain" style="margin-top:20px">${methodMeta.map(p => `<li><a href="${base}method/${p.slug}/">${esc(p.title)}</a></li>`).join("")}${concepts.length ? `<li><a href="${base}method/concepts/">Concepts</a> — ${concepts.length} defined terms with their locus in the sources</li>` : ""}<li><a href="${base}about/changelog/">Changelog</a></li></ul></div>`);
+<ul class="plain" style="margin-top:20px">${methodMeta.map(p => `<li><a href="${base}method/${p.slug}/">${esc(p.title)}</a></li>`).join("")}${concepts.length ? `<li><a href="${base}method/concepts/">Concepts</a> — ${concepts.length} defined terms with their locus in the sources</li><li><a href="${base}method/roles/">Who may do what</a> — the concepts read against the roles of Module 03</li>` : ""}<li><a href="${base}about/changelog/">Changelog</a></li></ul></div>`);
 
 // concept pages: definition, locus, where the Observatory uses the concept (the module column, row by row)
 const conceptBadge = c => c.definition_status === "approved" ? "" : ` <span class="badge prospective" title="${esc(c.drafted || "")}">draft definition</span>`;

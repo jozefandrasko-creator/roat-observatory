@@ -226,3 +226,32 @@ nav.site a.lang{margin-left:auto;font-family:var(--mono);font-size:12px;letter-s
 .stg dl.kv{margin:0} .stg .gatemark{position:absolute;top:-11px;left:0;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--shift);background:var(--paper);padding:0 8px 0 0}
 .stg#gate{border-top:2px solid var(--shift);padding-top:20px}
 .stg.f-ta .num{color:var(--n3)} .stg.f-op .num{color:var(--shift)} .stg.f-taop .num{color:var(--accent)}
+.ifaces{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:18px}
+.iface{background:var(--surface);padding:15px 17px}
+.iface .ihead{margin:0 0 7px;display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:15.5px}
+.iface .ihead .n{font-family:var(--mono);font-size:11px;color:var(--muted);min-width:18px}
+.iface .ihead .side{font-weight:600}
+.iface .ihead .arrow{color:var(--accent);font-size:15px}
+.iface .q{margin:0 0 10px;font-size:14.5px;color:var(--muted);max-width:78ch}
+.iface .imeta{display:flex;flex-wrap:wrap;gap:6px 26px;font-size:12.5px;color:var(--muted);margin-bottom:9px}
+.iface .isides{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px 22px}
+.iface .lab,.gov .lab{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.iface .isides .lab{display:block;margin-bottom:4px}
+.badge[class*="tag-"]{border-style:solid;text-transform:lowercase}
+.badge.tag-accountability-gap,.badge.tag-national-divergence,.badge.tag-open-design-question{background:var(--shift-soft);color:var(--shift);border-color:transparent}
+.badge.tag-structural-interface,.badge.tag-role-interface,.badge.tag-multi-regime{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
+.govlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.gov{background:var(--surface);padding:13px 15px}
+.gov h3{font-family:var(--sans);font-size:14.5px;font-weight:600;margin:0 0 5px;line-height:1.3}
+.gov .gmeta{margin:0 0 6px;font-size:12.5px;color:var(--muted)}
+.gov .grole{margin:0;font-size:13.5px;line-height:1.45}
+.gov .ginst{margin:7px 0 0;font-size:12.5px;color:var(--muted)}
+.fnblocks{display:flex;flex-direction:column;gap:26px;margin-top:14px}
+.fnblock h3{font-family:var(--serif);font-size:19px;font-weight:600;margin:0 0 4px}
+.fnblock .def{margin:0 0 10px;font-size:14px;color:var(--muted);max-width:78ch}
+.rolelist{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:14px}
+.rolerow{background:var(--surface);display:grid;grid-template-columns:minmax(0,210px) minmax(0,1fr) minmax(0,180px);gap:16px;padding:12px 15px;align-items:start}
+.rolerow .rname{font-size:14px;line-height:1.35}
+.fnchip{display:inline-block;border:1px solid var(--rule-soft);border-radius:2px;padding:3px 7px;margin:0 5px 5px 0;font-size:12px;line-height:1.3}
+.fnchip em{display:block;font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:2px}
+@media (max-width:760px){.rolerow{grid-template-columns:1fr}}
