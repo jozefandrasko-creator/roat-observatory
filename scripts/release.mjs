@@ -26,10 +26,20 @@ const J = p => JSON.parse(fs.readFileSync(path.join(ROOT, p), "utf8"));
 const R = p => fs.readFileSync(path.join(ROOT, p), "utf8");
 const W = (p, s) => fs.writeFileSync(path.join(ROOT, p), s);
 
-const args = Object.fromEntries(process.argv.slice(2).map(a => {
-  const m = a.match(/^--([^=]+)(?:=(.*))?$/);
-  return m ? [m[1], m[2] ?? true] : [a, true];
-}));
+// Accept both `--version=0.3.0` and `--version 0.3.0`: on release day the difference between the two
+// should not be the thing that goes wrong.
+const args = {};
+{
+  const argv = process.argv.slice(2);
+  for (let i = 0; i < argv.length; i++) {
+    const m = argv[i].match(/^--([^=]+)(?:=([\s\S]*))?$/);
+    if (!m) { args[argv[i]] = true; continue; }
+    if (m[2] !== undefined) { args[m[1]] = m[2]; continue; }
+    const next = argv[i + 1];
+    if (next !== undefined && !/^--/.test(next)) { args[m[1]] = next; i++; }
+    else args[m[1]] = true;
+  }
+}
 
 const ok = [], bad = [], note = [];
 const pass = m => ok.push(m);
