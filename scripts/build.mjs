@@ -24,8 +24,18 @@ const ids = J("data/ids.json"), vocab = J("data/vocabularies.json");
 const hubIndex = J("data/hub/register-index.json");
 const sourcesArr = J("data/hub/sources.json").sources; const sources = Object.fromEntries(sourcesArr.map(s => [s.id, s]));
 const outputs = J("data/hub/outputs.json").outputs.filter(o => o.public);
-const site = { base, built: new Date().toISOString().slice(0, 10), hubExported: hubIndex.exported.slice(0, 10) };
-const page = (rel, title, body, extra = {}) => write(rel, T.layout({ title, body, draft, site, path: "/" + rel.replace(/index\.html$/, ""), ...extra }));
+const origin = (process.env.SITE_ORIGIN || "https://jozefandrasko-creator.github.io").replace(/\/$/, "");
+const site = { base, origin, built: new Date().toISOString().slice(0, 10), hubExported: hubIndex.exported.slice(0, 10) };
+const abs = rel => `${origin}${base}${rel.replace(/index\.html$/, "")}`;
+const pagesWritten = [];
+const page = (rel, title, body, extra = {}) => { pagesWritten.push(rel); return write(rel, T.layout({ title, body, draft, site, path: "/" + rel.replace(/index\.html$/, ""), ...extra })); };
+/* JSON-LD helpers (schema.org). Kept small and factual: identity, dates, downloads, sources. */
+const ORG = { "@type": "Organization", "name": "ROAT – Faculty of Law, Comenius University Bratislava", "url": origin + base };
+const LICENSE = "https://creativecommons.org/licenses/by/4.0/";
+const ldSource = s => T.jsonld({ "@context": "https://schema.org", "@type": /Legal act|Draft legislation/.test(s.record_type) ? "Legislation" : "CreativeWork", "@id": abs(`sources/${s.id.toLowerCase()}/`), "identifier": s.id, "name": s.title, "url": s.official_source || undefined, "description": s.summary || undefined, "datePublished": s.publication_date || undefined, "inLanguage": s.language || undefined, "publisher": s.org ? { "@type": "Organization", "name": s.org } : undefined, "spatialCoverage": s.jurisdiction || undefined, ...(/Legal act|Draft legislation/.test(s.record_type) ? { "legislationIdentifier": s.citation || undefined, "legislationLegalForce": s.legal_status || undefined } : { "citation": s.citation || undefined }), "isPartOf": { "@type": "DataCatalog", "name": "ROAT Observatory Source Library", "url": abs("sources/") } });
+const ldModule = (m, s, frozen) => T.jsonld({ "@context": "https://schema.org", "@type": "Dataset", "@id": abs(`modules/${m.slug}/${frozen ? s.dir + "/" : ""}`), "identifier": frozen ? s.snap.roat_id : m.roat_id, "name": `${m.title} — snapshot ${s.data.snapshot_date}`, "description": m.question, "dateModified": s.data.snapshot_date, "version": s.data.snapshot_date, "creator": ORG, "license": LICENSE, "sameAs": s.snap.doi ? `https://doi.org/${s.snap.doi}` : undefined, "distribution": ["csv", "json"].map(f => ({ "@type": "DataDownload", "encodingFormat": f === "csv" ? "text/csv" : "application/json", "contentUrl": abs(`modules/${m.slug}/${frozen ? s.dir + "/" : ""}data.${f}`) })), "isBasedOn": recordsOf(s.data).filter(id => sources[id]).map(id => abs(`sources/${id.toLowerCase()}/`)), "includedInDataCatalog": { "@type": "DataCatalog", "name": "ROAT Observatory", "url": origin + base } });
+const ldConcept = c => T.jsonld({ "@context": "https://schema.org", "@type": "DefinedTerm", "@id": abs(`method/concepts/${c.slug}/`), "identifier": c.roat_id, "name": c.title, "alternateName": c.aliases || undefined, "description": c.definition, "inDefinedTermSet": { "@type": "DefinedTermSet", "name": "ROAT Observatory concepts", "url": abs("method/concepts/") } });
+const ldOutput = o => T.jsonld({ "@context": "https://schema.org", "@type": "ScholarlyArticle", "@id": abs(`research/${o.id.toLowerCase()}/`), "identifier": o.id, "name": o.title, "description": o.description || undefined, "creativeWorkStatus": o.status || undefined, "url": o.url || undefined, "author": ORG, "citation": (o.source_records || []).filter(id => sources[id]).map(id => abs(`sources/${id.toLowerCase()}/`)) });
 
 /* ---- load modules + snapshots ---- */
 const modules = fs.readdirSync(path.join(ROOT, "content/modules")).filter(f => f.endsWith(".json")).map(f => {
@@ -188,9 +198,9 @@ ${T.citeBlock({ module: m, snap: s.snap, site, url })}
 for (const m of modules) {
   if (!m.latest) { page(`modules/${m.slug}/index.html`, m.title, `<div class="wrap"><h1 class="page-title">${esc(m.title)}</h1><p class="note">No snapshot yet.</p></div>`); continue; }
   const render = m.kind === "method" ? methodBody : moduleBody;
-  page(`modules/${m.slug}/index.html`, m.title, render(m, m.latest, { frozen: false }), { description: m.question });
+  page(`modules/${m.slug}/index.html`, m.title, render(m, m.latest, { frozen: false }), { description: m.question, head: ldModule(m, m.latest, false) });
   for (const s of m.snapshots) {
-    page(`modules/${m.slug}/${s.dir}/index.html`, `${m.title} — ${s.dir}`, render(m, s, { frozen: true }), { description: m.question });
+    page(`modules/${m.slug}/${s.dir}/index.html`, `${m.title} — ${s.dir}`, render(m, s, { frozen: true }), { description: m.question, head: ldModule(m, s, true) });
     for (const f of ["data.csv", "data.json", "snapshot.json"]) fs.copyFileSync(path.join(ROOT, "data/modules", m.slug, s.dir, f), path.join(OUT, "modules", m.slug, s.dir, f));
   }
   for (const f of ["data.csv", "data.json"]) fs.copyFileSync(path.join(ROOT, "data/modules", m.slug, m.latest.dir, f), path.join(OUT, "modules", m.slug, f));
@@ -225,14 +235,37 @@ ${rowsIn.length ? "" : `<section><div class="wrap"><p class="note">Not yet coded
 page("jurisdictions/index.html", "Jurisdictions", `<div class="wrap"><h1 class="page-title">Jurisdictions</h1><p class="sub" style="margin-top:10px">A profile is a view across modules — every row a module has coded for the jurisdiction — plus a short verified overview.</p>
 ${T.cards(jurisdictions.map(j => ({ lab: j.roat_id, title: j.title, href: `${base}jurisdictions/${j.slug}/`, lines: [{ lab: "Coded in", text: modules.filter(m => m.kind !== "method" && (m.latest?.data.rows || []).some(r => baseJur(r.regime_id) === j.roat_id)).map(m => m.short_title).join(" · ") || "—" }, { lab: "Last verified", text: `${j.last_verified} (${j.verified_by})` }] })))}</div>`);
 
-// sources
+// sources: filterable, searchable catalogue (plain client-side script, no dependencies)
+const citedBy = {}; for (const m of modules) for (const id of (m.latest ? recordsOf(m.latest.data) : [])) (citedBy[id] = citedBy[id] || new Set()).add(m.short_title);
+const facet = (label, key, values) => `<label class="facet"><span>${esc(label)}</span><select data-facet="${key}"><option value="">All</option>${values.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join("")}</select></label>`;
+const uniq = f => [...new Set(sourcesArr.map(f).filter(Boolean))].sort((a, b) => a.localeCompare(b));
 page("sources/index.html", "Sources", `<div class="wrap"><h1 class="page-title">Source Library</h1><p class="sub" style="margin-top:10px">Curated public catalogue of ROAT Intelligence Hub records with Public Status = Published. Every module cell cites records from this library.</p>
-${sourcesArr.length ? sourcesArr.map(s => `<div class="srcrow">${T.chips([s.id], site, sources)}<div><b>${esc(s.title)}</b><br><span class="muted">${esc([s.record_type, s.jurisdiction, s.legal_status, s.publication_date].filter(Boolean).join(" · "))}</span></div></div>`).join("") : `<p class="note">No records have Public Status = Published yet. ${Object.keys(hubIndex.records).length} records exist in the Hub; ${Object.values(hubIndex.records).filter(r => r.public_status === "Review").length} are in editorial review. Records cited by module snapshots: ${[...new Set(modules.flatMap(m => m.latest ? recordsOf(m.latest.data) : []))].length}.</p>`}</div>`);
+${sourcesArr.length ? `<form class="filters" id="srcfilters" onsubmit="return false"><label class="facet grow"><span>Search</span><input type="search" id="srcq" placeholder="title, citation, summary, ID…" autocomplete="off"></label>${facet("Category", "category", uniq(s => s.category))}${facet("Jurisdiction", "jurisdiction", uniq(s => s.jurisdiction))}${facet("Record type", "type", uniq(s => s.record_type))}${facet("Cited in", "module", uniq(s => [...(citedBy[s.id] || [])].join("|")).flatMap(x => x.split("|")).filter((v, i, a) => a.indexOf(v) === i).sort())}${facet("Legal status", "status", uniq(s => s.legal_status))}<span class="count" id="srccount">${sourcesArr.length} of ${sourcesArr.length}</span></form>
+<div id="srclist">${sourcesArr.map(s => `<div class="srcrow" data-category="${esc(s.category)}" data-jurisdiction="${esc(s.jurisdiction)}" data-type="${esc(s.record_type)}" data-status="${esc(s.legal_status)}" data-module="${esc([...(citedBy[s.id] || [])].join("|"))}" data-q="${esc([s.id, s.title, s.citation, s.summary, s.why_it_matters, s.org, s.keywords].join(" ").toLowerCase())}">${T.chips([s.id], site, sources)}<div><b>${esc(s.title)}</b><br><span class="muted">${esc([s.record_type, s.jurisdiction, s.legal_status, s.publication_date].filter(Boolean).join(" · "))}${citedBy[s.id] ? ` · cited in ${esc([...citedBy[s.id]].join(", "))}` : ""}</span></div></div>`).join("")}</div>
+<p class="hint" id="srcnone" hidden>No record matches. Clear a filter or shorten the search.</p>
+<script>
+(function(){
+  const rows=[...document.querySelectorAll('#srclist .srcrow')], q=document.getElementById('srcq'), sels=[...document.querySelectorAll('#srcfilters select')], count=document.getElementById('srccount'), none=document.getElementById('srcnone'), total=rows.length;
+  function apply(){
+    const text=q.value.trim().toLowerCase(); let n=0;
+    rows.forEach(r=>{
+      let ok=!text||r.dataset.q.indexOf(text)>-1;
+      for(const s of sels){ if(!s.value) continue; const v=r.dataset[s.dataset.facet]||''; if(s.dataset.facet==='module'?v.split('|').indexOf(s.value)<0:v!==s.value) ok=false; }
+      r.hidden=!ok; if(ok) n++;
+    });
+    count.textContent=n+' of '+total; none.hidden=n>0;
+    const p=new URLSearchParams(); if(text) p.set('q',text); sels.forEach(s=>{ if(s.value) p.set(s.dataset.facet,s.value); });
+    history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:'')+location.hash);
+  }
+  const init=new URLSearchParams(location.search); if(init.get('q')) q.value=init.get('q'); sels.forEach(s=>{ const v=init.get(s.dataset.facet); if(v) s.value=v; });
+  q.addEventListener('input',apply); sels.forEach(s=>s.addEventListener('change',apply)); apply();
+})();
+</script>` : `<p class="note">No records have Public Status = Published yet. ${Object.keys(hubIndex.records).length} records exist in the Hub; ${Object.values(hubIndex.records).filter(r => r.public_status === "Review").length} are in editorial review. Records cited by module snapshots: ${[...new Set(modules.flatMap(m => m.latest ? recordsOf(m.latest.data) : []))].length}.</p>`}</div>`);
 for (const s of sourcesArr) {
   const citing = modules.flatMap(m => (m.latest?.data.rows || []).filter(r => (r.records || []).includes(s.id)).map(r => ({ m, r })));
   page(`sources/${s.id.toLowerCase()}/index.html`, s.title, `<div class="wrap"><p class="crumbs"><a href="${base}sources/">Sources</a> › ${esc(s.id)}</p><p class="eyebrow">${esc(s.id)} · ${esc(s.record_type)}</p><h1 class="page-title">${esc(s.title)}</h1>
 <dl class="kv" style="max-width:70ch;margin-top:16px">${[["Organisation", s.org], ["Jurisdiction", s.jurisdiction], ["Publication date", s.publication_date], ["Legal status", s.legal_status], ["Effective from", s.effective_from], ["Summary", s.summary], ["Why it matters", s.why_it_matters], ["Citation", s.citation], ["Last verified", s.last_verified]].filter(x => x[1]).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}${s.official_source ? `<dt>Official source</dt><dd><a href="${esc(s.official_source)}">${esc(s.official_source)}</a></dd>` : ""}</dl>
-<p class="module" style="margin-top:22px">Cited by</p>${citing.length ? `<ul>${citing.map(({ m, r }) => `<li><a href="${base}modules/${m.slug}/">${esc(m.short_title)}</a> — ${esc(r.regime_label)}</li>`).join("")}</ul>` : `<p class="muted">No module cell cites this record.</p>`}</div>`);
+<p class="module" style="margin-top:22px">Cited by</p>${citing.length ? `<ul>${citing.map(({ m, r }) => `<li><a href="${base}modules/${m.slug}/">${esc(m.short_title)}</a> — ${esc(r.regime_label)}</li>`).join("")}</ul>` : `<p class="muted">No module cell cites this record.</p>`}</div>`, { description: s.summary || s.title, head: ldSource(s) });
 }
 
 // research: one page per public output — what it is, which modules belong to it, which Hub records it rests on
@@ -253,7 +286,7 @@ ${juris.length ? `<dt>Jurisdictions in the evidence</dt><dd>${juris.map(esc).joi
 ${pub.length ? pub.map(id => `<div class="srcrow">${T.chips([id], site, sources)}<div><b>${esc(sources[id].title)}</b><br><span class="muted">${esc([sources[id].record_type, sources[id].jurisdiction, sources[id].publication_date].filter(Boolean).join(" · "))}</span></div></div>`).join("") : '<p class="muted">No record of this output is in the public Source Library yet.</p>'}
 ${priv.length ? `<p class="hint">${priv.length} further record${priv.length === 1 ? "" : "s"} cited by this output ${priv.length === 1 ? "is" : "are"} not yet published in the Source Library: ${priv.map(id => `<span class="chip" title="${esc(hubIndex.records[id]?.stage || "")}">${esc(id)}</span>`).join(" ")}</p>` : ""}
 <div class="note" style="margin-top:28px;border-top:1px solid var(--rule);padding-top:14px"><p class="module">Cite</p><p>ROAT, <em>${esc(o.title)}</em> [<code>${esc(o.id)}</code>], ${esc(o.status || "")}${o.url ? `, ${esc(o.url)}` : ""}. Evidence catalogue: ROAT Observatory ${esc(base)}research/${esc(o.id.toLowerCase())}/</p></div>
-</div>`, { description: o.description || o.title });
+</div>`, { description: o.description || o.title, head: ldOutput(o) });
 }
 
 // method pages
@@ -283,7 +316,7 @@ ${(c.locus || []).map(l => `<div class="srcrow">${T.chips([l.record], site, sour
 ${c.related?.length ? `<p class="module" style="margin-top:22px">Related concepts</p><p>${c.related.map(r => conceptById[r] ? conceptLink(conceptById[r]) : esc(r)).join(" · ")}</p>` : ""}
 </div>
 ${useBlocks.join("")}
-<section><div class="wrap"><div class="note" style="border-top:1px solid var(--rule);padding-top:14px"><p class="module">Cite this concept</p><p>ROAT Observatory, concept <em>${esc(c.title)}</em> [<code>${esc(c.roat_id)}</code>], ${esc(c.definition_status)} definition, ${esc(site.built)}. Faculty of Law, Comenius University Bratislava. ${esc(base)}method/concepts/${esc(c.slug)}/</p></div></div></section>`, { description: c.definition.slice(0, 160) });
+<section><div class="wrap"><div class="note" style="border-top:1px solid var(--rule);padding-top:14px"><p class="module">Cite this concept</p><p>ROAT Observatory, concept <em>${esc(c.title)}</em> [<code>${esc(c.roat_id)}</code>], ${esc(c.definition_status)} definition, ${esc(site.built)}. Faculty of Law, Comenius University Bratislava. ${esc(base)}method/concepts/${esc(c.slug)}/</p></div></div></section>`, { description: c.definition.slice(0, 160), head: ldConcept(c) });
 }
 if (concepts.length) page("method/concepts/index.html", "Concepts", `<div class="wrap"><p class="crumbs"><a href="${base}method/">Method</a> › Concepts</p><h1 class="page-title">Concepts</h1><p class="sub" style="margin-top:10px">The terms the modules code against, each with its definition, its locus in the primary sources and the module columns it governs. A draft badge means the definition has been drafted from the sources and awaits the author's review.</p>
 ${T.cards(concepts.map(c => ({ lab: c.roat_id, title: c.title + (c.definition_status === "approved" ? "" : " (draft)"), href: `${base}method/concepts/${c.slug}/`, lines: [c.definition.split(". ")[0] + ".", { lab: "Used in", text: (c.used_in || []).map(u => modById[u.module]?.short_title).filter(Boolean).join(" · ") || "—" }] })))}</div>`);
@@ -307,5 +340,10 @@ for (const c of concepts) resolve[c.roat_id] = `method/concepts/${c.slug}/`;
 for (const o of outputs) resolve[o.id] = `research/${o.id.toLowerCase()}/`;
 for (const [id, target] of Object.entries(resolve)) write(`id/${id}/index.html`, `<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${base}${target}"><title>${esc(id)}</title><a href="${base}${target}">${esc(id)}</a>`);
 write("id/index.json", JSON.stringify(resolve, null, 1));
+
+// sitemap and robots: every HTML page the build wrote, absolute URLs, lastmod = build date (the data files carry their own snapshot dates)
+const urls = [...new Set(pagesWritten)].filter(r => !draft).map(r => `  <url><loc>${esc(abs(r))}</loc><lastmod>${site.built}</lastmod></url>`);
+write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`);
+write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${abs("sitemap.xml")}\n`);
 
 console.log(`[build] ${draft ? "DRAFT " : ""}site written to site/ — ${modules.length} modules, ${jurisdictions.length} jurisdictions, ${sourcesArr.length} sources, ${Object.keys(resolve).length} resolvable IDs`);

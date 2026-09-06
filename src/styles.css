@@ -169,3 +169,12 @@ dl.stage-body dd{margin:0;font-size:14.5px;line-height:1.45}
 table.diff td.before{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(0,0,0,.35)}
 table.diff td.after{font-weight:600}
 table.diff td{vertical-align:top;max-width:34ch}
+
+/* source library filters (build: sources index) */
+.filters{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:end;margin:18px 0 14px;padding:12px 14px;border:1px solid var(--rule);border-radius:3px}
+.filters .facet{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted)}
+.filters .facet.grow{flex:1 1 220px}
+.filters select,.filters input{font:inherit;font-size:14px;padding:5px 8px;border:1px solid var(--rule);border-radius:2px;background:#fff;color:inherit;min-width:140px}
+.filters input{width:100%}
+.filters .count{font-family:var(--mono);font-size:12px;color:var(--muted);align-self:center;margin-left:auto}
+#srclist .srcrow[hidden]{display:none}

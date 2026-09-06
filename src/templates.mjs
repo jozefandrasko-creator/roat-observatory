@@ -2,8 +2,12 @@
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 export { esc };
 
-export function layout({ title, body, nav, draft, site, path: current = "/", description = "" }) {
+/** JSON-LD block for the page head; `data` is a plain object (schema.org). */
+export const jsonld = data => `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`;
+
+export function layout({ title, body, nav, draft, site, path: current = "/", description = "", head = "" }) {
   const items = [["/", "Observatory"], ["/modules/", "Modules"], ["/jurisdictions/", "Jurisdictions"], ["/sources/", "Sources"], ["/research/", "Research"], ["/method/", "Method"]];
+  const canonical = site.origin ? `${site.origin}${site.base}${current.replace(/^\//, "")}` : "";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -11,8 +15,10 @@ export function layout({ title, body, nav, draft, site, path: current = "/", des
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)} · ROAT Observatory</title>
 <meta name="description" content="${esc(description)}">
+${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="${site.base}styles.css">
+${head}
 </head>
 <body>
 ${draft ? `<div class="draft-banner">DRAFT BUILD — validation gates not passed; nothing on this build is citable</div>` : ""}
