@@ -31,15 +31,14 @@ Static, versioned publication of ROAT's comparative models of automated-vehicle 
 
 Source Library: 64 published records. Register: 371 records (highest id ROAT-2026-0375). Validation: 0 errors · 53 warnings (48 on the superseded human-roles/2026-09-05 snapshot, the rest are review/draft banners).
 
-The Hub now has guards (prompts 6 and 7, 2026-09-06): Data validation with reject on 31 Register columns, and a `Checks` sheet with 30 integrity formulas whose baseline is in column D. Every "Musí byť 0" check is at zero. Read `Checks` before and after any Hub prompt; the `roat-hub-edit` skill (source in `Claude outputs/skills/roat-hub-edit/`, packaged as `.skill`) encodes the prompt pattern, the live gviz read and the verification step.
+The Hub now has guards (prompts 6 and 7, 2026-09-06): Data validation with reject on 31 Register columns, and a `Checks` sheet with 30 integrity formulas whose baseline is in column D. After prompt 8 every check except the three informative counts is at zero (baseline re-recorded 2026-09-06). Read `Checks` before and after any Hub prompt; the `roat-hub-edit` skill (source in `Claude outputs/skills/roat-hub-edit/`, packaged as `.skill`) encodes the prompt pattern, the live gviz read and the verification step.
 
 ## Open items, in order
 
-1. Hub author decisions surfaced by `Checks`: Reliability pairing for 0112 and 0245 (CHK-21), Next Check Date for 0359 (CHK-23), and column N (Impact Area) still carries a warning-only validation bound to `Lists!$P$2:$P$18` that does not see `Deployment`.
-2. Author to read `Public-Library-kontrola-2026-09-06.md` (the public texts) and fix wording in the Hub; the ten Module 03 texts added on 2026-09-06 are in `ROAT-prompt-5-Public-Editorial-Queue-Modul-03.md`.
-3. When companion manuscripts are submitted: set the snapshot `status` to `published` (01: `ROAT-SNAP-LAYERS-2026-08-25`, 02: `ROAT-SNAP-SECOND-GATE-2026-08-31`), replace placeholder companion outputs in `data/ids.json` / `content/modules/*.json` with real `OUT-*` ids from the Hub Outputs sheet, bump version, release v0.2.0, write the new DOI back.
-4. Hub hygiene backlog (not blocking the Observatory): 0112/0245 Reliability, placeholder titles (0173, 0130–0133, 0139, 0149, 0165), ~50 legal records without Legal Status, 0318–0321 public fields (kept in Review on purpose).
-5. Optional: `HUB_SHEET_ID` secret + link-readable Sheet for the Monday `hub-sync.yml` PR; Zenodo record type Software → Dataset.
+1. Author to read `Public-Library-kontrola-2026-09-06.md` (the public texts) and fix wording in the Hub; the ten Module 03 texts added on 2026-09-06 are in `ROAT-prompt-5-Public-Editorial-Queue-Modul-03.md`.
+2. When companion manuscripts are submitted: set the snapshot `status` to `published` (01: `ROAT-SNAP-LAYERS-2026-08-25`, 02: `ROAT-SNAP-SECOND-GATE-2026-08-31`), replace placeholder companion outputs in `data/ids.json` / `content/modules/*.json` with real `OUT-*` ids from the Hub Outputs sheet, bump version, release v0.2.0, write the new DOI back.
+3. Hub hygiene backlog (not blocking the Observatory): placeholder titles (0173, 0130–0133, 0139, 0149, 0165), ~50 legal records without Legal Status, 0318–0321 public fields (kept in Review on purpose), 0245 SSRN metadata verification (then Level 3 / Peer-reviewed source).
+4. Optional: `HUB_SHEET_ID` secret + link-readable Sheet for the Monday `hub-sync.yml` PR; Zenodo record type Software → Dataset.
 
 ## Routine (Windows, PowerShell, in the repo folder)
 
