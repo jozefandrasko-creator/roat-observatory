@@ -1,6 +1,6 @@
 {
   "name": "roat-observatory",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "ROAT Observatory — how law lets automated vehicles onto the road. Static site generated from ROAT Intelligence Hub snapshots.",
   "type": "module",

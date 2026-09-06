@@ -8,7 +8,7 @@ authors:
     affiliation: "Faculty of Law, Comenius University Bratislava (ROAT)"
 license: CC-BY-4.0
 doi: 10.5281/zenodo.22409313
-version: 0.1.0
-date-released: 2026-09-05
+version: 0.2.0
+date-released: 2026-09-06
 abstract: "Comparative models of automated-vehicle deployment governance — layered regulatory normalisation (N0–N4), post-type-approval deployment models (Second Gate) and human roles — published as coded, provenance-tracked datasets at dated snapshots from the ROAT Intelligence Hub."
 keywords: [automated vehicles, regulation, type approval, deployment governance, comparative law, UNECE, European Union, Slovakia]

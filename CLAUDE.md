@@ -7,7 +7,7 @@ Read this before touching anything. It is the hand-off from the session that bui
 Static, versioned publication of ROAT's comparative models of automated-vehicle deployment governance (Faculty of Law, Comenius University Bratislava; author Jozef Andraško). Data comes from the **ROAT Intelligence Hub** (Google Sheet `1G_jtoKunmcY0BTuTCEZBe21cMxiOH6fJdsduZRRKXGc`) at dated snapshots. Specification: `ARCHITECTURE.md` (v0.2 + amendments A1–A3). Runbook: `RELEASE.md` (including the Windows routine). History: `CHANGELOG.md`.
 
 - Live site: https://jozefandrasko-creator.github.io/roat-observatory/ (GitHub Pages, built by `.github/workflows/build.yml` on every push to `main`).
-- Release v0.1.0 → Zenodo version DOI `10.5281/zenodo.22409314`, concept DOI `10.5281/zenodo.22409313` (all versions).
+- Release v0.1.0 → Zenodo version DOI `10.5281/zenodo.22409314`, concept DOI `10.5281/zenodo.22409313` (all versions). v0.2.0 prepared 2026-09-06 (version bumped, CHANGELOG heading, `.zenodo.json` with `upload_type: dataset`, notes in `Claude outputs/release-notes-v0.2.0.md`); the author publishes the GitHub release, then the v0.2.0 version DOI goes into the snapshots this release contains: second-gate/2026-09-07, human-roles/2026-09-07 (review) — and the three snapshots already carrying the v0.1.0 DOI keep it.
 - Zero npm dependencies; Node ≥ 20. Scripts are plain ESM in `scripts/`, templates in `src/templates.mjs`.
 
 ## Hard rules
@@ -35,9 +35,9 @@ The Hub now has guards (prompts 6 and 7, 2026-09-06): Data validation with rejec
 
 ## Open items, in order
 
-1. When companion manuscripts are submitted: set the snapshot `status` to `published` (01: `ROAT-SNAP-LAYERS-2026-08-25`, 02: `ROAT-SNAP-SECOND-GATE-2026-08-31`, 03: latest `ROAT-SNAP-ROLES-*`), bump version, release v0.2.0, write the new DOI back. (Companion OUT-* ids are resolved since 2026-09-06.)
+1. When companion manuscripts are submitted: set the snapshot `status` to `published` (01: `ROAT-SNAP-LAYERS-2026-08-25`, 02: latest `ROAT-SNAP-SECOND-GATE-*`, 03: latest `ROAT-SNAP-ROLES-*`), bump version, release v0.3.0, write the new DOI back. (Companion OUT-* ids are resolved since 2026-09-06.)
 2. Hub hygiene backlog (not blocking the Observatory). Done on 2026-09-06 by prompts 10 and 11: Legal Status on 56 legal-type records, 14 placeholder titles resolved, 0142 rejected as a duplicate of 0120. 0174 (Arizona § 28-9702) resolved by prompt 15. 0245 and 0263 SSRN metadata closed by prompt 18b (2026-09-06; author supplied the PDFs and posting dates, SSRN blocks every automated reader): 0263 Verified/Level 3/Published, 0245 Verified/Level 4/Draft. Hygiene backlog is empty except 0318–0321 public fields (kept in Review on purpose); 0262 Official Source points to the analysed Croatian gazette rather than the ROAT analysis itself (author's choice pending a public URL).
-3. Optional: `HUB_SHEET_ID` secret + link-readable Sheet for the Monday `hub-sync.yml` PR; Zenodo record type Software → Dataset.
+3. Decided 2026-09-06: the Sheet stays private and the Monday `hub-sync.yml` stays dormant (no `HUB_SHEET_ID` secret) — the Sheet ID is in the public repository, so link-readable would publish the whole Register with its internal notes; exports stay manual (or via the Drive connector from a Claude session). Zenodo record type: `.zenodo.json` makes new releases Datasets; the v0.1.0 record is changed by hand in Zenodo (Edit → Resource type).
 
 ## Routine (Windows, PowerShell, in the repo folder)
 
