@@ -1,7 +1,7 @@
 {
- "exported": "2026-09-06T16:53:22.357Z",
+ "exported": "2026-09-06T17:13:27.105Z",
  "from": "Public Library sheet",
- "count": 64,
+ "count": 65,
  "sources": [
   {
    "id": "ROAT-2026-0040",
@@ -1224,6 +1224,30 @@
    "official_source": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2024_12_154_2554.html",
    "doi": "",
    "last_verified": "2026-08-18",
+   "featured": "No",
+   "display_order": ""
+  },
+  {
+   "id": "ROAT-2026-0263",
+   "category": "Scientific literature",
+   "title": "Backroom Drivers",
+   "org": "Matthew Wansley",
+   "jurisdiction": "United States",
+   "record_type": "Scientific article",
+   "topic": "Regulation of remote facilitation (remote assistance and remote driving) of automated vehicles in the United States",
+   "impact_area": "Remote Driving; Human Factors; Safety; Enforcement",
+   "publication_date": "2026-08-19",
+   "legal_status": "",
+   "effective_from": "",
+   "language": "English",
+   "open_access": "Yes",
+   "summary": "Essay forthcoming in the Harvard Journal of Law & Technology on the remote facilitation of automated driving. It separates remote assistants, who advise an automated driving system, from remote drivers, who control it in real time, reviews the 2026 US disclosures and California's first rules on remote facilitation, and argues that companies rather than individual facilitators should bear responsibility, proposing adversarial audits, emergency simulations and emergency geofencing.",
+   "why_it_matters": "The clearest US legal account of remote human roles behind driverless vehicles; a direct comparator for the EU remote intervention operator and the German technical supervision coded in Module 03.",
+   "keywords": "remote facilitation; remote assistance; remote driving; automated driving system; human in the loop; least cost avoider; California DMV; adversarial audit; emergency geofencing; Waymo; Tesla",
+   "citation": "Wansley, M. (2026). Backroom Drivers. Harvard Journal of Law & Technology (forthcoming). SSRN preprint, abstract 7308978, posted 19 August 2026.",
+   "official_source": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7308978",
+   "doi": "",
+   "last_verified": "2026-09-06",
    "featured": "No",
    "display_order": ""
   },
