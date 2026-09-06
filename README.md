@@ -32,6 +32,7 @@ content/modules/<slug>.json + .md      module definition (dimensions, Hub sheet,
 content/jurisdictions/<slug>.json+.md  overview paragraph and metadata; everything else is generated
 content/method/*.md                    method pages (JSON front matter)
 content/research.json                  OUT-* ids allowed on the public Research page
+content/sk/                            Slovak overview layer (index, o-projekte, modules/<slug>.md) → /sk/; data stays English
 data/ids.json                          ROAT ID registry
 data/vocabularies.json                 N-scale, confidence, role values, Hub vocabulary snapshot
 data/modules/<slug>/<date>/            frozen snapshots — immutable once status = published

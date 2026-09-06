@@ -1,0 +1,6 @@
+---json
+{ "title": "Regulačná metóda ROAT", "module": "regulatory-method", "summary": "Čo treba ustáliť a v akom poradí, skôr než možno dôverovať regulačnému záveru o automatizovanom riadení.", "status": "draft", "drafted": "Návrh textu pripravený 2026-09-06 z anglického obsahu modulu; čaká na schválenie autora." }
+---
+Modul 07 je metodické vyhlásenie, nie kódovaný dataset. Väčšina regulačných analýz automatizovaného riadenia začína uprostred: pýta sa, čo hovoria pravidlá, skôr než ustálila, aké rozhodnutie má analýza podoprieť, aká sociotechnická prax sa v skutočnosti reguluje a čie vymedzenie problému sa preberá. Rámec zapisuje poradie, v ktorom ROAT pracuje, aby čitateľ videl, z ktorej fázy záver pochádza a ktoré fázy boli vykonané len zbežne.
+
+Trinásť fáz integruje model TechReg Ronalda Leenesa ako vonkajší proces regulačnej správy s vlastným modulom ROAT pre automatizované vozidlá vo fázach 5 až 8 a 12: vektorom funkčných vrstiev N0 až N4, ontológiou aktérov a funkcií a taxonómiou mostov a brán, ktorú uplatňujú ostatné moduly Observatória. Rámec je modulárny a iteratívny: hĺbka sleduje rozhodovaciu otázku, nie pevný počet strán, a neskoršie zistenia môžu vyžadovať prehodnotenie skorších fáz. Modul nemá sprievodný rukopis, a preto nepodlieha embargu.

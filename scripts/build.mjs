@@ -28,7 +28,15 @@ const origin = (process.env.SITE_ORIGIN || "https://jozefandrasko-creator.github
 const site = { base, origin, built: new Date().toISOString().slice(0, 10), hubExported: hubIndex.exported.slice(0, 10) };
 const abs = rel => `${origin}${base}${rel.replace(/index\.html$/, "")}`;
 const pagesWritten = [];
-const page = (rel, title, body, extra = {}) => { pagesWritten.push(rel); return write(rel, T.layout({ title, body, draft, site, path: "/" + rel.replace(/index\.html$/, ""), ...extra })); };
+// language pairs (site-relative dir → its counterpart in the other language), filled once the Slovak texts are loaded;
+// page() turns them into hreflang links on both sides and the nav's language switch.
+const langPairs = {};
+const page = (rel, title, body, extra = {}) => {
+  pagesWritten.push(rel);
+  const dir = rel.replace(/index\.html$/, ""); const alt = langPairs[dir];
+  const alternates = alt ? [{ hreflang: extra.lang || "en", href: dir }, alt] : [];
+  return write(rel, T.layout({ title, body, draft, site, path: "/" + dir, alternates, ...extra }));
+};
 /* JSON-LD helpers (schema.org). Kept small and factual: identity, dates, downloads, sources. */
 const ORG = { "@type": "Organization", "name": "ROAT – Faculty of Law, Comenius University Bratislava", "url": origin + base };
 const LICENSE = "https://creativecommons.org/licenses/by/4.0/";
@@ -94,6 +102,18 @@ const supersededBanner = (m, s) => s.supersededBy ? `<div class="wrap"><p class=
 const jurisdictions = fs.readdirSync(path.join(ROOT, "content/jurisdictions")).filter(f => f.endsWith(".json")).map(f => { const j = J(`content/jurisdictions/${f}`); j.body = md(R(`content/jurisdictions/${j.slug}.md`)); return j; }).sort((a, b) => a.title.localeCompare(b.title));
 const jurById = Object.fromEntries(jurisdictions.map(j => [j.roat_id, j]));
 const baseJur = id => String(id || "").split(":")[0];
+
+// Slovak layer: overview texts in content/sk (index.md, o-projekte.md, modules/<slug>.md). Front matter: title, status
+// (draft until the author approves), drafted (provenance note), summary (module cards), heading (index mast).
+const skRead = rel => { const { meta, body } = splitFront(R(rel)); return { ...meta, body: md(body) }; };
+const skPage = name => fs.existsSync(path.join(ROOT, `content/sk/${name}.md`)) ? skRead(`content/sk/${name}.md`) : null;
+const skIntro = skPage("index"), skAbout = skPage("o-projekte");
+const skByModule = Object.fromEntries(modules.filter(m => fs.existsSync(path.join(ROOT, `content/sk/modules/${m.slug}.md`))).map(m => [m.slug, skRead(`content/sk/modules/${m.slug}.md`)]));
+const pairLang = (en, sk) => { langPairs[en] = { hreflang: "sk", href: sk }; langPairs[sk] = { hreflang: "en", href: en }; };
+if (skIntro) pairLang("", "sk/");
+if (skAbout) pairLang("method/about/", "sk/o-projekte/");
+if (skIntro) pairLang("modules/", "sk/moduly/");
+for (const m of modules) if (skByModule[m.slug]) pairLang(`modules/${m.slug}/`, `sk/moduly/${m.slug}/`);
 const outputById = Object.fromEntries(J("data/hub/outputs.json").outputs.map(o => [o.id, o]));
 
 /* ---- concepts: content/concepts/*.json — a definition with its locus in the sources and the module dimensions it governs ---- */
@@ -320,6 +340,33 @@ ${useBlocks.join("")}
 }
 if (concepts.length) page("method/concepts/index.html", "Concepts", `<div class="wrap"><p class="crumbs"><a href="${base}method/">Method</a> › Concepts</p><h1 class="page-title">Concepts</h1><p class="sub" style="margin-top:10px">The terms the modules code against, each with its definition, its locus in the primary sources and the module columns it governs. A draft badge means the definition has been drafted from the sources and awaits the author's review.</p>
 ${T.cards(concepts.map(c => ({ lab: c.roat_id, title: c.title + (c.definition_status === "approved" ? "" : " (draft)"), href: `${base}method/concepts/${c.slug}/`, lines: [c.definition.split(". ")[0] + ".", { lab: "Used in", text: (c.used_in || []).map(u => modById[u.module]?.short_title).filter(Boolean).join(" · ") || "—" }] })))}</div>`);
+
+// Slovak pages: the author's overview texts; every page links to the English page that holds the coded data
+if (skIntro) {
+  const nn = m => String(m.number).padStart(2, "0");
+  const skStatus = { review: "v recenzii", published: "zverejnená", draft: "návrh" };
+  const skBadge = t => t.status === "approved" ? "" : ` <span class="badge prospective" title="${esc(t.drafted || "")}">návrh textu</span>`;
+  const skHint = t => t.status === "approved" ? "" : `<p class="hint">${esc(t.drafted || "Návrh textu; čaká na schválenie autora.")}</p>`;
+  const snapLine = m => { const s = m.latest; if (!s) return "Zatiaľ bez snímky."; return `Aktuálna snímka <a href="${base}modules/${m.slug}/${s.dir}/">${esc(s.data.snapshot_date)}</a> · ${s.data.rows.length} ${m.kind === "method" ? "fáz" : "riadkov"} · ${esc(skStatus[s.snap.status] || s.snap.status)}${s.snap.doi ? ` · DOI ${esc(s.snap.doi)}` : ""}${s.snap.supersedes ? ` · nahrádza snímku ${esc(s.diff ? s.diff.prev.data.snapshot_date : s.snap.supersedes)}` : ""}.`; };
+  const skCards = () => T.cards(modules.map(m => { const t = skByModule[m.slug]; return { lab: `Modul ${nn(m)} · ${m.roat_id}`, title: t ? t.title : m.title, href: t ? `${base}sk/moduly/${m.slug}/` : `${base}modules/${m.slug}/`, lines: [t ? t.summary || "" : m.question, { lab: "Aktuálna snímka", text: m.latest ? `${m.latest.data.snapshot_date} · ${m.latest.data.rows.length} ${m.kind === "method" ? "fáz" : "riadkov"} · ${skStatus[m.latest.snap.status] || m.latest.snap.status}` : "žiadna" }] }; }));
+  page("sk/index.html", skIntro.title, `<header class="mast"><div class="wrap">
+  <p class="eyebrow">ROAT Observatórium · slovenský prehľad</p>
+  <h1>${esc(skIntro.heading || skIntro.title)}${skBadge(skIntro)}</h1>
+  <div class="lede prose" style="margin-top:16px">${skIntro.body}</div>${skHint(skIntro)}
+</div></header>
+<section><div class="wrap"><p class="module">Moduly</p><h2>Štyri porovnávacie modely</h2>${skCards()}
+<p class="note muted" style="margin-top:18px">Údaje, tabuľky a pramene sú v angličtine: <a href="${base}">ROAT Observatory →</a> · <a href="${base}sources/">Knižnica zdrojov</a> · <a href="${base}jurisdictions/">Jurisdikcie</a> · <a href="${base}research/">Výskumné výstupy</a></p></div></section>`, { description: skIntro.summary || "Slovenský prehľad ROAT Observatória: ako právo vpúšťa automatizované vozidlá na cestu.", lang: "sk" });
+  page("sk/moduly/index.html", "Moduly", `<div class="wrap"><p class="crumbs"><a href="${base}sk/">Observatórium</a> › Moduly</p><h1 class="page-title">Moduly</h1><p class="sub" style="margin-top:10px">Každý modul je jeden porovnávací model s datovanými, zmrazenými snímkami kódovaných údajov. Slovenská stránka modulu je orientačný prehľad; kódované údaje sú na anglickej stránke.</p>${skCards()}</div>`, { description: "Slovenský prehľad modulov ROAT Observatória.", lang: "sk" });
+  for (const m of modules) {
+    const t = skByModule[m.slug]; if (!t) continue;
+    page(`sk/moduly/${m.slug}/index.html`, t.title, `<div class="wrap"><p class="crumbs"><a href="${base}sk/">Observatórium</a> › <a href="${base}sk/moduly/">Moduly</a> › ${esc(t.title)}</p><p class="eyebrow">Modul ${nn(m)} · ${esc(m.roat_id)}</p><h1 class="page-title">${esc(t.title)}${skBadge(t)}</h1>
+<p class="muted" style="margin-top:8px" lang="en">${esc(m.title)}</p>
+<div class="prose" style="margin-top:18px">${t.body}</div>${skHint(t)}
+<div class="note" style="margin-top:22px;border-top:1px solid var(--rule);padding-top:14px"><p class="module">Údaje modulu</p><p>${snapLine(m)} Kódované údaje, tabuľky a pramene sú publikované v angličtine: <a href="${base}modules/${m.slug}/">${esc(m.title)} →</a></p></div></div>`, { description: t.summary || "", lang: "sk" });
+  }
+  if (skAbout) page("sk/o-projekte/index.html", skAbout.title, `<div class="wrap"><p class="crumbs"><a href="${base}sk/">Observatórium</a> › ${esc(skAbout.title)}</p><h1 class="page-title">${esc(skAbout.title)}${skBadge(skAbout)}</h1><div class="prose" style="margin-top:18px">${skAbout.body}</div>${skHint(skAbout)}
+<p class="note muted" style="margin-top:18px">Anglicky: <a href="${base}method/about/">About ROAT</a> · <a href="${base}method/how-to-cite/">How to cite</a> · <a href="${base}about/changelog/">Changelog</a></p></div>`, { description: "O výskumnej skupine ROAT a o citovaní snímok Observatória.", lang: "sk" });
+}
 
 // changelog: repository history plus every snapshot the site holds
 const snapRows = modules.flatMap(m => m.snapshots.map(x => ({ m, x }))).sort((a, b) => String(b.x.data.snapshot_date).localeCompare(String(a.x.data.snapshot_date)));

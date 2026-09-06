@@ -178,3 +178,5 @@ table.diff td{vertical-align:top;max-width:34ch}
 .filters input{width:100%}
 .filters .count{font-family:var(--mono);font-size:12px;color:var(--muted);align-self:center;margin-left:auto}
 #srclist .srcrow[hidden]{display:none}
+nav.site a.lang{margin-left:auto;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--muted)} nav.site a.lang:hover{color:var(--accent)}
+.mast .lede.prose{font-size:17px;max-width:70ch} .mast .lede.prose p{margin:0 0 12px}

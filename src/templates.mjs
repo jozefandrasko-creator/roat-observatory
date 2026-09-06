@@ -5,31 +5,44 @@ export { esc };
 /** JSON-LD block for the page head; `data` is a plain object (schema.org). */
 export const jsonld = data => `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`;
 
-export function layout({ title, body, nav, draft, site, path: current = "/", description = "", head = "" }) {
-  const items = [["/", "Observatory"], ["/modules/", "Modules"], ["/jurisdictions/", "Jurisdictions"], ["/sources/", "Sources"], ["/research/", "Research"], ["/method/", "Method"]];
+/**
+ * `lang` is "en" (default) or "sk"; the Slovak layer carries overview texts only, the coded data stays on the English pages.
+ * `alternates` lists {hreflang, href} pairs (site-relative, no leading slash) for the same page in the other language;
+ * they become hreflang links and drive the language switch in the nav.
+ */
+export function layout({ title, body, nav, draft, site, path: current = "/", description = "", head = "", lang = "en", alternates = [] }) {
+  const sk = lang === "sk";
+  const items = sk
+    ? [["/sk/", "Observatórium"], ["/sk/moduly/", "Moduly"], ["/sk/o-projekte/", "O projekte"], ["/sources/", "Zdroje (EN)"], ["/method/", "Metóda (EN)"]]
+    : [["/", "Observatory"], ["/modules/", "Modules"], ["/jurisdictions/", "Jurisdictions"], ["/sources/", "Sources"], ["/research/", "Research"], ["/method/", "Method"]];
+  const other = alternates.find(a => a.hreflang === (sk ? "en" : "sk"));
+  const switchHref = other ? other.href : (sk ? "" : "sk/");
+  const isCurrent = p => (p === "/" || p === "/sk/") ? current === p : current.startsWith(p);
   const canonical = site.origin ? `${site.origin}${site.base}${current.replace(/^\//, "")}` : "";
+  const hreflangs = site.origin ? alternates.map(a => `<link rel="alternate" hreflang="${esc(a.hreflang)}" href="${esc(site.origin + site.base + a.href)}">`).join("\n") : "";
   return `<!doctype html>
-<html lang="en">
+<html lang="${lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(title)} · ROAT Observatory</title>
+<title>${esc(title)} · ${sk ? "ROAT Observatórium" : "ROAT Observatory"}</title>
 <meta name="description" content="${esc(description)}">
 ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
+${hreflangs}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="${site.base}styles.css">
 ${head}
 </head>
 <body>
-${draft ? `<div class="draft-banner">DRAFT BUILD — validation gates not passed; nothing on this build is citable</div>` : ""}
+${draft ? `<div class="draft-banner">${sk ? "PRACOVNÁ ZOSTAVA — validačné brány neprešli; nič na tejto zostave nie je citovateľné" : "DRAFT BUILD — validation gates not passed; nothing on this build is citable"}</div>` : ""}
 <header class="site-head"><div class="wrap">
-  <a class="brand" href="${site.base}">ROAT Observatory<small>How law lets automated vehicles onto the road</small></a>
-  <nav class="site">${items.map(([p, l]) => `<a href="${site.base}${p.slice(1)}"${(p === "/" ? current === "/" : current.startsWith(p)) ? ' aria-current="page"' : ""}>${l}</a>`).join("")}</nav>
+  <a class="brand" href="${site.base}${sk ? "sk/" : ""}">${sk ? "ROAT Observatórium<small>Ako právo vpúšťa automatizované vozidlá na cestu</small>" : "ROAT Observatory<small>How law lets automated vehicles onto the road</small>"}</a>
+  <nav class="site">${items.map(([p, l]) => `<a href="${site.base}${p.slice(1)}"${isCurrent(p) ? ' aria-current="page"' : ""}>${l}</a>`).join("")}<a class="lang" href="${site.base}${switchHref}" hreflang="${sk ? "en" : "sk"}" lang="${sk ? "en" : "sk"}">${sk ? "English" : "Slovensky"}</a></nav>
 </div></header>
 ${body}
 <footer class="site"><div class="wrap">
-  <span>ROAT · Faculty of Law, Comenius University Bratislava · content CC BY 4.0 · code MIT</span>
-  <span>Built ${esc(site.built)} from Hub export of ${esc(site.hubExported)}</span>
+  <span>${sk ? "ROAT · Právnická fakulta Univerzity Komenského v Bratislave · obsah CC BY 4.0 · kód MIT" : "ROAT · Faculty of Law, Comenius University Bratislava · content CC BY 4.0 · code MIT"}</span>
+  <span>${sk ? `Zostavené ${esc(site.built)} z exportu Hubu z ${esc(site.hubExported)}` : `Built ${esc(site.built)} from Hub export of ${esc(site.hubExported)}`}</span>
 </div></footer>
 <div class="tip" id="tip"></div>
 <script>

@@ -1,0 +1,6 @@
+---json
+{ "title": "Vrstvová normalizácia", "module": "layered-normalisation", "summary": "Ako ďaleko postúpila normalizácia automatizovaného riadenia v každej regulačnej funkcii a ktorý právny most alebo brána spravuje nesúlad medzi vrstvami.", "status": "draft", "drafted": "Návrh textu pripravený 2026-09-06 z anglického obsahu modulu; čaká na schválenie autora." }
+---
+Modul 01 sleduje, ako ďaleko postúpila normalizácia automatizovaného riadenia v jednotlivých regulačných funkciách právneho poriadku. Každý režim je kódovaný ako vektor siedmich funkčných vrstiev na ordinálnej stupnici N0 až N4, nie ako jediné skóre vyspelosti: v riadku vidno konfiguráciu režimu, v stĺpci porovnanie jednej funkcie naprieč režimami. Stupnica meria mieru právneho zakotvenia, nie regulačnú intenzitu, a skóre sa nikdy nesčítavajú za jurisdikciu.
+
+Päť režimov roku 2026 nestojí na spoločnom rebríku. Majú rôzne vedúce vrstvy a rôzne konfigurácie a právny most alebo brána, ktorá spravuje rozhranie medzi vedúcou a zaostávajúcou vrstvou, sa líši doktrinálnou formou aj tam, kde sa cesta opakuje. Návrhy zákonov sa do skóre platného práva nezapočítavajú a uvádzajú sa oddelene ako citlivostný dôkaz. Historický panel Spojeného kráľovstva (1861 – 1930) uplatňuje rovnaké kódovanie na normalizáciu motorového vozidla a je publikovaný ako samostatná snímka modulu.

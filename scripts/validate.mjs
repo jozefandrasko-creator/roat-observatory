@@ -157,6 +157,22 @@ for (const f of conFiles) {
 }
 for (const [id, c] of Object.entries(ids.concepts || {})) if (!exists(`content/concepts/${c.slug}.json`)) err(id, `concept registered but no content/concepts/${c.slug}.json`);
 
+/* ---- Slovak layer (content/sk/**.md): front matter, module link, draft status ---- */
+const skDir = path.join(ROOT, "content/sk");
+if (fs.existsSync(skDir)) {
+  const skFiles = [...fs.readdirSync(skDir).filter(f => f.endsWith(".md")).map(f => `content/sk/${f}`), ...(exists("content/sk/modules") ? fs.readdirSync(path.join(skDir, "modules")).filter(f => f.endsWith(".md")).map(f => `content/sk/modules/${f}`) : [])];
+  const modSlugs = new Set(modFiles.map(f => J(`content/modules/${f}`).slug));
+  for (const rel of skFiles) {
+    const w = `sk ${rel.replace(/^content\/sk\//, "")}`;
+    const m = fs.readFileSync(path.join(ROOT, rel), "utf8").match(/^---json\s*\n([\s\S]*?)\n---/);
+    let meta = null; try { meta = m ? JSON.parse(m[1]) : null; } catch { meta = null; }
+    if (!meta) { err(w, "front matter missing or not valid JSON"); continue; }
+    if (!meta.title) err(w, "front matter needs a title");
+    if (rel.includes("/modules/")) { const slug = path.basename(rel, ".md"); if (!modSlugs.has(slug)) err(w, `no module ${slug} in content/modules`); if (meta.module && meta.module !== slug) err(w, `front matter module "${meta.module}" differs from file name`); }
+    if (meta.status !== "approved") warn(w, `text is "${meta.status || "draft"}" — author review pending`);
+  }
+}
+
 /* ---- report ---- */
 const dedupe = a => { const s = new Set(); return a.filter(x => { const k = x.where + "|" + x.msg; if (s.has(k)) return false; s.add(k); return true; }); };
 const E = dedupe(errors), W = dedupe(warnings);
