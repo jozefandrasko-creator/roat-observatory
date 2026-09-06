@@ -346,7 +346,7 @@
    "label": "UN ADS GTR (2026)",
    "layer": "International / UNECE",
    "function": "TA",
-   "status": "Binding - adopted / phased",
+   "status": "Standard / technical reference",
    "backbone": true,
    "new_2026": true,
    "records": [
@@ -355,7 +355,7 @@
    "urls": [
     "https://unece.org/transport/documents/2026/04/working-documents/grva-proposal-new-united-nations-global-technical"
    ],
-   "note": ""
+   "note": "Adopted at WP.29's 199th session (June 2026); Global Registry publication details pending. Under Article 7 of the 1998 Agreement a UN GTR has no direct legal force and no mutual recognition of approvals: a Contracting Party that voted in favour must submit it to its own domestic adoption procedure but stays free not to adopt it, giving reasons. Contrast the 1958-Agreement UN Regulation."
   },
   {
    "id": "BOX-019",
@@ -363,7 +363,7 @@
    "label": "UNECE ADS Guidance & Interpretation",
    "layer": "International / UNECE",
    "function": "TA",
-   "status": "Soft law / guidance",
+   "status": "Draft / negotiation",
    "backbone": false,
    "new_2026": false,
    "records": [
@@ -372,7 +372,7 @@
    "urls": [
     "https://unece.org/transport/documents/2026/07/working-documents/working-party-automatedautonomous-and-connected"
    ],
-   "note": ""
+   "note": "GRVA working document ECE/TRANS/WP.29/GRVA/2026/24, tabled for the 26th GRVA session of 14-18 September 2026; the guidance and interpretation document is proposed, not adopted."
   },
   {
    "id": "BOX-020",
@@ -583,7 +583,7 @@
     "ROAT-2026-0214"
    ],
    "urls": [
-    "https://www.legislation.gov.uk/ukpga/2024/10/notes/division/6/index.htm?utm_source=chatgpt.com",
+    "https://www.legislation.gov.uk/ukpga/2024/10/contents",
     "https://www.legislation.gov.uk/uksi/2026/439/pdfs/uksi_20260439_en.pdf",
     "https://www.gov.uk/guidance/automated-vehicles-act-implementation-programme",
     "https://www.gov.uk/government/consultations/automated-vehicles-statement-of-safety-principles"
@@ -622,7 +622,7 @@
     "ROAT-2026-0308"
    ],
    "urls": [
-    "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074228/LEGISCTA000043371908/2026-05-30/?utm_source=chatgpt.com",
+    "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074228/LEGISCTA000043371908/2026-05-30/",
     "https://www.legifrance.gouv.fr/eli/ordonnance/2021/4/14/2021-443/jo/texte",
     "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043729532"
    ],
@@ -759,7 +759,7 @@
    "label": "UNECE remote intervention / interaction interpretation",
    "layer": "International / UNECE",
    "function": "OP",
-   "status": "Soft law / guidance",
+   "status": "Draft / negotiation",
    "backbone": false,
    "new_2026": false,
    "records": [
@@ -768,7 +768,7 @@
    "urls": [
     "https://wiki.unece.org/spaces/trans/pages/364708023/ADS+21st+Session"
    ],
-   "note": ""
+   "note": "Informal document ADS-21-71/Rev.3, a change request to the guidance and interpretation document deferred for further discussion at the 21st ADS session; not an adopted interpretation."
   },
   {
    "id": "BOX-042",
