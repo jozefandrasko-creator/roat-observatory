@@ -169,7 +169,7 @@ ${pending.length ? `<section><div class="wrap"><p class="module">Pending evidenc
 <dt>Snapshot</dt><dd><code>${esc(s.snap.roat_id)}</code> · legal snapshot date ${esc(d.snapshot_date)} · exported from Hub ${esc(d.exported_from_hub.slice(0, 10))}</dd>
 <dt>Coder · second pass</dt><dd>${esc(s.snap.coder || "—")} · ${esc(s.snap.second_pass || "—")}</dd>
 ${s.snap.caveats?.length ? `<dt>Caveats</dt><dd><ul>${s.snap.caveats.map(c => `<li>${esc(c)}</li>`).join("")}</ul></dd>` : ""}
-<dt>Companion research</dt><dd>${(m.relationships.companion_of || []).map(o => outputById[o] ? `<a href="${base}research/#${o.toLowerCase()}">${esc(outputById[o].title)}</a> (${esc(o)})` : `<span class="muted">${esc(o)} — pending OUT id</span>`).join("; ") || "—"}</dd>
+<dt>Companion research</dt><dd>${(m.relationships.companion_of || []).map(o => outputById[o] ? `<a href="${base}research/${o.toLowerCase()}/">${esc(outputById[o].title)}</a> (${esc(o)})` : `<span class="muted">${esc(o)} — pending OUT id</span>`).join("; ") || "—"}</dd>
 <dt>Related modules</dt><dd>${(m.relationships.related_module || []).map(o => modById[o] ? `<a href="${base}modules/${modById[o].slug}/">${esc(modById[o].title)}</a>` : esc(o)).join("; ") || "—"}</dd>
 ${conceptsOfModule(m).length ? `<dt>Concepts</dt><dd>${conceptsOfModule(m).map(c => `${conceptLink(c)} <span class="muted">(${(c.used_in || []).filter(u => u.module === m.roat_id).map(u => esc((m.dimensions.find(d => d.key === u.dimension) || {}).label || u.dimension)).join(", ")})</span>`).join("; ")}</dd>` : ""}
 <dt>All snapshots</dt><dd>${m.snapshots.filter(x => /^\d{4}-\d{2}-\d{2}$/.test(x.dir)).map(x => (x === s ? `<b>${esc(x.dir)}</b>` : `<a href="${base}modules/${m.slug}/${x.dir}/">${esc(x.dir)}</a>`) + (x.supersededBy ? ` <span class="muted">(superseded)</span>` : "")).join(" · ")}</dd>
@@ -235,9 +235,26 @@ for (const s of sourcesArr) {
 <p class="module" style="margin-top:22px">Cited by</p>${citing.length ? `<ul>${citing.map(({ m, r }) => `<li><a href="${base}modules/${m.slug}/">${esc(m.short_title)}</a> — ${esc(r.regime_label)}</li>`).join("")}</ul>` : `<p class="muted">No module cell cites this record.</p>`}</div>`);
 }
 
-// research
-page("research/index.html", "Research", `<div class="wrap"><h1 class="page-title">Research</h1><p class="sub" style="margin-top:10px">ROAT outputs that the modules belong to. Each is catalogued in the Hub Outputs sheet.</p>
-${outputs.map(o => `<div class="srcrow" id="${o.id.toLowerCase()}"><span class="chip">${esc(o.id)}</span><div><b>${esc(o.title)}</b><br><span class="muted">${esc([o.type, o.status, o.project].filter(Boolean).join(" · "))}</span>${modules.filter(m => (m.relationships.companion_of || []).includes(o.id)).map(m => `<br>Companion module: <a href="${base}modules/${m.slug}/">${esc(m.title)}</a>`).join("")}</div></div>`).join("")}</div>`);
+// research: one page per public output — what it is, which modules belong to it, which Hub records it rests on
+const companionsOf = o => modules.filter(m => (m.relationships.companion_of || []).includes(o.id));
+page("research/index.html", "Research", `<div class="wrap"><h1 class="page-title">Research</h1><p class="sub" style="margin-top:10px">ROAT outputs that the modules belong to. Each is catalogued in the Hub Outputs sheet; the page lists the records it rests on and how many of them are already in the public Source Library.</p>
+${T.cards(outputs.map(o => { const pub = (o.source_records || []).filter(id => sources[id]).length; return { lab: `${o.id} · ${o.type || "output"}`, title: o.title, href: `${base}research/${o.id.toLowerCase()}/`, lines: [o.description || "", { lab: "Status", text: [o.status, o.project].filter(Boolean).join(" · ") || "—" }, { lab: "Evidence", text: `${o.source_records?.length || 0} Hub records, ${pub} published${companionsOf(o).length ? ` · companion of ${companionsOf(o).map(m => m.short_title).join(", ")}` : ""}` }] }; }))}</div>`);
+for (const o of outputs) {
+  const recs = o.source_records || []; const pub = recs.filter(id => sources[id]); const priv = recs.filter(id => !sources[id]);
+  const juris = [...new Set(pub.map(id => sources[id].jurisdiction).filter(Boolean))].sort();
+  page(`research/${o.id.toLowerCase()}/index.html`, o.title, `<div class="wrap"><p class="crumbs"><a href="${base}research/">Research</a> › ${esc(o.id)}</p><p class="eyebrow">${esc(o.id)} · ${esc(o.type || "output")}</p><h1 class="page-title">${esc(o.title)}</h1>
+<div class="snap"><span>Status <b>${esc(o.status || "—")}</b></span><span>Project <b>${esc(o.project || "—")}</b></span><span>Hub records <b>${recs.length}</b> (${pub.length} published)</span>${o.url ? `<span><a href="${esc(o.url)}">Published output</a></span>` : ""}</div>
+${o.description ? `<div class="prose" style="margin-top:18px"><p>${esc(o.description)}</p></div>` : ""}
+<dl class="kv" style="max-width:70ch;margin-top:16px">
+<dt>Companion modules</dt><dd>${companionsOf(o).length ? companionsOf(o).map(m => `<a href="${base}modules/${m.slug}/">${esc(m.title)}</a>${m.latest ? ` <span class="muted">(snapshot ${esc(m.latest.data.snapshot_date)}, ${esc(m.latest.snap.status)})</span>` : ""}`).join("<br>") : '<span class="muted">none declared</span>'}</dd>
+${juris.length ? `<dt>Jurisdictions in the evidence</dt><dd>${juris.map(esc).join(" · ")}</dd>` : ""}
+</dl>
+<p class="module" style="margin-top:22px">Records this output rests on</p>
+${pub.length ? pub.map(id => `<div class="srcrow">${T.chips([id], site, sources)}<div><b>${esc(sources[id].title)}</b><br><span class="muted">${esc([sources[id].record_type, sources[id].jurisdiction, sources[id].publication_date].filter(Boolean).join(" · "))}</span></div></div>`).join("") : '<p class="muted">No record of this output is in the public Source Library yet.</p>'}
+${priv.length ? `<p class="hint">${priv.length} further record${priv.length === 1 ? "" : "s"} cited by this output ${priv.length === 1 ? "is" : "are"} not yet published in the Source Library: ${priv.map(id => `<span class="chip" title="${esc(hubIndex.records[id]?.stage || "")}">${esc(id)}</span>`).join(" ")}</p>` : ""}
+<div class="note" style="margin-top:28px;border-top:1px solid var(--rule);padding-top:14px"><p class="module">Cite</p><p>ROAT, <em>${esc(o.title)}</em> [<code>${esc(o.id)}</code>], ${esc(o.status || "")}${o.url ? `, ${esc(o.url)}` : ""}. Evidence catalogue: ROAT Observatory ${esc(base)}research/${esc(o.id.toLowerCase())}/</p></div>
+</div>`, { description: o.description || o.title });
+}
 
 // method pages
 const methodFiles = fs.readdirSync(path.join(ROOT, "content/method")).filter(f => f.endsWith(".md")).sort();
@@ -287,6 +304,7 @@ for (const m of modules) { resolve[m.roat_id] = `modules/${m.slug}/`; for (const
 for (const j of jurisdictions) resolve[j.roat_id] = `jurisdictions/${j.slug}/`;
 for (const s of sourcesArr) resolve[s.id] = `sources/${s.id.toLowerCase()}/`;
 for (const c of concepts) resolve[c.roat_id] = `method/concepts/${c.slug}/`;
+for (const o of outputs) resolve[o.id] = `research/${o.id.toLowerCase()}/`;
 for (const [id, target] of Object.entries(resolve)) write(`id/${id}/index.html`, `<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${base}${target}"><title>${esc(id)}</title><a href="${base}${target}">${esc(id)}</a>`);
 write("id/index.json", JSON.stringify(resolve, null, 1));
 
