@@ -300,7 +300,8 @@ let landscape = landscapes[landscapes.length - 1];
 // once the classification is carried in the Hub, hub-sync writes data/hub/landscape.json and it wins
 if (fs.existsSync(path.join(ROOT, "data/hub/landscape.json")) && landscape) {
   const live = J("data/hub/landscape.json");
-  if (live.boxes?.length) landscape = { ...landscape, ...live, snapshot_date: live.exported.slice(0, 10), source: { ...landscape.source, workbook: live.source, note: "Classification is now maintained in the ROAT Intelligence Hub and refreshed by hub-sync. " + landscape.source.note } };
+  // the classification cut-off stays what the coding describes; the Hub export date is a separate fact
+  if (live.boxes?.length) landscape = { ...landscape, ...live, snapshot_date: landscape.snapshot_date, refreshed: live.exported.slice(0, 10), source: { ...landscape.source, live: live.source } };
 }
 if (landscape) {
   const L = landscape;
@@ -339,7 +340,7 @@ ${opt("Layer", "layer", L.layers)}${opt("Status", "status", L.statuses)}${opt("F
 <div class="wall" id="wall">${L.pillars.map(p => `<section class="pcol" data-pillar="${esc(p)}"><h2>${esc(p)}</h2><p class="pcount muted">${L.boxes.filter(b => b.pillar === p).length} instruments</p>${L.boxes.filter(b => b.pillar === p).map(boxHtml).join("")}</section>`).join("")}</div>
 <p class="hint" id="mapnone" hidden>No instrument matches. Clear a filter or shorten the search.</p>
 <div class="note" style="margin-top:24px;border-top:1px solid var(--rule);padding-top:14px"><p class="module">Provenance</p>
-<p>Classification by pillar, layer, function and status comes from ${esc(L.source.workbook)}, cut-off ${esc(L.source.cut_off)}. The instruments themselves are ROAT Intelligence Hub records: ${allRecords.length} records are referenced, ${allRecords.length - pending} are published in the Source Library and ${pending} are held in the Hub pending publication, which is why some identifiers are not links. The map is a navigation layer; the coded comparative data lives in the <a href="${base}modules/">modules</a>.</p></div></div>
+<p>${L.source.live ? `Classification by pillar, layer, function and status is maintained in the ${esc(L.source.live)} and was refreshed on ${esc(L.refreshed)}; the coding describes the position on ${esc(L.source.cut_off)} and originates in ${esc(L.source.workbook)}.` : `Classification by pillar, layer, function and status comes from ${esc(L.source.workbook)}, cut-off ${esc(L.source.cut_off)}.`} The instruments themselves are ROAT Intelligence Hub records: ${allRecords.length} records are referenced, ${allRecords.length - pending} are published in the Source Library and ${pending} are held in the Hub pending publication, which is why some identifiers are not links. The map is a navigation layer; the coded comparative data lives in the <a href="${base}modules/">modules</a>.</p></div></div>
 <script>
 (function(){
   const boxes=[...document.querySelectorAll('#wall .mapbox')], cols=[...document.querySelectorAll('#wall .pcol')];

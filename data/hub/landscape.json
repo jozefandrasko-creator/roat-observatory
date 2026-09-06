@@ -1,0 +1,1357 @@
+{
+ "exported": "2026-09-06T19:03:06.559Z",
+ "source": "ROAT Intelligence Hub, sheet \"Regulatory Map\"",
+ "pillars": [
+  "International Road Traffic Law",
+  "Vehicle Type-Approval",
+  "ADS Safety Validation",
+  "Testing and Trial Operation",
+  "Deployment and Passenger Services",
+  "Human Roles and Remote Operation",
+  "Liability and Insurance",
+  "Data and Privacy",
+  "Cybersecurity and Software Updates",
+  "AI and Algorithmic Governance",
+  "Incident Reporting and Enforcement",
+  "Infrastructure, Connectivity and Emergency Response"
+ ],
+ "layers": [
+  "International / UNECE",
+  "European Union",
+  "National / subnational",
+  "Cross-cutting",
+  "Standards / Guidance"
+ ],
+ "statuses": [
+  "Binding - in force",
+  "Soft law / guidance",
+  "Draft / negotiation",
+  "Hub gap / verify",
+  "Binding - adopted / phased",
+  "Standard / technical reference"
+ ],
+ "boxes": [
+  {
+   "id": "BOX-001",
+   "pillar": "International Road Traffic Law",
+   "label": "Geneva Convention 1949",
+   "layer": "International / UNECE",
+   "function": "TA + OP",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0008"
+   ],
+   "urls": [
+    "https://treaties.un.org/pages/ViewDetailsV.aspx?src=TREATY&mtdsg_no=XI-B-1&chapter=11&Temp=mtdsg5&clang=_en"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-002",
+   "pillar": "International Road Traffic Law",
+   "label": "Vienna Convention 1968",
+   "layer": "International / UNECE",
+   "function": "TA + OP",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0009"
+   ],
+   "urls": [
+    "https://treaties.un.org/pages/ViewDetailsIII.aspx?src=TREATY&mtdsg_no=XI-B-19&chapter=11"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-003",
+   "pillar": "International Road Traffic Law",
+   "label": "Vienna Convention Art. 8(5 bis)",
+   "layer": "International / UNECE",
+   "function": "TA + OP",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0010"
+   ],
+   "urls": [
+    "https://unece.org/DAM/trans/doc/2014/wp1/ECE-TRANS-WP1-145e.pdf"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-004",
+   "pillar": "International Road Traffic Law",
+   "label": "Vienna Convention Art. 34 bis",
+   "layer": "International / UNECE",
+   "function": "TA + OP",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0011"
+   ],
+   "urls": [
+    "https://treaties.un.org/doc/Publication/CN/2021/CN.5.2021.Reissued.15012021-Eng.pdf"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-005",
+   "pillar": "International Road Traffic Law",
+   "label": "WP.1 Deployment Resolution",
+   "layer": "International / UNECE",
+   "function": "TA + OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0025"
+   ],
+   "urls": [
+    "https://unece.org/transport/publications/resolution-deployment-highly-and-fully-automated-vehicles-road-traffic"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-006",
+   "pillar": "International Road Traffic Law",
+   "label": "Draft AV Convention package",
+   "layer": "International / UNECE",
+   "function": "TA + OP",
+   "status": "Draft / negotiation",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0012",
+    "ROAT-2026-0013",
+    "ROAT-2026-0016"
+   ],
+   "urls": [
+    "https://unece.org/transport/documents/2022/12/informal-documents/zero-draft-skeleton-new-international-legal",
+    "https://unece.org/transport/documents/2022/12/informal-documents/questions-and-answers-regarding-new-legal-instrument",
+    "https://unece.org/sites/default/files/2023-05/GE.3-06-02e_0.pdf"
+   ],
+   "note": "Groups the zero draft, Q&A and scoping draft."
+  },
+  {
+   "id": "BOX-007",
+   "pillar": "Vehicle Type-Approval",
+   "label": "UN R157 – ALKS",
+   "layer": "International / UNECE",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0020"
+   ],
+   "urls": [
+    "https://unece.org/transport/documents/2021/03/standards/un-regulation-no-157-automated-lane-keeping-systems-alks"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-008",
+   "pillar": "Vehicle Type-Approval",
+   "label": "UN R171 - DCAS",
+   "layer": "International / UNECE",
+   "function": "TA",
+   "status": "Hub gap / verify",
+   "backbone": false,
+   "new_2026": false,
+   "records": [],
+   "urls": [
+    "https://unece.org/transport/vehicle-regulations-wp29/standards/addenda-1958-agreement-regulations-161-180"
+   ],
+   "note": "Foundational v0.1 item; no dedicated current Hub record."
+  },
+  {
+   "id": "BOX-009",
+   "pillar": "Vehicle Type-Approval",
+   "label": "New UN Regulation on ADS (2026)",
+   "layer": "International / UNECE",
+   "function": "TA",
+   "status": "Binding - adopted / phased",
+   "backbone": true,
+   "new_2026": true,
+   "records": [
+    "ROAT-2026-0299"
+   ],
+   "urls": [
+    "https://unece.org/transport/documents/2026/04/working-documents/grva-proposal-new-united-nations-regulation-uniform"
+   ],
+   "note": "WP.29 adopted the new ADS framework in June 2026; formal numbering/publication should be rechecked before public release."
+  },
+  {
+   "id": "BOX-010",
+   "pillar": "Vehicle Type-Approval",
+   "label": "EU Type-Approval Regulation 2018/858",
+   "layer": "European Union",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0036"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32018R0858"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-011",
+   "pillar": "Vehicle Type-Approval",
+   "label": "EU General Safety Regulation 2019/2144",
+   "layer": "European Union",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0039",
+    "ROAT-2026-0177"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/eli/reg/2019/2144/oj",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02019R2144-20260802"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-012",
+   "pillar": "Vehicle Type-Approval",
+   "label": "EU ADS Implementing Regulation 2022/1426",
+   "layer": "European Union",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0040"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R1426"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-013",
+   "pillar": "Vehicle Type-Approval",
+   "label": "EU ADS Amendment 2026/481",
+   "layer": "European Union",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": true,
+   "records": [
+    "ROAT-2026-0218"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/eli/reg_impl/2026/481/oj/eng"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-014",
+   "pillar": "Vehicle Type-Approval",
+   "label": "EU GSR implementing package",
+   "layer": "European Union",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0041",
+    "ROAT-2026-0042",
+    "ROAT-2026-0043",
+    "ROAT-2026-0047",
+    "ROAT-2026-0048",
+    "ROAT-2026-0049"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32021R0646",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32021R0535",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R2590",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32021R1958",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32021R1341",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32021R1243"
+   ],
+   "note": "Grouped ELKS, general construction, distraction, ISA, drowsiness and alcohol-interlock implementing/delegated acts."
+  },
+  {
+   "id": "BOX-015",
+   "pillar": "Vehicle Type-Approval",
+   "label": "EU position at WP.29 – Decision 2026/1411",
+   "layer": "European Union",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": true,
+   "records": [
+    "ROAT-2026-0217"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/eli/dec/2026/1411/oj/eng"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-016",
+   "pillar": "Vehicle Type-Approval",
+   "label": "US FMVSS modernisation for ADS",
+   "layer": "National / subnational",
+   "function": "TA",
+   "status": "Draft / negotiation",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0164"
+   ],
+   "urls": [
+    "https://www.federalregister.gov/documents/2026/06/26/2026-12981/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-135-to-accommodate-ads-equipped"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-017",
+   "pillar": "ADS Safety Validation",
+   "label": "UNECE NATM Guidelines",
+   "layer": "International / UNECE",
+   "function": "TA",
+   "status": "Hub gap / verify",
+   "backbone": false,
+   "new_2026": false,
+   "records": [],
+   "urls": [
+    "https://unece.org/transport/vehicle-regulations-wp29/working-party-automatedautonomous-and-connected-vehicles"
+   ],
+   "note": "Foundational v0.1 item; no dedicated current Hub record."
+  },
+  {
+   "id": "BOX-018",
+   "pillar": "ADS Safety Validation",
+   "label": "UN ADS GTR (2026)",
+   "layer": "International / UNECE",
+   "function": "TA",
+   "status": "Standard / technical reference",
+   "backbone": true,
+   "new_2026": true,
+   "records": [
+    "ROAT-2026-0300"
+   ],
+   "urls": [
+    "https://unece.org/transport/documents/2026/04/working-documents/grva-proposal-new-united-nations-global-technical"
+   ],
+   "note": "Adopted at WP.29's 199th session (June 2026); Global Registry publication details pending. Under Article 7 of the 1998 Agreement a UN GTR has no direct legal force and no mutual recognition of approvals: a Contracting Party that voted in favour must submit it to its own domestic adoption procedure but stays free not to adopt it, giving reasons. Contrast the 1958-Agreement UN Regulation."
+  },
+  {
+   "id": "BOX-019",
+   "pillar": "ADS Safety Validation",
+   "label": "UNECE ADS Guidance & Interpretation",
+   "layer": "International / UNECE",
+   "function": "TA",
+   "status": "Draft / negotiation",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0227"
+   ],
+   "urls": [
+    "https://unece.org/transport/documents/2026/07/working-documents/working-party-automatedautonomous-and-connected"
+   ],
+   "note": "GRVA working document ECE/TRANS/WP.29/GRVA/2026/24, tabled for the 26th GRVA session of 14-18 September 2026; the guidance and interpretation document is proposed, not adopted."
+  },
+  {
+   "id": "BOX-020",
+   "pillar": "ADS Safety Validation",
+   "label": "JRC interpretation of EU 2022/1426",
+   "layer": "European Union",
+   "function": "TA",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0312"
+   ],
+   "urls": [
+    "https://data.europa.eu/doi/10.2760/86028"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-021",
+   "pillar": "ADS Safety Validation",
+   "label": "JRC SMS & Remote Management addendum",
+   "layer": "Cross-cutting",
+   "function": "TA",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0311"
+   ],
+   "urls": [
+    "https://data.europa.eu/doi/10.2760/1764206"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-022",
+   "pillar": "ADS Safety Validation",
+   "label": "ISO 34503 – ODD specification",
+   "layer": "Standards / Guidance",
+   "function": "TA",
+   "status": "Standard / technical reference",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0208"
+   ],
+   "urls": [
+    "https://www.iso.org/standard/78952.html"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-023",
+   "pillar": "ADS Safety Validation",
+   "label": "ISO 21448 - SOTIF",
+   "layer": "Standards / Guidance",
+   "function": "TA",
+   "status": "Hub gap / verify",
+   "backbone": false,
+   "new_2026": false,
+   "records": [],
+   "urls": [
+    "https://www.iso.org/standard/77490.html"
+   ],
+   "note": "Foundational v0.1 item; no dedicated current Hub record."
+  },
+  {
+   "id": "BOX-024",
+   "pillar": "ADS Safety Validation",
+   "label": "ISO 26262 – Functional safety",
+   "layer": "Standards / Guidance",
+   "function": "TA",
+   "status": "Hub gap / verify",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0123"
+   ],
+   "urls": [
+    "https://www.flaw.uniba.sk/veda/vyskumne-skupiny/regulacia-automatizovanej-dopravy/kniznica-regulacie-automatizovanej-dopravy/"
+   ],
+   "note": "A Hub record exists but is currently Unverified / Signal."
+  },
+  {
+   "id": "BOX-025",
+   "pillar": "ADS Safety Validation",
+   "label": "UL 4600",
+   "layer": "Standards / Guidance",
+   "function": "TA",
+   "status": "Hub gap / verify",
+   "backbone": false,
+   "new_2026": false,
+   "records": [],
+   "urls": [
+    "https://www.shopulstandards.com/ProductDetail.aspx?UniqueKey=35823"
+   ],
+   "note": "Foundational v0.1 item; no dedicated current Hub record."
+  },
+  {
+   "id": "BOX-026",
+   "pillar": "Testing and Trial Operation",
+   "label": "EU automated-vehicle exemption guidelines",
+   "layer": "European Union",
+   "function": "OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0038"
+   ],
+   "urls": [
+    "https://ec.europa.eu/docsroom/documents/34802"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-027",
+   "pillar": "Testing and Trial Operation",
+   "label": "Slovakia – test-operation framework",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0156",
+    "ROAT-2026-0157",
+    "ROAT-2026-0306",
+    "ROAT-2026-0070"
+   ],
+   "urls": [
+    "https://www.slov-lex.sk/ezbierky/pravne-predpisy/SK/ZZ/2018/106/20250701",
+    "https://www.slov-lex.sk/ezbierky/pravne-predpisy/SK/ZZ/2018/131/20230102",
+    "https://www.slov-lex.sk/ezbierky/pravne-predpisy/SK/ZZ/2026/131/vyhlasene_znenie.html",
+    "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2022/429/20230102"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-028",
+   "pillar": "Testing and Trial Operation",
+   "label": "UK trialling framework + PAS 1884",
+   "layer": "Standards / Guidance",
+   "function": "OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0166",
+    "ROAT-2026-0127"
+   ],
+   "urls": [
+    "https://www.gov.uk/government/publications/trialling-automated-vehicle-technologies-in-public/code-of-practice-automated-vehicle-trialling",
+    "https://www.flaw.uniba.sk/veda/vyskumne-skupiny/regulacia-automatizovanej-dopravy/kniznica-regulacie-automatizovanej-dopravy/"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-029",
+   "pillar": "Testing and Trial Operation",
+   "label": "Croatia – real-world service testing",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0304",
+    "ROAT-2026-0305"
+   ],
+   "urls": [
+    "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2024_12_154_2554.html",
+    "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_07_77_901.html"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-030",
+   "pillar": "Testing and Trial Operation",
+   "label": "California AV testing / incident framework",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0183"
+   ],
+   "urls": [
+    "https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/autonomous-vehicles-incident-reporting/"
+   ],
+   "note": "Current Hub has verified incident-reporting guidance; dedicated testing-regulation record remains a gap."
+  },
+  {
+   "id": "BOX-031",
+   "pillar": "Deployment and Passenger Services",
+   "label": "UK AV Act + APS implementation",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Binding - adopted / phased",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0171",
+    "ROAT-2026-0301",
+    "ROAT-2026-0302",
+    "ROAT-2026-0214"
+   ],
+   "urls": [
+    "https://www.legislation.gov.uk/ukpga/2024/10/contents",
+    "https://www.legislation.gov.uk/uksi/2026/439/pdfs/uksi_20260439_en.pdf",
+    "https://www.gov.uk/guidance/automated-vehicles-act-implementation-programme",
+    "https://www.gov.uk/government/consultations/automated-vehicles-statement-of-safety-principles"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-032",
+   "pillar": "Deployment and Passenger Services",
+   "label": "Germany – automated driving framework",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Hub gap / verify",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0170"
+   ],
+   "urls": [
+    "https://www.gesetze-im-internet.de/stvg/__1a.html"
+   ],
+   "note": "StVG §1a is in the Hub; dedicated records for the 2021 Autonomous Driving Act and AFGBV are still needed."
+  },
+  {
+   "id": "BOX-033",
+   "pillar": "Deployment and Passenger Services",
+   "label": "France – automated driving / STRA framework",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0176",
+    "ROAT-2026-0307",
+    "ROAT-2026-0308"
+   ],
+   "urls": [
+    "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074228/LEGISCTA000043371908/2026-05-30/",
+    "https://www.legifrance.gouv.fr/eli/ordonnance/2021/4/14/2021-443/jo/texte",
+    "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043729532"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-034",
+   "pillar": "Deployment and Passenger Services",
+   "label": "Croatia – road-operation framework",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0303"
+   ],
+   "urls": [
+    "https://narodne-novine.nn.hr/clanci/sluzbeni/2024_12_145_2377.html"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-035",
+   "pillar": "Deployment and Passenger Services",
+   "label": "Slovakia – road-operation + CPT 1329",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Draft / negotiation",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0155",
+    "ROAT-2026-0158",
+    "ROAT-2026-0159"
+   ],
+   "urls": [
+    "https://www.slov-lex.sk/ezbierky/pravne-predpisy/SK/ZZ/2009/8/20260101",
+    "https://www.slov-lex.sk/ezbierky/pravne-predpisy/SK/ZZ/2018/134/20250101",
+    "https://www.nrsr.sk/web/Default.aspx?sid=zakony/zakon&ZakZborID=13&CisObdobia=9&CPT=1329"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-036",
+   "pillar": "Deployment and Passenger Services",
+   "label": "Czech Republic – automated mobility framework",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0160",
+    "ROAT-2026-0161"
+   ],
+   "urls": [
+    "https://e-sbirka.gov.cz/sb/2025/130?zalozka=text",
+    "https://e-sbirka.gov.cz/sb/2000/361/2024-11-01?odkazId=207652945&zalozka=text"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-037",
+   "pillar": "Deployment and Passenger Services",
+   "label": "EU Automated Mobility Strategy",
+   "layer": "European Union",
+   "function": "OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0050"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52018DC0283"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-038",
+   "pillar": "Deployment and Passenger Services",
+   "label": "UK AV marketing restrictions",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Hub gap / verify",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0138"
+   ],
+   "urls": [
+    "https://www.gov.uk/government/speeches/protecting-marketing-terms-for-automated-vehicles"
+   ],
+   "note": "Current Hub source is commentary linked to GOV.UK; create a dedicated official legal/policy record."
+  },
+  {
+   "id": "BOX-039",
+   "pillar": "Human Roles and Remote Operation",
+   "label": "WP.1 secondary-activities resolution",
+   "layer": "International / UNECE",
+   "function": "OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0027"
+   ],
+   "urls": [
+    "https://unece.org/transport/documents/2022/06/working-documents/global-forum-road-traffic-safety-wp1-resolution"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-040",
+   "pillar": "Human Roles and Remote Operation",
+   "label": "WP.1 remote-driving draft resolution",
+   "layer": "International / UNECE",
+   "function": "OP",
+   "status": "Draft / negotiation",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0028"
+   ],
+   "urls": [
+    "https://unece.org/fileadmin/DAM/trans/doc/2019/wp1/ECE-TRANS-WP1-2019-2e_.pdf"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-041",
+   "pillar": "Human Roles and Remote Operation",
+   "label": "UNECE remote intervention / interaction interpretation",
+   "layer": "International / UNECE",
+   "function": "OP",
+   "status": "Draft / negotiation",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0193"
+   ],
+   "urls": [
+    "https://wiki.unece.org/spaces/trans/pages/364708023/ADS+21st+Session"
+   ],
+   "note": "Informal document ADS-21-71/Rev.3, a change request to the guidance and interpretation document deferred for further discussion at the 21st ADS session; not an adopted interpretation."
+  },
+  {
+   "id": "BOX-042",
+   "pillar": "Human Roles and Remote Operation",
+   "label": "UNECE remote-driving / management papers",
+   "layer": "International / UNECE",
+   "function": "OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0029",
+    "ROAT-2026-0032"
+   ],
+   "urls": [
+    "https://unece.org/transport/documents/2021/09/informal-documents/informal-paper-remote-driving-united-kingdom-great",
+    "https://unece.org/transport/documents/2023/03/informal-documents/remote-management-automated-vehicles-finland-and"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-043",
+   "pillar": "Human Roles and Remote Operation",
+   "label": "SAE J3016 taxonomy",
+   "layer": "Standards / Guidance",
+   "function": "OP",
+   "status": "Standard / technical reference",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0120"
+   ],
+   "urls": [
+    "https://www.flaw.uniba.sk/veda/vyskumne-skupiny/regulacia-automatizovanej-dopravy/kniznica-regulacie-automatizovanej-dopravy/"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-044",
+   "pillar": "Human Roles and Remote Operation",
+   "label": "AVSC remote-assistance best practice",
+   "layer": "Standards / Guidance",
+   "function": "OP",
+   "status": "Standard / technical reference",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0191"
+   ],
+   "urls": [
+    "https://saemobilus.sae.org/reports/avsc-best-practice-ads-remote-assistance-use-case-avsc-i-04-2023"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-045",
+   "pillar": "Human Roles and Remote Operation",
+   "label": "ETSI AVM / remote-operations specification",
+   "layer": "Standards / Guidance",
+   "function": "OP",
+   "status": "Standard / technical reference",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0221"
+   ],
+   "urls": [
+    "https://www.etsi.org/deliver/etsi_ts/103800_103899/103882/02.01.01_60/ts_103882v020101p.pdf"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-046",
+   "pillar": "Liability and Insurance",
+   "label": "EU Product Liability Directive",
+   "layer": "European Union",
+   "function": "TA + OP",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0320"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/eli/dir/2024/2853/oj"
+   ],
+   "note": "New PLD; applies to products placed on market/put into service after 9 December 2026; Directive 85/374/EEC continues to govern products marketed before that date."
+  },
+  {
+   "id": "BOX-047",
+   "pillar": "Liability and Insurance",
+   "label": "EU Motor Insurance Directive amendment",
+   "layer": "European Union",
+   "function": "OP",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0321"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/eli/dir/2021/2118/oj"
+   ],
+   "note": "Compulsory motor-insurance/victim-compensation layer; review expressly considers autonomous vehicles."
+  },
+  {
+   "id": "BOX-048",
+   "pillar": "Liability and Insurance",
+   "label": "UK AEV Act 2018",
+   "layer": "National / subnational",
+   "function": "TA + OP",
+   "status": "Hub gap / verify",
+   "backbone": false,
+   "new_2026": false,
+   "records": [],
+   "urls": [
+    "https://www.legislation.gov.uk/ukpga/2018/18/contents"
+   ],
+   "note": "Foundational v0.1 item; no dedicated current Hub record."
+  },
+  {
+   "id": "BOX-049",
+   "pillar": "Liability and Insurance",
+   "label": "PACE legal-aspects resolution",
+   "layer": "International / UNECE",
+   "function": "TA + OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0035"
+   ],
+   "urls": [
+    "https://pace.coe.int/en/files/28816#trace-4"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-050",
+   "pillar": "Data and Privacy",
+   "label": "GDPR",
+   "layer": "European Union",
+   "function": "TA + OP",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0052"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-051",
+   "pillar": "Data and Privacy",
+   "label": "EDPB connected-vehicle guidelines",
+   "layer": "European Union",
+   "function": "TA + OP",
+   "status": "Hub gap / verify",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0058"
+   ],
+   "urls": [
+    "https://www.flaw.uniba.sk/veda/vyskumne-skupiny/regulacia-automatizovanej-dopravy/kniznica-regulacie-automatizovanej-dopravy/"
+   ],
+   "note": "Current Hub record remains Unverified / Signal."
+  },
+  {
+   "id": "BOX-052",
+   "pillar": "Data and Privacy",
+   "label": "EU Data Act",
+   "layer": "European Union",
+   "function": "TA + OP",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0059"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R2854"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-053",
+   "pillar": "Data and Privacy",
+   "label": "UN R160 – EDR",
+   "layer": "International / UNECE",
+   "function": "TA + OP",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0021"
+   ],
+   "urls": [
+    "https://unece.org/transport/documents/2021/10/standards/un-regulation-no-160-event-data-recorder-edr"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-054",
+   "pillar": "Data and Privacy",
+   "label": "EU EDR Regulation 2022/545",
+   "layer": "European Union",
+   "function": "TA + OP",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0046"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R0545"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-055",
+   "pillar": "Data and Privacy",
+   "label": "Article 29 data-protection opinions",
+   "layer": "European Union",
+   "function": "TA + OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0054",
+    "ROAT-2026-0056"
+   ],
+   "urls": [
+    "https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2014/wp216_en.pdf",
+    "https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2014/wp223_en.pdf"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-056",
+   "pillar": "Cybersecurity and Software Updates",
+   "label": "UN R155 – CSMS",
+   "layer": "International / UNECE",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0018"
+   ],
+   "urls": [
+    "https://unece.org/transport/documents/2021/03/standards/un-regulation-no-155-cyber-security-and-cyber-security"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-057",
+   "pillar": "Cybersecurity and Software Updates",
+   "label": "UN R156 – SUMS",
+   "layer": "International / UNECE",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0019"
+   ],
+   "urls": [
+    "https://unece.org/transport/documents/2021/03/standards/un-regulation-no-156-software-update-and-software-update"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-058",
+   "pillar": "Cybersecurity and Software Updates",
+   "label": "UN R161 – Unauthorized Use",
+   "layer": "International / UNECE",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0022"
+   ],
+   "urls": [
+    "https://unece.org/transport/documents/2021/10/standards/un-regulation-no-161-devices-against-unauthorized-use"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-059",
+   "pillar": "Cybersecurity and Software Updates",
+   "label": "NIS2 Directive",
+   "layer": "European Union",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0067"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/eli/dir/2022/2555"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-060",
+   "pillar": "Cybersecurity and Software Updates",
+   "label": "EU Cybersecurity Act",
+   "layer": "European Union",
+   "function": "TA",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0068"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/eli/reg/2019/881/oj"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-061",
+   "pillar": "Cybersecurity and Software Updates",
+   "label": "ISO/SAE 21434",
+   "layer": "Cross-cutting",
+   "function": "TA",
+   "status": "Hub gap / verify",
+   "backbone": false,
+   "new_2026": false,
+   "records": [],
+   "urls": [
+    "https://www.iso.org/standard/70918.html"
+   ],
+   "note": "Foundational v0.1 item; no dedicated current Hub record."
+  },
+  {
+   "id": "BOX-062",
+   "pillar": "AI and Algorithmic Governance",
+   "label": "EU AI Act",
+   "layer": "European Union",
+   "function": "TA + OP",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0318"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+   ],
+   "note": "Annex I links AI Act to Regulations 2018/858 and 2019/2144; cross-layer type-approval interface."
+  },
+  {
+   "id": "BOX-063",
+   "pillar": "AI and Algorithmic Governance",
+   "label": "EU CAV Ethics recommendations",
+   "layer": "European Union",
+   "function": "TA + OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0051"
+   ],
+   "urls": [
+    "https://op.europa.eu/en/publication-detail/-/publication/89624e2c-f98c-11ea-b44f-01aa75ed71a1/language-en/format-PDF/source-search%3E"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-064",
+   "pillar": "AI and Algorithmic Governance",
+   "label": "Trustworthy-AI testing framework",
+   "layer": "Cross-cutting",
+   "function": "TA + OP",
+   "status": "Standard / technical reference",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0002"
+   ],
+   "urls": [
+    "https://doi.org/10.1186/s12544-025-00732-x"
+   ],
+   "note": "Peer-reviewed research evidence retained from v0.1; not a legal instrument."
+  },
+  {
+   "id": "BOX-065",
+   "pillar": "Incident Reporting and Enforcement",
+   "label": "NHTSA SGO crash reporting",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0182"
+   ],
+   "urls": [
+    "https://www.nhtsa.gov/sites/nhtsa.gov/files/2025-04/third-amended-SGO-2021-01_2025.pdf"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-066",
+   "pillar": "Incident Reporting and Enforcement",
+   "label": "EU ADS in-service monitoring",
+   "layer": "European Union",
+   "function": "OP",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0040"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R1426"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-067",
+   "pillar": "Incident Reporting and Enforcement",
+   "label": "EU vehicle market surveillance",
+   "layer": "European Union",
+   "function": "OP",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0036"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32018R0858"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-068",
+   "pillar": "Incident Reporting and Enforcement",
+   "label": "California DMV AV incident reporting",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0183"
+   ],
+   "urls": [
+    "https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/autonomous-vehicles-incident-reporting/"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-069",
+   "pillar": "Incident Reporting and Enforcement",
+   "label": "Police–AV interaction research",
+   "layer": "Cross-cutting",
+   "function": "OP",
+   "status": "Standard / technical reference",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0078"
+   ],
+   "urls": [
+    "https://ieeexplore.ieee.org/document/10343540"
+   ],
+   "note": "Peer-reviewed operational evidence retained from v0.1; not a legal instrument."
+  },
+  {
+   "id": "BOX-070",
+   "pillar": "Infrastructure, Connectivity and Emergency Response",
+   "label": "EU ITS Directive",
+   "layer": "European Union",
+   "function": "OP",
+   "status": "Binding - in force",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0060"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32010L0040"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-071",
+   "pillar": "Infrastructure, Connectivity and Emergency Response",
+   "label": "EU C-ITS Strategy",
+   "layer": "European Union",
+   "function": "OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0064"
+   ],
+   "urls": [
+    "https://www.europarl.europa.eu/doceo/document/TA-8-2018-0063_EN.html"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-072",
+   "pillar": "Infrastructure, Connectivity and Emergency Response",
+   "label": "EU eCall Regulation",
+   "layer": "European Union",
+   "function": "OP",
+   "status": "Hub gap / verify",
+   "backbone": false,
+   "new_2026": false,
+   "records": [],
+   "urls": [
+    "https://eur-lex.europa.eu/eli/reg/2015/758/oj"
+   ],
+   "note": "Foundational v0.1 item; no dedicated current Hub record."
+  },
+  {
+   "id": "BOX-073",
+   "pillar": "Infrastructure, Connectivity and Emergency Response",
+   "label": "Waymo first-responder guide",
+   "layer": "National / subnational",
+   "function": "OP",
+   "status": "Hub gap / verify",
+   "backbone": false,
+   "new_2026": false,
+   "records": [],
+   "urls": [
+    "https://waymo.com/firstresponders/"
+   ],
+   "note": "Foundational v0.1 item; no dedicated current Hub record."
+  },
+  {
+   "id": "BOX-074",
+   "pillar": "Infrastructure, Connectivity and Emergency Response",
+   "label": "ENISA AI/AV cybersecurity report",
+   "layer": "European Union",
+   "function": "OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0069"
+   ],
+   "urls": [
+    "https://www.enisa.europa.eu/news/enisa-news/cybersecurity-challenges-in-the-uptake-of-artificial-intelligence-in-autonomous-driving"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-075",
+   "pillar": "Infrastructure, Connectivity and Emergency Response",
+   "label": "SUMP guidance",
+   "layer": "European Union",
+   "function": "OP",
+   "status": "Soft law / guidance",
+   "backbone": false,
+   "new_2026": false,
+   "records": [
+    "ROAT-2026-0167"
+   ],
+   "urls": [
+    "https://urban-mobility-observatory.transport.ec.europa.eu/document/download/3fb33992-f63e-4c9e-b5cf-d18a576489f9_en?filename=SUMP+Guidelines_third+edition_2026_final+cover.pdf"
+   ],
+   "note": ""
+  },
+  {
+   "id": "BOX-076",
+   "pillar": "AI and Algorithmic Governance",
+   "label": "Digital Omnibus on AI 2026/1744",
+   "layer": "European Union",
+   "function": "TA + OP",
+   "status": "Binding - in force",
+   "backbone": true,
+   "new_2026": true,
+   "records": [
+    "ROAT-2026-0319"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/eli/reg/2026/1744/oj"
+   ],
+   "note": "2026 amendment to AI Act implementation; must be read together with product/type-approval rules."
+  }
+ ]
+}
