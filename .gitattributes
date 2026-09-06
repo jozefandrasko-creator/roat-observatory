@@ -1,0 +1,15 @@
+# Normalise line endings: everything text is committed and checked out with LF,
+# so Windows editors / PowerShell never push CRLF into frozen snapshots.
+* text=auto eol=lf
+
+# Windows-only helpers keep CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary assets (none tracked today; kept for safety)
+*.png binary
+*.jpg binary
+*.pdf binary
+*.zip binary
+*.skill binary
