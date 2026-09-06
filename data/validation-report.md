@@ -1,4 +1,4 @@
-# Observatory validation — 2026-09-06 10:49 UTC
+# Observatory validation — 2026-09-06 12:48 UTC
 
 **0 errors · 53 warnings**
 
@@ -54,7 +54,7 @@
 - human-roles/2026-09-05 · Driverless-test oversight assistant — record ROAT-2026-0317 is below the evidence gate (Signal, Level 6 - Blog or other) — omitted from this row's sources
 - human-roles/2026-09-05 · Driverless-test oversight assistant — record ROAT-2026-0317 is not Published in the Public Library (source page will not exist)
 - human-roles/2026-09-05 · Driverless-test oversight assistant — no publishable evidence — the row is listed as pending, not published as coded
-- human-roles/2026-09-06 — latest snapshot status is "review" — module page will show a draft banner
+- human-roles/2026-09-07 — latest snapshot status is "review" — module page will show a draft banner
 - layered-normalisation/historical-uk — latest snapshot status is "draft" — module page will show a draft banner
 - second-gate/2026-08-31 — latest snapshot status is "review" — module page will show a draft banner
 

@@ -26,7 +26,7 @@ Static, versioned publication of ROAT's comparative models of automated-vehicle 
 |---|---|---|---|
 | 01 Layered normalisation | 2026-08-25 (+ longitudinal panel `historical-uk`, draft) | review | 23/23 (panel 26/26) |
 | 02 Second Gate | 2026-08-31 | review | 24/24 |
-| 03 Human roles | 2026-09-06 (supersedes 2026-09-05) | review | 30/30 |
+| 03 Human roles | 2026-09-07 (supersedes 2026-09-06; machine-assisted blind second pass recorded, 7 roles still first-pass only) | review | 30/30 |
 | 07 Regulatory method | 2026-09-05 | published | 1/1 |
 
 Source Library: 64 published records, all 64 public texts reviewed on 2026-09-06 (`Claude outputs/Public-Library-kontrola-2026-09-06b.md`, applied by prompt 9). Register: 371 records (highest id ROAT-2026-0375). Validation: 0 errors · 53 warnings (48 on the superseded human-roles/2026-09-05 snapshot, the rest are review/draft banners).

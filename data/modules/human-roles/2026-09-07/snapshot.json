@@ -1,0 +1,21 @@
+{
+ "roat_id": "ROAT-SNAP-ROLES-2026-09-07",
+ "module": "ROAT-MOD-ROLES",
+ "snapshot_date": "2026-09-07",
+ "coder": "JA",
+ "second_pass": "Machine-assisted blind second pass (ChatGPT, 2026-09-06) on 23 of 30 roles: the second coder could not access SAE J3016, SAE J3018 and UNECE ADS-21-71/Rev.2, so RC-003 and RC-016 to RC-021 were not second-coded. Class-level agreement 72 % after discounting convention differences (No versus System, No versus Not determined); 15 substantive disagreements adjudicated by JA, 10 cells changed against the 2026-09-06 snapshot (RC-005, RC-009, RC-011 twice, RC-012, RC-014, RC-020, RC-022, RC-028, RC-030). Not inter-coder reliability.",
+ "finding": "",
+ "caveats": [
+  "Evidence base completed on 2026-09-06: the blog crosswalk ROAT-2026-0317 is no longer cited as core evidence; every row rests on a primary legal or technical source (Vienna Convention 1968 and Art. 34 bis, SAE J3016/J3018, Swedish Ordinance 2017:309 and TSFS 2021:4, NTC Australia ADSE policy paper, Japan Act No. 32 of 2022, California Veh. Code § 38750, Ontario O. Reg. 161/25 and the ACMV Program Conditions).",
+  "Remote intervention is coded as intervention from outside the vehicle. In-vehicle commands and takeovers (RC-012, RC-020, RC-022) are therefore 'No' with a qualifier; the same information remains in the Fallback and Dispatch columns.",
+  "RC-009: AFGBV § 14(3) with Annex 1 no. 4 requires the technical supervision person to take over manually after a defect-triggered minimal-risk manoeuvre and allows near-field remote control (6 m, walking speed); the cell records this boundary case, not remote driving in the ordinary sense.",
+  "RC-014: 'Arranged if remote takeover' rests on parliamentary print 1329 read with the proposed § 5(6) of Act No. 8/2009 Coll.; confirm the wording at the next revision of the print.",
+  "RC-021 (remote prototype fallback test driver): SAE J3018_202012 names the role but defers its guidance to a future iteration — the cell records the definition, not operational requirements.",
+  "RC-025 (ADS lifecycle safety entity) rests on a consultation policy paper; the Australian Automated Vehicle Safety Law is not yet enacted.",
+  "55 first-pass cells affirm a function for which the second coder found no passage in the listed sources; they stand on the first coder's reading and are queued for pinpointing at the next revision.",
+  "Coding date per row is the 'Last checked' column in the Hub."
+ ],
+ "supersedes": "ROAT-SNAP-ROLES-2026-09-06",
+ "doi": null,
+ "status": "review"
+}
