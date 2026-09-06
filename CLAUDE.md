@@ -62,6 +62,7 @@ Sheets read by the sync: Intelligence Register, Public Library, Outputs, Cross-s
 
 - IDs: `ROAT-MOD-*` modules, `ROAT-SNAP-<MOD>-<date>` snapshots, `ROAT-JUR-*` jurisdictions (variants `ROAT-JUR-SK:1329`, `ROAT-JUR-UK:1861`), `RC-NNN` role concepts, `ROAT-CON-*` defined concepts (`content/concepts/*.json`, `definition_status` draft until the author approves); all resolvable at `/id/<ID>/`. Registry: `data/ids.json`.
 - Snapshots that declare `supersedes` get a build-time cell diff ("What changed") against the snapshot they replace; the superseded snapshot shows a forward-linking banner. No data is written for this; it is computed from the frozen files.
+- Source Library (`/sources/`) filters client-side (search + facets: category, jurisdiction, type, citing module, legal status); the state is in the URL query, so `/sources/?jurisdiction=Germany` is a linkable view. JSON-LD on source, module, snapshot, concept and research pages; canonical links, `sitemap.xml` and `robots.txt` are generated from the pages the build writes. Absolute URLs = `SITE_ORIGIN` (default `https://jozefandrasko-creator.github.io`) + `SITE_BASE` (CI sets `/roat-observatory/`).
 - Vocabularies: `data/vocabularies.json` (N0–N4 scale, role polarity, Hub publishable stages and evidence max).
 - Windows: scripts resolve their own path with `fileURLToPath` (never `URL.pathname`); `serve.mjs` normalises URLs before `path.join`. Keep it that way.
 - Language: repository, site and commit messages in English; conversation with the author in Slovak.
