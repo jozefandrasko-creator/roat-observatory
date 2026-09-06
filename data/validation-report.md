@@ -1,6 +1,6 @@
-# Observatory validation — 2026-09-06 15:34 UTC
+# Observatory validation — 2026-09-06 15:40 UTC
 
-**0 errors · 67 warnings**
+**0 errors · 61 warnings**
 
 ## Warnings
 
@@ -65,10 +65,4 @@
 - concept remote-driving — definition is "draft" — author review pending
 - concept remote-intervention — definition is "draft" — author review pending
 - concept technical-supervision — definition is "draft" — author review pending
-- sk index.md — text is "draft" — author review pending
-- sk o-projekte.md — text is "draft" — author review pending
-- sk modules/human-roles.md — text is "draft" — author review pending
-- sk modules/layered-normalisation.md — text is "draft" — author review pending
-- sk modules/regulatory-method.md — text is "draft" — author review pending
-- sk modules/second-gate.md — text is "draft" — author review pending
 
