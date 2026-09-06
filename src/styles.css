@@ -163,3 +163,9 @@ dl.stage-body{display:grid;grid-template-columns:1fr;gap:10px 30px;margin:0 0 0 
 @media(min-width:900px){dl.stage-body{grid-template-columns:1fr 1fr}}
 dl.stage-body dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
 dl.stage-body dd{margin:0;font-size:14.5px;line-height:1.45}
+
+/* snapshot diff (build: diffSection, supersededBanner) */
+.superseded{margin:14px 0 0;padding:10px 14px;border-left:3px solid var(--n1, #c8a24a);background:rgba(200,162,74,.10);font-size:14px}
+table.diff td.before{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(0,0,0,.35)}
+table.diff td.after{font-weight:600}
+table.diff td{vertical-align:top;max-width:34ch}

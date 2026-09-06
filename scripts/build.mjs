@@ -38,6 +38,49 @@ const modules = fs.readdirSync(path.join(ROOT, "content/modules")).filter(f => f
   return m;
 }).sort((a, b) => a.number - b.number);
 const modById = Object.fromEntries(modules.map(m => [m.roat_id, m]));
+
+/* ---- snapshot diffs: a snapshot that declares `supersedes` is compared cell by cell with the one it replaces ---- */
+const sameSet = (a, b) => { const x = [...(a || [])].sort().join(";"), y = [...(b || [])].sort().join(";"); return x === y; };
+function snapshotDiff(m, s, prev) {
+  const dims = (m.dimensions || []).map(d => [d.key, d.label]);
+  const meta = [["rationale", "Analytical note"], ["confidence", "Confidence"], ["term", "Term"], ["framework", "Framework"], ["verification", "Verification status"], ["bridge", "Dominant legal bridge / gate"], ["caveat", "Caveat"]];
+  const prevRows = Object.fromEntries((prev.data.rows || []).map(r => [r.regime_id, r]));
+  const curRows = Object.fromEntries((s.data.rows || []).map(r => [r.regime_id, r]));
+  const cells = [];
+  for (const r of s.data.rows || []) {
+    const p = prevRows[r.regime_id]; if (!p) continue;
+    for (const [k, label] of [...dims, ...meta]) {
+      const a = p[k] ?? "", b = r[k] ?? "";
+      if (String(a) !== String(b)) cells.push({ regime_id: r.regime_id, regime_label: r.regime_label, key: k, label, before: a, after: b });
+    }
+    const ek = new Set([...Object.keys(p.extra || {}), ...Object.keys(r.extra || {})]);
+    for (const k of ek) { const a = p.extra?.[k] ?? "", b = r.extra?.[k] ?? ""; if (String(a) !== String(b)) cells.push({ regime_id: r.regime_id, regime_label: r.regime_label, key: "extra." + k, label: k, before: a, after: b }); }
+    if (!sameSet(p.records, r.records)) cells.push({ regime_id: r.regime_id, regime_label: r.regime_label, key: "records", label: "Core ROAT records", before: (p.records || []).join("; "), after: (r.records || []).join("; ") });
+  }
+  const rowsAdded = (s.data.rows || []).filter(r => !prevRows[r.regime_id]).map(r => r.regime_label);
+  const rowsRemoved = (prev.data.rows || []).filter(r => !curRows[r.regime_id]).map(r => r.regime_label);
+  return { prev, cells, rowsAdded, rowsRemoved, rowsTouched: new Set(cells.map(c => c.regime_id)).size };
+}
+for (const m of modules) {
+  const byId = Object.fromEntries(m.snapshots.map(x => [x.snap.roat_id, x]));
+  for (const s of m.snapshots) {
+    const prev = s.snap.supersedes ? byId[s.snap.supersedes] : null;
+    if (!prev) continue;
+    s.diff = snapshotDiff(m, s, prev);
+    prev.supersededBy = s;
+  }
+}
+function diffSection(m, s) {
+  const d = s.diff; if (!d) return "";
+  const prevUrl = `${base}modules/${m.slug}/${d.prev.dir}/`;
+  const summary = d.cells.length ? `${d.cells.length} cell${d.cells.length === 1 ? "" : "s"} in ${d.rowsTouched} row${d.rowsTouched === 1 ? "" : "s"} differ from the superseded snapshot.` : "No coded cell differs from the superseded snapshot; the change is in the snapshot record (coder, second pass, caveats).";
+  const extras = [d.rowsAdded.length ? `Rows added: ${d.rowsAdded.map(esc).join(", ")}.` : "", d.rowsRemoved.length ? `Rows removed: ${d.rowsRemoved.map(esc).join(", ")}.` : ""].filter(Boolean).join(" ");
+  return `<section id="changes"><div class="wrap"><p class="module">What changed</p><h2>Since snapshot <a href="${prevUrl}">${esc(d.prev.data.snapshot_date)}</a></h2>
+<p class="sub">${esc(summary)} ${extras} Every difference is a deliberate recoding; the reason is recorded in the second-pass statement and the caveats below.</p>
+${d.cells.length ? `<div class="tblwrap"><table class="audit diff"><thead><tr><th>Row</th><th>Dimension</th><th>Before (${esc(d.prev.data.snapshot_date)})</th><th>After (${esc(s.data.snapshot_date)})</th></tr></thead><tbody>${d.cells.map(c => `<tr><td>${esc(c.regime_label)}<br><small class="muted">${esc(c.regime_id)}</small></td><td>${esc(c.label)}</td><td class="before">${esc(c.before) || '<span class="muted">—</span>'}</td><td class="after">${esc(c.after) || '<span class="muted">—</span>'}</td></tr>`).join("")}</tbody></table></div>` : ""}
+</div></section>`;
+}
+const supersededBanner = (m, s) => s.supersededBy ? `<div class="wrap"><p class="superseded">This snapshot has been superseded by <a href="${base}modules/${m.slug}/${s.supersededBy.dir}/">snapshot ${esc(s.supersededBy.data.snapshot_date)}</a>${s.supersededBy.diff?.cells.length ? ` (${s.supersededBy.diff.cells.length} cells recoded)` : ""}. It stays addressable and citable as published${s.snap.doi ? `, DOI ${esc(s.snap.doi)}` : ""}.</p></div>` : "";
 const jurisdictions = fs.readdirSync(path.join(ROOT, "content/jurisdictions")).filter(f => f.endsWith(".json")).map(f => { const j = J(`content/jurisdictions/${f}`); j.body = md(R(`content/jurisdictions/${j.slug}.md`)); return j; }).sort((a, b) => a.title.localeCompare(b.title));
 const jurById = Object.fromEntries(jurisdictions.map(j => [j.roat_id, j]));
 const baseJur = id => String(id || "").split(":")[0];
@@ -102,8 +145,9 @@ function moduleBody(m, s0, { frozen }) {
   <p class="eyebrow">Module ${String(m.number).padStart(2, "0")} · ${esc(m.roat_id)}</p>
   <h1 class="page-title">${esc(m.title)}${snapBadge(s)}</h1>
   <p class="lede" style="font-size:18px;color:var(--muted);max-width:64ch;margin:14px 0 0">${esc(m.question)}</p>
-  <div class="snap"><span>Snapshot <b>${esc(d.snapshot_date)}</b>${frozen ? " (frozen)" : " (latest)"}</span><span>Rows <b>${d.rows.length}</b></span><span>Coder <b>${esc(s.snap.coder || "—")}</b></span><span>DOI <b>${esc(s.snap.doi || "not yet minted")}</b></span><span>Hub sheet <b>${esc(d.source_sheet)}</b></span><span><a href="${url}data.csv">data.csv</a> · <a href="${url}data.json">data.json</a></span></div>
+  <div class="snap"><span>Snapshot <b>${esc(d.snapshot_date)}</b>${frozen ? " (frozen)" : " (latest)"}</span><span>Rows <b>${d.rows.length}</b></span><span>Coder <b>${esc(s.snap.coder || "—")}</b></span><span>DOI <b>${esc(s.snap.doi || "not yet minted")}</b></span><span>Hub sheet <b>${esc(d.source_sheet)}</b></span><span><a href="${url}data.csv">data.csv</a> · <a href="${url}data.json">data.json</a></span>${s.diff ? `<span><a href="#changes">Changes since ${esc(s.diff.prev.data.snapshot_date)} <b>${s.diff.cells.length}</b></a></span>` : ""}</div>
 </div>
+${supersededBanner(m, s)}
 <section><div class="wrap"><div class="prose">${m.body}<p class="muted" style="font-size:14px">${esc(m.method_summary)}</p></div></div></section>
 <section><div class="wrap"><p class="module">The table</p><h2>Coded rows</h2><p class="sub">Select a row for every coded dimension, the rationale and the ROAT records behind it.</p>
 ${T.moduleTable(m, d, { site, sources, vocab, idPrefix: m.slug, defaultOpen: "ROAT-JUR-SK" })}
@@ -112,6 +156,7 @@ ${m.dimensions.some(x => x.scale === "n-scale") ? `<p class="hint">Scores measur
 </div></section>
 ${d.pathways?.length ? `<section><div class="wrap"><p class="module">Pathway families</p><h2>Recurring configurations</h2>${T.cards(d.pathways.map(p => ({ title: p.pathway, lines: [p.pattern, { lab: "2026 case", text: p.case, cls: "case" }, { lab: "Analytical value", text: p.value }] })))}${findings["Cross-sectional finding"] ? `<blockquote class="find"><p>${esc(findings["Cross-sectional finding"])}</p></blockquote>` : ""}${findings["Novelty implication"] ? `<p class="note" style="margin-top:14px">${esc(findings["Novelty implication"])}</p>` : ""}</div></section>` : ""}
 ${d.audit?.length ? `<section><div class="wrap"><p class="module">Robustness</p><h2>Second-pass recoding audit</h2><p class="sub">${esc(s.snap.second_pass || "Rule-based recoding by the same coder — a sensitivity check, not inter-coder reliability.")}</p><div class="tblwrap"><table class="audit"><thead><tr><th>Cell audited</th><th>First pass</th><th>Strict decision rule</th><th>Second pass</th><th>Change</th><th>Effect on pathway</th></tr></thead><tbody>${d.audit.map(a => `<tr><td>${esc(a.cell)}</td><td>${esc(a.first)}</td><td>${esc(a.rule)}</td><td>${esc(a.second)}</td><td>${esc(a.change)}</td><td>${esc(a.effect)}</td></tr>`).join("")}</tbody></table></div><p class="hint">${esc((d.audit_result || []).join(" "))}</p></div></section>` : ""}
+${diffSection(m, s)}
 ${pending.length ? `<section><div class="wrap"><p class="module">Pending evidence</p><h2>Coded but not published</h2><p class="sub">These rows exist in the Hub sheet and are coded, but every record behind them is below the evidence gate — Research Stage below Verified, or Evidence Level 5 to 6. They are published once the primary source named here is captured and verified.</p><div class="tblwrap"><table class="audit"><thead><tr><th>Row</th><th>Framework</th><th>Primary source it needs</th><th>Records held today</th></tr></thead><tbody>${pending.map(r => `<tr><td>${esc(r.regime_label)}${r.regime_id ? `<br><small class="muted">${esc(r.regime_id)}</small>` : ""}</td><td>${esc(r.framework || "")}</td><td>${esc((r.extra && (r.extra["Primary legal / technical source"] || r.extra["Primary source URL"])) || "—")}</td><td>${(r.dropped || []).map(x => `<span class="chip">${esc(x)}</span>`).join(" ")}</td></tr>`).join("")}</tbody></table></div></div></section>` : ""}
 <section><div class="wrap"><p class="module">Snapshot record</p><h2>Provenance</h2><dl class="kv" style="max-width:70ch">
 <dt>Snapshot</dt><dd><code>${esc(s.snap.roat_id)}</code> · legal snapshot date ${esc(d.snapshot_date)} · exported from Hub ${esc(d.exported_from_hub.slice(0, 10))}</dd>
@@ -119,7 +164,8 @@ ${pending.length ? `<section><div class="wrap"><p class="module">Pending evidenc
 ${s.snap.caveats?.length ? `<dt>Caveats</dt><dd><ul>${s.snap.caveats.map(c => `<li>${esc(c)}</li>`).join("")}</ul></dd>` : ""}
 <dt>Companion research</dt><dd>${(m.relationships.companion_of || []).map(o => outputById[o] ? `<a href="${base}research/#${o.toLowerCase()}">${esc(outputById[o].title)}</a> (${esc(o)})` : `<span class="muted">${esc(o)} — pending OUT id</span>`).join("; ") || "—"}</dd>
 <dt>Related modules</dt><dd>${(m.relationships.related_module || []).map(o => modById[o] ? `<a href="${base}modules/${modById[o].slug}/">${esc(modById[o].title)}</a>` : esc(o)).join("; ") || "—"}</dd>
-<dt>All snapshots</dt><dd>${m.snapshots.filter(x => /^\d{4}-\d{2}-\d{2}$/.test(x.dir)).map(x => x === s ? `<b>${esc(x.dir)}</b>` : `<a href="${base}modules/${m.slug}/${x.dir}/">${esc(x.dir)}</a>`).join(" · ")}</dd>
+<dt>All snapshots</dt><dd>${m.snapshots.filter(x => /^\d{4}-\d{2}-\d{2}$/.test(x.dir)).map(x => (x === s ? `<b>${esc(x.dir)}</b>` : `<a href="${base}modules/${m.slug}/${x.dir}/">${esc(x.dir)}</a>`) + (x.supersededBy ? ` <span class="muted">(superseded)</span>` : "")).join(" · ")}</dd>
+${s.snap.supersedes ? `<dt>Supersedes</dt><dd><code>${esc(s.snap.supersedes)}</code>${s.diff ? ` · <a href="#changes">${s.diff.cells.length} cells recoded</a>` : ""}</dd>` : ""}
 ${m.panels.length ? `<dt>Additional panels</dt><dd>${m.panels.map(x => x === s ? `<b>${esc(x.snap.label || x.dir)}</b>` : `<a href="${base}modules/${m.slug}/${x.dir}/">${esc(x.snap.label || x.dir)}</a>${snapBadge(x)}`).join("<br>")}</dd>` : ""}
 </dl>
 ${d.findings_table?.length ? `<p class="module" style="margin-top:22px">Findings recorded with this panel</p><div class="tblwrap"><table class="audit"><thead><tr>${Object.keys(d.findings_table[0]).map(k => `<th>${esc(k)}</th>`).join("")}</tr></thead><tbody>${d.findings_table.map(r => `<tr>${Object.values(r).map(v => `<td>${esc(v)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : ""}
@@ -197,8 +243,8 @@ ${T.cards(modules.filter(m => m.kind === "method").map(m => ({ lab: `Module ${St
 const snapRows = modules.flatMap(m => m.snapshots.map(x => ({ m, x }))).sort((a, b) => String(b.x.data.snapshot_date).localeCompare(String(a.x.data.snapshot_date)));
 page("about/changelog/index.html", "Changelog", `<div class="wrap"><h1 class="page-title">Changelog</h1>
 <p class="sub" style="margin-top:10px">Every snapshot the Observatory holds, and what changed in the repository that builds them.</p>
-<p class="module" style="margin-top:26px">Snapshots</p><div class="tblwrap"><table class="audit"><thead><tr><th>Snapshot date</th><th>Module</th><th>Snapshot</th><th>Rows</th><th>Status</th><th>DOI</th></tr></thead><tbody>
-${snapRows.map(({ m, x }) => `<tr><td>${esc(x.data.snapshot_date)}${/^\d{4}-/.test(x.dir) ? "" : ` <span class="muted">(${esc(x.dir)})</span>`}</td><td><a href="${base}modules/${m.slug}/">${esc(m.short_title)}</a></td><td><code>${esc(x.snap.roat_id)}</code></td><td>${x.data.rows.length}</td><td>${esc(x.snap.status)}</td><td>${x.snap.doi ? esc(x.snap.doi) : '<span class="muted">not minted</span>'}</td></tr>`).join("")}
+<p class="module" style="margin-top:26px">Snapshots</p><div class="tblwrap"><table class="audit"><thead><tr><th>Snapshot date</th><th>Module</th><th>Snapshot</th><th>Rows</th><th>Status</th><th>Supersedes</th><th>DOI</th></tr></thead><tbody>
+${snapRows.map(({ m, x }) => `<tr><td><a href="${base}modules/${m.slug}/${x.dir}/">${esc(x.data.snapshot_date)}</a>${/^\d{4}-/.test(x.dir) ? "" : ` <span class="muted">(${esc(x.dir)})</span>`}</td><td><a href="${base}modules/${m.slug}/">${esc(m.short_title)}</a></td><td><code>${esc(x.snap.roat_id)}</code></td><td>${x.data.rows.length}</td><td>${esc(x.snap.status)}${x.supersededBy ? ' <span class="muted">· superseded</span>' : ""}</td><td>${x.snap.supersedes ? `<a href="${base}modules/${m.slug}/${x.diff ? x.diff.prev.dir : ""}/">${esc(x.diff ? x.diff.prev.data.snapshot_date : x.snap.supersedes)}</a>${x.diff ? ` <span class="muted">(${x.diff.cells.length} cells)</span>` : ""}` : '<span class="muted">—</span>'}</td><td>${x.snap.doi ? esc(x.snap.doi) : '<span class="muted">not minted</span>'}</td></tr>`).join("")}
 </tbody></table></div>
 <p class="module" style="margin-top:30px">Repository</p><div class="prose">${md(R("CHANGELOG.md").replace(/^# Changelog\s*/, ""))}</div>
 <p class="note muted" style="margin-top:22px">A published snapshot is immutable. Corrections produce a new dated snapshot that supersedes the old one; both stay addressable.</p></div>`);
