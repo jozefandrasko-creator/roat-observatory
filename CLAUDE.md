@@ -29,7 +29,7 @@ Static, versioned publication of ROAT's comparative models of automated-vehicle 
 | 03 Human roles | 2026-09-07 (supersedes 2026-09-06; machine-assisted blind second pass recorded, 7 roles still first-pass only) | review | 30/30 |
 | 07 Regulatory method | 2026-09-05 | published | 1/1 |
 
-Source Library: 64 published records, all 64 public texts reviewed on 2026-09-06 (`Claude outputs/Public-Library-kontrola-2026-09-06b.md`, applied by prompt 9). Register: 371 records (highest id ROAT-2026-0375). Validation: 0 errors · 53 warnings (48 on the superseded human-roles/2026-09-05 snapshot, the rest are review/draft banners).
+Source Library: 64 published records, all 64 public texts reviewed on 2026-09-06 (`Claude outputs/Public-Library-kontrola-2026-09-06b.md`, applied by prompt 9). Register: 372 records (highest id ROAT-2026-0376). Validation: 0 errors · 53 warnings (48 on the superseded human-roles/2026-09-05 snapshot, the rest are review/draft banners).
 
 The Hub now has guards (prompts 6 and 7, 2026-09-06): Data validation with reject on 31 Register columns, and a `Checks` sheet with 30 integrity formulas whose baseline is in column D. After prompt 8 every check except the three informative counts is at zero (baseline re-recorded 2026-09-06). Read `Checks` before and after any Hub prompt; the `roat-hub-edit` skill (source in `Claude outputs/skills/roat-hub-edit/`, packaged as `.skill`) encodes the prompt pattern, the live gviz read and the verification step.
 
