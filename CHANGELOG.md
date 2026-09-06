@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+- Navigation layer on the map: a decision tree (`/map/decision-tree/`) with three routes and eight decisions that assemble the legal layers in play, the nine-stage regulatory journey (`/map/journey/`) marking where technical approval ends and operational permission begins, and Slovakia in the European stack (`/map/slovakia/`, Slovak at `/sk/slovensko-v-stacku/`). Content in `content/guide/*.json`, imported from the ROAT Regulatory Map workbook v0.7.1 and checked record by record against the Hub register.
+- Regulatory landscape map (`/map/`): the 76 instruments and standards of the ROAT Regulatory Map workbook as a filterable wall of 12 pillars, each box carrying its regulatory layer, function, status class and Hub record identifiers. Boxes link to the Source Library where the record is published (33 of the 88 referenced records today), otherwise the identifier is plain and the official source is linked. Search and four facets keep their state in the URL. Editorial notes that describe Hub workflow rather than the instrument are not published.
+- hub-sync reads an optional `Regulatory Map` sheet into `data/hub/landscape.json`; when it exists the build prefers it over the frozen `content/landscape/<date>.json`, so the classification can be maintained in the Hub instead of the workbook.
+- xlsx importer fix: empty cells are self-closing in the OOXML stream, and a `<c…>…</c>` pattern swallowed them and shifted every later column. Eight map boxes had lost their official-source link.
+
 ## v0.2.0 — Source Library, Slovak layer, concept definitions (2026-09-06)
 - Zenodo version DOI 10.5281/zenodo.22546848 written into the two snapshots new in this release (second-gate/2026-09-07, human-roles/2026-09-07); concept DOI 10.5281/zenodo.22409313 unchanged.
 - Source Library: 65 sources — ROAT-2026-0263, Matthew Wansley, *Backroom Drivers* (Harvard JOLT forthcoming 2026; SSRN preprint posted 19 Aug 2026) published after Hub prompt 18b; the register's two SSRN placeholders (0245, 0263) now carry verified metadata.

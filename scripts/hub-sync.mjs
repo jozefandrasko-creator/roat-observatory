@@ -124,6 +124,34 @@ async function syncOutputs() {
   return outputs;
 }
 
+/* ---------- Regulatory Map (optional sheet) ----------
+   The landscape map lives in content/landscape/<date>.json until the classification is carried in the Hub.
+   Once a "Regulatory Map" sheet exists, this writes data/hub/landscape.json and the build prefers it. */
+async function syncLandscape() {
+  let rows;
+  try { rows = await readSheet("Regulatory Map"); }
+  catch { log("landscape: no Regulatory Map sheet — the build keeps using content/landscape/"); return null; }
+  const hdr = findRow(rows, r => r[0] === "Box ID");
+  if (hdr < 0) { log("landscape: Regulatory Map sheet has no \"Box ID\" header — skipped"); return null; }
+  const { rows: recs } = tableAt(rows, hdr, { stopAtBlank: false });
+  const yes = v => /^(yes|true|1|áno)$/i.test(String(v || "").trim());
+  const boxes = recs.filter(r => /^BOX-/.test(r["Box ID"])).map(r => ({
+    id: r["Box ID"].trim(), pillar: (r["Pillar"] || "").trim(), label: (r["Display label"] || "").trim(),
+    layer: (r["Layer"] || "").trim(), function: (r["Function"] || "").trim(), status: (r["Status"] || "").trim(),
+    backbone: yes(r["Backbone"]), new_2026: yes(r["NEW 2026"]),
+    records: splitIds(r["ROAT Record IDs"]).filter(s => /^ROAT-\d{4}-\d{4}$/.test(s)),
+    urls: String(r["Official source URL(s)"] || "").split(/\s+/).filter(u => /^https?:\/\//.test(u)),
+    note: (r["Editorial note"] || "").trim()
+  }));
+  const uniq = a => [...new Set(a)];
+  writeJSON(path.join(ROOT, "data/hub/landscape.json"), {
+    exported: new Date().toISOString(), source: "ROAT Intelligence Hub, sheet \"Regulatory Map\"",
+    pillars: uniq(boxes.map(b => b.pillar)), layers: uniq(boxes.map(b => b.layer)), statuses: uniq(boxes.map(b => b.status)), boxes
+  });
+  log(`landscape: ${boxes.length} boxes across ${uniq(boxes.map(b => b.pillar)).length} pillars`);
+  return boxes;
+}
+
 /* ---------- Module profiles ---------- */
 const nScore = v => { const m = String(v).trim().match(/^N?([0-4])$/); return m ? Number(m[1]) : null; };
 
@@ -304,6 +332,6 @@ function writeSnapshotSkeleton(mod, dir, date, parsed) {
 
 /* ---------- main ---------- */
 const modules = fs.readdirSync(path.join(ROOT, "content/modules")).filter(f => f.endsWith(".json")).map(f => JSON.parse(fs.readFileSync(path.join(ROOT, "content/modules", f), "utf8")));
-await syncRegister(); await syncSources(); await syncOutputs();
+await syncRegister(); await syncSources(); await syncOutputs(); await syncLandscape();
 for (const m of modules) { if (onlyModule && m.slug !== onlyModule) continue; await syncModule(m); }
 log("done");

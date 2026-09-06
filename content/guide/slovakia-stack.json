@@ -1,0 +1,108 @@
+{
+ "roat_id": "ROAT-GUIDE-SK-STACK",
+ "slug": "slovakia",
+ "title": "Slovakia in the European automated-mobility stack",
+ "title_sk": "Slovensko v európskom regulačnom stacku automatizovanej mobility",
+ "subtitle": "How international, EU and Slovak rules combine from technical approval to road deployment",
+ "subtitle_sk": "Ako sa medzinárodné, únijné a slovenské pravidlá skladajú od technického schválenia po nasadenie na ceste",
+ "snapshot_date": "2026-08-27",
+ "status": "draft",
+ "rows": [
+  {
+   "question": "Who or what may drive?",
+   "question_sk": "Kto alebo čo smie viesť vozidlo?",
+   "unece": "Vienna Convention 1968, Article 8(5 bis) and Article 34 bis",
+   "unece_sk": "Viedenský dohovor 1968, čl. 8 ods. 5 bis a čl. 34 bis",
+   "eu": "The EU technical framework does not comprehensively replace national traffic-law rules",
+   "eu_sk": "Únijný technický rámec komplexne nenahrádza národné pravidlá cestnej premávky",
+   "sk": "Act No. 8/2009 Coll. on road traffic; the parliamentary print 1329 reform track",
+   "sk_sk": "Zákon č. 8/2009 Z. z. o cestnej premávke a reformná línia tlače 1329",
+   "function": "OP",
+   "effect": "Technical legality of the system must still fit road-traffic rules and the allocation of actors.",
+   "effect_sk": "Technická prípustnosť systému sa musí stále zmestiť do pravidiel cestnej premávky a do rozdelenia rolí."
+  },
+  {
+   "question": "Can the vehicle or the system be approved?",
+   "question_sk": "Možno vozidlo alebo systém schváliť?",
+   "unece": "UN R157; the new UN ADS Regulation; the ADS GTR",
+   "unece_sk": "UN R157, nová predpisová úprava OSN pre ADS a globálny technický predpis ADS",
+   "eu": "Regulation 2018/858; Regulation 2019/2144; Regulation 2022/1426; Regulation 2026/481",
+   "eu_sk": "Nariadenia 2018/858, 2019/2144, 2022/1426 a 2026/481",
+   "sk": "Act No. 106/2018 Coll. carries the national approval and vehicle-operation interfaces",
+   "sk_sk": "Zákon č. 106/2018 Z. z. nesie národné rozhrania schvaľovania a prevádzky vozidiel",
+   "function": "TA",
+   "effect": "EU and UNECE approval can establish technical compliance, but it does not itself create a right to operate commercially.",
+   "effect_sk": "Únijné a EHK OSN schválenie môže preukázať technický súlad, samo osebe však nezakladá právo na komerčnú prevádzku."
+  },
+  {
+   "question": "Can it be tested on public roads?",
+   "question_sk": "Možno ho skúšať na verejných cestách?",
+   "unece": "NATM informs the safety evidence; WP.1 supplies the traffic-law context",
+   "unece_sk": "NATM formuje dôkazy o bezpečnosti, WP.1 dodáva kontext dopravného práva",
+   "eu": "EU type-approval rules influence the evidence, but access for testing remains largely national",
+   "eu_sk": "Únijné pravidlá typového schvaľovania ovplyvňujú dôkazy, prístup na skúšky však zostáva prevažne národný",
+   "sk": "Act No. 106/2018 Coll. § 49 test operation; the Act No. 131/2026 amendment effective 1 September 2026",
+   "sk_sk": "Skúšobná prevádzka podľa § 49 zákona č. 106/2018 Z. z. a novela zákonom č. 131/2026 Z. z. účinná od 1. septembra 2026",
+   "function": "OP",
+   "effect": "A separate Slovak test-operation permission remains the gateway for non-standard testing on public roads.",
+   "effect_sk": "Samostatné slovenské povolenie na skúšobnú prevádzku zostáva vstupnou bránou pre neštandardné skúšky na verejných cestách."
+  },
+  {
+   "question": "Who may operate and supervise it?",
+   "question_sk": "Kto ho smie prevádzkovať a dozerať naň?",
+   "unece": "UNECE work on remote intervention and interaction; remote-driving papers",
+   "unece_sk": "Práce EHK OSN o zásahu a interakcii na diaľku a dokumenty o riadení na diaľku",
+   "eu": "Regulation 2022/1426 with JRC guidance addresses remote management inside the approval context",
+   "eu_sk": "Nariadenie 2022/1426 s usmernením JRC rieši správu na diaľku v rámci schvaľovania",
+   "sk": "The current Slovak framework and the proposed print 1329: operator, control centre, supervision operator",
+   "sk_sk": "Súčasný slovenský rámec a navrhovaná tlač 1329: prevádzkovateľ, riadiace centrum, operátor dohľadu",
+   "function": "OP",
+   "effect": "Operational roles need a national legal allocation even where the system is technically approved.",
+   "effect_sk": "Prevádzkové roly potrebujú národné právne priradenie aj tam, kde je systém technicky schválený."
+  },
+  {
+   "question": "What data and cyber rules apply?",
+   "question_sk": "Aké pravidlá pre údaje a kybernetickú bezpečnosť platia?",
+   "unece": "UN R155; UN R156; UN R160",
+   "unece_sk": "UN R155, UN R156 a UN R160",
+   "eu": "GDPR; Data Act; NIS2; Cybersecurity Act; event-data rules; the AI Act where applicable",
+   "eu_sk": "GDPR, akt o údajoch, NIS2, akt o kybernetickej bezpečnosti, pravidlá o zapisovači údajov a akt o umelej inteligencii, ak sa uplatní",
+   "sk": "Slovak implementation of GDPR and NIS2 with sectoral enforcement",
+   "sk_sk": "Slovenská implementácia GDPR a NIS2 so sektorovým dozorom",
+   "function": "TA + OP",
+   "effect": "Vehicle approval, operator governance and data or cyber compliance overlap rather than substitute for one another.",
+   "effect_sk": "Schválenie vozidla, správa prevádzkovateľa a súlad v oblasti údajov a kybernetickej bezpečnosti sa prekrývajú, nenahrádzajú sa."
+  },
+  {
+   "question": "Can it provide a commercial service?",
+   "question_sk": "Môže poskytovať komerčnú službu?",
+   "unece": "There is no complete global service-licensing regime",
+   "unece_sk": "Úplný globálny režim licencovania služieb neexistuje",
+   "eu": "Internal-market, transport and consumer rules may apply; there is no single EU licence for an automated-vehicle service",
+   "eu_sk": "Môžu sa uplatniť pravidlá vnútorného trhu, dopravy a ochrany spotrebiteľa, jednotná únijná licencia na službu s automatizovaným vozidlom neexistuje",
+   "sk": "Road transport and service law, plus a future specific operational framework",
+   "sk_sk": "Právo cestnej dopravy a služieb a budúci osobitný prevádzkový rámec",
+   "function": "OP",
+   "effect": "Commercial use needs a second legal layer beyond type approval and test operation.",
+   "effect_sk": "Komerčné využitie potrebuje druhú právnu vrstvu nad typovým schválením a skúšobnou prevádzkou."
+  },
+  {
+   "question": "What happens after deployment?",
+   "question_sk": "Čo sa deje po nasadení?",
+   "unece": "UN R155 and R156; the emerging in-service framework for automated driving systems",
+   "unece_sk": "UN R155 a R156 a vznikajúci rámec pre systémy v prevádzke",
+   "eu": "Regulation 2022/1426 in-service monitoring; market surveillance; product-liability and data rules",
+   "eu_sk": "Monitorovanie v prevádzke podľa nariadenia 2022/1426, dohľad nad trhom a pravidlá o zodpovednosti za výrobok a o údajoch",
+   "sk": "Police and incident powers, administrative supervision, sanctions, recall and operating restrictions",
+   "sk_sk": "Policajné a nehodové právomoci, správny dozor, sankcie, stiahnutie z trhu a obmedzenia prevádzky",
+   "function": "TA + OP",
+   "effect": "Approval becomes a continuous lifecycle obligation, not a one-off certificate.",
+   "effect_sk": "Schválenie sa mení na priebežnú povinnosť počas životného cyklu, nie na jednorazový certifikát."
+  }
+ ],
+ "source": {
+  "workbook": "ROAT Regulatory Map 2026 – Reconstructed Draft v0.7.1 (PraF UK), sheet \"Slovakia EU Stack\"",
+  "cut_off": "2026-08-27",
+  "note": "Orientation table. Module 02 codes the Slovak deployment gate against seven other regimes; the Slovak reform track is followed as parliamentary print 1329."
+ }
+}

@@ -113,6 +113,7 @@ const pairLang = (en, sk) => { langPairs[en] = { hreflang: "sk", href: sk }; lan
 if (skIntro) pairLang("", "sk/");
 if (skAbout) pairLang("method/about/", "sk/o-projekte/");
 if (skIntro) pairLang("modules/", "sk/moduly/");
+if (fs.existsSync(path.join(ROOT, "content/guide/slovakia-stack.json"))) pairLang("map/slovakia/", "sk/slovensko-v-stacku/");
 for (const m of modules) if (skByModule[m.slug]) pairLang(`modules/${m.slug}/`, `sk/moduly/${m.slug}/`);
 const outputById = Object.fromEntries(J("data/hub/outputs.json").outputs.map(o => [o.id, o]));
 
@@ -290,11 +291,24 @@ for (const s of sourcesArr) {
 
 // landscape map: the "wall" of instruments by pillar and layer, from content/landscape/<date>.json.
 // A box is a legal instrument or standard; its records are Hub records and link to the Source Library once published.
+const guideDir = path.join(ROOT, "content/guide");
+const guides = {};
+if (fs.existsSync(guideDir)) for (const f of fs.readdirSync(guideDir).filter(f => f.endsWith(".json"))) { const g = J(`content/guide/${f}`); guides[g.slug] = g; }
 const landDir = path.join(ROOT, "content/landscape");
 const landscapes = fs.existsSync(landDir) ? fs.readdirSync(landDir).filter(f => f.endsWith(".json")).sort().map(f => J(`content/landscape/${f}`)) : [];
-const landscape = landscapes[landscapes.length - 1];
+let landscape = landscapes[landscapes.length - 1];
+// once the classification is carried in the Hub, hub-sync writes data/hub/landscape.json and it wins
+if (fs.existsSync(path.join(ROOT, "data/hub/landscape.json")) && landscape) {
+  const live = J("data/hub/landscape.json");
+  if (live.boxes?.length) landscape = { ...landscape, ...live, snapshot_date: live.exported.slice(0, 10), source: { ...landscape.source, workbook: live.source, note: "Classification is now maintained in the ROAT Intelligence Hub and refreshed by hub-sync. " + landscape.source.note } };
+}
 if (landscape) {
   const L = landscape;
+  // Editorial notes come from the working workbook and some of them describe the state of the Hub record
+  // rather than the instrument ("no dedicated current Hub record", "remains Unverified / Signal"). That is
+  // internal workflow, not something a reader of the public map needs; the status class already says
+  // "Verification pending". Keep only notes that say something about the instrument itself.
+  const publicNote = n => n && !/\bhub\b|unverified|signal|v0\.1 item|before public release|create a dedicated/i.test(n);
   const statusKey = s => s.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "");
   const statusLabel = { "binding-in-force": "Binding, in force", "binding-adopted-phased": "Binding, adopted or phased", "soft-law-guidance": "Soft law and guidance", "draft-negotiation": "Draft or in negotiation", "standard-technical-reference": "Standard or technical reference", "hub-gap-verify": "Verification pending" };
   const lab = s => statusLabel[statusKey(s)] || s;
@@ -308,12 +322,14 @@ if (landscape) {
   <p class="meta">${esc(b.layer)} · ${esc(fnLabel[b.function] || b.function)}</p>
   ${b.records.length ? `<div class="chips">${b.records.map(recChip).join("")}</div>` : ""}
   ${b.urls.length ? `<p class="meta"><a href="${esc(b.urls[0])}" rel="noopener">official source</a>${b.urls.length > 1 ? ` and ${b.urls.length - 1} more` : ""}</p>` : ""}
-  ${b.note ? `<p class="meta note">${esc(b.note)}</p>` : ""}
+  ${publicNote(b.note) ? `<p class="meta note">${esc(b.note)}</p>` : ""}
 </div>`;
   const allRecords = [...new Set(L.boxes.flatMap(b => b.records))];
   const pending = allRecords.filter(id => !sources[id]).length;
   const opt = (label, key, values) => `<label class="facet"><span>${esc(label)}</span><select data-facet="${key}"><option value="">All</option>${values.map(v => `<option value="${esc(v)}">${esc(lab(v))}</option>`).join("")}</select></label>`;
+  const guideCards = [["decision-tree", "Decision tree", "From an intended activity to the approval, operational and liability rules that apply."], ["journey", "Regulatory journey", "Nine stages from safety engineering to incident response, and where the law changes hands."], ["slovakia", "Slovakia in the European stack", "Seven regulatory questions read across UNECE, EU and Slovak law."]].filter(([k]) => guides[k]);
   page("map/index.html", L.title, `<div class="wrap wide"><h1 class="page-title">${esc(L.title)}</h1>
+${guideCards.length ? `<p class="module" style="margin-top:18px">Navigation layer</p>${T.cards(guideCards.map(([k, t, d]) => ({ title: t, href: `${base}map/${guides[k].slug}/`, lines: [d] })))}<p class="module" style="margin-top:26px">The wall</p>` : ""}
 <p class="sub" style="margin-top:10px">${esc(L.subtitle)}. ${L.boxes.length} instruments and standards across ${L.pillars.length} regulatory pillars, as they stood on ${esc(L.snapshot_date)}. A box is one instrument; its identifiers link to the Source Library where the record is published.</p>
 <form class="filters" id="mapfilters" onsubmit="return false"><label class="facet grow"><span>Search</span><input type="search" id="mapq" placeholder="instrument, pillar, ROAT ID…" autocomplete="off"></label>
 ${opt("Layer", "layer", L.layers)}${opt("Status", "status", L.statuses)}${opt("Function", "fn", ["TA", "OP", "TA + OP"])}
@@ -344,6 +360,78 @@ ${opt("Layer", "layer", L.layers)}${opt("Status", "status", L.statuses)}${opt("F
   q.addEventListener('input',apply); sels.forEach(s=>s.addEventListener('change',apply)); apply();
 })();
 </script>`, { description: `${L.boxes.length} instruments across ${L.pillars.length} pillars of automated mobility regulation, linked to the ROAT Source Library.` });
+}
+
+// guide pages: the navigation layer that sits on top of the map — how to get from a use case to the rules
+const guideCrumbs = t => `<p class="crumbs"><a href="${base}map/">Map</a> › ${esc(t)}</p>`;
+const guideBadge = g => g.status === "approved" ? "" : ` <span class="badge prospective" title="Drafted from the ROAT Regulatory Map workbook; author review pending">draft</span>`;
+const guideProv = g => `<div class="note" style="margin-top:26px;border-top:1px solid var(--rule);padding-top:14px"><p class="module">Provenance</p><p>${esc(g.source.workbook)}, cut-off ${esc(g.source.cut_off)}. ${esc(g.source.note)}</p></div>`;
+const recChips = ids => ids && ids.length ? T.chips(ids, site, sources) : "";
+
+const dt = guides["decision-tree"];
+if (dt) {
+  page("map/decision-tree/index.html", dt.title, `<div class="wrap">${guideCrumbs("Decision tree")}<h1 class="page-title">${esc(dt.title)}${guideBadge(dt)}</h1>
+<p class="sub" style="margin-top:10px">${esc(dt.subtitle)}. Position as of ${esc(dt.snapshot_date)}.</p>
+<blockquote class="find" style="margin-top:18px"><p>${esc(dt.start)} ${esc(dt.question)}</p></blockquote>
+<div class="cards" style="margin-top:16px">${dt.routes.map(r => `<div class="card route"><p class="lab">Route ${esc(r.key)}</p><h3>${esc(r.title)}</h3><p class="muted">${esc(r.lead)}</p>
+<ol class="steps">${r.steps.map(s => `<li><b>${esc(s.text)}</b>${s.detail ? `<span class="d">${esc(s.detail)}</span>` : ""}${s.note ? `<span class="n">${esc(s.note)}</span>` : ""}${s.records ? recChips(s.records) : ""}</li>`).join("")}</ol>
+<p class="out">${esc(r.output)}</p></div>`).join("")}</div>
+<p class="module" style="margin-top:30px">Eight decisions</p><h2>Answer these to assemble the layers that apply</h2>
+<p class="sub">Each answer names the legal layer it puts in play and the Hub records that carry it. The questions are read in order; nothing is stored and nothing leaves the page.</p>
+<div class="filters" style="justify-content:space-between"><span class="count" id="dtcount" style="margin-left:0">0 of ${dt.decisions.length} answered</span><button type="button" class="btn" id="dtreset">Reset</button></div>
+<div id="dtsum" class="note" hidden style="margin-bottom:14px"><p class="module">Layers your answers put in play</p><ul id="dtlayers" class="plain"></ul></div>
+<div id="dtlist">${dt.decisions.map(d => `<div class="dec" data-id="${esc(d.id)}" data-layer="${esc(d.layer)}"><p class="q"><b>${esc(d.id)}</b> ${esc(d.question)}</p>
+<div class="ans"><button type="button" class="btn" data-a="yes">Yes</button><button type="button" class="btn" data-a="no">No</button></div>
+<p class="r yes"><span class="lab">If yes</span> ${esc(d.if_yes)}</p><p class="r no"><span class="lab">If no</span> ${esc(d.if_no)}</p>
+<p class="meta"><span class="lab">Legal layer</span> ${esc(d.layer)}</p>${recChips(d.records)}</div>`).join("")}</div>
+<blockquote class="find" style="margin-top:24px"><p>${esc(dt.principle)}</p></blockquote>
+<p class="note" style="margin-top:14px">${esc(dt.spotlight)}</p>
+${guideProv(dt)}</div>
+<script>
+(function(){
+  const decs=[...document.querySelectorAll('#dtlist .dec')], count=document.getElementById('dtcount'), sum=document.getElementById('dtsum'), list=document.getElementById('dtlayers');
+  function refresh(){
+    const done=decs.filter(d=>d.dataset.answer);
+    count.textContent=done.length+' of '+decs.length+' answered';
+    list.innerHTML=done.map(d=>'<li><b>'+d.dataset.id+'</b> '+(d.dataset.answer==='yes'?'yes':'no')+' — '+d.dataset.layer+'</li>').join('');
+    sum.hidden=done.length===0;
+  }
+  decs.forEach(d=>d.querySelectorAll('button[data-a]').forEach(b=>b.addEventListener('click',()=>{
+    const a=b.dataset.a; d.dataset.answer=d.dataset.answer===a?'':a;
+    d.classList.toggle('picked-yes',d.dataset.answer==='yes'); d.classList.toggle('picked-no',d.dataset.answer==='no');
+    d.querySelectorAll('button[data-a]').forEach(x=>x.classList.toggle('on',x.dataset.a===d.dataset.answer));
+    refresh();
+  })));
+  document.getElementById('dtreset').addEventListener('click',()=>{decs.forEach(d=>{d.dataset.answer='';d.classList.remove('picked-yes','picked-no');d.querySelectorAll('button').forEach(x=>x.classList.remove('on'))});refresh()});
+  refresh();
+})();
+</script>`, { description: dt.subtitle });
+}
+
+const jr = guides["journey"];
+if (jr) {
+  page("map/journey/index.html", jr.title, `<div class="wrap">${guideCrumbs("Regulatory journey")}<h1 class="page-title">${esc(jr.title)}${guideBadge(jr)}</h1>
+<p class="sub" style="margin-top:10px">${esc(jr.subtitle)}. Position as of ${esc(jr.snapshot_date)}.</p>
+<div class="prose" style="margin-top:16px"><p>${esc(jr.lead)}</p></div>
+<div class="jrn">${jr.stages.map(s => `<section class="stg f-${s.function.replace(/[^A-Za-z]/g, "").toLowerCase()}"${s.n === 6 ? ' id="gate"' : ""}>
+${s.n === 6 ? `<p class="gatemark">Second Gate — technical approval ends, legal permission to operate begins</p>` : ""}
+<p class="num">${s.n}</p><div class="body"><h2>${esc(s.phase)}</h2>
+<p class="tags"><span class="badge">${esc(s.function === "TA" ? "type approval" : s.function === "OP" ? "operation" : "approval and operation")}</span> <span class="muted">${esc(s.layer)}</span></p>
+<dl class="kv"><div><dt>Key instruments</dt><dd>${esc(s.instruments)}</dd></div><div><dt>Main actors</dt><dd>${esc(s.actors)}</dd></div><div><dt>Regulatory question</dt><dd>${esc(s.question)}</dd></div><div><dt>Why it matters</dt><dd>${esc(s.why)}</dd></div></dl></div></section>`).join("")}</div>
+${guideProv(jr)}</div>`, { description: jr.subtitle });
+}
+
+const sks = guides["slovakia"];
+if (sks) {
+  const stackTable = (lang) => `<div class="tblwrap"><table class="audit"><thead><tr><th>${lang === "sk" ? "Regulačná otázka" : "Regulatory question"}</th><th>${lang === "sk" ? "EHK OSN a medzinárodné právo" : "UNECE and international"}</th><th>${lang === "sk" ? "Európska únia" : "European Union"}</th><th>${lang === "sk" ? "Slovensko" : "Slovakia"}</th><th>${lang === "sk" ? "Praktický dôsledok" : "Practical effect"}</th></tr></thead><tbody>
+${sks.rows.map(r => `<tr><td><b>${esc(lang === "sk" ? r.question_sk : r.question)}</b><br><span class="badge">${esc(r.function === "TA" ? (lang === "sk" ? "schvaľovanie" : "type approval") : r.function === "OP" ? (lang === "sk" ? "prevádzka" : "operation") : (lang === "sk" ? "oboje" : "approval and operation"))}</span></td><td>${esc(lang === "sk" ? r.unece_sk : r.unece)}</td><td>${esc(lang === "sk" ? r.eu_sk : r.eu)}</td><td>${esc(lang === "sk" ? r.sk_sk : r.sk)}</td><td>${esc(lang === "sk" ? r.effect_sk : r.effect)}</td></tr>`).join("")}
+</tbody></table></div>`;
+  page("map/slovakia/index.html", sks.title, `<div class="wrap">${guideCrumbs("Slovakia in the European stack")}<h1 class="page-title">${esc(sks.title)}${guideBadge(sks)}</h1>
+<p class="sub" style="margin-top:10px">${esc(sks.subtitle)}. Position as of ${esc(sks.snapshot_date)}.</p>
+${stackTable("en")}
+<p class="note" style="margin-top:16px">The same seven questions run through <a href="${base}map/decision-tree/">the decision tree</a>; Module 02 codes the Slovak deployment gate against seven other regimes in <a href="${base}modules/second-gate/">Second Gate</a>.</p>
+${guideProv(sks)}</div>`, { description: sks.subtitle });
+  guides.__skStackTable = stackTable;
 }
 
 // research: one page per public output — what it is, which modules belong to it, which Hub records it rests on
@@ -413,7 +501,7 @@ if (skIntro) {
   <div class="lede prose" style="margin-top:16px">${skIntro.body}</div>${skHint(skIntro)}
 </div></header>
 <section><div class="wrap"><p class="module">Moduly</p><h2>Štyri porovnávacie modely</h2>${skCards()}
-<p class="note muted" style="margin-top:18px">Údaje, tabuľky a pramene sú v angličtine: <a href="${base}">ROAT Observatory →</a> · <a href="${base}map/">Mapa regulačného prostredia</a> · <a href="${base}sources/">Knižnica zdrojov</a> · <a href="${base}jurisdictions/">Jurisdikcie</a> · <a href="${base}research/">Výskumné výstupy</a></p></div></section>`, { description: skIntro.summary || "Slovenský prehľad ROAT Observatória: ako právo vpúšťa automatizované vozidlá na cestu.", lang: "sk" });
+<p class="note muted" style="margin-top:18px">Údaje, tabuľky a pramene sú v angličtine: <a href="${base}">ROAT Observatory →</a> · <a href="${base}map/">Mapa regulačného prostredia</a> · <a href="${base}sk/slovensko-v-stacku/">Slovensko v stacku</a> · <a href="${base}sources/">Knižnica zdrojov</a> · <a href="${base}jurisdictions/">Jurisdikcie</a> · <a href="${base}research/">Výskumné výstupy</a></p></div></section>`, { description: skIntro.summary || "Slovenský prehľad ROAT Observatória: ako právo vpúšťa automatizované vozidlá na cestu.", lang: "sk" });
   page("sk/moduly/index.html", "Moduly", `<div class="wrap"><p class="crumbs"><a href="${base}sk/">Observatórium</a> › Moduly</p><h1 class="page-title">Moduly</h1><p class="sub" style="margin-top:10px">Každý modul je jeden porovnávací model s datovanými, zmrazenými snímkami kódovaných údajov. Slovenská stránka modulu je orientačný prehľad; kódované údaje sú na anglickej stránke.</p>${skCards()}</div>`, { description: "Slovenský prehľad modulov ROAT Observatória.", lang: "sk" });
   for (const m of modules) {
     const t = skByModule[m.slug]; if (!t) continue;
@@ -422,6 +510,11 @@ if (skIntro) {
 <div class="prose" style="margin-top:18px">${t.body}</div>${skHint(t)}
 <div class="note" style="margin-top:22px;border-top:1px solid var(--rule);padding-top:14px"><p class="module">Údaje modulu</p><p>${snapLine(m)} Kódované údaje, tabuľky a pramene sú publikované v angličtine: <a href="${base}modules/${m.slug}/">${esc(m.title)} →</a></p></div></div>`, { description: t.summary || "", lang: "sk" });
   }
+  if (sks && guides.__skStackTable) page("sk/slovensko-v-stacku/index.html", sks.title_sk, `<div class="wrap"><p class="crumbs"><a href="${base}sk/">Observatórium</a> › Slovensko v stacku</p><h1 class="page-title">${esc(sks.title_sk)}${sks.status === "approved" ? "" : ' <span class="badge prospective">návrh textu</span>'}</h1>
+<p class="sub" style="margin-top:10px">${esc(sks.subtitle_sk)}. Stav k ${esc(sks.snapshot_date)}.</p>
+${guides.__skStackTable("sk")}
+<p class="note" style="margin-top:16px">Kódované porovnanie slovenskej brány nasadenia so siedmimi ďalšími režimami je v <a href="${base}sk/moduly/second-gate/">module Druhá brána</a>. Anglická verzia tejto tabuľky je na stránke <a href="${base}map/slovakia/">Slovakia in the European stack</a>.</p>
+<div class="note" style="margin-top:22px;border-top:1px solid var(--rule);padding-top:14px"><p class="module">Pôvod</p><p>${esc(sks.source.workbook)}, uzávierka ${esc(sks.source.cut_off)}.</p></div></div>`, { description: sks.subtitle_sk, lang: "sk" });
   if (skAbout) page("sk/o-projekte/index.html", skAbout.title, `<div class="wrap"><p class="crumbs"><a href="${base}sk/">Observatórium</a> › ${esc(skAbout.title)}</p><h1 class="page-title">${esc(skAbout.title)}${skBadge(skAbout)}</h1><div class="prose" style="margin-top:18px">${skAbout.body}</div>${skHint(skAbout)}
 <p class="note muted" style="margin-top:18px">Anglicky: <a href="${base}method/about/">About ROAT</a> · <a href="${base}method/how-to-cite/">How to cite</a> · <a href="${base}about/changelog/">Changelog</a></p></div>`, { description: "O výskumnej skupine ROAT a o citovaní snímok Observatória.", lang: "sk" });
 }

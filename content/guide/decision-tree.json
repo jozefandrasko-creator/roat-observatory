@@ -1,0 +1,74 @@
+{
+ "roat_id": "ROAT-GUIDE-DECISION-TREE",
+ "slug": "decision-tree",
+ "title": "Decision tree: which rules apply to this vehicle?",
+ "subtitle": "From an intended activity to the approval, operational and liability rules that govern it",
+ "snapshot_date": "2026-08-27",
+ "status": "draft",
+ "start": "I want to place an automated or fully automated vehicle on a public road.",
+ "question": "What is the intended activity?",
+ "principle": "Type approval answers whether the vehicle or the automated driving system satisfies technical product requirements. Deployment law answers whether, where, by whom and under what operational conditions it may be used on public roads or as a transport service. Liability, insurance and in-use rules continue after deployment.",
+ "spotlight": "Slovakia: the decisive legal question is not only whether the vehicle is technically approved, but under which Slovak legal basis it may operate, who the accountable operator is, and for what service.",
+ "routes": [
+  {
+   "key": "testing",
+   "title": "Public-road testing",
+   "lead": "R&D and trial operation, not normal commercial deployment",
+   "steps": [
+    { "text": "Is this research, development or trial operation rather than normal commercial deployment?" },
+    { "text": "Identify the national public-road testing route.", "detail": "Slovakia: Act 106/2018 Coll. § 49 with the Act 131/2026 amendment. United Kingdom: trialling code. Croatia: NN 154/2024 real-world service testing, under the framework for fully automated vehicles introduced by NN 145/2024." },
+    { "text": "Define the safety case, the operational design domain, test conditions and the responsible human or remote roles.", "records": ["ROAT-2026-0156", "ROAT-2026-0306", "ROAT-2026-0166", "ROAT-2026-0303", "ROAT-2026-0304", "ROAT-2026-0191", "ROAT-2026-0193"] },
+    { "text": "Capture evidence that can be reused later for validation and type approval.", "detail": "Interface with NATM, the ADS GTR, Regulation (EU) 2022/1426 and ISO 34503." }
+   ],
+   "output": "A lawful trial and reusable safety evidence."
+  },
+  {
+   "key": "approval",
+   "title": "Type approval and market access",
+   "lead": "Technical admissibility of the vehicle and the system",
+   "steps": [
+    { "text": "Does the vehicle or the automated driving system require EU type approval?" },
+    { "text": "Build the approval stack.", "detail": "Regulation (EU) 2018/858, then the General Safety Regulation 2019/2144, then Regulation (EU) 2022/1426 and its 2026/481 amendment, together with the UNECE ADS Regulation and the ADS GTR." },
+    { "text": "Check the artificial-intelligence governance overlay.", "detail": "AI Act 2024/1689 and the Digital Omnibus 2026/1744. Product-related high-risk AI meets vehicle law here." },
+    { "text": "Conformity assessment and the approval authority's decision.", "records": ["ROAT-2026-0036", "ROAT-2026-0039", "ROAT-2026-0040", "ROAT-2026-0218", "ROAT-2026-0299", "ROAT-2026-0300", "ROAT-2026-0318", "ROAT-2026-0319"] }
+   ],
+   "output": "A technically approved vehicle or automated driving system."
+  },
+  {
+   "key": "deployment",
+   "title": "Deployment and commercial service",
+   "lead": "Legal permission to operate, not technical admissibility",
+   "steps": [
+    { "text": "Is technical approval already available?", "note": "If not, go to the testing or approval route first." },
+    { "text": "Identify the national road-operation or deployment authorisation.", "detail": "Slovakia: test-operation law does not itself amount to normal commercial deployment. Compare the UK Automated Vehicles Act, the French STRA regime and the Croatian service-testing and deployment model.", "note": "If approval is available, continue to national operation." },
+    { "text": "Allocate the operator, remote-management and service roles.", "detail": "Manufacturer, automated driving system provider, operator, remote operator, authority." },
+    { "text": "Add the liability and insurance layer.", "detail": "Product Liability Directive 2024/2853 for software, artificial intelligence, updates and evidence. Motor Insurance Directive 2009/103 as amended by 2021/2118.", "note": "Do not stop at type approval." },
+    { "text": "In-use monitoring, cybersecurity, software change and incident reporting.", "detail": "Regulation (EU) 2022/1426 with UN R155 and R156, event data recording, reporting and enforcement." }
+   ],
+   "output": "Lawful deployment or a commercial service, with lifecycle oversight."
+  }
+ ],
+ "decisions": [
+  { "id": "D1", "question": "Testing or deployment?", "if_yes": "Use the national testing route.", "if_no": "Proceed to approval and deployment.", "layer": "National road-traffic law", "records": ["ROAT-2026-0156", "ROAT-2026-0306", "ROAT-2026-0166", "ROAT-2026-0304"] },
+  { "id": "D2", "question": "Is EU type approval needed and available?", "if_yes": "Build or verify the EU and UNECE approval stack.", "if_no": "Remain in the trial or exemption route.", "layer": "EU product and type-approval law", "records": ["ROAT-2026-0036", "ROAT-2026-0039", "ROAT-2026-0040", "ROAT-2026-0218", "ROAT-2026-0299", "ROAT-2026-0300"] },
+  { "id": "D3", "question": "Is there an AI-enabled safety component within the scope of product law?", "if_yes": "Apply the AI Act overlay and its amended timetable.", "if_no": "Sectoral vehicle rules still apply.", "layer": "EU artificial-intelligence and sectoral product law", "records": ["ROAT-2026-0318", "ROAT-2026-0319"] },
+  { "id": "D4", "question": "Is normal road operation legally authorised?", "if_yes": "Move to operator and service requirements.", "if_no": "Type approval alone is insufficient.", "layer": "National operational law", "records": ["ROAT-2026-0171", "ROAT-2026-0307", "ROAT-2026-0308", "ROAT-2026-0303", "ROAT-2026-0305", "ROAT-2026-0159"] },
+  { "id": "D5", "question": "Is a commercial transport service intended?", "if_yes": "Check the service and operator authorisation.", "if_no": "Private and non-commercial road-use rules apply.", "layer": "Transport and service law", "records": ["ROAT-2026-0301", "ROAT-2026-0305", "ROAT-2026-0159"] },
+  { "id": "D6", "question": "Who carries lifecycle responsibility?", "if_yes": "Assign operator, remote and reporting duties.", "if_no": "Resolve the accountability gap before deployment.", "layer": "Operational governance", "records": ["ROAT-2026-0191", "ROAT-2026-0193", "ROAT-2026-0311", "ROAT-2026-0312"] },
+  { "id": "D7", "question": "Is accident and defect risk covered?", "if_yes": "Product liability, motor insurance and national tort rules apply.", "if_no": "Deployment risk remains incomplete.", "layer": "Liability and insurance", "records": ["ROAT-2026-0320", "ROAT-2026-0321"] },
+  { "id": "D8", "question": "Does an in-use change or an incident occur?", "if_yes": "Trigger monitoring, update, reporting and enforcement.", "if_no": "Continue routine lifecycle monitoring.", "layer": "Post-market and in-use governance", "records": ["ROAT-2026-0018", "ROAT-2026-0019", "ROAT-2026-0040", "ROAT-2026-0182", "ROAT-2026-0183"] }
+ ],
+ "sources": [
+  "https://eur-lex.europa.eu/eli/reg/2018/858/oj",
+  "https://eur-lex.europa.eu/eli/reg_impl/2022/1426/oj",
+  "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+  "https://eur-lex.europa.eu/eli/reg/2026/1744/oj",
+  "https://eur-lex.europa.eu/eli/dir/2024/2853/oj",
+  "https://eur-lex.europa.eu/eli/dir/2021/2118/oj"
+ ],
+ "source": {
+  "workbook": "ROAT Regulatory Map 2026 – Reconstructed Draft v0.7.1 (PraF UK), sheet \"Decision Tree v0.7\"",
+  "cut_off": "2026-08-27",
+  "note": "Navigation layer. It points to the instruments and the Hub records that govern each step; it is not legal advice and it does not replace the coded modules."
+ }
+}

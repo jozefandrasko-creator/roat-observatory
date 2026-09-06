@@ -32,6 +32,7 @@ content/modules/<slug>.json + .md      module definition (dimensions, Hub sheet,
 content/jurisdictions/<slug>.json+.md  overview paragraph and metadata; everything else is generated
 content/method/*.md                    method pages (JSON front matter)
 content/landscape/<date>.json          regulatory landscape map (pillars, layers, instrument boxes) → /map/
+content/guide/*.json                   navigation layer: decision tree, regulatory journey, Slovakia stack
 content/research.json                  OUT-* ids allowed on the public Research page
 content/sk/                            Slovak overview layer (index, o-projekte, modules/<slug>.md) → /sk/; data stays English
 data/ids.json                          ROAT ID registry

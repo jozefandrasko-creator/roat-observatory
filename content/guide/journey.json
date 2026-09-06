@@ -1,0 +1,25 @@
+{
+ "roat_id": "ROAT-GUIDE-JOURNEY",
+ "slug": "journey",
+ "title": "The regulatory journey",
+ "subtitle": "Testing, approval, deployment and in-use oversight, and where the law changes hands",
+ "snapshot_date": "2026-08-27",
+ "status": "draft",
+ "lead": "Nine stages take an automated driving system from safety engineering to incident response. The function column marks whether a stage answers a type-approval question or an operational one. The break between stage 5 and stage 6 is the Second Gate: technical approval ends there and a separate legal permission to operate begins.",
+ "stages": [
+  { "n": 1, "phase": "Research, development and safety engineering", "function": "TA", "layer": "International and standards", "instruments": "ISO 26262; ISO 21448; ISO/SAE 21434", "actors": "Manufacturer and automated driving system developer", "question": "Safety architecture, safety of the intended functionality, cybersecurity, data governance", "why": "Evidence starts here" },
+  { "n": 2, "phase": "Closed-track and scenario testing", "function": "TA", "layer": "UNECE, EU and standards", "instruments": "NATM; ADS GTR; Regulation (EU) 2022/1426; ISO 34503", "actors": "Manufacturer; technical service", "question": "Scenario coverage, credibility of simulation, controlled validation", "why": "Feeds the safety case" },
+  { "n": 3, "phase": "Public-road trial authorisation", "function": "OP", "layer": "National", "instruments": "Slovakia § 49; UK trialling framework; Croatian service testing", "actors": "Ministry, road authority, police", "question": "Permit, operational design domain, route, safety operator, incident plan", "why": "National law governs access to roads" },
+  { "n": 4, "phase": "Safety case and conformity assessment", "function": "TA", "layer": "UNECE and EU", "instruments": "UN ADS Regulation; ADS GTR; Regulation (EU) 2022/1426 with JRC guidance", "actors": "Manufacturer; technical service; approval authority", "question": "Audit, safety case, track, simulation and real-world evidence", "why": "The technical approval threshold" },
+  { "n": 5, "phase": "Vehicle and system type approval", "function": "TA", "layer": "UNECE and EU", "instruments": "UN Regulations; Regulation (EU) 2018/858; 2019/2144; 2022/1426; 2026/481", "actors": "Type-approval authority", "question": "Approval of the vehicle and system against technical rules", "why": "Type approval is not permission to run a road service" },
+  { "n": 6, "phase": "Operational authorisation and deployment", "function": "OP", "layer": "National", "instruments": "UK Automated Vehicles Act; German StVG and AFGBV; French STRA; the Croatian framework. In Slovakia the only non-test deployment gate today is the § 52 operational permit for automated delivery vehicles, with a general regime still in the print 1329 reform", "actors": "National or local operational authority", "question": "Operating area, operator, remote support, service conditions", "why": "A separate operational gate" },
+  { "n": 7, "phase": "Commercial passenger or goods service", "function": "OP", "layer": "National and sectoral", "instruments": "Automated passenger service rules; road transport law; insurance; consumer and accessibility rules", "actors": "Service regulator; operator", "question": "Service licence, insurance, accessibility, marketing", "why": "The commercial deployment layer" },
+  { "n": 8, "phase": "In-use monitoring and software change", "function": "TA + OP", "layer": "UNECE, EU and national", "instruments": "Regulation (EU) 2022/1426 in-service monitoring; UN R155 and R156; NHTSA standing general order", "actors": "Manufacturer; operator; surveillance authority", "question": "Occurrence reporting, software updates, maintenance, performance", "why": "Continuous compliance" },
+  { "n": 9, "phase": "Incident response and corrective action", "function": "TA + OP", "layer": "National, EU and UNECE", "instruments": "Event data recording; eCall; incident reporting; market surveillance", "actors": "Police; emergency services; investigators; approval authority", "question": "Investigation, data access, recall or withdrawal, lessons learned", "why": "Closes the feedback loop" }
+ ],
+ "source": {
+  "workbook": "ROAT Regulatory Map 2026 – Reconstructed Draft v0.7.1 (PraF UK), sheet \"Regulatory Journey v0.3\"",
+  "cut_off": "2026-08-27",
+  "note": "Conceptual bridge between type approval and road or service operation. Module 02 codes what actually stands at the operational gate in eight regimes."
+ }
+}

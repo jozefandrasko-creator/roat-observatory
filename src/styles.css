@@ -205,3 +205,24 @@ nav.site a.lang{margin-left:auto;font-family:var(--mono);font-size:12px;letter-s
 .legend .sw.s-draft-negotiation{background:var(--shift)} .legend .sw.s-hub-gap-verify{background:var(--n0);border-style:dashed}
 #wall .pcol[hidden],#wall .mapbox[hidden]{display:none!important}
 .wrap.wide{max-width:1560px}
+.btn{font:inherit;font-size:13px;padding:4px 12px;border:1px solid var(--rule);border-radius:2px;background:var(--surface);color:inherit;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)} .btn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.card.route .steps{margin:10px 0 0;padding-left:18px;font-size:13.5px;display:flex;flex-direction:column;gap:9px}
+.card.route .steps li b{font-weight:600} .card.route .steps .d{display:block;color:var(--muted);font-size:12.5px;margin-top:3px}
+.card.route .steps .n{display:block;color:var(--shift);font-size:12px;margin-top:3px}
+.card.route .out{margin:12px 0 0;padding-top:9px;border-top:1px solid var(--rule-soft);font-size:13px;font-weight:600;color:var(--accent-ink)}
+.dec{border:1px solid var(--rule);border-left:3px solid var(--rule);border-radius:3px;padding:11px 13px;margin-bottom:9px;background:var(--surface)}
+.dec.picked-yes{border-left-color:var(--n3)} .dec.picked-no{border-left-color:var(--shift)}
+.dec .q{margin:0 0 8px;font-size:15px} .dec .ans{display:flex;gap:8px;margin-bottom:8px}
+.dec .r,.dec .meta{margin:0 0 3px;font-size:13px;color:var(--muted)}
+.dec .lab{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.dec.picked-yes .r.yes,.dec.picked-no .r.no{color:var(--ink)}
+.dec .chips{margin-top:7px}
+.jrn{margin-top:20px;display:flex;flex-direction:column;gap:0}
+.stg{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--rule-soft);position:relative}
+.stg .num{font-family:var(--mono);font-size:20px;color:var(--muted);margin:0;min-width:34px;text-align:right}
+.stg .body{flex:1} .stg h2{font-family:var(--serif);font-size:20px;margin:0 0 6px;font-weight:600}
+.stg .tags{margin:0 0 8px;font-size:12.5px}
+.stg dl.kv{margin:0} .stg .gatemark{position:absolute;top:-11px;left:0;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--shift);background:var(--paper);padding:0 8px 0 0}
+.stg#gate{border-top:2px solid var(--shift);padding-top:20px}
+.stg.f-ta .num{color:var(--n3)} .stg.f-op .num{color:var(--shift)} .stg.f-taop .num{color:var(--accent)}
