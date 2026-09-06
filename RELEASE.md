@@ -110,7 +110,7 @@ The trigger is a submission, not a date: **v0.3.0 goes out when OUT-005 (The Sec
 npm run release-check        # preflight only, changes nothing
 ```
 
-It prints, per module, whether the embargo is lifted and why; then seven checks (validation, no ignored material in git status, clean tree, version consistency between package.json and CITATION.cff, no placeholder OUT ids, every published snapshot carrying a DOI, a CHANGELOG Unreleased section with entries); then exactly which snapshot files `--prepare` would change.
+It prints, per module, whether the embargo is lifted and why; then the checks (validation, no ignored material in git status, clean tree, version consistency between package.json and CITATION.cff, no placeholder companion output still cited by a module, every published snapshot carrying a DOI, a CHANGELOG Unreleased section with entries); then exactly which snapshot files `--prepare` would change.
 
 ### On submission day
 
@@ -121,7 +121,7 @@ It prints, per module, whether the embargo is lifted and why; then seven checks 
 5. **Check what you are about to publish.** `npm run validate` (0 errors), `npm run build`, `npm run serve`, and look at the two Module 02 snapshot pages: the draft banner must be gone and the citation block must show the DOI.
 6. **Commit and push.** `git status --porcelain | Select-String "hub-export|site/|Claude outputs"` must print nothing, and check `git status --short` for stray files in the repository root as well.
 7. **Tag and release.** GitHub → Releases → Draft a new release → tag `v0.3.0`, notes from `Claude outputs/release-notes-v0.3.0.md`.
-8. **Write the DOI back.** When Zenodo has minted the version DOI, run `node scripts/release.mjs --doi=10.5281/zenodo.NNNNNNNN`. Expect it to report **nothing to write**: both Module 02 snapshots already carry the DOI of the release in which they first became citable (v0.1.0 for 2026-08-31, v0.2.0 for 2026-09-07), and a snapshot keeps that DOI so existing citations keep resolving. The command lists any review snapshot without a DOI as a candidate; add one deliberately with `--snapshots=<module>/<date>` or leave it.
+8. **Write the DOI back.** When Zenodo has minted the version DOI, run `node scripts/release.mjs --doi=10.5281/zenodo.NNNNNNNN`. Expect it to report **nothing to write**: both Module 02 snapshots already carry the DOI of the release in which they first became citable (v0.1.0 for 2026-08-31, v0.2.0 for 2026-09-07), and a snapshot keeps that DOI so existing citations keep resolving. The command lists any non-draft snapshot without a DOI as a candidate; add one deliberately with `--snapshots=<module>/<date>` or leave it. Named snapshots are validated before anything is written: an unknown name, a draft, or a snapshot that already carries a DOI is refused rather than silently accepted. A status that is not on the closed submitted list also fails closed, so `Submission preparation` can never be read as submitted.
 
 ### What v0.3.0 does not do
 

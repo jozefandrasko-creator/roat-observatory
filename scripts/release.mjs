@@ -64,13 +64,19 @@ for (const m of modules) {
   }
 }
 
-// A manuscript counts as submitted once the Hub says so. "Submission preparation" is not submitted.
-const SUBMITTED = /^(submitted|under review|revise|revision|accepted|in press|published)/i;
+// A manuscript counts as submitted once the Hub says so, and only for a value on this closed list.
+// Prefix matching is not safe here: "Submission preparation" must not pass, and neither must a status
+// someone invents. An unknown value fails closed and is printed so the author can fix the Hub or this list.
+const SUBMITTED = new Set([
+  "submitted", "under review", "in review", "revise and resubmit", "revision requested",
+  "under revision", "accepted", "in press", "published"
+]);
+const isSubmitted = s => SUBMITTED.has(String(s || "").trim().toLowerCase());
 const companionSubmitted = m => {
   const ids = m.relationships?.companion_of || [];
   if (!ids.length) return { released: true, why: "no companion manuscript, so no embargo" };
   const states = ids.map(id => ({ id, status: outputs[id]?.status || "unknown to the Hub" }));
-  const blocking = states.filter(s => !SUBMITTED.test(s.status));
+  const blocking = states.filter(s => !isSubmitted(s.status));
   return blocking.length
     ? { released: false, why: blocking.map(s => `${s.id} is "${s.status}"`).join(", ") }
     : { released: true, why: states.map(s => `${s.id} is "${s.status}"`).join(", ") };
@@ -106,11 +112,14 @@ function preflight() {
   if (cffVersion === pkg.version) pass(`version ${pkg.version} matches in package.json and CITATION.cff`);
   else fail(`version mismatch: package.json ${pkg.version}, CITATION.cff ${cffVersion}`);
 
-  // 4. placeholder companion ids
+  // 4. placeholder companion ids. The registry key is external_outputs_pending; a module whose
+  // companion_of points at one of those is citing a manuscript that has no Hub identifier yet.
   const ids = J("data/ids.json");
-  const placeholders = Object.keys(ids.outputs || {}).filter(k => !/^OUT-\d+$/.test(k));
-  if (placeholders.length) fail(`placeholder output ids still registered: ${placeholders.join(", ")}`);
-  else pass("no placeholder OUT-* identifiers");
+  const pending = Object.keys(ids.external_outputs_pending || {});
+  const citing = modules.filter(m => (m.relationships?.companion_of || []).some(t => pending.includes(t)));
+  if (citing.length) fail(`placeholder companion output still cited by ${citing.map(m => m.slug).join(", ")}: ${pending.join(", ")}`);
+  else if (pending.length) note.push(`registered but uncited placeholders: ${pending.join(", ")}`);
+  else pass("no placeholder companion outputs");
 
   // 5. published snapshots must carry a DOI
   const undoi = snapshots.filter(s => s.snap.status === "published" && !s.snap.doi);
@@ -149,13 +158,21 @@ function preflight() {
 /* ---------- prepare ---------- */
 
 function prepare() {
+  // A flag given without a value arrives as boolean true; accepting it would stamp "true" into
+  // CITATION.cff or the CHANGELOG heading, so every string flag is type-checked before anything is read.
   const version = args.version;
-  if (!/^\d+\.\d+\.\d+$/.test(String(version || ""))) { console.error("--prepare needs --version X.Y.Z"); process.exit(1); }
+  if (typeof version !== "string" || !/^\d+\.\d+\.\d+$/.test(version)) { console.error("--prepare needs --version X.Y.Z (with a value)"); process.exit(1); }
+  if (args.title !== undefined && typeof args.title !== "string") { console.error('--title needs a value, e.g. --title "Second Gate published"'); process.exit(1); }
   const title = String(args.title || "").trim();
   if (!title) { console.error('--prepare needs --title "short description of the release"'); process.exit(1); }
+  if (args.date !== undefined && (typeof args.date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(args.date))) { console.error("--date needs a value like 2026-09-07"); process.exit(1); }
   const today = args.date || new Date().toISOString().slice(0, 10);
 
   if (!preflight() && !args.force) { console.error("\nPreflight failed. Fix the BLOCKED items, or pass --force with a reason recorded in the commit message."); process.exit(1); }
+
+  // Say plainly which kind of release this is. A release with no embargo lift is legitimate — the runbook
+  // allows one when the code changed in a way worth citing — but it should never happen by accident.
+  if (!releasable.length) console.log("\nNote: no snapshot leaves embargo in this release. This is a code-only release; if you expected a module to be published, stop and check the output status in the Hub.");
 
   const changes = [];
   // package.json + CITATION.cff
@@ -195,18 +212,39 @@ function prepare() {
 /* ---------- DOI write-back ---------- */
 
 function writeDoi() {
-  const doi = String(args.doi);
+  if (typeof args.doi !== "string") { console.error("--doi needs a value like 10.5281/zenodo.22546848"); process.exit(1); }
+  const doi = args.doi;
   if (!/^10\.\d{4,9}\/[-._;()/:A-Za-z0-9]+$/.test(doi)) { console.error("--doi needs a DOI like 10.5281/zenodo.22546848"); process.exit(1); }
-  const only = args.snapshots ? String(args.snapshots).split(",").map(s => s.trim()) : null;
-  // Default: only snapshots this release actually makes citable, i.e. published ones without a DOI.
-  // A snapshot still in review is public but not part of the citable record, so it is offered, not written.
+
+  const name = s => `${s.module.slug}/${s.dir}`;
+  const superseded = new Set(snapshots.filter(s => s.snap.supersedes).map(s => s.snap.supersedes));
+  const isSuperseded = s => superseded.has(s.snap.roat_id);
+
+  // --snapshots is resolved and fully validated before anything is written: an unknown name used to be a
+  // silent no-op, and a draft or already-stamped snapshot must never be overwritten by a typo.
+  let only = null;
+  if (args.snapshots !== undefined) {
+    if (typeof args.snapshots !== "string") { console.error("--snapshots needs a value, e.g. --snapshots=human-roles/2026-09-06"); process.exit(1); }
+    only = args.snapshots.split(",").map(s => s.trim()).filter(Boolean);
+    const known = new Set(snapshots.map(name));
+    const unknown = only.filter(n => !known.has(n));
+    if (unknown.length) { console.error(`unknown snapshot(s): ${unknown.join(", ")}\nknown: ${[...known].join(", ")}`); process.exit(1); }
+    const named = snapshots.filter(s => only.includes(name(s)));
+    const drafts = named.filter(s => s.snap.status === "draft");
+    if (drafts.length) { console.error(`refusing to stamp a draft snapshot: ${drafts.map(name).join(", ")} — a draft is not part of any release`); process.exit(1); }
+    const stamped = named.filter(s => s.snap.doi);
+    if (stamped.length) { console.error(`already carries a DOI, refusing to overwrite: ${stamped.map(s => `${name(s)} → ${s.snap.doi}`).join(", ")}`); process.exit(1); }
+  }
+
+  // Default: only snapshots this release actually makes citable, i.e. published ones without a DOI, and
+  // not one that a later snapshot supersedes. A snapshot still in review is offered, not written.
   const targets = only
-    ? snapshots.filter(s => only.includes(`${s.module.slug}/${s.dir}`))
-    : snapshots.filter(s => s.snap.status === "published" && !s.snap.doi);
-  const offered = snapshots.filter(s => !s.snap.doi && s.snap.status === "review" && !targets.includes(s));
+    ? snapshots.filter(s => only.includes(name(s)))
+    : snapshots.filter(s => s.snap.status === "published" && !s.snap.doi && !isSuperseded(s));
+  const offered = snapshots.filter(s => !s.snap.doi && s.snap.status !== "draft" && !targets.includes(s));
   if (offered.length) {
     console.log("Candidates not written (status review, so not part of the citable record yet):");
-    for (const s of offered) console.log(`- ${s.module.slug}/${s.dir} — add with --snapshots=${s.module.slug}/${s.dir} if this release makes it citable`);
+    for (const s of offered) console.log(`- ${s.module.slug}/${s.dir} (${s.snap.status}${isSuperseded(s) ? ", superseded" : ""}) — add with --snapshots=${s.module.slug}/${s.dir} only if this release is what makes it citable`);
     console.log("");
   }
   if (!targets.length) {
