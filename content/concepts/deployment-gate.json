@@ -4,8 +4,9 @@
   "title": "Deployment gate (the second gate)",
   "aliases": ["second gate", "post-type-approval authorisation", "Betriebsbereichsgenehmigung", "mise en service", "druhá brána"],
   "definition": "Whatever a legal order requires, beyond the technical admissibility of the vehicle and its automated driving system, before driverless operation on a given road, for a given service and under a given actor is lawful: an operating-area approval, a service commissioning decision, a passenger-service permit, a conditional admission with a road-access pilot, or only a test permit. A gate has an object, a decision maker, an accountable actor and lifecycle rules that keep the authorisation honest when the system changes. It is the organising concept of Module 02.",
-  "definition_status": "draft",
-  "drafted": "Drafted 2026-09-06 from the primary sources listed below; author review pending.",
+  "definition_status": "approved",
+  "approved": "2026-09-06",
+  "drafted": "Drafted 2026-09-06 from the primary sources listed below.",
   "locus": [
     { "record": "ROAT-2026-0329", "pinpoint": "§ 1e", "note": "Approval of the defined operating area." },
     { "record": "ROAT-2026-0330", "pinpoint": "§§ 7–10", "note": "Operating permit and operating-area approval procedure." },

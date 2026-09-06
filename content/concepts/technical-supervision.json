@@ -4,8 +4,9 @@
   "title": "Technical supervision (remote supervisor)",
   "aliases": ["Technische Aufsicht", "operátor dohľadu", "specified automated operation supervisor", "remote management"],
   "definition": "A natural person outside the vehicle who monitors autonomous operation and may deactivate the system, release or request manoeuvres and respond to incidents, without continuously performing the DDT. German law created the archetype; Japan's specified automated operation supervisor and Slovakia's draft operátor dohľadu are counterparts, while EU type-approval law knows a remote management function rather than a person. The Observatory codes supervision separately from intervention and remote driving because the legally decisive boundary is whether the automated driving system keeps the DDT.",
-  "definition_status": "draft",
-  "drafted": "Drafted 2026-09-06 from the primary sources listed below; author review pending.",
+  "definition_status": "approved",
+  "approved": "2026-09-06",
+  "drafted": "Drafted 2026-09-06 from the primary sources listed below.",
   "locus": [
     { "record": "ROAT-2026-0329", "pinpoint": "§ 1d(3), § 1f(2)", "note": "Technische Aufsicht: powers and limits." },
     { "record": "ROAT-2026-0330", "pinpoint": "§ 14", "note": "Duties and qualification of the technical supervision." },

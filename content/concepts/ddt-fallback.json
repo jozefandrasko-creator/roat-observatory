@@ -4,8 +4,9 @@
   "title": "DDT fallback and minimal risk condition",
   "aliases": ["fallback", "minimal risk manoeuvre (MRM)", "minimal risk condition (MRC)", "risikominimaler Zustand", "minimálne rizikový stav"],
   "definition": "The response to a performance-relevant system failure or to an exit from the operational design domain: a user performs the DDT, or the user or the automated driving system brings the vehicle to a minimal risk condition, a stable stopped state that reduces crash risk when the trip cannot or should not continue. EU type-approval law names the manoeuvre a minimal risk manoeuvre; German law names the resulting state the risikominimaler Zustand. The Observatory codes who performs or triggers the fallback separately from who performs the DDT, because frameworks allocate the two functions to different actors.",
-  "definition_status": "draft",
-  "drafted": "Drafted 2026-09-06 from the primary sources listed below; author review pending.",
+  "definition_status": "approved",
+  "approved": "2026-09-06",
+  "drafted": "Drafted 2026-09-06 from the primary sources listed below.",
   "locus": [
     { "record": "ROAT-2026-0120", "pinpoint": "§ 3.12, § 3.16", "note": "DDT fallback and minimal risk condition." },
     { "record": "ROAT-2026-0040", "pinpoint": "Art. 2", "note": "Minimal risk manoeuvre as defined for the type approval of fully automated vehicles." },

@@ -4,8 +4,9 @@
   "title": "Remote driving",
   "aliases": ["remote driver", "teleoperated driving", "Fernsteuerung", "diaľkové riadenie"],
   "definition": "Real-time performance of part or all of the DDT or the DDT fallback, including braking, steering and acceleration, by a remote driver who completes the object and event detection and response and may overrule the automated driving system. EU type-approval law leaves it outside the ADS framework; German law confines the technical supervision to releasing manoeuvres and, after a defect, to near-field manual control at walking speed within six metres. The Observatory codes remote driving as its own column so that a supervisor or intervention role is never mistaken for a remote driver.",
-  "definition_status": "draft",
-  "drafted": "Drafted 2026-09-06 from the primary sources listed below; author review pending.",
+  "definition_status": "approved",
+  "approved": "2026-09-06",
+  "drafted": "Drafted 2026-09-06 from the primary sources listed below.",
   "locus": [
     { "record": "ROAT-2026-0120", "pinpoint": "§ 3.24, § 3.31.1.2", "note": "Remote driving and the remote driver." },
     { "record": "ROAT-2026-0311", "pinpoint": "Appendix 2, § 2.2.3", "note": "Remote driving outside the scope of Regulation (EU) 2022/1426." },
