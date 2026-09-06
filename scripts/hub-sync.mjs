@@ -268,7 +268,9 @@ async function syncModule(mod) {
   else if (mod.hub.profile === "single-table") parsed = profileSingleTable(mod, rows, mod.hub.join ? await readSheet(mod.hub.join.sheet) : null);
   else throw new Error(`Unknown profile ${mod.hub.profile} for ${mod.slug}`);
 
-  const date = isoFromSheetDate(parsed.sheetDate) || snapshotDate;
+  // An explicit --snapshot-date wins over the "Snapshot: <date>" line in the sheet, so a re-sync after
+  // a recoding never overwrites the frozen folder named in the sheet (CLAUDE.md hard rule 3).
+  const date = args["snapshot-date"] || isoFromSheetDate(parsed.sheetDate) || snapshotDate;
   const dir = path.join(ROOT, "data/modules", mod.slug, date);
   fs.mkdirSync(dir, { recursive: true });
   const data = { module: mod.roat_id, snapshot_date: date, exported_from_hub: new Date().toISOString(), source_sheet: mod.hub.sheet, rows: parsed.rows, ...parsed.extras };

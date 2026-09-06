@@ -1,4 +1,4 @@
-# Observatory validation — 2026-09-06 12:48 UTC
+# Observatory validation — 2026-09-06 13:49 UTC
 
 **0 errors · 53 warnings**
 
@@ -56,5 +56,5 @@
 - human-roles/2026-09-05 · Driverless-test oversight assistant — no publishable evidence — the row is listed as pending, not published as coded
 - human-roles/2026-09-07 — latest snapshot status is "review" — module page will show a draft banner
 - layered-normalisation/historical-uk — latest snapshot status is "draft" — module page will show a draft banner
-- second-gate/2026-08-31 — latest snapshot status is "review" — module page will show a draft banner
+- second-gate/2026-09-07 — latest snapshot status is "review" — module page will show a draft banner
 

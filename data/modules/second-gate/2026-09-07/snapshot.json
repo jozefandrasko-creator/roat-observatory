@@ -1,0 +1,18 @@
+{
+ "roat_id": "ROAT-SNAP-SECOND-GATE-2026-09-07",
+ "module": "ROAT-MOD-SECOND-GATE",
+ "snapshot_date": "2026-09-07",
+ "coder": "JA",
+ "second_pass": "Machine-assisted blind second pass (ChatGPT, 2026-09-06) on 7 of 8 regimes; the text of the China Road Traffic Safety Law revision draft was not accessible to the second coder. Class-level agreement 61 % on the coded regimes after mapping the first pass to a 14-dimension codebook; 28 substantive disagreements adjudicated by JA, 20 cells changed against the 2026-08-31 snapshot: Great Britain (13 cells) is now coded on what was in force on 31 August 2026 (Part 5 of the Automated Vehicles Act 2024 and APS permits from 15 May 2026, AEVA 2018 s. 2 insurer liability, pilots), not on the Part 1 authorisation architecture that commences later; Slovakia (7 cells) records the operational permit for automated delivery vehicles under § 52 of Act No. 106/2018 Coll. as the only non-test deployment gate. Not inter-coder reliability.",
+ "finding": "",
+ "caveats": [
+  "Current law and draft/prospective regimes are kept apart; China RTSL draft and Slovak print 1329 are prospective only.",
+  "Great Britain is coded as 2026 transitional current law: Part 5 of the Automated Vehicles Act 2024 (automated passenger service permits) has been in force since 15 May 2026, Part 1 (authorisation, authorised self-driving entities, no-user-in-charge operators, reallocation of legal responsibility) had not been commenced at the snapshot date, and Part 4 commences on 7 January 2027 (Commencement Regulations SI 2025/1339, 2026/437 and 2026/731).",
+  "Slovakia: the operational permit for automated delivery vehicles (§ 52 of Act No. 106/2018 Coll., with § 55b, § 2(2)(w) and § 5(6) of Act No. 8/2009 Coll.) is a narrow but real deployment gate outside test operation; the general assessment that no deployment gate exists for fully automated vehicles stands.",
+  "17 first-pass cells affirm a feature for which the second coder found no passage in the listed sources; they stand on the first coder's reading and are queued for pinpointing at the next revision.",
+  "The China RTSL draft row was not second-coded; it will be re-coded when the draft text is supplied to the second coder."
+ ],
+ "supersedes": "ROAT-SNAP-SECOND-GATE-2026-08-31",
+ "doi": null,
+ "status": "review"
+}
