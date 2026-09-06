@@ -1,5 +1,5 @@
 {
- "exported": "2026-09-05T23:22:24.674Z",
+ "exported": "2026-09-06T10:14:21.380Z",
  "count": 371,
  "records": {
   "ROAT-2026-0001": {
@@ -86,8 +86,8 @@
    "stage": "Verified",
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
-   "legal_status": "",
-   "public_status": "",
+   "legal_status": "In force",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "International"
@@ -1717,7 +1717,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "California, United States"
@@ -1809,7 +1809,7 @@
    "legal_status": "",
    "public_status": "",
    "record_type": "Dataset",
-   "next_check": "2026-09-13",
+   "next_check": "2026-09-30",
    "jurisdiction": "United States"
   },
   "ROAT-2026-0182": {
@@ -1827,7 +1827,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Not applicable",
-   "public_status": "Review",
+   "public_status": "Published",
    "record_type": "Official guidance",
    "next_check": "2026-09-13",
    "jurisdiction": "California, United States"
@@ -3647,7 +3647,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Not applicable",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Standard",
    "next_check": "",
    "jurisdiction": "Global"
@@ -3657,7 +3657,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Sweden"
@@ -3667,7 +3667,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Sweden"
@@ -3677,7 +3677,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "Draft",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Policy document",
    "next_check": "",
    "jurisdiction": "Australia"
@@ -3687,7 +3687,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Japan"
@@ -3697,7 +3697,7 @@
    "evidence_level": "Level 1 - Legal act",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Legal act",
    "next_check": "",
    "jurisdiction": "Ontario, Canada"
@@ -3707,7 +3707,7 @@
    "evidence_level": "Level 2 - Official document",
    "reliability": "Official source",
    "legal_status": "In force",
-   "public_status": "",
+   "public_status": "Published",
    "record_type": "Official guidance",
    "next_check": "",
    "jurisdiction": "Ontario, Canada"
